@@ -64,7 +64,7 @@
                     <div class="col-lg-2 col-md-2">
 
                         <a href="./index.html">
-                            <img src="./img/로고.png" alt="">
+                            <img src="./img/ë¡ê³ .png" alt="">
                         </a>
 
                     </div>
@@ -73,7 +73,7 @@
                     <div class="col-lg-7 col-md-7">
                         <div class="advanced-search">
                             <div class="input-group">
-                                <input type="text" placeholder="검색">
+                                <input type="text" placeholder="ê²ì">
                                 <button type="button"><i class="ti-search"></i></button>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                         <ul class="nav-right">
                             <li class="heart-icon">
                                 <a href="#">
-                                    <i class="icon_MSY_alt">로그인</i>
+                                    <i class="icon_MSY_alt">ë¡ê·¸ìd</i>
                                 </a>
                             </li>
                         </ul>
@@ -104,32 +104,32 @@
                         <li class="active"><a href="./index.html">Home</a></li>
 
 
-                        <li><a href="#">중고거래</a>
+                        <li><a href="#">ì¤ê³ ê±°ë</a>
                             <ul class="dropdown">
-                                <li><a href="#">외출용품</a></li>
-                                <li><a href="#"> 장난감/도서</a></li>
-                                <li><a href="#">의류</a></li>
-                                <li><a href="#">가구</a></li>
-                                <li><a href="#">침구류</a></li>
-                                <li><a href="#"> 생활용품</a></li>
-                                <li><a href="#">기타</a></li>
+                                <li><a href="#">ì¸ì¶ì©í</a></li>
+                                <li><a href="#"> ì¥ëê°/ëì</a></li>
+                                <li><a href="#">ìë¥</a></li>
+                                <li><a href="#">ê°êµ¬</a></li>
+                                <li><a href="#">ì¹¨êµ¬ë¥</a></li>
+                                <li><a href="#"> ìíì©í</a></li>
+                                <li><a href="#">ê¸°í</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="#">커뮤니티</a>
+                        <li><a href="#">ì»¤ë®¤ëí°</a>
                             <ul class="dropdown">
-                                <li><a href="#">잡담</a></li>
-                                <li><a href="#">그외</a></li>
-                                <li><a href="#">등등</a></li>
+                                <li><a href="#">ì¡ë´</a></li>
+                                <li><a href="#">ê·¸ì¸</a></li>
+                                <li><a href="#">ë±ë±</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="#">마이페이지</a>
+                        <li><a href="#">ë§ì´íì´ì§</a>
                             <ul class="dropdown">
-                                <li><a href="#">판매/구매목록</a></li>
-                                <li><a href="#">매너온도</a></li>
-                                <li><a href="#">개인정보 수정</a></li>
-                                <li><a href="#">좋아요 목록</a></li>
+                                <li><a href="#">íë§¤/êµ¬ë§¤ëª©ë¡</a></li>
+                                <li><a href="#">ë§¤ëì¨ë</a></li>
+                                <li><a href="#">ê°ì¸ì ë³´ ìì </a></li>
+                                <li><a href="#">ì¢ìì ëª©ë¡</a></li>
                             </ul>
                         </li>
 
@@ -142,17 +142,17 @@
     <!-- Header End -->
 
     <!-- Hero Section Begin -->
-    <!-- 1번째사진 -->
+    <!-- 1ë²ì§¸ì¬ì§ -->
     <section class="hero-section">
         <div class="hero-items owl-carousel">
             <div class="single-hero-items set-bg" data-setbg="img/hero-1.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
-                            <span>작은글씨</span>
-                            <h1>큰글씨</h1>
-                            <p>간단한설명</p>
-                            <a href="#" class="primary-btn">바로가기버튼</a>
+                            <span>ììê¸ì¨</span>
+                            <h1>í°ê¸ì¨</h1>
+                            <p>ê°ë¨íì¤ëª</p>
+                            <a href="#" class="primary-btn">ë°ë¡ê°ê¸°ë²í¼</a>
                         </div>
                     </div>
                     <div class="off-card">
@@ -160,15 +160,15 @@
                     </div>
                 </div>
             </div>
-            <!-- 2번째사진 -->
+            <!-- 2ë²ì§¸ì¬ì§ -->
             <div class="single-hero-items set-bg" data-setbg="img/hero-2.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
-                            <span>작은글씨</span>
-                            <h1>큰글씨</h1>
-                            <p>간단한설명</p>
-                            <a href="#" class="primary-btn">바로가기버튼</a>
+                            <span>ììê¸ì¨</span>
+                            <h1>í°ê¸ì¨</h1>
+                            <p>ê°ë¨íì¤ëª</p>
+                            <a href="#" class="primary-btn">ë°ë¡ê°ê¸°ë²í¼</a>
                         </div>
                     </div>
                     <div class="off-card">
@@ -179,64 +179,64 @@
         </div>
     </section>
 
-    <!-- 중고거래 -->
+    <!-- ì¤ê³ ê±°ë -->
     <div class="banner-section spad">
         <div class="container-fluid">
-            <h1>중고거래</h1>
+            <h1>ì¤ê³ ê±°ë</h1>
             <div class="row">
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
+                        <img src="./img/ê°ìì§.png" alt="">
                         <div class="inner-text"></div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
+                        <img src="./img/ê°ìì§.png" alt="">
                         <div class="inner-text"></div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
+                        <img src="./img/ê°ìì§.png" alt="">
                         <div class="inner-text"></div>
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <h3 href="#" style="text-align: right;" class="btn primary-btn">더보기</h3>
+                    <h3 href="#" style="text-align: right;" class="btn primary-btn">ëë³´ê¸°</h3>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <!-- 커뮤니티 -->
+    <!-- ì»¤ë®¤ëí° -->
 
     <div class="banner-section spad">
         <div class="container-fluid">
-            <h1>커뮤니티</h1>
+            <h1>ì»¤ë®¤ëí°</h1>
             <div class="row">
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
+                        <img src="./img/ê°ìì§.png" alt="">
                         <div class="inner-text"></div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
+                        <img src="./img/ê°ìì§.png" alt="">
                         <div class="inner-text"></div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
+                        <img src="./img/ê°ìì§.png" alt="">
                         <div class="inner-text"></div>
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <!-- <h3 href="#" style="text-align: right;" class="primary-btn">더보기</h3> -->
-                    <button style="text-align: right;" class="btn primary-btn">더보기</button>
+                    <!-- <h3 href="#" style="text-align: right;" class="primary-btn">ëë³´ê¸°</h3> -->
+                    <button style="text-align: right;" class="btn primary-btn">ëë³´ê¸°</button>
                 </div>
             </div>
         </div>
@@ -245,7 +245,7 @@
     <!-- Man Banner Section End -->
 
 
-    <!-- 아래까만거 -->
+    <!-- ìëê¹ë§ê±° -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
