@@ -31,6 +31,8 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+
+
 html,
 body {
 	height: 100%;
@@ -81,7 +83,7 @@ p {
 	color: #636363;
 	font-weight: 400;
 	line-height: 26px;
-	margin: 0 0 0px 0;
+	margin: 0 0 15px 0;
 }
 
 img {
@@ -133,7 +135,7 @@ ol {
 	color: #252525;
 	font-size: 36px;
 	font-weight: 700;
-	margin-bottom: 40px;
+	margin-bottom: 38px;
 	position: relative;
 }
 
@@ -464,7 +466,7 @@ ol {
 }
 
 .inner-header .advanced-search .input-group {
-	max-width: 100%;
+	max-width: 70%;
 	height: 100%;
 }
 
@@ -1152,7 +1154,6 @@ ol {
 }
 
 .product-item {
-	width: 600px;
 	margin-bottom: 26px;
 }
 
@@ -1232,9 +1233,13 @@ ol {
 	padding: 16px 18px 12px 19px;
 }
 
+.product-item .pi-text {
+	text-align: center;
+	padding-top: 26px;
+}
 
 .product-item .pi-text .catagory-name {
-	font-size: 10px;
+	font-size: 12px;
 	color: #b2b2b2;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -1947,6 +1952,8 @@ ol {
 	border-radius: 2px;
 }
 
+
+
 .checkmark:after {
 	position: absolute;
 	content: "";
@@ -1978,7 +1985,7 @@ ol {
 .product-show-option .select-option .nice-select:after {
 	border-bottom: 2px solid #4c4c4c;
 	border-right: 2px solid #4c4c4c;
-	height: 7px;p
+	height: 7px;
 	right: 22px;
 	top: 47%;
 	width: 7px;
@@ -2275,7 +2282,7 @@ ol {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin-bottom: 10px;
+	margin-bottom: 33px;
 }
 
 .product-details .quantity .pro-qty {
@@ -2316,7 +2323,7 @@ ol {
 }
 
 .product-details .pd-tags {
-	margin-top: 5px;
+	margin-bottom: 27px;
 }
 
 .product-details .pd-tags li {
