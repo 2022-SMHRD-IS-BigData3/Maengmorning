@@ -2,6 +2,7 @@
 <html lang="zxx">
 
 <head>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     <meta charset="UTF-8">
     <meta name="description" content="Fashi Template">
     <meta name="keywords" content="Fashi, unica, creative, html">
@@ -147,8 +148,8 @@
                         <i class="ti-menu"></i>
                         <span>All departments</span>
                         <ul class="depart-hover">
-                            <li class="active"><a href="#">Women’s Clothing</a></li>
-                            <li><a href="#">Men’s Clothing</a></li>
+                            <li class="active"><a href="#">Womenâs Clothing</a></li>
+                            <li><a href="#">Menâs Clothing</a></li>
                             <li><a href="#">Underwear</a></li>
                             <li><a href="#">Kid's Clothing</a></li>
                             <li><a href="#">Brand Fashion</a></li>
