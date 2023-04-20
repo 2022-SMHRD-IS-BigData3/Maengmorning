@@ -2,34 +2,29 @@
 <html lang="zxx">
 
 <style>
-
-    
+    .single-banner {
+        width: 570.98px;
+        height: 330.55px;
+        overflow: hidden;
+    }
 
     .single-banner {
-         width: 570.98px;
-         height: 330.55px;
-         overflow: hidden;
-     }
-     .single-banner {
-         width: 570.00px;
-         height: 330.55px;
-         overflow: hidden;
-     }
-     
-     
-     .col-lg-12{
-         margin-top: 10px;
-         margin-left: 1700px;
-     }
- 
-     .logo {
-         width: 300px;
-         
-     }
- 
- 
- </style>
- 
+        width: 570.00px;
+        height: 330.55px;
+        overflow: hidden;
+    }
+
+    .col-lg-12 {
+        margin-top: 10px;
+        margin-left: 1700px;
+    }
+
+    .logo {
+        width: 300px;
+
+    }
+</style>
+
 
 <head>
     <meta charset="UTF-8">
@@ -62,19 +57,19 @@
 
     <!-- Header Section Begin -->
     <header class="header-section">
-        
+
         <div class="container">
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
-                     
-                            <a href="./index.html">
-                                <img src="./img/로고.png" alt="">
-                            </a>
-                     
+
+                        <a href="./index.html">
+                            <img src="./img/로고.png" alt="">
+                        </a>
+
                     </div>
 
-                    
+
                     <div class="col-lg-7 col-md-7">
                         <div class="advanced-search">
                             <div class="input-group">
@@ -85,9 +80,9 @@
                     </div>
 
 
-                    
+
                     <div class="col-lg-3 text-right col-md-3">
-                        
+
                         <ul class="nav-right">
                             <li class="heart-icon">
                                 <a href="#">
@@ -102,13 +97,13 @@
         <div class="nav-item">
             <div class="container">
                 <div class="nav-depart">
-                    
+
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
-                       
-                       
+
+
                         <li><a href="#">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
@@ -120,7 +115,7 @@
                                 <li><a href="#">기타</a></li>
                             </ul>
                         </li>
-                        
+
                         <li><a href="#">커뮤니티</a>
                             <ul class="dropdown">
                                 <li><a href="#">잡담</a></li>
@@ -137,7 +132,7 @@
                                 <li><a href="#">좋아요 목록</a></li>
                             </ul>
                         </li>
-                       
+
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>
@@ -165,7 +160,7 @@
                     </div>
                 </div>
             </div>
-             <!-- 2번째사진 -->
+            <!-- 2번째사진 -->
             <div class="single-hero-items set-bg" data-setbg="img/hero-2.jpg">
                 <div class="container">
                     <div class="row">
@@ -183,70 +178,70 @@
             </div>
         </div>
     </section>
-    
+
     <!-- 중고거래 -->
     <div class="banner-section spad">
         <div class="container-fluid">
-          <h1>중고거래</h1>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="single-banner">
-                <img src="./img/강아지.png" alt="">
-                <div class="inner-text"></div>
-              </div>
+            <h1>중고거래</h1>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-banner">
+                        <img src="./img/강아지.png" alt="">
+                        <div class="inner-text"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-banner">
+                        <img src="./img/강아지.png" alt="">
+                        <div class="inner-text"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-banner">
+                        <img src="./img/강아지.png" alt="">
+                        <div class="inner-text"></div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <h3 href="#" style="text-align: right;" class="btn primary-btn">더보기</h3>
+                </div>
             </div>
-            <div class="col-lg-4">
-              <div class="single-banner">
-                <img src="./img/강아지.png" alt="">
-                <div class="inner-text"></div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="single-banner">
-                <img src="./img/강아지.png" alt="">
-                <div class="inner-text"></div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-                <h3 href="#" style="text-align: right;" class="btn primary-btn">더보기</h3>
-            </div>
-          </div>
         </div>
-      </div>
-      
-
-<!-- 커뮤니티 -->
-    
-<div class="banner-section spad">
-    <div class="container-fluid">
-      <h1>커뮤니티</h1>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="single-banner">
-            <img src="./img/강아지.png" alt="">
-            <div class="inner-text"></div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="single-banner">
-            <img src="./img/강아지.png" alt="">
-            <div class="inner-text"></div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="single-banner">
-            <img src="./img/강아지.png" alt="">
-            <div class="inner-text"></div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <!-- <h3 href="#" style="text-align: right;" class="primary-btn">더보기</h3> -->
-          <button style="text-align: right;" class="btn primary-btn">더보기</button>
-        </div>
-      </div>
     </div>
-  </div>
-  
+
+
+    <!-- 커뮤니티 -->
+
+    <div class="banner-section spad">
+        <div class="container-fluid">
+            <h1>커뮤니티</h1>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-banner">
+                        <img src="./img/강아지.png" alt="">
+                        <div class="inner-text"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-banner">
+                        <img src="./img/강아지.png" alt="">
+                        <div class="inner-text"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-banner">
+                        <img src="./img/강아지.png" alt="">
+                        <div class="inner-text"></div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <!-- <h3 href="#" style="text-align: right;" class="primary-btn">더보기</h3> -->
+                    <button style="text-align: right;" class="btn primary-btn">더보기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Man Banner Section End -->
 
 
@@ -312,8 +307,11 @@
                     <div class="col-lg-12">
                         <div class="copyright-text">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                         <div class="payment-pic">
                             <img src="img/payment-method.png" alt="">
