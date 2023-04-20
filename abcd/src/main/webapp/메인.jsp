@@ -63,7 +63,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
 
-                        <a href="./index.html">
+                        <a href="./메인.jsp">
                             <img src="./img/ë¡ê³ .png" alt="">
                         </a>
 
