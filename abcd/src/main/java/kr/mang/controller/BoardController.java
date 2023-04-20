@@ -15,7 +15,9 @@ public class BoardController extends HttpServlet {
     }
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		System.out.println("servise 호출 완료");
 		
+		request.getRequestDispatcher("");
 		
 		
 	}

@@ -1,0 +1,1 @@
+SELECT*FROM 회원정보;

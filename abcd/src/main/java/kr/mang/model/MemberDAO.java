@@ -13,7 +13,7 @@ public class MemberDAO {
 	private static SqlSessionFactory sqlSessionFactory;
 	static {
 		try {
-			String resource = "kr/smhrd/db/mybatis-config.xml";
+			String resource = "kr/mang/db/mybatis-config.xml";
 			InputStream inputStream = Resources.getResourceAsStream(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
