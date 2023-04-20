@@ -140,6 +140,7 @@
                 </div>
             </div>
         </div>
+       <form action=""> 
         <div class="nav-item">
             <div class="container">
                 <div class="nav-depart">
@@ -158,6 +159,8 @@
                         </ul>
                     </div>
                 </div>
+               </form> 
+              <form action="">
                 <nav class="nav-menu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
@@ -194,6 +197,7 @@
                        
                     </ul>
                 </nav>
+               </form>
                 <div id="mobile-menu-wrap"></div>
             </div>
         </div>
@@ -248,13 +252,15 @@
                         </div>
                     </div>
                 </div>
+              
+             <form action="/board" method="post">
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
                                 <!--제품 사진 등록하는 곳-->
                                 <img class="product-big-img"
-                                    src="https://www.maeili.com/editor/upload/fa3b6475-acc0-4f72-be1a-4f676d62232a.jpg"
+                                    src="${imgurl}"
                                     alt="">
                                 <div class="zoom-icon">
                                     <i class="fa fa-search-plus"></i>
@@ -274,13 +280,14 @@
                                 </div>
                             </div>
                         </div>
+                      
                         <div class="col-lg-6">
                             <div class="product-details">
                                 <div class="pd-title">
-                                    <h4>젖병 팝니다</h4>
+                                    <h4>${title }</h4>
                                     <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                                 </div>
-                                <p>판매자 : 성영맘(저장된 판매자 이름)</p>
+                                <p>판매자 : ${sellid}</p>
                                 <div class="pd-rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -290,10 +297,10 @@
                                     <span>(5)</span>
                                 </div>
                                 <div class="pd-desc">
-                                    <p>아이 젖병입니다</p>
-                                    <h4>450,000원</h4>
+                                    <p>${title }</p>
+                                    <h4>${price}</h4>
                                 </div>
-
+							
 
                                 <div class="quantity">
                                     <a href="#" class="primary-btn pd-cart">판매자 쪽지 보내기</a> <br>
@@ -317,6 +324,8 @@
                             </div>
                         </div>
                     </div>
+                 </div>
+               </form>
                     <div class="product-tab">
                         <div class="tab-item">
                             <ul class="nav" role="tablist">
