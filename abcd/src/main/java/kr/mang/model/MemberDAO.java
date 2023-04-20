@@ -22,23 +22,36 @@ public class MemberDAO {
 		}
 	}
 	
+	SqlSession session= null;
+	public int join(MemberVO vo) {
+		int row =0;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			row  = session.insert("join", vo);
+			
+		} finally {
+			session.close();
+		}
+		System.out.println(row);
+		return row ;
+	}
+	public String login(MemberVO vo) {
+		String uId = null; 
+		try {
+				session = sqlSessionFactory.openSession(true);
+				uId = session.selectOne("login",vo);
+			
+		} finally {
+			session.close();
+		}
+		
+		
+		
+		return uId;
+	}
+
+
 	
-	
-	
-//	int row = 0;
-//	public int join(MemberVO vo) {
-//		// 데이터 베이스 연결 ~ 추가
-//		SqlSession session = null;
-//		try {
-//
-//			 session = sqlSessionFactory.openSession(true);
-//			 row =session.insert("join", vo);
-//		} finally {
-//			session.close();
-//		}
-//		return row;
-//
-//	}
 //	public MemberVO login(MemberVO vo) {
 //		SqlSession session  = null;
 //		MemberVO mvo = null;

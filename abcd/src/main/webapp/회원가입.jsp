@@ -139,22 +139,22 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="register-form">
                         <h2>회원가입</h2>
-                        <form action="#">
+                        <form action="Join.do" method = "post">
                             <div class="group-input">
                                 <label for="username">이름</label>
-                                <input type="text" id="name">
+                                <input type="text" id="name" name ="name">
                             </div>
                             <div class="group-input">
                                 <label for="con-pass">전화번호</label>
-                                <input type="text" id="tel">
+                                <input type="text" id="tel" name= "tel">
                             </div>
                             <div class="group-input">
                                 <label for="username">사용하실 아이디</label>
-                                <input type="text" id="id">
+                                <input type="text" id="id" name = "id">
                             </div>
                             <div class="group-input">
                                 <label for="pass">사용하실 비밀번호</label>
-                                <input type="password" id="pw">
+                                <input type="password" id="pw" name = "pw">
                             </div>
                             <div class="group-input">
                                 <label for="con-pass">비밀번호 확인</label>
@@ -162,11 +162,11 @@
                             </div>
                             <div class="group-input">
                                 <label for="con-pass">사용하실 닉네임</label>
-                                <input type="text" id="nickname">
+                                <input type="text" id="nickName" name ="nickName">
                             </div>
                             <div class="group-input">
                                 <label for="con-pass">거래희망 지역</label>
-                                <input type="text" id="area">
+                                <input type="text" id="area" name = "area">
                             </div>
                             <button type="submit" class="site-btn register-btn">회원가입</button>
                         </form>

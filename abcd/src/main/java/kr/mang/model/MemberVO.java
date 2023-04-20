@@ -2,74 +2,84 @@ package kr.mang.model;
 
 public class MemberVO {
 
-	private String ID ;
+	private String id ;
 	private String pw ;
-	private String tell ;
+	private String tel ;
 	private String area ;
 	private String name ;
-	private String  nickName;
-	private String  Manner;
+	private String nickName;
+	private String manner;
 	
-	public MemberVO(String iD, String pw, String tell, String area, String name, String nickName, String manner) {
+	public MemberVO(String id, String pw, String tel, String area, String name, String nickName, String manner) {
 		super();
-		ID = iD;
+		this.id = id;
 		this.pw = pw;
-		this.tell = tell;
+		this.tel = tel;
 		this.area = area;
 		this.name = name;
 		this.nickName = nickName;
-		Manner = manner;
+		this.manner = manner;
 	}
 	
 	public MemberVO() {
 		
 	}
-	
-	
-	public String getID() {
-		return ID;
+
+	public String getId() {
+		return id;
 	}
-	public void setID(String iD) {
-		ID = iD;
+
+	public void setId(String id) {
+		this.id = id;
 	}
+
 	public String getPw() {
 		return pw;
 	}
+
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	public String getTell() {
-		return tell;
+
+	public String getTel() {
+		return tel;
 	}
-	public void setTell(String tell) {
-		this.tell = tell;
+
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
+
 	public String getArea() {
 		return area;
 	}
+
 	public void setArea(String area) {
 		this.area = area;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getNickName() {
 		return nickName;
 	}
+
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
+
 	public String getManner() {
-		return Manner;
+		return manner;
 	}
+
 	public void setManner(String manner) {
-		Manner = manner;
+		this.manner = manner;
 	}
-	
-	
 	
 	
 }

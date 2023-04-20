@@ -139,14 +139,14 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="login-form">
                         <h2>로그인</h2>
-                        <form action="#">
+                        <form action="Login.do" method = "post">
                             <div class="group-input">
                                 <label for="username">ID</label>
-                                <input type="text" id="username">
+                                <input type="text" id="username" name = "id">
                             </div>
                             <div class="group-input">
                                 <label for="pass">Password</label>
-                                <input type="text" id="pass">
+                                <input type="password" id="pw" name = "pw">
                             </div>
                             <div class="group-input gi-check">
                                 <div class="gi-more">
