@@ -2,12 +2,12 @@
 <html lang="zxx">
 
 <style>
-    <!-- 사진 
-    -->
+
+
     .single-banner
     {
     width:
-    560.98px;
+    400px;
     height:
     320.55px;
     overflow:
@@ -15,20 +15,24 @@
     }
     .single-banner
     {
-    width:
-    570.00px;
+   width:
+    400px;
     height:
-    330.55px;
+    320.55px;
     overflow:
     hidden;
     }
+    
     div>li1 {
     background-color
     :orange;
     }
-	div >.container {
-	margin-left: 520px;
-	}
+    
+    ul.dropdown {
+    width: 200px;
+    height: 600px;
+    }
+
 
 
 
@@ -38,10 +42,11 @@ margin-top: 10px;
 margin-left: 1600px;
 }
 
-.logo {
-width: 300px;
-
+div >.container {
+margin-left: 600px;
 }
+
+
 
 
 
@@ -77,7 +82,6 @@ width: 300px;
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
     <!-- Header Section Begin -->
     <header class="header-section">
 
@@ -85,53 +89,25 @@ width: 300px;
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
-
                         <a href="./메인.jsp">
                             <img src="./img/로고.png" alt="">
                         </a>
-
-                        <a href="./index.html">
-                            <img src="./메인사진파일/로고.png" alt="">
-                        </a>
-
-
                     </div>
-
-
-                    <div class="col-lg-7 col-md-7">
-                        <div class="advanced-search">
-                            <div class="input-group">
-                                <input type="text" placeholder="검색">
-                                <button type="button"><i class="ti-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-
-
                     <div class="col-lg-3 text-right col-md-3">
-
-                        <ul class="nav-right">
-                            <li class="heart-icon">
-                                <a href="#">
-                                    <i class="icon_MSY_alt">로그인</i>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+        
+        
+        
         <div class="nav-item">
             <div class="container">
-                <div class="nav-depart">
-
-                </div>
+                <div class="nav-depart"></div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
-
-
+                        
                         <li><a href="#">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
@@ -161,138 +137,24 @@ width: 300px;
                                 <li><a href="#">좋아요 목록</a></li>
                             </ul>
                         </li>
-
+                        
                     </ul>
                 </nav>
-                <div id="mobile-menu-wrap"></div>
             </div>
         </div>
     </header>
-    <!-- Header End -->
-    
-    
 
-    <!-- Hero Section Begin -->
-    <!-- 1번째사진 -->
-    <section class="hero-section">
-        <div class="hero-items owl-carousel">
-            <div class="single-hero-items set-bg" data-setbg="img/hero-1.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <span>작은글씨</span>
-                            <h1>큰글씨</h1>
-                            <p>간단한설명</p>
-                            <a href="#" class="primary-btn">바로가기버튼</a>
-                        </div>
-                    </div>
-                    <div class="off-card">
-                        <h2>Sale <span>50%</span></h2>
-                    </div>
-                </div>
-            </div>
-            <!-- 2번째사진 -->
-            <div class="single-hero-items set-bg" data-setbg="img/hero-2.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <span>작은글씨</span>
-                            <h1>큰글씨</h1>
-                            <p>간단한설명</p>
-                            <a href="#" class="primary-btn">바로가기버튼</a>
-                        </div>
-                    </div>
-                    <div class="off-card">
-                        <h2>Sale <span>50%</span></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 중고거래 -->
+  <!-- 사진등록 -->
+  
+  
+  
     <div class="banner-section spad">
         <div class="container-fluid">
-            
-          <div class="nav-item">
-            <div class="container">
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li class="active"><a href="./index.html">중고거래</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-            
-            
-
-
-            <div class="row">
+            <div class="img-thumbnail">
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="banner-section spad">
-        <div class="container-fluid">
-		
-		<div class="nav-item">
-            <div class="container">
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li class="active"><a href="./index.html">더보기</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div></div></div>
-    
-    
-
-    
-
-    <!-- 커뮤니티 -->
-
-    <div class="banner-section spad">
-        <div class="container-fluid">
-		
-		<div class="nav-item">
-            <div class="container">
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li class="active"><a href="./index.html">커뮤니티</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="./img/강아지.png" alt="">
+                    	<img src="./img/">
                     </div>
                 </div>
             </div>
@@ -300,19 +162,34 @@ width: 300px;
     </div>
     
     
-    <div class="banner-section spad">
-        <div class="container-fluid">
-		
-		<div class="nav-item">
-            <div class="container">
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li class="active"><a href="./index.html">더보기</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div></div></div>
+
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 
     <!-- Man Banner Section End -->
 
