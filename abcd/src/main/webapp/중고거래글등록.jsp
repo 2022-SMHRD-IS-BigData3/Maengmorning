@@ -34,7 +34,6 @@
     div .category-option {
         margin-bottom: 30px;
         margin-left: 15px;
-
     
     }
 
