@@ -187,10 +187,6 @@ margin-left: 520px;
             </div>
         </div>
     </div>
-                    
-                    
-                    
-                    
                         <div class="tab-item">
                             <ul class="nav" role="tablist">
                                 <li>
