@@ -2,10 +2,10 @@
 <html lang="zxx">
 
 <style>
-
+	<!-- 사진 -->
     .single-banner {
-         width: 570.98px;
-         height: 330.55px;
+         width: 560.98px;
+         height: 320.55px;
          overflow: hidden;
      }
      .single-banner {
@@ -13,17 +13,23 @@
          height: 330.55px;
          overflow: hidden;
      }
+   
+     div>li1{
+     background-color :orange;
+     }
      
-     
+     <!-- 버튼 -->
      .col-lg-12{
          margin-top: 10px;
-         margin-left: 1700px;
+         margin-left: 1600px;
      }
  
      .logo {
          width: 300px;
          
      }
+     
+   
  
  </style>
 
@@ -34,7 +40,7 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fashi | Template</title>
+    <title>메인</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -64,11 +70,16 @@
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
-                     
+
+                        <a href="./메인.jsp">
+                            <img src="./img/로고.png" alt="">
+                        </a>
+
                             <a href="./index.html">
                                 <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
+
                     </div>
 
                     
@@ -184,65 +195,63 @@
     <!-- 중고거래 -->
     <div class="banner-section spad">
         <div class="container-fluid">
-          <h1>중고거래</h1>
+          <Jung style="background-color: black; display: inline-block; color: white; font-size: 36px;">중고거래</Jung>
+
+          
           <div class="row">
             <div class="col-lg-4">
               <div class="single-banner">
-                <img src="./메인사진파일/강아지.png" alt="">
-                <div class="inner-text"></div>
+                <img src="./img/강아지.png" alt="">
               </div>
             </div>
             <div class="col-lg-4">
               <div class="single-banner">
-                <img src="./메인사진파일/강아지.png" alt="">
-                <div class="inner-text"></div>
+                 <img src="./img/강아지.png" alt="">
               </div>
             </div>
             <div class="col-lg-4">
               <div class="single-banner">
-                <img src="./메인사진파일/강아지.png" alt="">
-                <div class="inner-text"></div>
+                 <img src="./img/강아지.png" alt="">
               </div>
-            </div>
-            <div class="col-lg-12">
-                <h3 href="#" style="text-align: right;" class="btn primary-btn">더보기</h3>
             </div>
           </div>
         </div>
       </div>
-      
-
+ 
+            <div class="col-lg-12" style="text-align: right;">
+                <href="#" style="text-align: right;" class="btn primary-btn">더보기</href>
+            </div>
+           
 <!-- 커뮤니티 -->
     
-<div class="banner-section spad">
-    <div class="container-fluid">
-      <h1>커뮤니티</h1>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="single-banner">
-            <img src="./메인사진파일/강아지.png" alt="">
-            <div class="inner-text"></div>
+   <div class="banner-section spad">
+        <div class="container-fluid">
+          <Jung style="background-color: black; display: inline-block; color: white; font-size: 36px;">커뮤니티</Jung>
+
+          
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="single-banner">
+                <img src="./img/강아지.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="single-banner">
+                 <img src="./img/강아지.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="single-banner">
+                 <img src="./img/강아지.png" alt="">
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="single-banner">
-            <img src="./메인사진파일/강아지.png" alt="">
-            <div class="inner-text"></div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="single-banner">
-            <img src="./메인사진파일/강아지.png" alt="">
-            <div class="inner-text"></div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <!-- <h3 href="#" style="text-align: right;" class="primary-btn">더보기</h3> -->
-          <button style="text-align: right;" class="btn primary-btn">더보기</button>
         </div>
       </div>
-    </div>
-  </div>
+ 
+            <div class="col-lg-12" style="text-align: right;">
+                <href="#" style="text-align: right;" class="btn primary-btn">더보기</href>
+            </div><br><br><br>
   
     <!-- Man Banner Section End -->
 
@@ -254,51 +263,43 @@
                 <div class="col-lg-3">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="#" ><img src="img/로고.png" alt=""></a>
+                        	<li1>Email: hello.colorlib@gmail.com</li1>
                         </div>
-                        <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello.colorlib@gmail.com</li>
-                        </ul>
-                        <div class="footer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
+                       
+                        
                     </div>
                 </div>
                 <div class="col-lg-2 offset-lg-1">
                     <div class="footer-widget">
-                        <h5>Information</h5>
+                        <h5>팀장</h5>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
+                            <li><a href="#">팀원</a></li>
+                            <li><a href="#">팀원</a></li>
+                            <li><a href="#">팀원</a></li>
+                            <li><a href="#">팀원</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="footer-widget">
-                        <h5>My Account</h5>
+                        <h5>정민규</h5>
                         <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Shopping Cart</a></li>
-                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">류이수</a></li>
+                            <li><a href="#">이상원</a></li>
+                            <li><a href="#">이도연</a></li>
+                            <li><a href="#">맹성영</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="newslatter-item">
-                        <h5>Join Our Newsletter Now</h5>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Enter Your Mail">
-                            <button type="button">Subscribe</button>
-                        </form>
+                        <h5>야 뭐먹을거냐고</h5>
+                        <p>진정해,,</p>
+                        <p>...</p>
+                        <p>알아서해</p>
+                        <p>아니 뭐 왜</p>
+                      
                     </div>
                 </div>
             </div>
@@ -306,16 +307,7 @@
         <div class="copyright-reserved">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copyright-text">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </div>
-                        <div class="payment-pic">
-                            <img src="img/payment-method.png" alt="">
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
