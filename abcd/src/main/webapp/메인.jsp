@@ -14,13 +14,9 @@
          overflow: hidden;
      }
    
-   
      div>li1{
      background-color :orange;
      }
-     
-     
-     
      
      <!-- 버튼 -->
      .col-lg-12{
