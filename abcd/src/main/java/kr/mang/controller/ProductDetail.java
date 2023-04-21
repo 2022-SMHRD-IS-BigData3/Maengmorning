@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ProductDetail implements Command{
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int pro_id = Integer.parseInt(request.getParameter("pro_id"));
-		P
+		
 		
 		return null;
 	}
