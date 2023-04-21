@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class ProductlistVO {
 	private int pro_id;
-	private String sellid;
+	private String sellerid;
 	private String imgurl;
 	private int price;
 	private String title;
@@ -13,12 +13,12 @@ public class ProductlistVO {
 	private Date pro_date;
 	
 	public ProductlistVO() {}
-
-	public ProductlistVO(int pro_id, String sellid, String imgurl, int price, String title, String area, String pro_state,
-			Date pro_date) {
+	
+	public ProductlistVO(int pro_id, String sellerid, String imgurl, int price, String title, String area,
+			String pro_state, Date pro_date) {
 		super();
 		this.pro_id = pro_id;
-		this.sellid = sellid;
+		this.sellerid = sellerid;
 		this.imgurl = imgurl;
 		this.price = price;
 		this.title = title;
@@ -35,12 +35,12 @@ public class ProductlistVO {
 		this.pro_id = pro_id;
 	}
 
-	public String getSellid() {
-		return sellid;
+	public String getSellerid() {
+		return sellerid;
 	}
 
-	public void setSellid(String sellid) {
-		this.sellid = sellid;
+	public void setSellerid(String sellerid) {
+		this.sellerid = sellerid;
 	}
 
 	public String getImgurl() {
@@ -90,6 +90,8 @@ public class ProductlistVO {
 	public void setPro_date(Date pro_date) {
 		this.pro_date = pro_date;
 	}
+
+	
 	
 	
 }

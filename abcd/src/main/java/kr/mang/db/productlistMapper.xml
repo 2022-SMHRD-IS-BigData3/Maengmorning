@@ -8,11 +8,11 @@
 	<!-- paramterType : DAO에서 받아오는 데이터가 있을 때 작성 >> 반드시 full name 작성(패키지 명까지) -->
 	
 	<select id="productlist" resultType="kr.mang.model.ProductlistVO"><!-- resultType은 select할때 사용 -->
-  	select* from 등록물품 <!-- order by num desc -->
+  	select* from 등록물품 order by pro_id desc 
   </select>
   
   <select id="productdetail" resultType="kr.mang.model.ProductlistVO">
-  	
+  	select * from 등록물품 where pro_id = #{pro_id}
   </select>
   
   
