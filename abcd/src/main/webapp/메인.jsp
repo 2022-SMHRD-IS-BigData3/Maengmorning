@@ -124,8 +124,8 @@
                         <li><a href="#">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
-                                <li><a href="#"> 장난감/도서</a></li>
-                                <li><a href="#">의류</a></li>
+                                <li><a href="https://www.toyplus.co.kr/goods/goods_list.php?cateCd=001001"> 장난감/도서</a></li>
+                                <li><a href="https://wiisnt.co.kr/product/list.html?cate_no=114">의류</a></li>
                                 <li><a href="#">가구</a></li>
                                 <li><a href="#">침구류</a></li>
                                 <li><a href="#"> 생활용품</a></li>
@@ -143,7 +143,7 @@
 
                         <li><a href="#">마이페이지</a>
                             <ul class="dropdown">
-                                <li><a href="#">판매/구매목록</a></li>
+                                <li><a href="./장바구니.jsp">판매/구매목록</a></li>
                                 <li><a href="#">매너온도</a></li>
                                 <li><a href="#">개인정보 수정</a></li>
                                 <li><a href="#">좋아요 목록</a></li>
