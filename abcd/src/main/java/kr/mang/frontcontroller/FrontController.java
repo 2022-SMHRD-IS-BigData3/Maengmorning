@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.mang.controller.ProductList;
 import kr.mang.controller.Command;
 import kr.mang.controller.JoinService;
 import kr.mang.controller.LoginService;
@@ -21,53 +22,33 @@ import kr.mang.controller.LoginService;
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-
 	private HashMap<String,Command> map = null;
-	
-	
-	
-	
 	@Override
 	public void init() throws ServletException {
-		
 		map = new HashMap<>();
-		
 		map.put("Login.do",new LoginService());
 		map.put("Join.do",new JoinService());
-//		map.put("SelectAll.do",new SelectAllService());
+		map.put("ProductList.do",new ProductList());
 //		map.put("EmailCheck.do", new EmailCheckService());
 //		map.put("Ajax.do", new Ajax());
 	}
 	// ---> service 메소드 완성 !!! ---> 더이상 손 안대도 됨!!
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		String uri = request.getRequestURI();
-
 		String cp = request.getContextPath();
-
 		String finaluri = uri.substring(cp.length() + 1);
-
 		Command com = null;
 		request.setCharacterEncoding("UTF-8");
-		
 		String finalpath = null;
-		
 		if (finaluri.contains("Go")) {
 			finalpath = finaluri.replaceAll("Go", "").toLowerCase().replaceAll(".do", ".jsp");
 		}else {
 			com =map.get(finaluri);
 			finalpath = com.execute(request, response);
 		}
-
-		
 		if(finalpath == null) {
-		
-			
-			
 		}
-
 		else if (finalpath.contains("redirect:/")) {
 			response.sendRedirect(finalpath.substring(10));
 		} else {

@@ -6,19 +6,13 @@
 <!-- sql를 기술하는 공간 -->
 
 <mapper namespace="kr.mang.model.MemberDAO">
-	<!-- namespace 해당하는 mapper 파일을 사용하게 될 DAO이름을 작성해주는 것이 원칙 -->
-
+   <!-- namespace 해당하는 mapper 파일을 사용하게 될 DAO이름을 작성해주는 것이 원칙 -->
 <insert id="join"  parameterType="kr.mang.model.MemberVO" >
-
 insert into 회원정보 
 values (#{id}, #{pw}, #{tel}, #{area}, #{name}, #{nickName})
-
-
 </insert>
 
 <select id="login" parameterType="kr.mang.model.MemberVO" resultType="kr.mang.model.MemberVO">
 select 회원ID from 회원정보 where 회원ID = #{id} and pw = #{pw}
-
-
 </select>
 </mapper>

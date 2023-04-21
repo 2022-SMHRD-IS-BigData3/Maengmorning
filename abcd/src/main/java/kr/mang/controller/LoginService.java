@@ -22,6 +22,10 @@ public class LoginService implements Command {
 		String id =request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
+		System.out.println(id);
+		System.out.println(pw);
+		
+		
 		MemberVO vo = new MemberVO();
 		
 		vo.setId(id);

@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -198,6 +199,7 @@
                         </div>
                     </div>
                 </div>
+              
                 <div class="col-lg-9 order-1 order-lg-2">
                     <div class="product-show-option">
                         <div class="row">
@@ -214,12 +216,14 @@
                             </div>
                         </div>
                     </div>
+                 
+                  <c:forEach items="${productlist}" var="list">
                     <div class="product-list">
                         <div class="row">
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/220952353_2_1681328301_w856.jpg" alt="">
+                                        <img src="${list.imgurl}">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
@@ -227,15 +231,19 @@
                                     <div class="pi-text">
                                         <div class="catagory-name">외출용품</div>
                                         <a href="#">
-                                            <h5>(새상품)무냐무냐 오가닉 수면조끼(65,120)</h5>
+                                            <h5>${list.title}</h5>
                                         </a>
                                         <div class="product-price">
-                                            7,000원<br>
+                                            ${list.price}<br>
                                         </div>
-                                        <a class="area">용봉동</a>
+                                        <a class="area">${list.area }</a>
                                     </div>
                                 </div>
                             </div>
+                            </div>
+                            </div>
+                        </c:forEach>
+                         <!-- 
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
@@ -398,6 +406,8 @@
                             </div>
                         </div>
                     </div>
+                    -->
+               
                 </div>
             </div>
         </div>
