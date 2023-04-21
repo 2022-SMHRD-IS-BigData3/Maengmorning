@@ -30,5 +30,7 @@
 	<mappers>
 	<!-- mapper 파일이 추가될 때마다, 하나씩 추가해서 기술해줄 것!!! -->
 		<mapper resource="kr/mang/db/MemberMapper.xml" />
+		<mapper resource="kr/mang/db/BoardListMapper.xml" />
+		
 	</mappers>
 </configuration>
