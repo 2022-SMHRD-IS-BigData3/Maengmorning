@@ -25,8 +25,7 @@
     }
     
     div>li1 {
-    background-color
-    :orange;
+    color : red;
     }
     
     ul.dropdown {
@@ -44,7 +43,7 @@ margin-left: 1600px;
 }
 
 div >.container {
-margin-left: 600px;
+margin-left: 495px;
 }
 
 
@@ -261,7 +260,8 @@ margin-left: 600px;
                 <div class="col-lg-3">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <a href="#"><img src="img/로고.png" alt=""></a>
+                            <a href="#"><img src="img/하얀배경로고.png" alt=""></a>
+                            <br>
                             <li1>Email: hello.colorlib@gmail.com</li1>
                         </div>
 
