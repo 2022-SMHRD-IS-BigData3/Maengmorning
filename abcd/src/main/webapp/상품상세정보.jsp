@@ -84,7 +84,7 @@
                         <li class="active"><a href="./index.html">Home</a></li>
                        
                        
-                        <li><a href="#">중고거래</a>
+                        <li><a href="중고거래목록.jsp">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="#"> 장난감/도서</a></li>
