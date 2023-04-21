@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -9,7 +8,7 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>중고거래목록</title>
+    <title>커뮤니티목록</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -58,6 +57,29 @@
          width: 300px;
          
      }
+
+     /* 스타일링 */
+     table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #e7ab3c;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #ddd;
+      }
+      h3 {
+        margin-bottom: 20px;
+      }
  
 </style>
 
@@ -176,13 +198,8 @@
                     <div class="filter-widget">
                         <h4 class="fw-title">Categories</h4>
                         <ul class="filter-catagories">
-                            <li><a href="#">외출용품</a></li>
-                            <li><a href="#">장난감/도서</a></li>
-                            <li><a href="#">의류</a></li>
-                            <li><a href="#">가구</a></li>
-                            <li><a href="#">침구류</a></li>
-                            <li><a href="#">생활용품</a></li>
-                            <li><a href="#">기타</a></li>
+                            <li><a href="#">정보공유</a></li>
+                            <li><a href="#">자유게시판</a></li>
                         </ul>
                     </div>
                    
@@ -199,8 +216,11 @@
                         </div>
                     </div>
                 </div>
-              
                 <div class="col-lg-9 order-1 order-lg-2">
+                    
+                    
+                    <h3>커뮤니티</h3>
+
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
@@ -212,202 +232,86 @@
                                 </div>
                             </div>
                             <div class="col-lg-5 col-md-5 text-right">
-                                <button id="registration">물품등록</button>
+                                <button id="registration">글 등록</button>
                             </div>
                         </div>
                     </div>
-                 
-                  <c:forEach items="${productlist}" var="list">
-                    <div class="product-list">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="${list.imgurl}">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">외출용품</div>
-                                        <a href="#">
-                                            <h5>${list.title}</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            ${list.price}<br>
-                                        </div>
-                                        <a class="area">${list.area }</a>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            </div>
-                        </c:forEach>
-                         <!-- 
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/189551586_1_1679277101_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">외출용품</div>
-                                        <a href="#">
-                                            <h5>유아운동화</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            13,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/221668090_1_1681957202_w856.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">장난감/도서</div>
-                                        <a href="#">
-                                            <h5>티니핑 키링 (미개봉)</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            2,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/219784588_1_1680334787_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">장난감/도서</div>
-                                        <a href="#">
-                                            <h5>아이 스마트 팔레트 안드로이드 패드 그림그리기 색칠공부 [미개봉 새제품]</h5>
-                                        </a>
-                                        <div class="product-price">
-                                           9,900원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/173217013_1_1639641301_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">가구</div>
-                                        <a href="#">
-                                            <h5>유아 식탁의자</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            45,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/221237820_2_1681569669_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">장난감/도서</div>
-                                        <a href="#">
-                                            <h5>시크릿쥬쥬 가방 시큐릿쥬쥬 진주엔젤 크로스 백</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            13,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/189991743_1_1679976156_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">침구류</div>
-                                        <a href="#">
-                                            <h5>낮잠이불</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            35,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/201725750_1_1665328203_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">기타</div>
-                                        <a href="#">
-                                            <h5>데이지생일풍선세트</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            18,900원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/211308153_1_1676522062_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">생활용품</div>
-                                        <a href="#">
-                                            <h5>tgm 젖병. 젖꼭지2개씩 새것이에요.</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            10,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
-               
+                    
+                        <table>
+                        <thead>
+                            <tr>
+                            <th>글번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>동네</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>1</td>
+                            <td>첫 번째 글</td>
+                            <td>작성자1</td>
+                            <td>용봉동</td>
+                            </tr>
+                            <tr>
+                            <td>2</td>
+                            <td>두 번째 글</td>
+                            <td>작성자2</td>
+                            <td>용봉동</td>
+                            </tr>
+                            <tr>
+                            <td>3</td>
+                            <td>세 번째 글</td>
+                            <td>작성자3</td>
+                            <td>용봉동</td>
+                            </tr>
+                            <tr>
+                            <td>4</td>
+                            <td>네 번째 글</td>
+                            <td>작성자1</td>
+                            <td>용봉동</td>
+                            </tr>
+                            <tr>
+                            <td>5</td>
+                            <td>다섯 번째 글</td>
+                            <td>작성자2</td>
+                            <td>용봉동</td>
+                            </tr>
+                            <tr>
+                            <td>6</td>
+                            <td>여섯 번째 글</td>
+                            <td>작성자3</td>
+                            <td>용봉동</td>
+                            </tr>
+                            <tr>
+                            <td>7</td>
+                            <td>일곱 번째 글</td>
+                            <td>작성자1</td>
+                            <td>용봉동</td>
+                            </tr>
+                            <tr>
+                            <td>8</td>
+                            <td>여덟 번째 글</td>
+                            <td>작성자2</td>
+                            <td>용봉동</td>
+                            </tr>
+                            <tr>
+                            <td>9</td>
+                            <td>아홉 번째 글</td>
+                            <td>작성자3</td>
+                            <td>용봉동</td>
+                            </tr>
+                            <tr>
+                            <td>10</td>
+                            <td>열 번째 글</td>
+                            <td>작성자3</td>
+                            <td>용봉동</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+
+
                 </div>
             </div>
         </div>

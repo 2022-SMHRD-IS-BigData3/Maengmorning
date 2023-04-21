@@ -2,6 +2,7 @@
 <html lang="zxx">
 
 <style>
+<<<<<<< HEAD
     <!-- 사진 
     -->
     .single-banner
@@ -46,6 +47,38 @@ width: 300px;
 
 
 </style>
+=======
+	<!-- 사진 -->
+    .single-banner {
+         width: 560.98px;
+         height: 320.55px;
+         overflow: hidden;
+     }
+     .single-banner {
+         width: 570.00px;
+         height: 330.55px;
+         overflow: hidden;
+     }
+   
+     div>li1{
+     background-color :orange;
+     }
+     
+     <!-- 버튼 -->
+     .col-lg-12{
+         margin-top: 10px;
+         margin-left: 1600px;
+     }
+ 
+     .logo {
+         width: 300px;
+         
+     }
+     
+   
+ 
+ </style>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
 
 <head>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>

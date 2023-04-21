@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- SQL구문 기술하는 공간 -->
+<mapper namespace="kr.mang.model.ProductlistDAO">
+	<!-- namespace : 해당하는 mapper 파일을 사용하게 될 DAO의 이름을 작성해주는 것이 원칙 -->
+	<!-- paramterType : DAO에서 받아오는 데이터가 있을 때 작성 >> 반드시 full name 작성(패키지 명까지) -->
+	
+	<select id="productlist" resultType="kr.mang.model.ProductlistVO"><!-- resultType은 select할때 사용 -->
+  	select* from 등록물품 <!-- order by num desc -->
+  </select>
+  
+  <select id="productdetail" resultType="kr.mang.model.ProductlistVO">
+  	
+  </select>
+  
+  
+</mapper>
