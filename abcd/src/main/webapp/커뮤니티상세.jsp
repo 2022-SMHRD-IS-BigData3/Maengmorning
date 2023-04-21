@@ -119,7 +119,7 @@
                     <div class="col-lg-2 col-md-2">
 
                         <a href="./index.html">
-                            <img src="./메인사진파일/로고.png" alt="">
+                            <img src="./img/로고.png" alt="">
                         </a>
 
                     </div>
