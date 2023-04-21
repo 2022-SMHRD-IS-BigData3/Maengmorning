@@ -60,19 +60,17 @@
         }
     </style>
 </head>
-
-<body>
-    <div class="message-container">
-        <form>
-            <label for="recipient">받는 사람:</label>
-            <input type="text" id="recipient" name="recipient">
-            <label for="subject">제목:</label>
-            <input type="text" id="subject" name="subject">
-            <label for="message">내용:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">보내기</button>
-        </form>
-    </div>
-</body>
-
+		<body>
+		    <div class="message-container">
+		        <form>
+		            <label for="recipient">받는 사람:</label>
+		            <input type="text" id="recipient" name="recipient">
+		            <label for="subject">제목:</label>
+		            <input type="text" id="subject" name="subject">
+		            <label for="message">내용:</label>
+		            <textarea id="message" name="message"></textarea>
+		            <button type="submit">보내기</button>
+		        </form>
+		    </div>
+		</body>
 </html>
