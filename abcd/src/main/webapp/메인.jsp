@@ -14,10 +14,9 @@
          overflow: hidden;
      }
      
-     
      .col-lg-12{
          margin-top: 10px;
-         margin-left: 1700px;
+         margin-left: 1530px;
      }
  
      .logo {
@@ -64,11 +63,16 @@
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
-                     
+
+                        <a href="./메인.jsp">
+                            <img src="./img/로고.png" alt="">
+                        </a>
+
                             <a href="./index.html">
                                 <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
+
                     </div>
 
                     
@@ -188,19 +192,20 @@
           <div class="row">
             <div class="col-lg-4">
               <div class="single-banner">
-                <img src="./메인사진파일/강아지.png" alt="">
+                <img src="./img/강아지.png" alt="">
+              
                 <div class="inner-text"></div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="single-banner">
-                <img src="./메인사진파일/강아지.png" alt="">
+                 <img src="./img/강아지.png" alt="">
                 <div class="inner-text"></div>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="single-banner">
-                <img src="./메인사진파일/강아지.png" alt="">
+                 <img src="./img/강아지.png" alt="">
                 <div class="inner-text"></div>
               </div>
             </div>
@@ -220,23 +225,23 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="single-banner">
-            <img src="./메인사진파일/강아지.png" alt="">
+             <img src="./img/강아지.png" alt="">
             <div class="inner-text"></div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="single-banner">
-            <img src="./메인사진파일/강아지.png" alt="">
+             <img src="./img/강아지.png" alt="">
             <div class="inner-text"></div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="single-banner">
-            <img src="./메인사진파일/강아지.png" alt="">
+             <img src="./img/강아지.png" alt="">
             <div class="inner-text"></div>
           </div>
         </div>
-        <div class="col-lg-12">
+        	<div class="col-lg-12">
           <!-- <h3 href="#" style="text-align: right;" class="primary-btn">더보기</h3> -->
           <button style="text-align: right;" class="btn primary-btn">더보기</button>
         </div>
