@@ -14,7 +14,6 @@
          overflow: hidden;
      }
      
-     
      .col-lg-12{
          margin-top: 10px;
          margin-left: 1700px;
@@ -64,11 +63,16 @@
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
-                     
+
+                        <a href="./메인.jsp">
+                            <img src="./img/로고.png" alt="">
+                        </a>
+
                             <a href="./index.html">
                                 <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
+
                     </div>
 
                     
