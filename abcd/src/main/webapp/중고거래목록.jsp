@@ -231,6 +231,7 @@
                                     <div class="pi-text">
                                         <div class="catagory-name">외출용품</div>
                                         <a href="#">
+                                            <span>${list.pro_id}</span>
                                             <h5>${list.title}</h5>
                                         </a>
                                         <div class="product-price">
