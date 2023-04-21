@@ -33,6 +33,7 @@
 
 
 
+
 <!-- 버튼 -->
 .col-lg-12{
 margin-top: 10px;
@@ -47,6 +48,12 @@ width: 300px;
 div>.container{
 margin-left: 600px;
 }
+
+.nav-item>a{
+margin-right: 1600px;
+
+}
+
 
 
 </style>
@@ -137,7 +144,7 @@ margin-left: 600px;
                         <li class="active"><a href="./index.html">Home</a></li>
 
 
-                        <li><a href="#">중고거래</a>
+                        <li><a href="#">중고거래</a> 
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="https://www.toyplus.co.kr/goods/goods_list.php?cateCd=001001"> 장난감/도서</a>
