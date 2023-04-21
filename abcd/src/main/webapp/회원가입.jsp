@@ -8,7 +8,7 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fashi | Template</title>
+    <title>회원가입</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <!-- Page Preloder -->
+<!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -38,11 +38,16 @@
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
-                     
+
+                        <a href="./메인.jsp">
+                            <img src="./img/로고.png" alt="">
+                        </a>
+
                             <a href="./index.html">
                                 <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
+
                     </div>
 
                     
