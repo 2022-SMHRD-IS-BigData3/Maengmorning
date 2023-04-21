@@ -1,12 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+
 <head>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<meta charset="UTF-8">
-<title>Insert title here</title>
- <style>
+    <meta charset="UTF-8">
+    <title>쪽지 보관함</title>
+    <style>
         ul.note-list {
             list-style: none;
             padding: 0;
@@ -72,38 +71,41 @@
         }
     </style>
 </head>
+
 <body>
-		<div class="container">
-	        <ul class="note-list">
-	            <li class="note-item">
-	                <div>
-	                    <button class = "button">받은쪽지</button>
-	                    <button class = "button">보낸쪽지</button>
-	                </div>
-	                
-	                <div class="note-title">닉네임 : DB에서 받아올 데이터(닉네임)</div>
-	                <div class="note-info">내용 : DB에서 받아올 데이터(내용)</div>
-	                <button class="delete-btn">삭제</button>
-	            </li>
-	            <li class="note-item">
-	                <div class="note-title">닉네임 : DB에서 받아올 데이터(닉네임)</div>
-	                <div class="note-info">내용 : DB에서 받아올 데이터(내용)</div>
-	                <button class="delete-btn">삭제</button>
-	            </li>
-	            <li class="note-item">
-	                <div class="note-title">닉네임 : DB에서 받아올 데이터(닉네임)</div>
-	                <div class="note-info">내용 : DB에서 받아올 데이터(내용)</div>
-	                <button class="delete-btn">삭제</button>
-	            </li>
-	        </ul>
-	        <div class="note-content">
-	            <h3>쪽지 제목</h3>
-	            <div class="note-detail">
-	                <p>닉네임 : DB에서 받아올 데이터(닉네임)</p>
-	                <p>받은 날짜 :  DB에서 받아올 데이터(날짜)</p>
-	                <p>내용 : 쪽지 상세 내용 </p>
-	            </div>
-	        </div>
-	    </div>
+    
+    <div class="container">
+        <ul class="note-list">
+            <li class="note-item">
+                <div>
+                    <button class = "button">받은쪽지</button>
+                    <button class = "button">보낸쪽지</button>
+                </div>
+                
+                <div class="note-title">닉네임 : DB에서 받아올 데이터(닉네임)</div>
+                <div class="note-info">내용 : DB에서 받아올 데이터(내용)</div>
+                <button class="delete-btn">삭제</button>
+            </li>
+            <li class="note-item">
+                <div class="note-title">닉네임 : DB에서 받아올 데이터(닉네임)</div>
+                <div class="note-info">내용 : DB에서 받아올 데이터(내용)</div>
+                <button class="delete-btn">삭제</button>
+            </li>
+            <li class="note-item">
+                <div class="note-title">닉네임 : DB에서 받아올 데이터(닉네임)</div>
+                <div class="note-info">내용 : DB에서 받아올 데이터(내용)</div>
+                <button class="delete-btn">삭제</button>
+            </li>
+        </ul>
+        <div class="note-content">
+            <h3>쪽지 제목</h3>
+            <div class="note-detail">
+                <p>닉네임 : DB에서 받아올 데이터(닉네임)</p>
+                <p>받은 날짜 :  DB에서 받아올 데이터(날짜)</p>
+                <p>내용 : 쪽지 상세 내용 </p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
