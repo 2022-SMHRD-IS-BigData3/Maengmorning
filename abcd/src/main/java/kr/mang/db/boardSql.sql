@@ -1,1 +1,1 @@
-SELECT*FROM 회원정보;
+SELECT*FROM 등록물품;

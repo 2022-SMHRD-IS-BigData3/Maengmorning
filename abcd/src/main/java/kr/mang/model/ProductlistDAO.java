@@ -8,11 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-
-
-
-
-public class BoardDAO {
+public class ProductlistDAO {
 	private static SqlSessionFactory sqlSessionFactory;
 	static {
 		try {
@@ -23,19 +19,18 @@ public class BoardDAO {
 			e.printStackTrace();
 		}
 	}
-	
-	public List<BoardVO> detail() {
+	// 게시판 전체 리스트 가져오기
+	public List<ProductlistVO> productList() {
 		SqlSession session = null;
-		List<BoardVO> detail = null;
+		List<ProductlistVO> list = null;
 		try {
 			session = sqlSessionFactory.openSession();
-			detail = session.selectList("detail");
+			list = session.selectList("productlist");
 		} finally {
 			session.close();
 		}
-		return detail;
+		return list;
 	}
-	
 
 	
 	

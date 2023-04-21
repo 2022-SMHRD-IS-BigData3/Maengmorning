@@ -253,7 +253,7 @@
                     </div>
                 </div>
               
-             <form action="/board" method="post">
+             <form action="" method="post">
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-6">
@@ -269,14 +269,14 @@
                             <div class="product-thumbs">
                                 <div class="producw제품설명t-thumbs-track ps-slider owl-carousel">
                                     <div class="pt active" data-imgbigurl="img/product-single/product-1.jpg"><img
-                                            src="https://momplace.co.kr/wp-content/uploads/2021/06/%EC%A0%96%EB%B3%91_%EB%8D%94%EB%B8%94%ED%95%98%ED%8A%B8.webp"
+                                            src="${imgul }"
                                             alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-2.jpg"><img
-                                            src="img/product-single/product-2.jpg" alt=""></div>
+                                            src="${imgul }" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="img/product-single/product-3.jpg" alt=""></div>
+                                            src="${imgul }" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="img/product-single/product-3.jpg" alt=""></div>
+                                            src="${imgul }" alt=""></div>
                                 </div>
                             </div>
                         </div>

@@ -2,7 +2,7 @@ package kr.mang.model;
 
 import java.util.Date;
 
-public class BoardVO {
+public class ProductlistVO {
 	private int pro_id;
 	private String sellid;
 	private String imgurl;
@@ -12,9 +12,9 @@ public class BoardVO {
 	private String pro_state;
 	private Date pro_date;
 	
-	public BoardVO() {}
+	public ProductlistVO() {}
 
-	public BoardVO(int pro_id, String sellid, String imgurl, int price, String title, String area, String pro_state,
+	public ProductlistVO(int pro_id, String sellid, String imgurl, int price, String title, String area, String pro_state,
 			Date pro_date) {
 		super();
 		this.pro_id = pro_id;
