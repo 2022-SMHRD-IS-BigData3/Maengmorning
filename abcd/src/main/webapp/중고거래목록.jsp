@@ -213,9 +213,11 @@
                                     </select>
                                 </div>
                             </div>
+                           <form action="ProductInput.do" method="post">
                             <div class="col-lg-5 col-md-5 text-right">
-                                <button id="registration">물품등록</button>
+                                <input type="submit" value="물품등록" class="button fit">
                             </div>
+                           </form>
                         </div>
                     </div>
                  
@@ -235,7 +237,7 @@
                                         <a href="#">
                                             <span>${list.pro_id}</span>
                                            <h5 id="title">
-                                            <a href="Productdetail.do?pro_id=${list.pro_id }">
+                                            <a href="Productdetail.do?pro_id=${list.pro_id}">
                                             	${list.title}
                                             </a>
                                            </h5>
@@ -244,7 +246,7 @@
                                             ${list.price}원<br>
                                         </div>
                                         <a class="area">${list.area }</a>
-                                        <a class="date"><fmt:formatDate value="${list.pro_date }" pattern="yyyy.MM.dd"/></a>
+                                        <a class="date"><fmt:formatDate value="${list.pro_date}" pattern="yyyy.MM.dd"/></a>
                                     </div>
                                 </div>
                             </div>

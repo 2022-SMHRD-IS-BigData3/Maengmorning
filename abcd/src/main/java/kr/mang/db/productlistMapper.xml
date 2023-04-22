@@ -11,9 +11,13 @@
   	select* from 등록물품 order by pro_id desc 
   </select>
   
-  <select id="productdetail" resultType="kr.mang.model.ProductlistVO">
-  	select * from 등록물품 where pro_id = #{pro_id}
+  <select id="productdetail" parameterType="int" resultType="kr.mang.model.ProductlistVO">
+  	SELECT * FROM 등록물품 WHERE PRO_ID = #{pro_id}
   </select>
   
+  <insert id="productinput" parameterType="kr.mang.model.ProductlistVO">
+  	insert into 등록물품(pro_id,sellerid,imgurl,title,area,pro_state)
+  	values(board_seq.nextval,#{sellerid},#{imgurl},#{title},#{area},#{pro_state})
+  </insert>
   
 </mapper>

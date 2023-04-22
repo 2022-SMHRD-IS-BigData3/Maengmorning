@@ -181,7 +181,7 @@
                     </div>
                 </div>
               
-             <form action="Productdetail.do" method="post">
+             <nav id="Productdetail.do">
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-6">
@@ -197,14 +197,14 @@
                             <div class="product-thumbs">
                                 <div class="producw제품설명t-thumbs-track ps-slider owl-carousel">
                                     <div class="pt active" data-imgbigurl="img/product-single/product-1.jpg"><img
-                                            src="${list.imgul }"
+                                            src="${list.imgurl}"
                                             alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-2.jpg"><img
-                                            src="${list.imgul }" alt=""></div>
+                                            src="${list.imgurl}" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="${list.imgul }" alt=""></div>
+                                            src="${list.imgurl}" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="${list.imgul }" alt=""></div>
+                                            src="${list.imgurl}" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -253,7 +253,7 @@
                         </div>
                     </div>
                  </div>
-               </form>
+               </nav>
                     <div class="product-tab">
                         <div class="tab-item">
                             <ul class="nav" role="tablist">

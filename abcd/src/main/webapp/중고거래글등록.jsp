@@ -187,7 +187,7 @@
     </div>
 
 
-
+<form action="ProductInput.do" method="post">
     <div class="col-lg-12" align="center">
         <div class="col-lg-6">
             <div class="contact-form">
@@ -195,14 +195,20 @@
                     <h4>물품등록</h4>
                     <div class="logo">
                         <a class="picture" href="#">
+                           <input type="image" class="form-control" id="image" name="image"> 
                             <img src="img/free-icon-camera-685655.png" alt="">
                         </a>
                     </div>
-                    <form action="#" class="comment-form">
+                    <!-- <form action="#" class="comment-form"> -->
                         <div class="row">
                             <div class="col-lg-12">
-                                <input type="text" placeholder="글 제목">
+                            	<label for="title">제목</label>
+                                <input type="text" placeholder="Enter title" id="title" name="title">
                             </div>
+                            <div class="form-group">
+									<label for="sellerid">작성자</label> <input type="text"
+										class="form-control" placeholder="Enter sellerid" id="sellerid" name="sellerid">
+							</div>
                                 <div class="category-option">
                                     <select class="sorting">
                                         <option value="">외출용품</option>
@@ -215,26 +221,28 @@
                                     </select>
                                 </div>
                                 <div class="area">
-                                    <input id="area" type="text" placeholder="거래지역">
+                                	<label for="area"> 거래지역</label>
+                                    <input id="area" name="area" type="text" placeholder="Enter area">
                                 </div>
                                 <div class="price">
-                                    <input id="price" type="text" placeholder="가격 작성">
+                                	<label for="price">가격</label>
+                                    <input id="price" name="price" type="number" placeholder="Enter price">
                                 </div>
 
                             <div class="col-lg-12">
-                                <textarea placeholder="글 내용"></textarea>
+                                <textarea row="7" class="form-control" id="pro_state" name="pro_state" placeholder="글 내용"></textarea>
                             <div class="col-lg-12">
                                <input type="text" placeholder="태그 작성">
                             </div>
-                                <button type="submit" class="site-btn">등록</button>
+                                <button type="submit" class="site-btn" >등록</button>
                             </div>
                         </div>
-                    </form>
+                   <!--  </form> -->
                 </div>
             </div>
         </div>
     </div>
-
+</form>
 
 
 
