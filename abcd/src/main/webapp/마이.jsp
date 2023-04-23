@@ -160,7 +160,7 @@ margin-left: 495px;
                     <div class="product-tab">
                     
     
-        <div class="container-fluid">
+        <div class="container-zxzxzzxzfluid">
             <div class="img-thumbnail">
                 <div class="col-lg-4">
                     <div class="single-banner">
