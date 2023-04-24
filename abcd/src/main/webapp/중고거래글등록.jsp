@@ -331,7 +331,7 @@
     </div>
 
 
-<form action="ProductInput.do"  method="post">
+<form action="ProductInput.do" enctype="multipart/form-data" method="post">
     <div class="col-lg-12" align="center">
         <div class="col-lg-6">
             <div class="contact-form">
@@ -340,7 +340,7 @@
                     <div class="logo">
                         <a class="picture" href="#">
                            <input type="file" class="form-control" id="imageurl" name="imageurl" > 
-                           <input type="submit" value="Upload">
+                           
                             <img src="img/free-icon-camera-685655.png" alt="">
                         </a>
                     </div>
