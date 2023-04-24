@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.mang.controller.ProductList;
+import kr.mang.controller.BoardList;
 import kr.mang.controller.Command;
 import kr.mang.controller.JoinService;
 import kr.mang.controller.LoginService;
@@ -31,6 +32,7 @@ public class FrontController extends HttpServlet {
 		map.put("Join.do",new JoinService());
 		map.put("ProductList.do",new ProductList());
 		map.put("Productdetail.do", new ProductDetail());
+		map.put("BoardList.do", new BoardList());
 //		map.put("Ajax.do", new Ajax());
 	}
 	// ---> service 메소드 완성 !!! ---> 더이상 손 안대도 됨!!
