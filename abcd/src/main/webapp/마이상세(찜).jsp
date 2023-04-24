@@ -4,8 +4,8 @@
 <style>
     
    
-    
-
+	#double {border: 10px double black;}
+   
     /* 테이블 스타일 */
     table {
       width: 100%;
@@ -13,9 +13,12 @@
       border: 1px solid black;
     }
 
-    th, td {
+    h2, tr, th, td {
+    /* 선 */
       border: 1px solid black;
+    /* 칸크기 */
       padding: 8px;
+    /* 정렬 */
       text-align: center;
     }
 
@@ -49,8 +52,13 @@
         <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+<body>
 
-		<br><h2><찜목록></h2><br>
+	<br>
+		<h2 id="double"><찜목록></h2>
+		<br></div>
+		
+		
 <table>
       <thead>
         <tr>
@@ -82,7 +90,7 @@
         </tr>
         <tr>
          <td>판매자</td>
-          <t>상품E</td>
+          <td>상품E</td>
           <td>600,000원</td>
         </tr>
       </tbody>
