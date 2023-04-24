@@ -19,5 +19,21 @@
     <welcome-file-list>
         <welcome-file>메인.jsp</welcome-file>
     </welcome-file-list>
+    <!-- 파일업로드 관련 설정 -->
+    <servlet>
+        <servlet-name>ProductInput</servlet-name>
+        <servlet-class>kr.mang.controller.ProductInput</servlet-class>
+        <multipart-config>
+            <location></location>
+            <max-file-size>-1</max-file-size>
+            <max-request-size>-1</max-request-size>
+            <file-size-threshold>1024</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>kr.mang.controller.ProductInput</servlet-name>
+        <url-pattern>/fileUpload</url-pattern>
+    </servlet-mapping>
     
 </web-app>

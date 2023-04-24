@@ -196,7 +196,7 @@
                     <h4>사진등록</h4>
                     <div class="logo">
                         <a class="picture" href="#">
-                           <input type="file" class="form-control" id="imageurl" name="imageurl" appept="image/*"> 
+                           <input type="file" class="form-control" id="imageurl" name="imageurl" > 
                             <img src="img/free-icon-camera-685655.png" alt="">
                         </a>
                     </div>
