@@ -65,7 +65,6 @@
         <tr>
           <th>날짜</th>
           <th>상품명</th>
-         
           <th>금액</th>
         </tr>
       </thead>
@@ -73,7 +72,6 @@
         <tr>
           <td>2022-01-01</td>
           <td>상품A</td>
-        
           <td>500,000원</td>
         </tr>
         <tr>
@@ -85,26 +83,22 @@
         <tr>
           <td>2022-01-03</td>
           <td>상품C</td>
-          
           <td>200,000원</td>
         </tr>
         <tr>
           <td>2022-01-04</td>
           <td>상품D</td>
-         
           <td>400,000원</td>
         </tr>
         <tr>
           <td>2022-01-05</td>
           <td>상품E</td>
-         
           <td>600,000원</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <th colspan="2">합계</th>
-         
           <td>2,000,000원</td>
         </tr>
       </tfoot>
