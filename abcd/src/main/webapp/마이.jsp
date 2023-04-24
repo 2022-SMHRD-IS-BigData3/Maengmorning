@@ -173,7 +173,7 @@ margin-left: 600px;
                         <div class="tab-item">
                             <ul class="nav" role="tablist">
                                 <li>
-                                    <a data-toggle="tab" href="판매내역.jsp" role="tab">판매/구매목록</a>
+                                    <a data-toggle="tab" href="#tab-3" role="tab">판매/구매목록</a>
                                 </li>
                                 <li>
                                     <a data-toggle="tab" href="#tab-3" role="tab">매너온도</a>

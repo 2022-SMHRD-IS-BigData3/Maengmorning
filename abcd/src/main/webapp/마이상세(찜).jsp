@@ -58,77 +58,16 @@
 </head>
 
 <body>
-    
-       <h2> <구매내역> </h2>
-    <table>
-      <thead>
-        <tr>
-          <th>날짜</th>
-          <th>상품명</th>
-          <th>금액</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2022-01-01</td>
-          <td>상품A</td>
-          <td>500,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-02</td>
-          <td>상품B</td>
-         
-          <td>300,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-03</td>
-          <td>상품C</td>
-          <td>200,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-04</td>
-          <td>상품D</td>
-          <td>400,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-05</td>
-          <td>상품E</td>
-          <td>600,000원</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th colspan="2">합계</th>
-          <td>2,000,000원</td>
-        </tr>
-      </tfoot>
-    </table>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
+	<h1>찜목록</h1>
+	<ul>
+		<li>상품1</li>
+		<li>상품2</li>
+		<li>상품3</li>
+		<li>상품4</li>
+		<li>상품5</li>
+	</ul>
+	
+	
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
