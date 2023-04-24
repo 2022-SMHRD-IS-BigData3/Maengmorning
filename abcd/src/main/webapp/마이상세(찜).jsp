@@ -20,7 +20,7 @@
       border: 1px solid black;
     }
 
-    th, td {
+    ul, li {
       border: 1px solid black;
       padding: 8px;
       text-align: center;
@@ -66,6 +66,21 @@
 		<li>상품4</li>
 		<li>상품5</li>
 	</ul>
+	<ul>
+		<li>상품1</li>
+		<li>상품2</li>
+		<li>상품3</li>
+		<li>상품4</li>
+		<li>상품5</li>
+	</ul>
+	<ul>
+		<li>상품1</li>
+		<li>상품2</li>
+		<li>상품3</li>
+		<li>상품4</li>
+		<li>상품5</li>
+	</ul>
+	
 	
 	
     <!-- Js Plugins -->
