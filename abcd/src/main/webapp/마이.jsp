@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -25,7 +24,8 @@
     }
     
     div>li1 {
-    color : red;
+    background-color
+    :orange;
     }
     
     ul.dropdown {
@@ -43,7 +43,7 @@ margin-left: 1600px;
 }
 
 div >.container {
-margin-left: 495px;
+margin-left: 600px;
 }
 
 
@@ -160,7 +160,7 @@ margin-left: 495px;
                     <div class="product-tab">
                     
     
-        <div class="container-zxzxzzxzfluid">
+        <div class="container-fluid">
             <div class="img-thumbnail">
                 <div class="col-lg-4">
                     <div class="single-banner">
@@ -260,8 +260,7 @@ margin-left: 495px;
                 <div class="col-lg-3">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <a href="#"><img src="img/하얀배경로고.png" alt=""></a>
-                            <br>
+                            <a href="#"><img src="img/로고.png" alt=""></a>
                             <li1>Email: hello.colorlib@gmail.com</li1>
                         </div>
 
