@@ -100,7 +100,6 @@ margin-left: 600px;
         </div>
         
         
-        
         <div class="nav-item">
             <div class="container">
                 <div class="nav-depart"></div>
