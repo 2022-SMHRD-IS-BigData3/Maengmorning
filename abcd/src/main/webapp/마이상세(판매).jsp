@@ -7,15 +7,16 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      
     }
-    
-    
 
     /* 테이블 스타일 */
     table {
+ 	 
       width: 100%;
       border-collapse: collapse;
       border: 1px solid black;
+     
     }
 
         h2, tr, th, td {
@@ -23,6 +24,7 @@
       border: 1px solid black;
     /* 칸크기 */
       padding: 8px;
+      
     /* 정렬 */
       text-align: center;
     }
@@ -39,7 +41,7 @@
         <meta name="keywords" content="Fashi, unica, creative, html">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>메인</title>
+        <title>마이페이지상세(판매/구매내역)</title>
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap"
@@ -60,58 +62,58 @@
 <body>
 	
 
-
 	<br>
-    <h2><판매내역></h2><br>
+	
+	<h2> <판매내역> </h2><br>
     <table>
       <thead>
         <tr>
           <th>날짜</th>
+           <th>판매자</th>
           <th>상품명</th>
-         
           <th>판매금액</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>2022-01-01</td>
+          <td>판매자</td>
           <td>상품A</td>
-        
           <td>500,000원</td>
         </tr>
         <tr>
           <td>2022-01-02</td>
+		  <td>판매자</td>
           <td>상품B</td>
-          
           <td>300,000원</td>
         </tr>
         <tr>
           <td>2022-01-03</td>
+          <td>판매자</td>
           <td>상품C</td>
-         
           <td>200,000원</td>
         </tr>
         <tr>
           <td>2022-01-04</td>
+          <td>판매자</td>
           <td>상품D</td>
-          
           <td>400,000원</td>
         </tr>
         <tr>
           <td>2022-01-05</td>
+          <td>판매자</td>
           <td>상품E</td>
-          
           <td>600,000원</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <th colspan="2">합계</th>
-         
+          <th colspan="3">합계</th>
           <td>2,000,000원</td>
         </tr>
       </tfoot>
     </table>
+    
     
 
 	<br>
@@ -166,28 +168,10 @@
       </tfoot>
     </table>
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
 
 
 
