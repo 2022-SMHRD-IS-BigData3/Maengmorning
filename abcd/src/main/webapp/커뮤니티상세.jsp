@@ -160,6 +160,13 @@
                         <li class="active"><a href="./index.html">Home</a></li>
 
 
+                       
+                       
+                       
+                       
+                       
+                       
+                       
                         <li><a href="#">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
@@ -188,7 +195,6 @@
                                 <li><a href="#">좋아요 목록</a></li>
                             </ul>
                         </li>
-
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>
@@ -201,7 +207,7 @@
     <div class="breacrumb-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-10">
                     <div class="breadcrumb-text">
                         <a href="#"><i class="fa fa-home"></i> Home</a>
                         <span>Shop</span>
@@ -415,7 +421,7 @@
         <div class="copyright-reserved">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-10">
                         <div class="copyright-text">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;
