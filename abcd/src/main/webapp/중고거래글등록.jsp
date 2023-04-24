@@ -188,7 +188,7 @@
     </div>
 
 
-<form action="ProductInput.do" enctype="multipart/form-data" method="post">
+<form action="ProductInput.do"  method="post">
     <div class="col-lg-12" align="center">
         <div class="col-lg-6">
             <div class="contact-form">

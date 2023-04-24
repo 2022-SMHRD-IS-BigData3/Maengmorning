@@ -215,7 +215,7 @@
                             </div>
                           
                             <div class="col-lg-5 col-md-5 text-right">
-                               <a href="ProductInput.do">물품등록</a>
+                               <a href="중고거래글등록.jsp">물품등록</a>
                             </div>
                           
                         </div>
