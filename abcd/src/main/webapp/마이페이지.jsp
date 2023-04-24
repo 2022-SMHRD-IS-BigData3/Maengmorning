@@ -164,13 +164,6 @@
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
 
-
-                       
-                       
-                       
-                       
-                       
-                       
                        
                         <li><a href="#">중고거래</a>
                             <ul class="dropdown">
