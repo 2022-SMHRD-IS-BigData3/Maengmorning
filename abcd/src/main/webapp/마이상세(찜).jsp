@@ -2,16 +2,9 @@
 <html lang="zxx">
 
 <style>
-    /* 전체 스타일 */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     
-    h2{background-color: 
+   
     
-    }
 
     /* 테이블 스타일 */
     table {
@@ -20,7 +13,7 @@
       border: 1px solid black;
     }
 
-    ul, li {
+    th, td {
       border: 1px solid black;
       padding: 8px;
       text-align: center;
@@ -57,31 +50,49 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
-<body>
-	<h1>찜목록</h1>
-	<ul>
-		<li>상품1</li>
-		<li>상품2</li>
-		<li>상품3</li>
-		<li>상품4</li>
-		<li>상품5</li>
-	</ul>
-	<ul>
-		<li>상품1</li>
-		<li>상품2</li>
-		<li>상품3</li>
-		<li>상품4</li>
-		<li>상품5</li>
-	</ul>
-	<ul>
-		<li>상품1</li>
-		<li>상품2</li>
-		<li>상품3</li>
-		<li>상품4</li>
-		<li>상품5</li>
-	</ul>
-	
-	
+		<br><h2><찜목록></h2><br>
+<table>
+      <thead>
+        <tr>
+          <th>판매자</th>
+          <th>상품명</th>
+          <th>금액</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <td>판매자</td>
+          <td>상품A</td>
+          <td>500,000원</td>
+        </tr>
+        <tr>
+        <td>판매자</td>
+          <td>상품B</td>
+          <td>300,000원</td>
+        </tr>
+        <tr>
+        <td>판매자</td>
+          <td>상품C</td>
+          <td>200,000원</td>
+        </tr>
+        <tr>
+         <td>판매자</td>
+          <td>상품D</td>
+          <td>400,000원</td>
+        </tr>
+        <tr>
+         <td>판매자</td>
+          <t>상품E</td>
+          <td>600,000원</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2">합계</th>
+          <td>2,000,000원</td>
+        </tr>
+      </tfoot>
+    </table>
 	
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>

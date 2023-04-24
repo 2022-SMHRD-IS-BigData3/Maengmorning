@@ -248,66 +248,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <c:forEach items="${Blist}"  var="list">
                             <tr>
-                            <td>1</td>
-                            <td>첫 번째 글</td>
-                            <td>작성자1</td>
-                            <td>용봉동</td>
+                            <td>${list.b_id}</td>
+                            <td>${list.title}</td>
+                            <td>${list.userid}</td>
+                            <td>${list.area}</td>
                             </tr>
-                            <tr>
-                            <td>2</td>
-                            <td>두 번째 글</td>
-                            <td>작성자2</td>
-                            <td>용봉동</td>
-                            </tr>
-                            <tr>
-                            <td>3</td>
-                            <td>세 번째 글</td>
-                            <td>작성자3</td>
-                            <td>용봉동</td>
-                            </tr>
-                            <tr>
-                            <td>4</td>
-                            <td>네 번째 글</td>
-                            <td>작성자1</td>
-                            <td>용봉동</td>
-                            </tr>
-                            <tr>
-                            <td>5</td>
-                            <td>다섯 번째 글</td>
-                            <td>작성자2</td>
-                            <td>용봉동</td>
-                            </tr>
-                            <tr>
-                            <td>6</td>
-                            <td>여섯 번째 글</td>
-                            <td>작성자3</td>
-                            <td>용봉동</td>
-                            </tr>
-                            <tr>
-                            <td>7</td>
-                            <td>일곱 번째 글</td>
-                            <td>작성자1</td>
-                            <td>용봉동</td>
-                            </tr>
-                            <tr>
-                            <td>8</td>
-                            <td>여덟 번째 글</td>
-                            <td>작성자2</td>
-                            <td>용봉동</td>
-                            </tr>
-                            <tr>
-                            <td>9</td>
-                            <td>아홉 번째 글</td>
-                            <td>작성자3</td>
-                            <td>용봉동</td>
-                            </tr>
-                            <tr>
-                            <td>10</td>
-                            <td>열 번째 글</td>
-                            <td>작성자3</td>
-                            <td>용봉동</td>
-                            </tr>
+                            </c:forEach>
                         </tbody>
                         </table>
 
