@@ -6,7 +6,7 @@ public class ProductlistVO {
 	private int pro_id;
 	private String sellerid;
 	private String imgurl;
-	private int price;
+	private String price;
 	private String title;
 	private String area;
 	private String pro_state;
@@ -14,7 +14,7 @@ public class ProductlistVO {
 	
 	public ProductlistVO() {}
 	
-	public ProductlistVO(int pro_id, String sellerid, String imgurl, int price, String title, String area,
+	public ProductlistVO(int pro_id, String sellerid, String imgurl, String price, String title, String area,
 			String pro_state, Date pro_date) {
 		super();
 		this.pro_id = pro_id;
@@ -51,11 +51,11 @@ public class ProductlistVO {
 		this.imgurl = imgurl;
 	}
 
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 

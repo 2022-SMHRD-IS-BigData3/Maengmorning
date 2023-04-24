@@ -213,11 +213,11 @@
                                     </select>
                                 </div>
                             </div>
-                           <form action="ProductInput.do" method="post">
+                          
                             <div class="col-lg-5 col-md-5 text-right">
-                                <input type="submit" value="물품등록" class="button fit">
+                               <a href="ProductInput.do">물품등록</a>
                             </div>
-                           </form>
+                          
                         </div>
                     </div>
                  

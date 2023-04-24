@@ -50,10 +50,11 @@ public class ProductlistDAO {
 	// 중고거래 물품 등록페이지
 	public void productInput(ProductlistVO vo) {
 		SqlSession session = null;
-		ProductlistVO detail = null;
+		
 		try {
 			session = sqlSessionFactory.openSession();
-			detail = session.selectOne("productInput", vo);
+			session.insert("productinput", vo);
+			session.commit();
 		} finally {
 			session.close();
 		}
