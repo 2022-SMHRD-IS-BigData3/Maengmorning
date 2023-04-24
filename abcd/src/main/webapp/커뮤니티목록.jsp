@@ -28,14 +28,14 @@
 
 <style>
     #registration{
-	display: inline-block;
-	font-size: 16px;
-	color: #636363;
-	padding: 5px 15px;
-	border: 1px solid #ebebeb;
-	margin-right: 5px;
-	margin-bottom: 9px;
-	border-radius: 2px;
+   display: inline-block;
+   font-size: 16px;
+   color: #636363;
+   padding: 5px 15px;
+   border: 1px solid #ebebeb;
+   margin-right: 5px;
+   margin-bottom: 9px;
+   border-radius: 2px;
 }
 
 .single-banner {
@@ -247,7 +247,9 @@
                         <c:forEach items="${Blist}"  var="list">
                             <tr>
                             <td>${list.b_id}</td>
-                            <td>${list.title}</td>
+                            <td>
+                            <a href="Boarddetail.do?b_id=${list.b_id}">${list.title}</a>
+                            </td>
                             <td>${list.userid}</td>
                             <td>${list.area}</td>
                             </tr>

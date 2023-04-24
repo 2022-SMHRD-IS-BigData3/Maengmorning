@@ -1,4 +1,6 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -160,13 +162,6 @@
                         <li class="active"><a href="./index.html">Home</a></li>
 
 
-                       
-                       
-                       
-                       
-                       
-                       
-                       
                         <li><a href="#">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
@@ -195,6 +190,7 @@
                                 <li><a href="#">좋아요 목록</a></li>
                             </ul>
                         </li>
+
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>
@@ -207,7 +203,7 @@
     <div class="breacrumb-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-12">
                     <div class="breadcrumb-text">
                         <a href="#"><i class="fa fa-home"></i> Home</a>
                         <span>Shop</span>
@@ -251,14 +247,13 @@
                         </div>
                     </div>
 
-
                     <!-- 게시판 글 -->
                     <div class="post-info">
                         <div class="title">
-                            <h1>글제목</h1>
+                            <h1>${detail.title}</h1>
                         </div>
 
-                        <p>작성자: 작성자 이름 | 작성일: 2023-04-21 | 동네: 용봉동 | 조회수 : 1</p>
+                        <p>작성자:${detail.userid }| 작성일: | 동네: ${detail.area} | 조회수 : 1</p>
                     </div>
 
 
@@ -292,7 +287,7 @@
                         <table>
                             <tr>
                                 <p>
-                                    글내용
+                                   ${detail.cont}
 
                                 </p>
                                 <p>#태그</p>
@@ -316,6 +311,11 @@
                       </ul>
 
                     </div>
+
+                   
+                    
+                        
+
 
                 </div>
             </div>
@@ -416,7 +416,7 @@
         <div class="copyright-reserved">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         <div class="copyright-text">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;

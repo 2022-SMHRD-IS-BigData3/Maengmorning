@@ -21,21 +21,32 @@ public class BoardDAO {
 			e.printStackTrace();
 		}
 	}
-	
-	SqlSession session= null;
+
+	SqlSession session = null;
 
 	public List<BoardVO> BoardList() {
 		List<BoardVO> list = null;
 		try {
 			session = sqlSessionFactory.openSession(true);
-			  list = session.selectList("selectList");
-		}finally {
+			list = session.selectList("selectList");
+		} finally {
 			session.close();
-			System.out.println(list);
-		}
-		
+ 		}
+
 		return list;
 	}
 
+	public BoardVO BoardDetail(int b_id) {
+		BoardVO detail = null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			detail = session.selectOne("detail", b_id);
+			session.commit();
+		} finally {
+			session.close();
+		}
+		return detail;
+
+	}
 
 }
