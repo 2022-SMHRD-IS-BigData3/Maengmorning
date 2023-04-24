@@ -124,14 +124,10 @@
         }
 
 
-        label {
-            color: #FFFFFF;
-        }
+        
 
         form {
-            background-color: #242b36;
-
-
+        background-color: #fff;
             border: 1px solid #ccc;
             padding: 30px;
             border-radius: 5px;
@@ -174,6 +170,7 @@
         }
 
         .tab-content {
+        
             display: block;
             width: 85%;
             padding: 10px;
@@ -181,6 +178,7 @@
             border: 1px solid #ccc;
             border-radius: 3px;
             font-size: 16px;
+            background-color: #ebf7ff;
         }
 
 
