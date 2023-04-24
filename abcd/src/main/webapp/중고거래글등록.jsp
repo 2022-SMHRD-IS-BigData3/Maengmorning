@@ -231,6 +231,7 @@
                                 </div>
 
                             <div class="col-lg-12">
+                            	<label>내용</label>
                                 <textarea row="7" class="form-control" id="pro_state" name="pro_state" placeholder="글 내용"></textarea>
                             <div class="col-lg-12">
                                <input type="text" placeholder="태그 작성">
