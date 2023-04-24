@@ -2,6 +2,10 @@ package kr.mang.frontcontroller;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.io.File;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,11 +16,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.mang.controller.ProductList;
 import kr.mang.controller.BoardList;
+import kr.mang.controller.Boarddetail;
 import kr.mang.controller.Command;
 import kr.mang.controller.JoinService;
 import kr.mang.controller.LoginService;
 import kr.mang.controller.ProductDetail;
-
+import kr.mang.controller.ProductInput;
 
 
 
@@ -32,8 +37,10 @@ public class FrontController extends HttpServlet {
 		map.put("Join.do",new JoinService());
 		map.put("ProductList.do",new ProductList());
 		map.put("Productdetail.do", new ProductDetail());
+		map.put("ProductInput.do", new ProductInput());
 		map.put("BoardList.do", new BoardList());
-//		map.put("Ajax.do", new Ajax());
+		map.put("Boarddetail.do", new Boarddetail());
+
 	}
 	// ---> service 메소드 완성 !!! ---> 더이상 손 안대도 됨!!
 	protected void service(HttpServletRequest request, HttpServletResponse response)

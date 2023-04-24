@@ -42,13 +42,21 @@ public class ProductlistDAO {
 		} finally {
 			session.close();
 		}
-		
-		
 		return detail;
 	}
 	
-	
-	
+	// 중고거래 물품 등록페이지
+	public void productInput(ProductlistVO vo) {
+		SqlSession session = null;
+		
+		try {
+			session = sqlSessionFactory.openSession();
+			session.insert("productinput", vo);
+			session.commit();
+		} finally {
+			session.close();
+		}
+	}
 	
 	
 	
