@@ -103,8 +103,6 @@
                             </a>
                      
                     </div>
-
-                    
                     <div class="col-lg-7 col-md-7">
                         <div class="advanced-search">
                             <div class="input-group">
@@ -113,8 +111,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     
                     <div class="col-lg-3 text-right col-md-3">
                         
