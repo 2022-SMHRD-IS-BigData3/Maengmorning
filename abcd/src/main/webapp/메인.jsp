@@ -4,8 +4,7 @@
 
 <style>
 
-  <!-- 사진 
-    -->
+  
     .single-banner
     {
     width:
@@ -31,6 +30,16 @@
 	div >.container {
 	margin-left: 520px;
 	}
+
+
+
+.nav-item > a{
+  padding-left: 0;
+}
+
+.nav-item > a {
+  margin-left: 0;
+}
 
 
 
