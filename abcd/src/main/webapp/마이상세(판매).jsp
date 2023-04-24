@@ -9,9 +9,7 @@
       padding: 0;
     }
     
-    h2{background-color: 
     
-    }
 
     /* 테이블 스타일 */
     table {
@@ -20,12 +18,14 @@
       border: 1px solid black;
     }
 
-    th, td {
+        h2, tr, th, td {
+    /* 선 */
       border: 1px solid black;
+    /* 칸크기 */
       padding: 8px;
+    /* 정렬 */
       text-align: center;
     }
-
     th {
       background-color: lightgray;
     }
@@ -62,7 +62,7 @@
 
 
 	<br>
-    <h2><판매내역></h2>
+    <h2><판매내역></h2><br>
     <table>
       <thead>
         <tr>
@@ -116,7 +116,7 @@
 
 	<br>
 	
-	<h2> <구매내역> </h2>
+	<h2> <구매내역> </h2><br>
     <table>
       <thead>
         <tr>

@@ -181,14 +181,15 @@
                     </div>
                 </div>
               
-             <form action="Productdetail.do" method="post">
+             <nav id="Productdetail.do">
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
-                                <!--제품 사진 등록하는 곳-->
+                           <!--제품 사진 등록하는 곳
+                           detail에서 가져온 데이터 등록 (list에서 가져오면 안됨. 덩어리가 안나옴.(아마도 계속안나온 이유가 이거인듯?))-->
                                 <img class="product-big-img"
-                                    src="${list.imgurl}"
+                                    src="${detail.imgurl}"
                                     alt="">
                                 <div class="zoom-icon">
                                     <i class="fa fa-search-plus"></i>
@@ -197,14 +198,14 @@
                             <div class="product-thumbs">
                                 <div class="producw제품설명t-thumbs-track ps-slider owl-carousel">
                                     <div class="pt active" data-imgbigurl="img/product-single/product-1.jpg"><img
-                                            src="${list.imgul }"
+                                            src="${detail.imgurl}"
                                             alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-2.jpg"><img
-                                            src="${list.imgul }" alt=""></div>
+                                            src="${detail.imgurl}" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="${list.imgul }" alt=""></div>
+                                            src="${detail.imgurl}" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="${list.imgul }" alt=""></div>
+                                            src="${detail.imgurl}" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -212,10 +213,10 @@
                         <div class="col-lg-6">
                             <div class="product-details">
                                 <div class="pd-title">
-                                    <h4>${list.title}</h4>
+                                    <h4>${detail.title}</h4>
                                     <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                                 </div>
-                                <p>판매자 : ${list.sellerid}</p>
+                                <p>판매자 : ${detail.sellerid}</p>
                                 <div class="pd-rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -225,8 +226,8 @@
                                     <span>(5)</span>
                                 </div>
                                 <div class="pd-desc">
-                                    <p>${list.title}</p>
-                                    <h4>${list.price}</h4>
+                                    <p>${detail.title}</p>
+                                    <h4>${detail.price}</h4>
                                 </div>
 							
 
@@ -234,7 +235,7 @@
                                     <a href="#" class="primary-btn pd-cart">판매자 쪽지 보내기</a> <br>
                                 </div>
                                 <div>
-                                    <a href="#" class="primary-btn pd-cart">구매하기</a>
+                                    <a href="결제페이지.jsp" class="primary-btn pd-cart">구매하기</a>
                                 </div>
                                 <ul class="pd-tags">
                                     <li><span>카테고리</span>: 유아용품</li>
@@ -253,7 +254,7 @@
                         </div>
                     </div>
                  </div>
-               </form>
+               </nav>
                     <div class="product-tab">
                         <div class="tab-item">
                             <ul class="nav" role="tablist">
@@ -272,7 +273,7 @@
                                         <div class="row">
                                             <div class="col-lg-7">
                                                 <h5>상세정보</h5>
-                                                <p>${fn:replace(list.state,crcn,"<br/>")}</p>
+                                                <p>${fn:replace(detail.pro_state,crcn,"<br/>")}</p>
                                                 
 
                                             </div>

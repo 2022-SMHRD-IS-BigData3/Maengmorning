@@ -1,4 +1,6 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -249,12 +251,12 @@
                     <!-- 게시판 글 -->
                     <div class="post-info">
                         <div class="title">
-                            <h1>글제목</h1>
+                            <h1>${detail.title}</h1>
                         </div>
 
-                        <p>작성자: 작성자 이름 | 작성일: 2023-04-21 | 동네: 용봉동 | 조회수 : 1</p>
+                        <p>작성자:${detail.userid }| 작성일:" pattern="yyyy.MM.dd"/>  | 동네: ${detail.area} | 조회수 : 1</p>
                     </div>
-
+<fmt:formatDate value="${detail.pro_date}" pattern="yyyy.MM.dd"/>
 
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
@@ -286,7 +288,7 @@
                         <table>
                             <tr>
                                 <p>
-                                    글내용
+                                   ${detail.cont}
 
                                 </p>
                                 <p>#태그</p>

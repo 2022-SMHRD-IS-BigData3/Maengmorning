@@ -2,53 +2,42 @@
 <html lang="zxx">
 
 <style>
-
-
-    .single-banner
-    {
-    width:
-    400px;
-    height:
-    320.55px;
-    overflow:
-    hidden;
+    .single-banner {
+        width:
+            400px;
+        height:
+            320.55px;
+        overflow:
+            hidden;
     }
-    .single-banner
-    {
-   width:
-    400px;
-    height:
-    320.55px;
-    overflow:
-    hidden;
+
+    .single-banner {
+        width:
+            400px;
+        height:
+            320.55px;
+        overflow:
+            hidden;
     }
-    
+
     div>li1 {
-    background-color
-    :orange;
+        background-color: orange;
     }
-    
+
     ul.dropdown {
-    width: 200px;
-    height: 600px;
+        width: 200px;
+        height: 600px;
     }
 
 
+    .col-lg-12 {
+        margin-top: 10px;
+        margin-left: 1600px;
+    }
 
-
-<!-- 버튼 -->
-.col-lg-12{
-margin-top: 10px;
-margin-left: 1600px;
-}
-
-div >.container {
-margin-left: 600px;
-}
-
-
-
-
+    div>.container {
+        margin-left: 600px;
+    }
 
 </style>
 
@@ -98,16 +87,15 @@ margin-left: 600px;
                 </div>
             </div>
         </div>
-        
-        
-        
+
+
         <div class="nav-item">
             <div class="container">
                 <div class="nav-depart"></div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
-                        
+
                         <li><a href="#">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
@@ -137,7 +125,7 @@ margin-left: 600px;
                                 <li><a href="#">좋아요 목록</a></li>
                             </ul>
                         </li>
-                        
+
                     </ul>
                 </nav>
             </div>
@@ -145,83 +133,140 @@ margin-left: 600px;
     </header>
 
 
-  <!-- 사진등록 -->
-  
-    
-
-    
-   
-    
+    <section class="product-shop spad page-details">
         <div class="container">
-           
-                <div class="mb-3">
-                    <div class="row">
-                    </div>
-                    <div class="product-tab">
-                    
-    
-        <div class="container-fluid">
-            <div class="img-thumbnail">
-                <div class="col-lg-4">
-                    <div class="single-banner">
-                    	<img src="./img/">
-                    </div>
+
+            <div class="col-lg-3">
+                <div class="filter-widget">
+                    <h4 class="fw-title">카테고리</h4>
+                    <ul class="filter-catagories">
+                        <li><a href="#">개인정보수정</a></li>
+                        <li><a href="#">판매/구매목록</a></li>
+                        <li><a href="#">찜목록</a></li>
+                        <li><a href="#">매너온도</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-   <br>
-                        <div class="tab-item">
-                            <ul class="nav" role="tablist">
-                                <li>
-                                    <a data-toggle="tab" href="#tab-3" role="tab">판매/구매목록</a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#tab-3" role="tab">매너온도</a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#tab-3" role="tab">개인정보 수정</a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#tab-3" role="tab">좋아요 목록</a>
-                                </li>
-                            </ul>
+
+    </section>
+
+
+    <div class="container">
+
+        <div class="col-lg-9">
+            <div class="row">
+            </div>
+            <div class="product-tab">
+
+                <form action="마이상세(판매).jsp">
+                    <table class="table">
+                        <thead>
+                            <td>판매내역</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>날짜</td>
+                                <td>상품명</td>
+                                <td>구매자</td>
+                                <td>판매금액</td>
+                            </tr>
+                            <tr>
+                                <td>DB에서 날짜</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매금액</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: right;">
+                        <button>더보기</button>
+                    </div>
+                    </div>
+                </form>
+                <br>
+
+                <form action="마이상세(판매).jsp">
+                    <table class="table">
+                        <thead>
+                            <td>구매내역</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>날짜</td>
+                                <td>상품명</td>
+                                <td>판매자</td>
+                                <td>구매금액</td>
+                            </tr>
+                            <tr>
+                                <td>DB에서 날짜</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 판매자</td>
+                                <td>DB에서 구매금액</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: right;">
+                        <button>더보기</button>
+                    </div>
+                </form>
+                <br>
+                <form action="마이상세(판매).jsp">
+                    <table class="table">
+                        <thead>
+                            <td>찜목록</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>판매자</td>
+                                <td>상품명</td>
+                                <td>금액</td>
+                            </tr>
+                            <tr>
+                                <td>DB에서 판매자</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 금액</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: right;">
+                        <button>더보기</button>
+                    </div>
+                </div>
+                </form>
+                <div class="tab-item-content">
+                    <div class="tab-content">
+                        <div class="tab-pane fade-in active" id="tab-1" role="tabpanel">
+                            <div class="product-content">
+                                <div class="row">
+                                </div>
+                            </div>
                         </div>
-                        <div class="tab-item-content">
-                            <div class="tab-content">
-                                <div class="tab-pane fade-in active" id="tab-1" role="tabpanel">
-                                    <div class="product-content">
-                                        <div class="row">
+                        <div class="tab-pane fade" id="tab-2" role="tabpanel">
+                            <div class="specification-table">
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="tab-pane fade" id="tab-3" role="tabpanel">
+                            <div class="customer-review-option">
+                                <div class="comment-option">
+                                    <div class="co-item">
+                                        <div class="avatar-text">
+
+
+
+
+
+
+
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade" id="tab-2" role="tabpanel">
-                                    <div class="specification-table">
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                                
-                                <div class="tab-pane fade" id="tab-3" role="tabpanel">
-                                    <div class="customer-review-option">
-                                        <div class="comment-option">
-                                            <div class="co-item">
-                                                <div class="avatar-text">
-							
-                            
-                               
-	
-	
-	
-	
-                                                </div>
-                                            </div>
-                                            <div class="co-item">
-                                                <div class="avatar-pic">
-                                                </div>
-                                                <div class="avatar-text">
-                                                </div>
-                                            </div>
+                                    <div class="co-item">
+                                        <div class="avatar-pic">
+                                        </div>
+                                        <div class="avatar-text">
                                         </div>
                                     </div>
                                 </div>
@@ -229,35 +274,37 @@ margin-left: 600px;
                         </div>
                     </div>
                 </div>
-           
+            </div>
         </div>
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- Man Banner Section End -->

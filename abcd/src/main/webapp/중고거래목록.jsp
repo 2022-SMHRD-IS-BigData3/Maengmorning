@@ -213,12 +213,14 @@
                                     </select>
                                 </div>
                             </div>
+                          
                             <div class="col-lg-5 col-md-5 text-right">
-                                <button id="registration">물품등록</button>
+                               <a href="ProductInput.do">물품등록</a>
                             </div>
+                          
                         </div>
                     </div>
-                 
+       <!-- dao productlist기능 이용, productVO에 있는 변수 활용 -->
                   <c:forEach items="${productlist}" var="list">
                     <div class="product-list">
                         <div class="row">
@@ -235,7 +237,7 @@
                                         <a href="#">
                                             <span>${list.pro_id}</span>
                                            <h5 id="title">
-                                            <a href="Productdetail.do?pro_id=${list.pro_id }">
+                                            <a href="Productdetail.do?pro_id=${list.pro_id}">
                                             	${list.title}
                                             </a>
                                            </h5>
@@ -244,7 +246,7 @@
                                             ${list.price}원<br>
                                         </div>
                                         <a class="area">${list.area }</a>
-                                        <a class="date"><fmt:formatDate value="${list.pro_date }" pattern="yyyy.MM.dd"/></a>
+                                        <a class="date"><fmt:formatDate value="${list.pro_date}" pattern="yyyy.MM.dd"/></a>
                                     </div>
                                 </div>
                             </div>
