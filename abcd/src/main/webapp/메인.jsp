@@ -130,7 +130,7 @@ margin-right: 1600px;
 
                         <ul class="nav-right">
                             <li class="heart-icon">
-                                <a href="#">
+                                <a href="로그인.jsp">
                                     <i class="icon_MSY_alt">로그인</i>
                                 </a>
                             </li>

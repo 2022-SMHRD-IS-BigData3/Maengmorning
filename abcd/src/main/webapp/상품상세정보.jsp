@@ -234,7 +234,7 @@
                                     <a href="#" class="primary-btn pd-cart">판매자 쪽지 보내기</a> <br>
                                 </div>
                                 <div>
-                                    <a href="#" class="primary-btn pd-cart">구매하기</a>
+                                    <a href="결제페이지.jsp" class="primary-btn pd-cart">구매하기</a>
                                 </div>
                                 <ul class="pd-tags">
                                     <li><span>카테고리</span>: 유아용품</li>
