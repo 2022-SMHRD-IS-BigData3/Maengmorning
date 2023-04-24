@@ -173,7 +173,7 @@ margin-left: 600px;
                         <div class="tab-item">
                             <ul class="nav" role="tablist">
                                 <li>
-                                    <a data-toggle="tab" href="#tab-3" role="tab">판매/구매목록</a>
+                                    <a data-toggle="tab" href="판매내역.jsp" role="tab">판매/구매목록</a>
                                 </li>
                                 <li>
                                     <a data-toggle="tab" href="#tab-3" role="tab">매너온도</a>
@@ -198,12 +198,22 @@ margin-left: 600px;
                                     <div class="specification-table">
                                     </div>
                                 </div>
+                                
+                                
+                                
+                                
                                 <div class="tab-pane fade" id="tab-3" role="tabpanel">
                                     <div class="customer-review-option">
                                         <div class="comment-option">
                                             <div class="co-item">
                                                 <div class="avatar-text">
-
+							
+                            
+                               
+	
+	
+	
+	
                                                 </div>
                                             </div>
                                             <div class="co-item">
