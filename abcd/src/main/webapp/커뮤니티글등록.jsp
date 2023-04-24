@@ -9,7 +9,7 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>커뮤니티목록</title>
+    <title>커뮤니티글등록</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -27,65 +27,55 @@
 </head>
 
 <style>
-    #registration{
-	display: inline-block;
-	font-size: 16px;
-	color: #636363;
-	padding: 5px 15px;
-	border: 1px solid #ebebeb;
-	margin-right: 5px;
-	margin-bottom: 9px;
-	border-radius: 2px;
-}
+    div .leave-comment {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
 
-.single-banner {
-         width: 570.98px;
-         height: 330.55px;
-         overflow: hidden;
-     }
-     .single-banner {
-         width: 570.00px;
-         height: 330.55px;
-         overflow: hidden;
-     }
-     
-     .col-lg-12{
-         margin-top: 10px;
-         margin-left: 1700px;
-     }
- 
-     .logo {
-         width: 300px;
-         
-     }
+    div .category-option {
+        margin-bottom: 30px;
+        margin-left: 15px;
+    
+    }
 
-     /* 스타일링 */
-     table {
-        border-collapse: collapse;
-        width: 100%;
-      }
-      th, td {
-        text-align: left;
-        padding: 8px;
-      }
-      th {
-        background-color: #e7ab3c;
-        color: white;
-      }
-      tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-      tr:hover {
-        background-color: #ddd;
-      }
-      h3 {
-        margin-bottom: 20px;
-      }
- 
+    div .logo {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 25px;
+    }
+
+    div .sorting {
+        height: 50px;
+        width: 280px;
+        margin-right: 25px;
+    }
+
+    div .option {
+        height: 50px;
+        width: 280px;
+        margin-right: 25px;
+    }
+
+    div #area, .area {
+        height: 50px;
+        width: 280px;
+        margin-right: 25px;
+    }
+
+    div #price, .price {
+        height: 50px;
+        width: 280px;
+        margin-right: 25px;
+    }
+    
+    
+     div>li1{
+     background-color :orange;
+     }
 </style>
 
 <body>
-    <!-- Page Preloder -->
+<!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -97,11 +87,16 @@
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
-                     
+
+                        <a href="./메인.jsp">
+                            <img src="./img/로고.png" alt="">
+                        </a>
+
                             <a href="./index.html">
-                                <img src="./img/로고.png" alt="">
+                                <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
+
                     </div>
 
                     
@@ -181,91 +176,54 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="breadcrumb-text">
-                        <a href="#"><i class="fa fa-home"></i> Home</a>
-                        <span>Shop</span>
+                    <div class="breadcrumb-text product-more">
+                        <a href="./home.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="./shop.html">커뮤니티</a>
+                        <span>글등록</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb Section Begin -->
 
-    <!-- 카테고리/ 태그 -->
-    <section class="product-shop spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
-                    <div class="filter-widget">
-                        <h4 class="fw-title">Categories</h4>
-                        <ul class="filter-catagories">
-                            <li><a href="#">정보공유</a></li>
-                            <li><a href="#">자유게시판</a></li>
-                        </ul>
-                    </div>
-                   
-                    <div class="filter-widget">
-                        <h4 class="fw-title">Tags</h4>
-                        <div class="fw-tags">
-                            <a href="#">Towel</a>
-                            <a href="#">Shoes</a>
-                            <a href="#">Coat</a>
-                            <a href="#">Dresses</a>
-                            <a href="#">Trousers</a>
-                            <a href="#">Men's hats</a>
-                            <a href="#">Backpack</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 order-1 order-lg-2">
-                    
-                    
-                    <h3>커뮤니티</h3>
 
-                    <div class="product-show-option">
+    <div class="col-lg-12" align="center">
+        <div class="col-lg-6">
+            <div class="contact-form">
+                <div class="leave-comment">
+                    <h4>물품등록</h4>
+                    <div class="logo">
+                        <a class="picture" href="#">
+                            <img src="img/free-icon-camera-685655.png" alt="">
+                        </a>
+                    </div>
+                    <form action="커뮤니티목록.jsp" class="comment-form">
                         <div class="row">
-                            <div class="col-lg-7 col-md-7">
-                                <div class="select-option">
+                            <div class="col-lg-12">
+                                <input type="text" placeholder="글 제목">
+                            </div>
+                                <div class="category-option">
                                     <select class="sorting">
-                                        <option value="">최신순</option>
-                                        <option value="">인기순</option>
+                                        <option value="">정보공유</option>
+                                        <option value="">자유게시판</option>
                                     </select>
                                 </div>
+
+                            <div class="col-lg-12">
+                                <textarea placeholder="글 내용"></textarea>
+                            <div class="col-lg-12">
+                               <input type="text" placeholder="태그 작성">
                             </div>
-                            <div class="col-lg-5 col-md-5 text-right">
-                                <button id="registration">글 등록</button>
+                                <button type="submit" class="site-btn">등록</button>
                             </div>
                         </div>
-                    </div>
-                    
-                        <table>
-                        <thead>
-                            <tr>
-                            <th>글번호</th>
-                            <th>제목</th>
-                            <th>작성자</th>
-                            <th>동네</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <c:forEach items="${Blist}"  var="list">
-                            <tr>
-                            <td>${list.b_id}</td>
-                            <td>${list.title}</td>
-                            <td>${list.userid}</td>
-                            <td>${list.area}</td>
-                            </tr>
-                            </c:forEach>
-                        </tbody>
-                        </table>
-
-
-
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Product Shop Section End -->
+    </div>
+
+
 
     <!-- Partner Logo Section Begin -->
     <div class="partner-logo">
@@ -302,57 +260,50 @@
     <!-- Partner Logo Section End -->
 
     <!-- Footer Section Begin -->
+    <!-- 아래까만거 -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="#" ><img src="img/로고.png" alt=""></a>
+                        	<li1>Email: mag@gmail.com</li1>
                         </div>
-                        <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello.colorlib@gmail.com</li>
-                        </ul>
-                        <div class="footer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
+                       
+                        
                     </div>
                 </div>
                 <div class="col-lg-2 offset-lg-1">
                     <div class="footer-widget">
-                        <h5>Information</h5>
+                        <h5>팀장</h5>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
+                            <li><a href="#">팀원</a></li>
+                            <li><a href="#">팀원</a></li>
+                            <li><a href="#">팀원</a></li>
+                            <li><a href="#">팀원</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="footer-widget">
-                        <h5>My Account</h5>
+                        <h5>정민규</h5>
                         <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Shopping Cart</a></li>
-                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">류이수</a></li>
+                            <li><a href="#">이상원</a></li>
+                            <li><a href="#">이도연</a></li>
+                            <li><a href="#">맹성영</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="newslatter-item">
-                        <h5>Join Our Newsletter Now</h5>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Enter Your Mail">
-                            <button type="button">Subscribe</button>
-                        </form>
+                        <h5>야 뭐먹을거냐고</h5>
+                        <p>진정해,,</p>
+                        <p>...</p>
+                        <p>알아서해</p>
+                        <p>아니 뭐 왜</p>
+                      
                     </div>
                 </div>
             </div>
@@ -360,16 +311,7 @@
         <div class="copyright-reserved">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copyright-text">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </div>
-                        <div class="payment-pic">
-                            <img src="img/payment-method.png" alt="">
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

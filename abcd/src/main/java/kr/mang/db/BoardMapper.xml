@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- sql를 기술하는 공간 -->
+
+<mapper namespace="kr.mang.model.BoardDAO">
+
+
+ <select id="selectList" resultType="kr.mang.model.BoardVO">
+ 
+ select B_ID,USERID, TITLE, AREA from BOARD order by b_id desc
+ 
+ </select>
+
+
+</mapper>

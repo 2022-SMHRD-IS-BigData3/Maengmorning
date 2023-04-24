@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -199,12 +198,22 @@ margin-left: 600px;
                                     <div class="specification-table">
                                     </div>
                                 </div>
+                                
+                                
+                                
+                                
                                 <div class="tab-pane fade" id="tab-3" role="tabpanel">
                                     <div class="customer-review-option">
                                         <div class="comment-option">
                                             <div class="co-item">
                                                 <div class="avatar-text">
-
+							
+                            
+                               
+	
+	
+	
+	
                                                 </div>
                                             </div>
                                             <div class="co-item">
