@@ -1,3 +1,7 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%pageContext.setAttribute("crcn", "\n");%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -8,10 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>제품상세정보</title>
-
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -22,6 +24,11 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript">
+     function goList(){
+    	 location.href="ProductList.do"
+     }
+    </script>
 </head>
 
 <body>
@@ -74,14 +81,14 @@
                 </div>
             </div>
         </div>
-       <form action=""> 
+        
         <div class="nav-item">
             <div class="container">
                 <div class="nav-depart">
                     
                 </div>
-               </form> 
-              <form action="">
+      
+              
                 <nav class="nav-menu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
@@ -118,7 +125,7 @@
                        
                     </ul>
                 </nav>
-               </form>
+               
                 <div id="mobile-menu-wrap"></div>
             </div>
         </div>
@@ -174,14 +181,14 @@
                     </div>
                 </div>
               
-             <form action="" method="post">
+             <form action="Productdetail.do" method="post">
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
                                 <!--제품 사진 등록하는 곳-->
                                 <img class="product-big-img"
-                                    src="${imgurl}"
+                                    src="${list.imgurl}"
                                     alt="">
                                 <div class="zoom-icon">
                                     <i class="fa fa-search-plus"></i>
@@ -190,14 +197,14 @@
                             <div class="product-thumbs">
                                 <div class="producw제품설명t-thumbs-track ps-slider owl-carousel">
                                     <div class="pt active" data-imgbigurl="img/product-single/product-1.jpg"><img
-                                            src="${imgul }"
+                                            src="${list.imgul }"
                                             alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-2.jpg"><img
-                                            src="${imgul }" alt=""></div>
+                                            src="${list.imgul }" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="${imgul }" alt=""></div>
+                                            src="${list.imgul }" alt=""></div>
                                     <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="${imgul }" alt=""></div>
+                                            src="${list.imgul }" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -205,10 +212,10 @@
                         <div class="col-lg-6">
                             <div class="product-details">
                                 <div class="pd-title">
-                                    <h4>${title }</h4>
+                                    <h4>${list.title}</h4>
                                     <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                                 </div>
-                                <p>판매자 : ${sellid}</p>
+                                <p>판매자 : ${list.sellerid}</p>
                                 <div class="pd-rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -218,8 +225,8 @@
                                     <span>(5)</span>
                                 </div>
                                 <div class="pd-desc">
-                                    <p>${title }</p>
-                                    <h4>${price}</h4>
+                                    <p>${list.title}</p>
+                                    <h4>${list.price}</h4>
                                 </div>
 							
 
@@ -265,12 +272,8 @@
                                         <div class="row">
                                             <div class="col-lg-7">
                                                 <h5>상세정보</h5>
-                                                <p>젖병 팝니다 새상품입니다
-                                                    <br>
-                                                    네고 가능하니 연락주세요 ~
-                                                    <br>
-                                                    가격은 45만원입니다.
-                                                </p>
+                                                <p>${fn:replace(list.state,crcn,"<br/>")}</p>
+                                                
 
                                             </div>
                                         </div>

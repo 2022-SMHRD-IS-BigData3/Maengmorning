@@ -19,7 +19,7 @@ public class ProductlistDAO {
 			e.printStackTrace();
 		}
 	}
-	// 게시판 전체 리스트 가져오기
+	// 중고거래 등록글  전체 리스트 가져오기
 	public List<ProductlistVO> productList() {
 		SqlSession session = null;
 		List<ProductlistVO> list = null;
@@ -32,7 +32,20 @@ public class ProductlistDAO {
 		return list;
 	}
 
-	
+	// 중고거래 물품 상세페이지
+	public ProductlistVO detail(int pro_id) {
+		SqlSession session = null;
+		ProductlistVO detail = null;
+		try {
+			session = sqlSessionFactory.openSession();
+			detail = session.selectOne("productdetail", pro_id);
+		} finally {
+			session.close();
+		}
+		
+		
+		return detail;
+	}
 	
 	
 	

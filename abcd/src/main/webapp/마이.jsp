@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -24,8 +25,7 @@
     }
     
     div>li1 {
-    background-color
-    :orange;
+    color : red;
     }
     
     ul.dropdown {
@@ -43,7 +43,7 @@ margin-left: 1600px;
 }
 
 div >.container {
-margin-left: 600px;
+margin-left: 495px;
 }
 
 
@@ -147,10 +147,20 @@ margin-left: 600px;
 
   <!-- 사진등록 -->
   
-  
-  
-    <div class="banner-section spad">
-        <div class="container-fluid">
+    
+
+    
+   
+    
+        <div class="container">
+           
+                <div class="mb-3">
+                    <div class="row">
+                    </div>
+                    <div class="product-tab">
+                    
+    
+        <div class="container-zxzxzzxzfluid">
             <div class="img-thumbnail">
                 <div class="col-lg-4">
                     <div class="single-banner">
@@ -159,9 +169,58 @@ margin-left: 600px;
                 </div>
             </div>
         </div>
-    </div>
-    
-    
+   <br>
+                        <div class="tab-item">
+                            <ul class="nav" role="tablist">
+                                <li>
+                                    <a data-toggle="tab" href="#tab-3" role="tab">판매/구매목록</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#tab-3" role="tab">매너온도</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#tab-3" role="tab">개인정보 수정</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#tab-3" role="tab">좋아요 목록</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-item-content">
+                            <div class="tab-content">
+                                <div class="tab-pane fade-in active" id="tab-1" role="tabpanel">
+                                    <div class="product-content">
+                                        <div class="row">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab-2" role="tabpanel">
+                                    <div class="specification-table">
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab-3" role="tabpanel">
+                                    <div class="customer-review-option">
+                                        <div class="comment-option">
+                                            <div class="co-item">
+                                                <div class="avatar-text">
+
+                                                </div>
+                                            </div>
+                                            <div class="co-item">
+                                                <div class="avatar-pic">
+                                                </div>
+                                                <div class="avatar-text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+        </div>
 
     
     
@@ -201,7 +260,8 @@ margin-left: 600px;
                 <div class="col-lg-3">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <a href="#"><img src="img/로고.png" alt=""></a>
+                            <a href="#"><img src="img/하얀배경로고.png" alt=""></a>
+                            <br>
                             <li1>Email: hello.colorlib@gmail.com</li1>
                         </div>
 

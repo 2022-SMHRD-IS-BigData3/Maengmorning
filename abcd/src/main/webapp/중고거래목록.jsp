@@ -1,4 +1,6 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -231,12 +233,18 @@
                                     <div class="pi-text">
                                         <div class="catagory-name">외출용품</div>
                                         <a href="#">
-                                            <h5>${list.title}</h5>
+                                            <span>${list.pro_id}</span>
+                                           <h5 id="title">
+                                            <a href="Productdetail.do?pro_id=${list.pro_id }">
+                                            	${list.title}
+                                            </a>
+                                           </h5>
                                         </a>
                                         <div class="product-price">
-                                            ${list.price}<br>
+                                            ${list.price}원<br>
                                         </div>
                                         <a class="area">${list.area }</a>
+                                        <a class="date"><fmt:formatDate value="${list.pro_date }" pattern="yyyy.MM.dd"/></a>
                                     </div>
                                 </div>
                             </div>
@@ -534,6 +542,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+   
 </body>
 
 </html>
