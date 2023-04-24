@@ -38,6 +38,7 @@ public class FrontController extends HttpServlet {
 		map.put("Productdetail.do", new ProductDetail());
 		map.put("ProductInput.do", new ProductInput());
 		map.put("BoardList.do", new BoardList());
+		
 
 
 	}

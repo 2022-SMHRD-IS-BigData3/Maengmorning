@@ -216,6 +216,7 @@
                                     <h4>${detail.title}</h4>
                                     <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                                 </div>
+                                <a class="date"><fmt:formatDate value="${detail.pro_date}" pattern="yyyy.MM.dd"/></a>
                                 <p>판매자 : ${detail.sellerid}</p>
                                 <div class="pd-rating">
                                     <i class="fa fa-star"></i>
