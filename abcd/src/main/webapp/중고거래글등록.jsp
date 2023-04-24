@@ -62,7 +62,6 @@
 
             margin-left: 15px;
 
-
         }
 
         div .logo {
