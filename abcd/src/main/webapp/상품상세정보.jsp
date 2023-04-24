@@ -189,24 +189,17 @@
                             <div class="product-pic-zoom">
                            <!--제품 사진 등록하는 곳
                            detail에서 가져온 데이터 등록 (list에서 가져오면 안됨. 덩어리가 안나옴.(아마도 계속안나온 이유가 이거인듯?))-->
-                                <img class="product-big-img"
-                                    src="${detail.imgurl}"
-                                    alt="">
+                                <img class="product-big-img" src="" alt="">
                                 <div class="zoom-icon">
                                     <i class="fa fa-search-plus"></i>
                                 </div>
                             </div>
                             <div class="product-thumbs">
-                                <div class="producw제품설명t-thumbs-track ps-slider owl-carousel">
-                                    <div class="pt active" data-imgbigurl="img/product-single/product-1.jpg"><img
-                                            src="${detail.imgurl}"
-                                            alt=""></div>
-                                    <div class="pt" data-imgbigurl="img/product-single/product-2.jpg"><img
-                                            src="${detail.imgurl}" alt=""></div>
-                                    <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="${detail.imgurl}" alt=""></div>
-                                    <div class="pt" data-imgbigurl="img/product-single/product-3.jpg"><img
-                                            src="${detail.imgurl}" alt=""></div>
+                                <div class="product-thumbs-track ps-slider owl-carousel">
+                                    <div class="pt active"><img src="${detail.imgurl}" alt=""></div>
+                                    <div class="pt"><img src="${detail.imgurl}" alt=""></div>
+                                    <div class="pt"><img src="${detail.imgurl}" alt=""></div>
+                                    <div class="pt"><img src="${detail.imgurl}" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -263,9 +256,6 @@
                                 <li>
                                     <a class="active" data-toggle="tab" href="#tab-1" role="tab">상세페이지</a>
                                 </li>
-                                <li>
-                                    <a data-toggle="tab" href="#tab-3" role="tab">고객리뷰</a>
-                                </li>
                             </ul>
                         </div>
                         <div class="tab-item-content">
@@ -284,39 +274,6 @@
                                 </div>
                                 <div class="tab-pane fade" id="tab-2" role="tabpanel">
                                     <div class="specification-table">
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="tab-3" role="tabpanel">
-                                    <div class="customer-review-option">
-                                        <h4>리뷰</h4>
-                                        <div class="comment-option">
-                                            <div class="co-item">
-                                                <div class="avatar-pic">
-                                                    <img src="img/product-single/avatar-1.png" alt="">
-                                                </div>
-                                                <div class="avatar-text">
-
-                                                    <h5>Brandon Kelley <span>27 Aug 2019</span></h5>
-                                                    <div class="at-reply">Nice !</div>
-                                                </div>
-                                            </div>
-                                            <div class="co-item">
-                                                <div class="avatar-pic">
-                                                    <img src="img/product-single/avatar-2.png" alt="">
-                                                </div>
-                                                <div class="avatar-text">
-                                                    <div class="at-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                    </div>
-                                                    <h5>Roy Banks <span>27 Aug 2019</span></h5>
-                                                    <div class="at-reply">Nice !</div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
