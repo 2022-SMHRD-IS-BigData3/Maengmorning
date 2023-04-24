@@ -186,7 +186,8 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
-                                <!--제품 사진 등록하는 곳-->
+                           <!--제품 사진 등록하는 곳
+                           detail에서 가져온 데이터 등록 (list에서 가져오면 안됨. 덩어리가 안나옴.(아마도 계속안나온 이유가 이거인듯?))-->
                                 <img class="product-big-img"
                                     src="${detail.imgurl}"
                                     alt="">
@@ -272,7 +273,7 @@
                                         <div class="row">
                                             <div class="col-lg-7">
                                                 <h5>상세정보</h5>
-                                                <p>${fn:replace(list.state,crcn,"<br/>")}</p>
+                                                <p>${fn:replace(detail.pro_state,crcn,"<br/>")}</p>
                                                 
 
                                             </div>

@@ -36,17 +36,12 @@ public class ProductlistDAO {
 	public ProductlistVO detail(int pro_id) {
 		SqlSession session = null;
 		ProductlistVO detail = null;
-		System.out.println("page");
 		try {
 			session = sqlSessionFactory.openSession();
 			detail = session.selectOne("productdetail", pro_id);
-			System.out.println("hi");
 		} finally {
-			System.out.println("bye");
 			session.close();
 		}
-		
-		System.out.println("ok");
 		return detail;
 	}
 	
