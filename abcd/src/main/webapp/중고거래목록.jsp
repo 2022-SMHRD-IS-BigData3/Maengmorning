@@ -220,7 +220,7 @@
                           
                         </div>
                     </div>
-                 
+       <!-- dao productlist기능 이용, productVO에 있는 변수 활용 -->
                   <c:forEach items="${productlist}" var="list">
                     <div class="product-list">
                         <div class="row">

@@ -11,7 +11,7 @@
   	select* from 등록물품 order by pro_id desc 
   </select>
   
-  <select id="productdetail" parameterType="kr.mang.model.ProductlistVO" resultType="kr.mang.model.ProductlistVO">
+  <select id="productdetail" parameterType="int" resultType="kr.mang.model.ProductlistVO">
   	SELECT * FROM 등록물품 WHERE PRO_ID = #{pro_id}
   </select>
   
