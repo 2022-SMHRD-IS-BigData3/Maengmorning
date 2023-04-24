@@ -197,6 +197,7 @@
                     <div class="logo">
                         <a class="picture" href="#">
                            <input type="file" class="form-control" id="imageurl" name="imageurl" > 
+                           <input type="submit" value="Upload">
                             <img src="img/free-icon-camera-685655.png" alt="">
                         </a>
                     </div>
