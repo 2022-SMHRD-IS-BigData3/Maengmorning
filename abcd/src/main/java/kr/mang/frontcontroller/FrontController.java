@@ -33,6 +33,7 @@ public class FrontController extends HttpServlet {
 		map.put("ProductList.do",new ProductList());
 		map.put("Productdetail.do", new ProductDetail());
 		map.put("BoardList.do", new BoardList());
+		
 //		map.put("Ajax.do", new Ajax());
 	}
 	// ---> service 메소드 완성 !!! ---> 더이상 손 안대도 됨!!

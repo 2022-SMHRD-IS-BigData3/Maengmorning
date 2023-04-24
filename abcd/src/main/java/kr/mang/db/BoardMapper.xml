@@ -14,5 +14,13 @@
  
  </select>
 
+<select id = "detail" resultType="kr.mang.model.BoardVO">
+
+select * from BOARD WHERE b_id = "${b_id}"
+
+</select>
+
+
+
 
 </mapper>
