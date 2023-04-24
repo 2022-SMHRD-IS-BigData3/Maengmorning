@@ -1,45 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
-
-<style>
-    .single-banner {
-        width:
-            400px;
-        height:
-            320.55px;
-        overflow:
-            hidden;
-    }
-
-    .single-banner {
-        width:
-            400px;
-        height:
-            320.55px;
-        overflow:
-            hidden;
-    }
-
-    div>li1 {
-        background-color: orange;
-    }
-
-    ul.dropdown {
-        width: 200px;
-        height: 600px;
-    }
-
-
-    .col-lg-12 {
-        margin-top: 10px;
-        margin-left: 1600px;
-    }
-
-    div>.container {
-        margin-left: 600px;
-    }
-
-</style>
 
 <head>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
@@ -48,13 +9,15 @@
         <meta name="keywords" content="Fashi, unica, creative, html">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>메인</title>
+        <title>마이페이지</title>
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap"
             rel="stylesheet">
 
         <!-- Css Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
         <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
@@ -66,11 +29,93 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
+<style>
+
+
+	.table {
+  margin-top: -45px;
+}
+    #registration {
+        display: inline-block;
+        font-size: 16px;
+        color: #636363;
+        padding: 5px 15px;
+        border: 1px solid #ebebeb;
+        margin-right: 5px;
+        margin-bottom: 9px;
+        border-radius: 2px;
+    }
+
+    .single-banner {
+        width: 570.98px;
+        height: 330.55px;
+        overflow: hidden;
+    }
+
+    .single-banner {
+        width: 570.00px;
+        height: 330.55px;
+        overflow: hidden;
+    }
+
+    .col-lg-12 {
+        margin-top: 10px;
+        margin-left: 1700px;
+    }
+
+    .logo {
+        width: 300px;
+
+    }
+
+    /* 스타일링 */
+    .post-info {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .post-info h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .post-info p {
+        font-size: 14px;
+        color: #777;
+        margin: 0;
+    }
+
+    .post-content {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .content_img {
+        margin-bottom: 20px;
+    }
+
+    div .comment input {
+        width: 500px;
+    }
+
+    table {
+
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    a.nickname {
+        font-weight: 700;
+    }
+</style>
+
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
     <!-- Header Section Begin -->
     <header class="header-section">
 
@@ -78,30 +123,60 @@
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
-                        <a href="./메인.jsp">
+
+                        <a href="./index.html">
                             <img src="./img/로고.png" alt="">
                         </a>
+
                     </div>
+
+
+                    <div class="col-lg-7 col-md-7">
+                        <div class="advanced-search">
+                            <div class="input-group">
+                                <input type="text" placeholder="검색">
+                                <button type="button"><i class="ti-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                     <div class="col-lg-3 text-right col-md-3">
+
+                        <ul class="nav-right">
+                            <li class="heart-icon">
+                                <a href="#">
+                                    <i class="icon_MSY_alt">로그인</i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-
-
         <div class="nav-item">
             <div class="container">
-                <div class="nav-depart"></div>
+                <div class="nav-depart">
+
+                </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
                         <li class="active"><a href="./index.html">Home</a></li>
 
+
+                       
+                       
+                       
+                       
+                       
+                       
+                       
                         <li><a href="#">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
-                                <li><a href="https://www.toyplus.co.kr/goods/goods_list.php?cateCd=001001"> 장난감/도서</a>
-                                </li>
-                                <li><a href="https://wiisnt.co.kr/product/list.html?cate_no=114">의류</a></li>
+                                <li><a href="#"> 장난감/도서</a></li>
+                                <li><a href="#">의류</a></li>
                                 <li><a href="#">가구</a></li>
                                 <li><a href="#">침구류</a></li>
                                 <li><a href="#"> 생활용품</a></li>
@@ -119,25 +194,42 @@
 
                         <li><a href="#">마이페이지</a>
                             <ul class="dropdown">
-                                <li><a href="./장바구니.jsp">판매/구매목록</a></li>
+                                <li><a href="#">판매/구매목록</a></li>
                                 <li><a href="#">매너온도</a></li>
                                 <li><a href="#">개인정보 수정</a></li>
                                 <li><a href="#">좋아요 목록</a></li>
                             </ul>
                         </li>
-
                     </ul>
                 </nav>
+                <div id="mobile-menu-wrap"></div>
             </div>
         </div>
     </header>
+    <!-- Header End -->
 
-
-    <section class="product-shop spad page-details">
+    <!-- Breadcrumb Section Begin -->
+    <div class="breacrumb-section">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="breadcrumb-text">
+                        <a href="#"><i class="fa fa-home"></i> Home</a>
+                        <span>Shop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Section Begin -->
 
-            <div class="col-lg-3">
-                <div class="filter-widget">
+    <!-- 카테고리/ 태그 -->
+    <section class="product-shop spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
+                    
+                    <div class="filter-widget">
                     <h4 class="fw-title">카테고리</h4>
                     <ul class="filter-catagories">
                         <li><a href="#">개인정보수정</a></li>
@@ -146,20 +238,26 @@
                         <li><a href="#">매너온도</a></li>
                     </ul>
                 </div>
-            </div>
 
-    </section>
+                </div>
+                
+                <div class="col-lg-8 order-1 order-lg-2">
+               
+                    <div class="product-show-option">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
 
-
-    <div class="container">
-
-        <div class="col-lg-9">
+                    <!-- 게시판 글 -->
+                    <div class="container">
+        <div class="col-lg-11">
             <div class="row">
             </div>
-            <div class="product-tab">
 
                 <form action="마이상세(판매).jsp">
                     <table class="table">
+                       
                         <thead>
                             <td>판매내역</td>
                         </thead>
@@ -178,16 +276,18 @@
                             </tr>
                         </tbody>
                     </table>
+                    
                     <div style="text-align: right;">
                         <button>더보기</button>
                     </div>
-                    </div>
                 </form>
-                <br>
+                <br><br>
 
                 <form action="마이상세(판매).jsp">
                     <table class="table">
+                        
                         <thead>
+                        
                             <td>구매내역</td>
                         </thead>
                         <tbody>
@@ -209,7 +309,7 @@
                         <button>더보기</button>
                     </div>
                 </form>
-                <br>
+                <br><br>
                 <form action="마이상세(판매).jsp">
                     <table class="table">
                         <thead>
@@ -233,6 +333,7 @@
                     </div>
                 </div>
                 </form>
+                <br><br><br><br>
                 <div class="tab-item-content">
                     <div class="tab-content">
                         <div class="tab-pane fade-in active" id="tab-1" role="tabpanel">
@@ -245,22 +346,11 @@
                             <div class="specification-table">
                             </div>
                         </div>
-
-
-
-
                         <div class="tab-pane fade" id="tab-3" role="tabpanel">
                             <div class="customer-review-option">
                                 <div class="comment-option">
                                     <div class="co-item">
                                         <div class="avatar-text">
-
-
-
-
-
-
-
                                         </div>
                                     </div>
                                     <div class="co-item">
@@ -278,39 +368,18 @@
         </div>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Man Banner Section End -->
-
-
-    <!-- 아래까만거 -->
+                    
+                    
+        
+        </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
     <footer class="footer-section">
         <div class="container">
             <div class="row">
@@ -318,7 +387,7 @@
                     <div class="footer-left">
                         <div class="footer-logo">
                             <a href="#"><img src="img/로고.png" alt=""></a>
-                            <li1>Email: hello.colorlib@gmail.com</li1>
+                            <li>Email: hello.colorlib@gmail.com</li>
                         </div>
 
 

@@ -29,6 +29,7 @@
     	 location.href="ProductList.do"
      }
     </script>
+    
 </head>
 
 <body>
@@ -150,6 +151,7 @@
 
     <!-- 카테고리 작성-->
     <section class="product-shop spad page-details">
+        <div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
@@ -172,15 +174,14 @@
                         <h4 class="fw-title">태그</h4>
                         <div class="fw-tags">
                             <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
+                        	<a href="#">저장된태그</a>
+                        	<a href="#">저장된태그</a>
+                        	<a href="#">저장된태그</a>
+                        	<a href="#">저장된태그</a>
                         </div>
                     </div>
                 </div>
-              
+              </div>
              <nav id="Productdetail.do">
                 <div class="col-lg-9">
                     <div class="row">
@@ -323,7 +324,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- Product Shop Section End -->
 
