@@ -42,8 +42,6 @@
 }
 
 
-
-
 <!-- 버튼 -->
 .col-lg-12{
 margin-top: 10px;
@@ -64,10 +62,7 @@ margin-right: 1600px;
 
 }
 
-
-
 </style>
-
 
 <head>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
