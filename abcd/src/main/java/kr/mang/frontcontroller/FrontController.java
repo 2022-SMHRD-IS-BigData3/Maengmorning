@@ -9,6 +9,7 @@ import java.util.UUID;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,6 +28,13 @@ import kr.mang.controller.ProductInput;
 
 // url이 .do로 끝나는 모든 요청에 대해 처리하는 서블릿 
 @WebServlet("*.do")
+@MultipartConfig(
+		location = "C:/",
+		maxFileSize = -1,
+		maxRequestSize = -1,
+		fileSizeThreshold = 1024
+		)
+
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private HashMap<String,Command> map = null;
@@ -42,6 +50,7 @@ public class FrontController extends HttpServlet {
 		map.put("Boarddetail.do", new Boarddetail());
 
 	}
+	
 	// ---> service 메소드 완성 !!! ---> 더이상 손 안대도 됨!!
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

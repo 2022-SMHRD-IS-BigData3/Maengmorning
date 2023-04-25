@@ -17,8 +17,8 @@
   </select>
   <!-- 물품 등록 -->
   <insert id="productinput" parameterType="kr.mang.model.ProductlistVO">
-  	insert into 등록물품(pro_id,sellerid,imgurl,price,title,area,pro_state,pro_date)
-  	values(board_seq.nextval,#{sellerid},#{imgurl},#{price},#{title},#{area},#{pro_state},sysdate)
+  	insert into 등록물품(PRO_ID,SELLERID,IMGURL,PRICE,TITLE,AREA,PRO_STATE,PRO_DATE)
+  	values('B'||seq_name.nextval,'smhrd',#{imgurl},#{price},#{title},#{area},#{pro_state},sysdate)
   </insert>
   
 </mapper>

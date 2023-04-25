@@ -1,3 +1,7 @@
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -207,6 +211,7 @@
         </div>
     </div>
 
+   <form action="ProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
     <table id="Product_Style" align="center">
         <tr class="border-bottom">
           <th colspan="2" >
@@ -219,9 +224,10 @@
           <td>
             <div class="logo">
                 <img src="img/free-icon-camera-685655.png" alt="">
+              <!--   <input name="imgurl" type="file" class="form-control" id="imgurl">-->
             </div>
             <div class="input-group mb-3">
-                <input type="file" class="form-control" id="inputGroupFile02">
+               <input name="imgurl" type="file" class="form-co/ntrol" id="imgurl"> 
                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
               </div>
           </td>
@@ -231,7 +237,8 @@
           <td>글 제목</td>
           <td>
             <div>
-                <input class="ProductTitle" type="text" placeholder="글 제목">
+                <input id="title" name="title" type="text" placeholder="글 제목">
+                
             </div>
           </td>
         </tr>
@@ -257,7 +264,7 @@
             <td>거래지역</td>
             <td>
                 <div class="area">
-                    <input class="ProductArea" type="text" placeholder="거래지역">
+                    <input id="area" name="area" type="text" placeholder="거래지역">
                 </div> 
             </td>
           </tr>
@@ -266,7 +273,7 @@
             <td>상품가격</td>
             <td>
                 <div class="price">
-                    <input class="ProductPrice" type="text" placeholder="가격 작성">
+                   <input id="price" name="price" type="text" placeholder="가격 작성">
                 </div>
             </td>
           </tr>
@@ -275,7 +282,7 @@
             <td>상품설명</td>
             <td>
                 <div>
-                    <textarea class="ProductText" placeholder="여러 장의 상품 사진과 구입연도, 브랜드, 사용감, 하자유무 등 구매자에게 꼭 필요한 정보를 포함해주세요. (10자 이상)"></textarea>  
+                    <textarea id="pro_state" name="pro_state" class="ProductText" placeholder="여러 장의 상품 사진과 구입연도, 브랜드, 사용감, 하자유무 등 구매자에게 꼭 필요한 정보를 포함해주세요. (10자 이상)"></textarea>  
                 </div>
             </td>
           </tr>
@@ -291,13 +298,13 @@
         
         <tr class="border-bottom" align="center">
             <td colspan="2">
-                <button type="submit" class="site-btn">등록</button>
+               <input type="submit" class="btn btn-primary btn-sm px-3 gap-3" value="등록">
             </td>
         </tr>
         
 
       </table>
-
+	</form>
 
 
     <!-- Partner Logo Section Begin -->
