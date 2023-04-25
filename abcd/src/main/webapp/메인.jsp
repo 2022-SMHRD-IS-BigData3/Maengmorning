@@ -262,7 +262,7 @@
               <nav class="nav-menu mobile-menu">
                 <ul>
        				
-                  <li class="active"><a href="ProductList.do" type="button">더보기</a></li>
+                  <li class="active"><a href="Go중고거래목록.do" type="button">더보기</a></li>
                 </ul>
               </nav>
             </div>
@@ -346,7 +346,7 @@
               <div class="container">
                 <nav class="nav-menu mobile-menu">
                   <ul>
-                    <li class="active"><a href="BoardList.do">더보기</a></li>
+                    <li class="active"><a href="Go커뮤니티목록.do">더보기</a></li>
                   </ul>
                 </nav>
               </div>
