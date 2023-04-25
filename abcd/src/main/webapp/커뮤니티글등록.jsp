@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -35,6 +34,7 @@
     div .category-option {
         margin-bottom: 30px;
         margin-left: 15px;
+
     
     }
 
@@ -67,11 +67,32 @@
         width: 280px;
         margin-right: 25px;
     }
+
+    #Product_Style {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        width: 900px;
+    }
+
+    div.logo {
+        height: 100px;
+        width: 100px;
+    }
     
+    .Product_Style_td {
+        margin-right: 20px;
     
-     div>li1{
-     background-color :orange;
-     }
+    }
+
+    .ProductTitle, div.nice-select.sorting, .ProductArea, .ProductPrice, .ProductTag {
+        width: 675px;
+    }
+
+    .ProductText {
+        width: 675px;
+        height: 400px;
+    }
+    
 </style>
 
 <body>
@@ -178,50 +199,84 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
                         <a href="./home.html"><i class="fa fa-home"></i> Home</a>
-                        <a href="./shop.html">커뮤니티</a>
-                        <span>글등록</span>
+                        <a href="./shop.html">중고거래</a>
+                        <span>물품등록</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <table id="Product_Style" align="center">
+        <tr class="border-bottom">
+          <th colspan="2" >
+            <h4>커뮤니티 글 등록</h4>
+          </th>
+        </tr>
 
-    <div class="col-lg-12" align="center">
-        <div class="col-lg-6">
-            <div class="contact-form">
-                <div class="leave-comment">
-                    <h4>물품등록</h4>
-                    <div class="logo">
-                        <a class="picture" href="#">
-                            <img src="img/free-icon-camera-685655.png" alt="">
-                        </a>
-                    </div>
-                    <form action="커뮤니티목록.jsp" class="comment-form">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <input type="text" placeholder="글 제목">
-                            </div>
-                                <div class="category-option">
-                                    <select class="sorting">
-                                        <option value="">정보공유</option>
-                                        <option value="">자유게시판</option>
-                                    </select>
-                                </div>
-
-                            <div class="col-lg-12">
-                                <textarea placeholder="글 내용"></textarea>
-                            <div class="col-lg-12">
-                               <input type="text" placeholder="태그 작성">
-                            </div>
-                                <button type="submit" class="site-btn">등록</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+        <tr class="border-bottom">
+          <td class="Product_Style_td">이미지</td>
+          <td>
+            <div class="logo">
+                <img src="img/free-icon-camera-685655.png" alt="">
             </div>
-        </div>
-    </div>
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+              </div>
+          </td>
+        </tr>
+
+        <tr class="border-bottom">
+          <td>글 제목</td>
+          <td>
+            <div>
+                <input class="ProductTitle" type="text" placeholder="글 제목">
+            </div>
+          </td>
+        </tr>
+
+        <tr class="border-bottom">
+          <td>카테고리</td>
+          <td>
+            <div class="category-option">
+                <select class="sorting">
+                    <option value="">정보공유</option>
+                    <option value="">자유게시판</option>
+                    
+                </select>
+            </div> 
+          </td>
+        </tr>
+
+        <tr class="border-bottom">
+            <td>글 내용</td>
+            <td>
+                <div>
+                    <textarea class="ProductText" placeholder="회원들과 공유하고 싶은 정보들을 자유롭게 작성해주세요. (10자 이상)"></textarea>  
+                </div>
+            </td>
+          </tr>
+
+        <tr class="border-bottom">
+            <td>상품태그</td>
+            <td>
+                <div>
+                    <input class="ProductTag" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
+                 </div>
+            </td>
+          </tr>
+        
+        <tr class="border-bottom" align="center">
+            <td colspan="2">
+                <button type="submit" class="site-btn">등록</button>
+            </td>
+        </tr>
+        
+
+      </table>
+
+
 
     <!-- Partner Logo Section Begin -->
     <div class="partner-logo">
@@ -258,50 +313,57 @@
     <!-- Partner Logo Section End -->
 
     <!-- Footer Section Begin -->
-    <!-- 아래까만거 -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="footer-left">
                         <div class="footer-logo">
-                            <a href="#" ><img src="img/로고.png" alt=""></a>
-                        	<li1>Email: mag@gmail.com</li1>
+                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
                         </div>
-                       
-                        
+                        <ul>
+                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Phone: +65 11.188.888</li>
+                            <li>Email: hello.colorlib@gmail.com</li>
+                        </ul>
+                        <div class="footer-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-2 offset-lg-1">
                     <div class="footer-widget">
-                        <h5>팀장</h5>
+                        <h5>Information</h5>
                         <ul>
-                            <li><a href="#">팀원</a></li>
-                            <li><a href="#">팀원</a></li>
-                            <li><a href="#">팀원</a></li>
-                            <li><a href="#">팀원</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Checkout</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Serivius</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <div class="footer-widget">
-                        <h5>정민규</h5>
+                        <h5>My Account</h5>
                         <ul>
-                            <li><a href="#">류이수</a></li>
-                            <li><a href="#">이상원</a></li>
-                            <li><a href="#">이도연</a></li>
-                            <li><a href="#">맹성영</a></li>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Shopping Cart</a></li>
+                            <li><a href="#">Shop</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="newslatter-item">
-                        <h5>야 뭐먹을거냐고</h5>
-                        <p>진정해,,</p>
-                        <p>...</p>
-                        <p>알아서해</p>
-                        <p>아니 뭐 왜</p>
-                      
+                        <h5>Join Our Newsletter Now</h5>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#" class="subscribe-form">
+                            <input type="text" placeholder="Enter Your Mail">
+                            <button type="button">Subscribe</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -309,7 +371,19 @@
         <div class="copyright-reserved">
             <div class="container">
                 <div class="row">
-                    
+                    <div class="col-lg-12">
+                        <div class="copyright-text">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                            This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </div>
+                        <div class="payment-pic">
+                            <img src="img/payment-method.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

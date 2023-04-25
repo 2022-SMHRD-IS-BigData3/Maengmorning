@@ -3,7 +3,7 @@
 <html lang="zxx">
 
 <style>
-
+	
   
     .single-banner
     {
@@ -61,6 +61,8 @@ margin-left: 600px;
 margin-right: 1600px;
 
 }
+
+
 
 </style>
 
@@ -185,12 +187,11 @@ margin-right: 1600px;
             </div>
         </div>
     </header>
-    <!-- Header End -->
     
     
 
-    <!-- Hero Section Begin -->
-    <!-- 1번째사진 -->
+    <!-- Header End -->
+    
     <section class="hero-section">
         <div class="hero-items owl-carousel">
             <div class="single-hero-items set-bg" data-setbg="img/hero-1.jpg">
