@@ -372,10 +372,10 @@
                         <div class="filter-widget">
                             <h4 class="fw-title">카테고리</h4>
                             <ul class="filter-catagories">
-                                <li><a href="#">개인정보수정</a></li>
-                                <li><a href="#">판매/구매목록</a></li>
-                                <li><a href="#">찜목록</a></li>
-                                <li><a href="#">매너온도</a></li>
+                                <li><a href="#">잡담</a></li>
+                                <li><a href="#">그외</a></li>
+                                <li><a href="쪽지보관함수정.jsp">등등</a></li>
+                                
                             </ul>
                         </div>
 
@@ -455,10 +455,11 @@
                 </div>
 
             </div>
+           </section>
 
             <br><br><br><br>
-
-            <footer class="footer-section">
+<!--아래까만거  -->
+           <footer class="footer-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3">
