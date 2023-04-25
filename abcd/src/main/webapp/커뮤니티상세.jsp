@@ -303,11 +303,11 @@
 
                     <br>
                     <ul class="list-group">
-                        <li class="list-group-item"> <a class="nickname">성영맘</a> 루루 귀여워요~~~ <button>삭제</button></li>
-                        <li class="list-group-item"> <a class="nickname">성영맘</a> 맹성영바보 <button>삭제</button></li>
-                        <li class="list-group-item"> <a class="nickname">성영맘</a> 성영이 해줘~~ <button>삭제</button></li>
-                        <li class="list-group-item"> <a class="nickname">성영맘</a> 메롱 <button>삭제</button></li>
-                        <li class="list-group-item"> <a class="nickname">성영맘</a> 메롱 <button>삭제</button></li>
+                        <li class="list-group-item"> <a class="nickname">성영맘</a> 루루 귀여워요~~~ <button>ㅇㅈ</button></li>
+                        <li class="list-group-item"> <a class="nickname">성영</a> 도연이언니 <button>바보</button></li>
+                        <li class="list-group-item"> <a class="nickname">가수</a> 이승기<button>삭제</button></li>
+                        <li class="list-group-item"> <a class="nickname">팀장님</a> 힘내세뇨 <button>!!!</button></li>
+                        <li class="list-group-item"> <a class="nickname">성영맘</a> 루루 귀여워요~~~ <button>ㅇㅈ</button></li>
                       </ul>
 
                     </div>
