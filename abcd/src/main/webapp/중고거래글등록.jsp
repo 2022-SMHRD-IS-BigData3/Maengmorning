@@ -1,3 +1,7 @@
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -220,10 +224,10 @@
           <td>
             <div class="logo">
                 <img src="img/free-icon-camera-685655.png" alt="">
-                <input name="imgurl" type="file" class="form-control" id="imgurl">
+              <!--   <input name="imgurl" type="file" class="form-control" id="imgurl">-->
             </div>
             <div class="input-group mb-3">
-               <input name="imgurl" type="file" class="form-control" id="imgurl">
+               <input name="imgurl" type="file" class="form-co/ntrol" id="imgurl"> 
                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
               </div>
           </td>
@@ -234,7 +238,7 @@
           <td>
             <div>
                 <input id="title" name="title" type="text" placeholder="글 제목">
-                <input type="hidden" id="pro_id" name="pro_id" value="${detail.pro_id}">
+                
             </div>
           </td>
         </tr>
