@@ -1,4 +1,6 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
     <!DOCTYPE html>
 
@@ -319,7 +321,7 @@
             </div>
 
         </div>
-
+	<form action="ProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
         <div class="col-lg-12" align="center">
 
             <div class="col-lg-6">
@@ -327,26 +329,27 @@
                 <div class="contact-form">
 
                     <div class="leave-comment">
-
+						<input type="hidden" id="pro_id" name="pro_id" value="${detail.pro_id}">
                         <h4>물품등록</h4>
 
-                        <div class="logo">
+                        <div class="input-group">
 
                             <a class="picture" href="#">
 
                                 <img src="img/free-icon-camera-685655.png" alt="">
-
+								<input name="imgurl" type="file" class="form-control" id="imgurl">
+								
                             </a>
 
                         </div>
 
-                        <form action="#" class="comment-form">
+                        
 
                             <div class="row">
 
                                 <div class="col-lg-12">
-
-                                    <input type="text" placeholder="글 제목">
+									
+                                    <input id="title" name="title" type="text" placeholder="글 제목">
 
                                 </div>
 
@@ -374,19 +377,19 @@
 
                                 <div class="area">
 
-                                    <input id="area" type="text" placeholder="거래지역">
+                                    <input id="area" name="area" type="text" placeholder="거래지역">
 
                                 </div>
 
                                 <div class="price">
 
-                                    <input id="price" type="text" placeholder="가격 작성">
+                                    <input id="price" name="price" type="text" placeholder="가격 작성">
 
                                 </div>
 
                                 <div class="col-lg-12">
 
-                                    <textarea placeholder="글 내용"></textarea>
+                                    <textarea id="pro_state" name="pro_state" class="form-control" placeholder="글 내용" rows = "7"></textarea>
 
                                     <div class="col-lg-12">
 
@@ -394,13 +397,13 @@
 
                                     </div>
 
-                                    <button type="submit" class="site-btn">등록</button>
-
+                                    <input type="submit" class="btn btn-primary btn-sm px-3 gap-3" value="등록">
+									
                                 </div>
 
                             </div>
 
-                        </form>
+                       
 
                     </div>
 
@@ -409,7 +412,7 @@
             </div>
 
         </div>
-
+ 	</form>
         <!-- Partner Logo Section Begin -->
 
         <div class="partner-logo">
@@ -609,6 +612,7 @@
         <script src="js/owl.carousel.min.js"></script>
 
         <script src="js/main.js"></script>
+       
 
     </body>
 

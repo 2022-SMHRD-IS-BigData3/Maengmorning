@@ -24,7 +24,7 @@
         <servlet-name>ProductInput</servlet-name>
         <servlet-class>kr.mang.frontcontroller.ProductInput</servlet-class>
         <multipart-config>
-            <location></location>
+            <location>/Users/smhrd/Desktop/uploads</location>
             <max-file-size>-1</max-file-size>
             <max-request-size>-1</max-request-size>
             <file-size-threshold>1024</file-size-threshold>

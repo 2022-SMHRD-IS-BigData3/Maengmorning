@@ -42,6 +42,7 @@ public class FrontController extends HttpServlet {
 		map.put("Boarddetail.do", new Boarddetail());
 
 	}
+	
 	// ---> service 메소드 완성 !!! ---> 더이상 손 안대도 됨!!
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
