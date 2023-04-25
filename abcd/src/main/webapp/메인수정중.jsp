@@ -261,7 +261,8 @@
             <div class="container">
               <nav class="nav-menu mobile-menu">
                 <ul>
-                  <li class="active"><a href="./index.html">더보기</a></li>
+       				<div></div>
+                  <li class="active"><a href="./index.html" type="button">더보기</a></li>
                 </ul>
               </nav>
             </div>
@@ -269,12 +270,9 @@
         </div>
       </div>
 
-
-      <br><br>
-
-
-
-
+	<!-- 선 -->
+   <div class="copyright-reserved"></div>
+<br><br><br><br>
       <!-- 커뮤니티 -->
 
       <div class="container-fluid">
@@ -356,12 +354,10 @@
           </div>
         </div>
 
-        <!--아래여백만들려고넣어둠-->
-        <div class="banner-section spad"></div>
+        
 
 
-
-
+<br><br><br>
 
 
 
@@ -413,13 +409,11 @@
               </div>
             </div>
           </div>
-          <div class="copyright-reserved">
-            <div class="container">
-              <div class="row">
-
-              </div>
-            </div>
-          </div>
+          
+          
+          
+          
+          
         </footer>
         <!-- Footer Section End -->
 
