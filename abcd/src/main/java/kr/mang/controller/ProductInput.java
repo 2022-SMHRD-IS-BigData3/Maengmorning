@@ -23,7 +23,13 @@ public class ProductInput implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 업로드될 폴더 경로
 		String uploadPath = request.getServletContext().getRealPath("/uploads");
-		
+		System.out.println("uploadpath는?"+uploadPath);
+		try {
+			//파일업로드
+			//MultipartRequest multi = new Mul
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		
 		
 		
