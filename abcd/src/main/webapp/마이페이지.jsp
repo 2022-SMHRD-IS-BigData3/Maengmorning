@@ -128,6 +128,10 @@
             a.nickname {
                 font-weight: 700;
             }
+            
+          
+            
+            
     </style>
 
     <body>
@@ -252,8 +256,7 @@
                             <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
                                 role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false">
                                 <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">매너온도???</text>
+                                <rect width="100%" height="100%" fill="#FFD280" /><text x="12%" y="50%" fill="#F6F6F6">매너온도 ★★★★★</text>
                             </svg>
                         </div>
                     </div>
@@ -274,7 +277,7 @@
                     <table class="table">
 
                         <thead>
-                            <td>판매내역</td>
+                            <td><h4>✔판매내역</h4></td>
                         </thead>
                         <tbody>
                             <tr>
@@ -293,7 +296,7 @@
                     </table>
 
                     <div style="text-align: right;">
-                        <button>더보기</button>
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
                     </div>
                 </form>
                 <br><br>
@@ -303,7 +306,7 @@
 
                         <thead>
 
-                            <td>구매내역</td>
+                            <td><h4>✔구매내역</h4></td>
                         </thead>
                         <tbody>
                             <tr>
@@ -321,14 +324,15 @@
                         </tbody>
                     </table>
                     <div style="text-align: right;">
-                        <button>더보기</button>
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
+
                     </div>
                 </form>
                 <br><br>
                 <form action="마이상세(찜).jsp">
                     <table class="table">
                         <thead>
-                            <td>찜목록</td>
+                            <td><h4>❤찜목록</h4></td>
                         </thead>
                         <tbody>
                             <tr>
@@ -344,7 +348,7 @@
                         </tbody>
                     </table>
                     <div style="text-align: right;">
-                        <button>더보기</button>
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
                     </div>
             </form>
             </div>

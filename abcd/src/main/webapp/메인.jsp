@@ -94,7 +94,7 @@
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
                 <li class="heart-icon">
-                  <a href="로그인.jsp">
+                  <a href="#">
                     <i class="icon_MSY_alt">로그인</i>
                   </a>
                 </li>
@@ -262,7 +262,10 @@
               <nav class="nav-menu mobile-menu">
                 <ul>
        				
+
                   <li class="active"><a href="Go중고거래목록.do" type="button">더보기</a></li>
+
+
                 </ul>
               </nav>
             </div>
@@ -346,7 +349,11 @@
               <div class="container">
                 <nav class="nav-menu mobile-menu">
                   <ul>
+<<<<<<< HEAD
                     <li class="active"><a href="Go커뮤니티목록.do">더보기</a></li>
+=======
+                    <li class="active"><a href="./index.html">더보기</a></li>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
                   </ul>
                 </nav>
               </div>
