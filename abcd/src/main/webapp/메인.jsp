@@ -94,7 +94,7 @@
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
                 <li class="heart-icon">
-                  <a href="#">
+                  <a href="로그인.jsp">
                     <i class="icon_MSY_alt">로그인</i>
                   </a>
                 </li>
@@ -262,7 +262,7 @@
               <nav class="nav-menu mobile-menu">
                 <ul>
        				
-                  <li class="active"><a href="./index.html" type="button">더보기</a></li>
+                  <li class="active"><a href="ProductList.do" type="button">더보기</a></li>
                 </ul>
               </nav>
             </div>
@@ -346,7 +346,7 @@
               <div class="container">
                 <nav class="nav-menu mobile-menu">
                   <ul>
-                    <li class="active"><a href="./index.html">더보기</a></li>
+                    <li class="active"><a href="BoardList.do">더보기</a></li>
                   </ul>
                 </nav>
               </div>
