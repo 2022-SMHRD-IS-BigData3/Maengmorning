@@ -221,7 +221,7 @@
               </div>
             </div>
           </div>
-
+ 
           <div class="col">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +261,7 @@
             <div class="container">
               <nav class="nav-menu mobile-menu">
                 <ul>
-       				<div></div>
+       				
                   <li class="active"><a href="./index.html" type="button">더보기</a></li>
                 </ul>
               </nav>
@@ -269,7 +269,7 @@
           </div>
         </div>
       </div>
-
+ </div>
 	<!-- 선 -->
    <div class="copyright-reserved"></div>
 <br><br><br><br>
@@ -337,7 +337,7 @@
 
           </div>
         </div>
-
+ </div>
 
         <div class="banner-section spad">
           <div class="container-fluid">
@@ -352,8 +352,7 @@
               </div>
             </div>
           </div>
-        </div>
-
+      </div>
         
 
 
@@ -363,71 +362,70 @@
 
         <!-- 아래까만거 -->
         <footer class="footer-section">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="footer-left">
-                  <div class="footer-logo">
-                    <a href="#"><img src="img/로고.png" alt=""></a>
-                    <li>Email: hello.colorlib@gmail.com</li>
-                  </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="footer-left">
+                                <div class="footer-logo">
+                                    <a href="#"><img src="img/로고.png" alt=""></a>
+                                    <li>Email: hello.colorlib@gmail.com</li>
+                                </div>
 
-
+                            </div>
+                        </div>
+                        <div class="col-lg-2 offset-lg-1">
+                            <div class="footer-widget">
+                                <h5>팀장</h5>
+                                <ul>
+                                    <li><a href="#">팀원</a></li>
+                                    <li><a href="#">팀원</a></li>
+                                    <li><a href="#">팀원</a></li>
+                                    <li><a href="#">팀원</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="footer-widget">
+                                <h5>정민규</h5>
+                                <ul>
+                                    <li><a href="#">류이수</a></li>
+                                    <li><a href="#">이상원</a></li>
+                                    <li><a href="#">이도연</a></li>
+                                    <li><a href="#">맹성영</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="newslatter-item">
+                                <h5>야 뭐먹을거냐고</h5>
+                                <p>진정해,,</p>
+                                <p>...</p>
+                                <p>알아서해</p>
+                                <p>아니 뭐 왜</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-lg-2 offset-lg-1">
-                <div class="footer-widget">
-                  <h5>팀장</h5>
-                  <ul>
-                    <li><a href="#">팀원</a></li>
-                    <li><a href="#">팀원</a></li>
-                    <li><a href="#">팀원</a></li>
-                    <li><a href="#">팀원</a></li>
-                  </ul>
+                <div class="copyright-reserved">
+                    <div class="container">
+                        <div class="row">
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-lg-2">
-                <div class="footer-widget">
-                  <h5>정민규</h5>
-                  <ul>
-                    <li><a href="#">류이수</a></li>
-                    <li><a href="#">이상원</a></li>
-                    <li><a href="#">이도연</a></li>
-                    <li><a href="#">맹성영</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="newslatter-item">
-                  <h5>야 뭐먹을거냐고</h5>
-                  <p>진정해,,</p>
-                  <p>...</p>
-                  <p>알아서해</p>
-                  <p>아니 뭐 왜</p>
+            </footer>
+            <!-- Footer Section End -->
 
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          
-          
-          
-          
-        </footer>
-        <!-- Footer Section End -->
+            <!-- Js Plugins -->
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/jquery-ui.min.js"></script>
+            <script src="js/jquery.countdown.min.js"></script>
+            <script src="js/jquery.nice-select.min.js"></script>
+            <script src="js/jquery.zoom.min.js"></script>
+            <script src="js/jquery.dd.min.js"></script>
+            <script src="js/jquery.slicknav.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/main.js"></script>
+    </body>
 
-        <!-- Js Plugins -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        <script src="js/jquery.countdown.min.js"></script>
-        <script src="js/jquery.nice-select.min.js"></script>
-        <script src="js/jquery.zoom.min.js"></script>
-        <script src="js/jquery.dd.min.js"></script>
-        <script src="js/jquery.slicknav.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/main.js"></script>
-  </body>
-
-  </html>
+    </html>

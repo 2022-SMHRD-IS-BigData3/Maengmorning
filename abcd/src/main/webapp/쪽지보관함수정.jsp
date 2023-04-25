@@ -455,10 +455,11 @@
                 </div>
 
             </div>
+           </section>
 
             <br><br><br><br>
-
-            <footer class="footer-section">
+<!--아래까만거  -->
+           <footer class="footer-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3">
