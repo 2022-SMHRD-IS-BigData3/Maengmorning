@@ -49,12 +49,18 @@ public class ProductlistDAO {
 	public void productInput(ProductlistVO vo) {
 		SqlSession session = null;
 		try {
+			System.out.println("Starting productInput");
+	        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
 			System.out.println("등록하러왔다.");
 			session = sqlSessionFactory.openSession();
+			System.out.println("session: " + session);
 			session.insert("productinput", vo);
 			session.commit();
 			System.out.println("등록했다.");
-		} finally {
+		}catch (Exception e) {
+	        System.out.println("Error inserting ProductlistVO into database");
+	        e.printStackTrace(); 
+		}finally {
 			System.out.println("닫았다.");
 			session.close();
 		}

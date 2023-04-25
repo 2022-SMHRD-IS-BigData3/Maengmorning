@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
     id="WebApp_ID" version="3.1">
 
-    <display-name>MyProject</display-name>
+    <display-name>Hproject</display-name>
     
     <servlet>
         <servlet-name>FrontController</servlet-name>
@@ -24,7 +24,7 @@
         <servlet-name>ProductInput</servlet-name>
         <servlet-class>kr.mang.frontcontroller.ProductInput</servlet-class>
         <multipart-config>
-            <location>/Users/smhrd/Desktop/uploads</location>
+            <location>/uploads</location>
             <max-file-size>-1</max-file-size>
             <max-request-size>-1</max-request-size>
             <file-size-threshold>1024</file-size-threshold>

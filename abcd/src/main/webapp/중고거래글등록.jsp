@@ -337,6 +337,7 @@
                             <a class="picture" href="#">
 
                                 <img src="img/free-icon-camera-685655.png" alt="">
+								
 								<input name="imgurl" type="file" class="form-control" id="imgurl">
 								
                             </a>

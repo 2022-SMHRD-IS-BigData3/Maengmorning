@@ -55,10 +55,13 @@ public class ProductInput implements Command {
     String imgPath = null;
     if (imgStream != null && imgName != null && !imgName.isEmpty()) {
     	System.out.println(5);
-      String webPath = "C:/Users/smhrd/Desktop/uploads"; // 이미지를 저장할 경로 정의
+      String webPath = "/uploads"; // 이미지를 저장할 경로 정의
+      System.out.println(webPath);
       String realPath = request.getServletContext().getRealPath(webPath);
       System.out.println(realPath);
-      imgPath = webPath + imgName;
+      System.out.println(Paths.get(realPath, imgName));
+      imgPath = webPath + "/" + imgName;
+      System.out.println(imgPath);
       Files.copy(imgStream, Paths.get(realPath, imgName));
     }
     
@@ -80,6 +83,6 @@ public class ProductInput implements Command {
     
     // 사용자를 성공 페이지로 리디렉션
     System.out.println(8);
-    return "상품상세정보.jsp";
+    return "Productdetail.do";
   }
 }
