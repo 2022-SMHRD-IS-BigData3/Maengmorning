@@ -43,7 +43,7 @@ public class JoinService implements Command {
 		int row = dao.join(vo);
 		if (row > 0) {
 			request.setAttribute("nickName", nickName);
-			return "메인.jsp";
+			return "로그인.jsp";
 		}else {
 			return "회원가입.jsp";
 		}
