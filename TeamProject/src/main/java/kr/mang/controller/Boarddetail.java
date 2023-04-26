@@ -22,7 +22,7 @@ public class Boarddetail implements Command {
 	
 		request.setAttribute("detail", vo);
 
-		return "Boarddetail.jsp";
+		return "GoBoarddetail.do";
 	}
 
 }

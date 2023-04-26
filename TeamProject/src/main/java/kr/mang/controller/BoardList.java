@@ -20,7 +20,7 @@ public class BoardList implements Command {
 		List<BoardVO> list = dao.BoardList();
 		request.setAttribute("Blist",list );
 		
-		return "BoardList.jsp";
+		return "GoBoardList.do";
 	}
 
 }

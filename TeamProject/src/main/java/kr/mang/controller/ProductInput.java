@@ -84,7 +84,7 @@ public class ProductInput implements Command {
 
 		// 사용자를 성공 페이지로 리디렉션
 		System.out.println(8);
-		return "Productdetail.do";
+		return "GoProductdetail.do";
 	}
 
 }

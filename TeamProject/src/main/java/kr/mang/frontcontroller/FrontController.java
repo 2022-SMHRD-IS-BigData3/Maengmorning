@@ -61,6 +61,7 @@ public class FrontController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String finalpath = null;
 		if (finaluri.contains("Go")) {
+			System.out.println("들어옴1");
 			finalpath = finaluri.replaceAll("Go", "").toLowerCase().replaceAll(".do", ".jsp");
 		}else {
 			com =map.get(finaluri);
