@@ -12,7 +12,7 @@
 
     /* 테이블 스타일 */
     table {
- 	 
+     
       width: 100%;
       border-collapse: collapse;
       border: 1px solid black;
@@ -60,9 +60,9 @@
 </head>
 
 <body>
-	
+   
 
-	<br><br><br><br>
+   <br><br><br><br>
         <!-- 판매내역 -->
         <div class="container">
             <div class="col-lg-12">
