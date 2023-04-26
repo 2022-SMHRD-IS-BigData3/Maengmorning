@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="kr.mang.model.ImgUploadVO"%>
 <%@ page import="java.io.File" %>
 <%@ page import="java.util.Enumeration" %>
@@ -243,10 +244,10 @@
    	  ServletContext context = this.getServletContext(); // 절대경로를 얻는다.
    	  realFolder = context.getRealPath(saveFolder); 		 // saveFolder의 절대경로를 얻음
    	  
-   	  MultipartRequest multi = null;
+   		System.out.println(realFolder);
    	  
    	  // 파일업로드를 직접적으로 담당
-   	  multi = new MultipartRequest(request, realFolder,maxSize,encType,new DefaultFileRenamePolicy());
+   	   MultipartRequest multi = new MultipartRequest(request, realFolder,maxSize,encType,new DefaultFileRenamePolicy());
    	  
    	  //form으로 전달받은 3가지를 가져온다.
    	  String file_name =  multi.getFilesystemName("file_name");
