@@ -1,2 +1,2 @@
-SELECT*FROM USER_INFO;
+SELECT*FROM BOARD;
 create sequence product_seq;
