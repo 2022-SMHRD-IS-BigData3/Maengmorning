@@ -224,10 +224,11 @@
           <td>
             <div class="logo">
                 <img src="img/free-icon-camera-685655.png" alt="">
-              <!--   <input name="imgurl" type="file" class="form-control" id="imgurl">-->
             </div>
             <div class="input-group mb-3">
-               <input name="imgurl" type="file" class="form-co/ntrol" id="imgurl"> 
+               <input name="imgurl" type="file" class="uploadFile01" id="imgurl"> <br>
+               <input name="imgurl" type="file" class="uploadFile02" id="imgurl"> <br>
+               <input name="imgurl" type="file" class="uploadFile03" id="imgurl"> <br>
                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
               </div>
           </td>
