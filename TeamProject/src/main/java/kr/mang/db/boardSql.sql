@@ -1,2 +1,2 @@
-SELECT*FROM 등록물품;
+SELECT*FROM USER_INFO;
 create sequence product_seq;
