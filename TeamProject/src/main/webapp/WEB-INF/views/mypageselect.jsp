@@ -88,10 +88,7 @@
                                     <strong class="mb-1 text-body-secondary">12,000원</strong>
                                     <p class="d-inline-block mb-2 text-secondary">판매자이름</p>
 
-                                </div>
-                            </div>
-
-                        </div>
+                         
 
                         <div class="col-md-12">
                             <div
