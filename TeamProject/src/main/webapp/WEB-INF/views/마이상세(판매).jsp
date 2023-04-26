@@ -62,111 +62,76 @@
 <body>
 	
 
-	<br>
-	
-	<h2> <판매내역> </h2><br>
-    <table>
-      <thead>
-        <tr>
-          <th>날짜</th>
-           <th>판매자</th>
-          <th>상품명</th>
-          <th>판매금액</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2022-01-01</td>
-          <td>판매자</td>
-          <td>상품A</td>
-          <td>500,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-02</td>
-		  <td>판매자</td>
-          <td>상품B</td>
-          <td>300,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-03</td>
-          <td>판매자</td>
-          <td>상품C</td>
-          <td>200,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-04</td>
-          <td>판매자</td>
-          <td>상품D</td>
-          <td>400,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-05</td>
-          <td>판매자</td>
-          <td>상품E</td>
-          <td>600,000원</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th colspan="3">합계</th>
-          <td>2,000,000원</td>
-        </tr>
-      </tfoot>
-    </table>
-    
-    
+	<br><br><br><br>
+        <!-- 판매내역 -->
+        <div class="container">
+            <div class="col-lg-12">
+                <form action="마이상세(판매).jsp">
+                    <td><h4 style="text-align:center;">판매내역✔</h4></td>
+                    <table></table>
+                    <table class="table table-bordered">
+                        <thead class="table-warning">
 
-	<br>
-	
-	<h2> <구매내역> </h2><br>
-    <table>
-      <thead>
-        <tr>
-          <th>날짜</th>
-           <th>판매자</th>
-          <th>상품명</th>
-          <th>구매금액</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2022-01-01</td>
-          <td>판매자</td>
-          <td>상품A</td>
-          <td>500,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-02</td>
-		  <td>판매자</td>
-          <td>상품B</td>
-          <td>300,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-03</td>
-          <td>판매자</td>
-          <td>상품C</td>
-          <td>200,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-04</td>
-          <td>판매자</td>
-          <td>상품D</td>
-          <td>400,000원</td>
-        </tr>
-        <tr>
-          <td>2022-01-05</td>
-          <td>판매자</td>
-          <td>상품E</td>
-          <td>600,000원</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th colspan="3">합계</th>
-          <td>2,000,000원</td>
-        </tr>
-      </tfoot>
-    </table>
+
+                            <tr>
+                                <td>날짜</td>
+                                <td>상품명</td>
+                                <td>구매자</td>
+                                <td>판매금액</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DB에서 날짜</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매금액</td>
+                            </tr>
+                            <tr>
+                                <td>DB에서 날짜</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매금액</td>
+                            </tr>
+                            <tr>
+                                <td>DB에서 날짜</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매금액</td>
+                            </tr>
+                            <tr>
+                                <td>DB에서 날짜</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매금액</td>
+                            </tr>
+                            <tr>
+                                <td>DB에서 날짜</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매금액</td>
+                            </tr>
+                            <tr>
+                                <td>DB에서 날짜</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매금액</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                              <th colspan="3" style="text-align:end;">합계 : </th>
+                              <td style="text-align:left;">2,000,000원</td>
+                            </tr>
+                          </tfoot>
+                    </table>
+                </table>
+                </form>
+                <br><br>
+            </div>
+        </div>
+        
+        <br><br><br><br>
 
 
 
