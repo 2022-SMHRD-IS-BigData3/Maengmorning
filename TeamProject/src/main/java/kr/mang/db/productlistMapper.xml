@@ -40,7 +40,7 @@
   </select>
   <!-- 물품 판매글 등록 -->
   <insert id="productinput" parameterType="kr.mang.model.ProductlistVO">
-  	insert into ITEMS(ITEMS_ID,TITLE,ITEMS_STATE,PRICE,UP_DATE,USER_ID,ITEMS_IMG_ID,TAG_ID)
+  	insert into ITEMS(ITEMS_ID,TITLE,ITEMS_STATE,PRICE,UP_DATE)
   	values('B'||ITEMS_ID.nextval,#{title},#{items_state},#{price},sysdate)
   </insert>
   

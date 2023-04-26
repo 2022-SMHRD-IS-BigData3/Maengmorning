@@ -12,12 +12,58 @@ public class ProductlistVO {
 	private String items_img_id;
 	private String tag_id;
 	
+	
+	private String path_img;
+	private Date upload_date;
+	private String file_name;
+	
+	
+	
+	public String getPath_img() {
+		return path_img;
+	}
+
+
+
+	public void setPath_img(String path_img) {
+		this.path_img = path_img;
+	}
+
+
+
+	public Date getUpload_date() {
+		return upload_date;
+	}
+
+
+
+	public void setUpload_date(Date upload_date) {
+		this.upload_date = upload_date;
+	}
+
+
+
+	public String getFile_name() {
+		return file_name;
+	}
+
+
+
+	public void setFile_name(String file_name) {
+		this.file_name = file_name;
+	}
+
+
+	
 	public ProductlistVO() {}
 	
 	
 	
+	
+
+
 	public ProductlistVO(int items_id, String title, String items_state, String price, Date up_date, String user_id,
-			String items_img_id, String tag_id) {
+			String items_img_id, String tag_id, String path_img, Date upload_date, String file_name) {
 		super();
 		this.items_id = items_id;
 		this.title = title;
@@ -27,6 +73,9 @@ public class ProductlistVO {
 		this.user_id = user_id;
 		this.items_img_id = items_img_id;
 		this.tag_id = tag_id;
+		this.path_img = path_img;
+		this.upload_date = upload_date;
+		this.file_name = file_name;
 	}
 
 
