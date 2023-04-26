@@ -234,31 +234,7 @@
               </div>
           </td>
         </tr>
-   <% 
-      ImgUploadVO vo = new ImgUploadVO();
-   	  String realFolder ="";
-   	  String saveFolder ="img"; 	// 사진을 저장할 경로
-   	  String encType = "utf-8"; 	// 변환 형식
-   	  int maxSize = 5*1024*1024;	// 사진의 size
-   	  
-   	  ServletContext context = this.getServletContext(); // 절대경로를 얻는다.
-   	  realFolder = context.getRealPath(saveFolder); 		 // saveFolder의 절대경로를 얻음
-   	  
-   		System.out.println(realFolder);
-   	  
-   	  // 파일업로드를 직접적으로 담당
-   	   MultipartRequest multi = new MultipartRequest(request, realFolder,maxSize,encType,new DefaultFileRenamePolicy());
-   	  
-   	  //form으로 전달받은 3가지를 가져온다.
-   	  String file_name =  multi.getFilesystemName("file_name");
-   	  
-   	  vo.setFile_name(file_name);
-   	  
-   	  if(file_name != null){
-   		  File oldFile = new File(realFolder+"\\"+file_name);
-   		  File newFile = new File(realFolder+"\\"+file_name+"사진.jpg");
-   	  }
-   	  %>
+   
 
         <tr class="border-bottom">
           <td>글 제목</td>

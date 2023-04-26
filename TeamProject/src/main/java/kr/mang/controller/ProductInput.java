@@ -29,6 +29,9 @@ public class ProductInput implements Command {
 		System.out.println("price");
 		// 위에서 받아온 데이터 파라메터 수집
 		ProductlistVO vo = new ProductlistVO();
+		vo.setTitle(title);
+		vo.setItems_state(items_state);
+		vo.setPrice(price);
 		// 데이터 넘겨받아서 db에 저장 (productlistDAO로 이동)
 		ProductlistDAO dao = new ProductlistDAO();
 		dao.productInput(vo);

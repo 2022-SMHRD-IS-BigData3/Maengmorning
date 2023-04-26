@@ -13,32 +13,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+import kr.mang.model.ImgUploadDAO;
+import kr.mang.model.ImgUploadVO;
 import kr.mang.model.ProductlistDAO;
 import kr.mang.model.ProductlistVO;
 
 // Command 인터페이스를 구현하는 클래스 만들기
-public class ProductInput2 implements Command {
+public class ImgInput2 implements Command {
 	// 이미지 업로드할 디렉토리
 
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 양식에서 값 가져오기
 		System.out.println("1");
-		String title = request.getParameter("title");
-		String sellerid = request.getParameter("sellerid");
-		String area = request.getParameter("area");
-		String pro_state = request.getParameter("pro_state");
-		String price = request.getParameter("price");
-		Date pro_date = new Date();
-		System.out.println("title: " + title);
-		System.out.println("sellerid: " + sellerid);
-		System.out.println("area: " + area);
-		System.out.println("pro_state: " + pro_state);
-		System.out.println("price: " + price);
+		String file_name = request.getParameter("file_name");
+		System.out.println("file_name: " + file_name);
+	
 
 		System.out.println(2);
 		// 양식에서 이미지 파일 가져오기
-		Part imgPart = request.getPart("imgurl");
+		Part imgPart = request.getPart("file_name");
 		InputStream imgStream = null;
 		String imgName = null;
 		System.out.println(imgPart);
@@ -68,19 +62,18 @@ public class ProductInput2 implements Command {
 
 		// 값을 사용하여 새 ProductlistVO 개체를 만듭니다.
 		System.out.println(6);
-		ProductlistVO vo = new ProductlistVO();
-		vo.setTitle(title);
+		ImgUploadVO vo = new ImgUploadVO();
+		vo.setFile_name(file_name);
 		//vo.setSellerid(sellerid);
 		//vo.setArea(area);
 		//vo.setPro_state(pro_state);
 		//vo.setPro_date(pro_date);
-		vo.setPrice(price);
 		//vo.setImgurl(imgPath);
 
 		// 데이터를 데이터베이스에 삽입
 		System.out.println(7);
-		ProductlistDAO dao = new ProductlistDAO();
-		dao.productInput(vo);
+		ImgUploadDAO dao = new ImgUploadDAO();
+		dao.imgInput(vo);
 
 		// 사용자를 성공 페이지로 리디렉션
 		System.out.println(8);

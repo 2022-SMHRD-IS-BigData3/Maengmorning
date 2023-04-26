@@ -31,12 +31,15 @@
               ,A.USER_ID
               ,A.UP_DATE
               ,B.ITEMS_IMG_ID
-               ,D.TAG_CONT
-          FROM ITEMS A,ITEMS_IMG B, USER_INFO C,TAG_INFO D
+              ,D.TAG_CONT
+          FROM ITEMS A
+          	   LEFT JOIN ITEMS_IMG B ON A.ITEMS_IMG_ID = B.ITEMS_ID 
+          	   LEFT JOIN USER_INFO C ON A.USER_ID = C.USER_ID
+          	   LEFT JOIN TAG_INFO D ON A.TAG_ID = D.TAG_ID
 		 WHERE A.ITEMS_ID = A.#{items_id}
   </select>
   <!-- 물품 판매글 등록 -->
-  <insert id="productinput" parameterType="kr.mang.model.ImgUploadVO">
+  <insert id="productinput" parameterType="kr.mang.model.ProductlistVO">
   	insert into ITEMS(ITEMS_ID,TITLE,ITEMS_STATE,PRICE,UP_DATE,USER_ID,ITEMS_IMG_ID,TAG_ID)
   	values('B'||ITEMS_ID.nextval,#{title},#{items_state},#{price},sysdate)
   </insert>

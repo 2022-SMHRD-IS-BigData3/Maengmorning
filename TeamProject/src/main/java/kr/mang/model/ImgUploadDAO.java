@@ -20,7 +20,7 @@ public class ImgUploadDAO {
 		}
 	
 		// 중고거래 이미지 등록페이지
-		public void imgInput(ProductlistVO vo) {
+		public void imgInput(ImgUploadVO vo) {
 			SqlSession session = null;
 			try {
 				System.out.println("이미지등록시작");
