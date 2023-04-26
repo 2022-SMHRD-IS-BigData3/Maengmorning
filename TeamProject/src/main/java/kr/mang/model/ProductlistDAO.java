@@ -49,16 +49,15 @@ public class ProductlistDAO {
 	public void productInput(ProductlistVO vo) {
 		SqlSession session = null;
 		try {
-			System.out.println("글 등록 시작");
+			System.out.println("중고물품 등록 시작");
 	        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
-			System.out.println("등록하러왔다.");
 			session = sqlSessionFactory.openSession();
 			System.out.println("session: " + session);
 			session.insert("productinput", vo);
 			session.commit();
 			System.out.println("등록했다.");
 		}catch (Exception e) {
-	        System.out.println("글 db저장중 에러 발생");
+	        System.out.println("물품 db저장중 에러 발생");
 	        e.printStackTrace(); 
 		}finally {
 			System.out.println("닫았다.");
@@ -66,6 +65,24 @@ public class ProductlistDAO {
 		}
 	}
 	
-	
+	// 중고거래 물품 등록페이지
+		public void imgInput(ProductlistVO vo) {
+			SqlSession session = null;
+			try {
+				System.out.println("중고물품 등록 시작");
+		        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
+				session = sqlSessionFactory.openSession();
+				System.out.println("session: " + session);
+				session.insert("imginput", vo);
+				session.commit();
+				System.out.println("등록했다.");
+			}catch (Exception e) {
+		        System.out.println("물품 db저장중 에러 발생");
+		        e.printStackTrace(); 
+			}finally {
+				System.out.println("닫았다.");
+				session.close();
+			}
+		}
 	
 }

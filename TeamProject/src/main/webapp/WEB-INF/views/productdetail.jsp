@@ -1,4 +1,4 @@
-<%@page import="kr.mang.model.ImgUploadVO"%>
+<%@page import="kr.mang.model.ProductlistVO"%>
 <%@ page import="java.io.File" %>
 <%@ page import="java.util.Enumeration" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
