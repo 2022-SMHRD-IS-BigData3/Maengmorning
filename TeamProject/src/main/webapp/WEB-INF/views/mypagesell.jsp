@@ -71,8 +71,6 @@
                     <table></table>
                     <table class="table table-bordered">
                         <thead class="table-warning">
-
-
                             <tr>
                                 <td>날짜</td>
                                 <td>상품명</td>
@@ -132,13 +130,6 @@
         </div>
         
         <br><br><br><br>
-
-
-
-
-
-
-
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
