@@ -317,7 +317,7 @@
           </div>
 
           <div class="productShopDetail">
-            <button type="button" class="btn btn-secondary">더보기</button>
+            <button type="button" class="btn btn-warning">더보기</button>
             <br>
         </div>
 
@@ -385,7 +385,7 @@
             </div>
 
             <div class="productShopDetail">
-                <button type="button" class="btn btn-secondary">더보기</button>
+                <button type="button" class="btn btn-warning">더보기</button>
                 <br>
             </div>
 
