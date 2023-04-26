@@ -144,7 +144,7 @@
                     <div class="row">
                         <div class="col-lg-2 col-md-2">
 
-                            <a href="./index.html">
+                            <a href="./Gomain.do">
                                 <img src="./img/로고.png" alt="">
                             </a>
 
@@ -185,7 +185,7 @@
                             <li class="active"><a href="./Gomain.do">Home</a></li>
 
 
-                            <li><a href="#">중고거래</a>
+                            <li><a href="./Goproductlist.do">중고거래</a>
                                 <ul class="dropdown">
                                     <li><a href="#">외출용품</a></li>
                                     <li><a href="#"> 장난감/도서</a></li>
@@ -197,7 +197,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="#">커뮤니티</a>
+                            <li><a href="./Goboardlist.do">커뮤니티</a>
                                 <ul class="dropdown">
                                     <li><a href="#">잡담</a></li>
                                     <li><a href="#">그외</a></li>
@@ -205,7 +205,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="#">마이페이지</a>
+                            <li><a href="./Gomypage.do">마이페이지</a>
                                 <ul class="dropdown">
                                     <li><a href="GOmy.do">판매/구매목록</a></li>
                                     <li><a href="#">매너온도</a></li>
@@ -301,7 +301,7 @@
                 </form>
                 <br><br>
 
-                <form action="/Gomypagesell.do">
+                <form action="./Gomypagebuy.do">
                     <table class="table">
                         <thead>
                             <tr>
@@ -331,7 +331,7 @@
                     </div>
                 </form>
                 <br><br>
-                <form action="./Gomypageselect">
+                <form action="./Gomypageselect.do">
                     <table class="table">
                         <thead>
                             <td>
