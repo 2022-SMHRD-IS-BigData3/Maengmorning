@@ -42,7 +42,7 @@ public class JoinService implements Command {
 		int row = dao.join(vo);
 		if (row > 0) {
 			request.setAttribute("nickName", nickName);
-			return "Main.do";
+			return "GoMain.do";
 		} else {
 
 			return "GoJoin.do";
