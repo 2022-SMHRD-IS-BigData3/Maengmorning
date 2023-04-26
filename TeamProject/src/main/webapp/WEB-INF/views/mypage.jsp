@@ -211,7 +211,7 @@
 
                             <li><a href="#">마이페이지</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">판매/구매목록</a></li>
+                                    <li><a href="GOmy.do">판매/구매목록</a></li>
                                     <li><a href="#">매너온도</a></li>
                                     <li><a href="#">개인정보 수정</a></li>
                                     <li><a href="#">좋아요 목록</a></li>
