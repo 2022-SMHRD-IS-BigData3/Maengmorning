@@ -1,3 +1,8 @@
+<%@page import="kr.mang.model.ImgUploadVO"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -280,12 +285,14 @@
                             <table class="border-bottom">
                                 <tr>
                                     <td>
-                                    <h4>새상품,아기슈퍼맨 바디수트 판매합니다</h4> 
+                                    <h4>
+                                    ${detail.title}
+                                    새상품,아기슈퍼맨 바디수트 판매합니다</h4> 
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                    <h2>10,000원</h2>
+                                    <h2>${detail.price} 10,000원</h2>
                                     </td>
                                 </tr>
 
@@ -294,11 +301,11 @@
                             <table class="ProductHeader">
                                 <tr>
                                     <td class="tdTitle">- 판매자</td>
-                                    <td class="tdText">성영맘</td>
+                                    <td class="tdText">${detail.user_id }성영맘</td>
                                 </tr>
                                 <tr>
                                     <td class="tdTitle">- 거래지역</td>
-                                    <td class="tdText">광주전체</td>
+                                    <td class="tdText">${detail.area }광주전체</td>
                                 </tr>
                                 <tr>
                                     <td class="tdTitle">- 카테고리</td>
@@ -306,7 +313,7 @@
                                 </tr>
                                 <tr>
                                     <td class="tdTitle">- 상품태그</td>
-                                    <td class="tdText">#유아용품 #유아의류</td>
+                                    <td class="tdText">${detail.tag}#유아용품 #유아의류</td>
                                 </tr>
                            
                            
@@ -324,6 +331,7 @@
                         </tr>
                         <tr>
                             <td>
+                            ${detail.items_state}
                             샀는데 저희아기한테 안맞네요
 
                             포장 그대로있는 새상품이구요

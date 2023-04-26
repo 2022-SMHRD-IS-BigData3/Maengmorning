@@ -9,11 +9,31 @@
 	
 	<!-- 등록물품 리스트 -->
 	<select id="productlist" resultType="kr.mang.model.ProductlistVO"><!-- resultType은 select할때 사용 -->
-  	select* from ITEMS order by ITEMS_ID desc 
+  	SELECT A.ITEMS_ID
+      	  ,A.TITLE
+          ,A.ITEMS_STATE
+          ,A.PRICE
+          ,A.USER_ID
+          ,A.UP_DATE
+          ,B.ITEMS_IMG_ID
+          ,C.AREA
+          ,D.TAG_CONT
+      FROM ITEMS A,ITEMS_IMG B, USER_INFO C,TAG_INFO D
+     WHERE A.ITEMS_IMG_ID = B.ITEMS_IMG_ID
+     ORDER BY ITEMS_ID DESC;
   </select>
   <!-- 등록물품 상세보기 -->
   <select id="productdetail" parameterType="int" resultType="kr.mang.model.ProductlistVO">
-  	SELECT * FROM ITEMS WHERE ITEMS_ID = #{items_id}
+  		SELECT A.ITEMS_ID
+      	      ,A.TITLE
+              ,A.ITEMS_STATE
+              ,A.PRICE
+              ,A.USER_ID
+              ,A.UP_DATE
+              ,B.ITEMS_IMG_ID
+               ,D.TAG_CONT
+          FROM ITEMS A,ITEMS_IMG B, USER_INFO C,TAG_INFO D
+		 WHERE A.ITEMS_ID = A.#{items_id}
   </select>
   <!-- 물품 판매글 등록 -->
   <insert id="productinput" parameterType="kr.mang.model.ImgUploadVO">
