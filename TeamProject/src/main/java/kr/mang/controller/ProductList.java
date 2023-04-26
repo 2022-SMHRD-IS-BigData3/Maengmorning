@@ -15,7 +15,7 @@ public class ProductList implements Command {
 		List<ProductlistVO> list = dao.productList();
 		request.setAttribute("productlist", list);
 		
-		return "중고거래목록.jsp";
+		return "ProductList.jsp";
 	
 	}
 }

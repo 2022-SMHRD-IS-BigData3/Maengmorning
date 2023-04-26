@@ -38,7 +38,7 @@ public class LoginService implements Command {
 			session.setAttribute("uId", mvo);
 		}
 		
-		return "로그인성공.jsp";
+		return "LoginSuccess.jsp";
 	}
 
 }
