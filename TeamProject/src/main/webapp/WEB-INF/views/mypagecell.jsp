@@ -66,7 +66,7 @@
         <!-- 판매내역 -->
         <div class="container">
             <div class="col-lg-12">
-                <form action="마이상세(판매).jsp">
+                <form action="./Gomypagesell.do">
                     <td><h4 style="text-align:center;">판매내역✔</h4></td>
                     <table></table>
                     <table class="table table-bordered">
