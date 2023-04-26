@@ -8,7 +8,7 @@
 <mapper namespace="kr.mang.model.MemberDAO">
    <!-- namespace 해당하는 mapper 파일을 사용하게 될 DAO이름을 작성해주는 것이 원칙 -->
 <insert id="join"  parameterType="kr.mang.model.MemberVO" >
-insert into user_info 
+insert into user_info (USER_ID,PW,TEL,AREA,USER_NAME,NICKNAME)
 values (#{id}, #{pw}, #{tel}, #{area}, #{name}, #{nickName})
 </insert>
 
