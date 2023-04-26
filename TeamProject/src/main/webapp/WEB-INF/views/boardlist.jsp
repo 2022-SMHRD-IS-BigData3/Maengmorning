@@ -218,6 +218,8 @@
                     
                     <h3>커뮤니티</h3>
 
+                    <form action="./Goboardinput.do">
+                    <table>
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
@@ -228,12 +230,15 @@
                                     </select>
                                 </div>
                             </div>
+                            </div>
                             <div class="col-lg-5 col-md-5 text-right">
                                 <button id="registration">글 등록</button>
                             </div>
                         </div>
-                    </div>
+                    </table>
                     
+                    </form>
+                   
                         <table>
                         <thead>
                             <tr>
