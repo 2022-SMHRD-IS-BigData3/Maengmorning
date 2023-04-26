@@ -1,3 +1,4 @@
+<%@page import="kr.mang.model.ImgUploadVO"%>
 <%@ page import="java.io.File" %>
 <%@ page import="java.util.Enumeration" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
@@ -211,7 +212,7 @@
         </div>
     </div>
 
-   <form action="ProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
+      <form action="ProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
     <table id="Product_Style" align="center">
         <tr class="border-bottom">
           <th colspan="2" >
@@ -227,11 +228,36 @@
               <!--   <input name="imgurl" type="file" class="form-control" id="imgurl">-->
             </div>
             <div class="input-group mb-3">
-               <input name="imgurl" type="file" class="form-co/ntrol" id="imgurl"> 
+               <input name="file_name" type="file" class="form-co/ntrol" id="file_name"> 
                 <label class="input-group-text" for="inputGroupFile02">Upload</label>
               </div>
           </td>
         </tr>
+   <% 
+      ImgUploadVO vo = new ImgUploadVO();
+   	  String realFolder ="";
+   	  String saveFolder ="img"; 	// 사진을 저장할 경로
+   	  String encType = "utf-8"; 	// 변환 형식
+   	  int maxSize = 5*1024*1024;	// 사진의 size
+   	  
+   	  ServletContext context = this.getServletContext(); // 절대경로를 얻는다.
+   	  realFolder = context.getRealPath(saveFolder); 		 // saveFolder의 절대경로를 얻음
+   	  
+   	  MultipartRequest multi = null;
+   	  
+   	  // 파일업로드를 직접적으로 담당
+   	  multi = new MultipartRequest(request, realFolder,maxSize,encType,new DefaultFileRenamePolicy());
+   	  
+   	  //form으로 전달받은 3가지를 가져온다.
+   	  String file_name =  multi.getFilesystemName("file_name");
+   	  
+   	  vo.setFile_name(file_name);
+   	  
+   	  if(file_name != null){
+   		  File oldFile = new File(realFolder+"\\"+file_name);
+   		  File newFile = new File(realFolder+"\\"+file_name+"사진.jpg");
+   	  }
+   	  %>
 
         <tr class="border-bottom">
           <td>글 제목</td>
@@ -282,7 +308,7 @@
             <td>상품설명</td>
             <td>
                 <div>
-                    <textarea id="pro_state" name="pro_state" class="ProductText" placeholder="여러 장의 상품 사진과 구입연도, 브랜드, 사용감, 하자유무 등 구매자에게 꼭 필요한 정보를 포함해주세요. (10자 이상)"></textarea>  
+                    <textarea id="items_state" name="items_state" class="ProductText" placeholder="여러 장의 상품 사진과 구입연도, 브랜드, 사용감, 하자유무 등 구매자에게 꼭 필요한 정보를 포함해주세요. (10자 이상)"></textarea>  
                 </div>
             </td>
           </tr>
@@ -291,7 +317,7 @@
             <td>상품태그</td>
             <td>
                 <div>
-                    <input class="ProductTag" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
+                    <input class="tag_id" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
                  </div>
             </td>
           </tr>
@@ -305,6 +331,7 @@
 
       </table>
 	</form>
+
 
 
     <!-- Partner Logo Section Begin -->
