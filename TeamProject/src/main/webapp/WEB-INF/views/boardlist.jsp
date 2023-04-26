@@ -132,7 +132,7 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./Gomain">Home</a></li>
+                        <li class="active"><a href="./Gomain.do">Home</a></li>
                        
                        
                         <li><a href="./Goproductlist.do">중고거래</a>
@@ -178,7 +178,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <a href="#"><i class="fa fa-home"></i> Home</a>
+                        <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
                         <span>Shop</span>
                     </div>
                 </div>
