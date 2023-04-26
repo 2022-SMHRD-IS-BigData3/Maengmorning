@@ -98,7 +98,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
                      
-                            <a href="./index.html">
+                            <a href="./Gomain.do">
                                 <img src="./img/로고.png" alt="">
                             </a>
                      
@@ -116,7 +116,7 @@
                         
                         <ul class="nav-right">
                             <li class="heart-icon">
-                                <a href="#">
+                                <a href="./Gologin.do">
                                     <i class="icon_MSY_alt">로그인</i>
                                 </a>
                             </li>
@@ -135,7 +135,7 @@
                         <li class="active"><a href="./index.html">Home</a></li>
                        
                        
-                        <li><a href="#">중고거래</a>
+                        <li><a href="./Goproductlist.do">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="#"> 장난감/도서</a></li>
@@ -147,7 +147,7 @@
                             </ul>
                         </li>
                         
-                        <li><a href="#">커뮤니티</a>
+                        <li><a href="./Goboardlist.do">커뮤니티</a>
                             <ul class="dropdown">
                                 <li><a href="#">잡담</a></li>
                                 <li><a href="#">그외</a></li>
@@ -155,7 +155,7 @@
                             </ul>
                         </li>
 
-                        <li><a href="#">마이페이지</a>
+                        <li><a href="./Gomypage.do">마이페이지</a>
                             <ul class="dropdown">
                                 <li><a href="#">판매/구매목록</a></li>
                                 <li><a href="#">매너온도</a></li>
