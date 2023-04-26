@@ -128,10 +128,6 @@
             a.nickname {
                 font-weight: 700;
             }
-            
-          
-            
-            
     </style>
 
     <body>
@@ -170,7 +166,7 @@
 
                             <ul class="nav-right">
                                 <li class="heart-icon">
-                                    <a href="#">
+                                    <a href="./Gologin.do">
                                         <i class="icon_MSY_alt">로그인</i>
                                     </a>
                                 </li>
@@ -186,7 +182,7 @@
                     </div>
                     <nav class="nav-menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li class="active"><a href="./Gomain.do">Home</a></li>
 
 
                             <li><a href="#">중고거래</a>
@@ -240,9 +236,9 @@
                     </div>
                 </div>
 
-<br>
+                <br>
 
-<!-- 개인정보 -->
+                <!-- 개인정보 -->
                 <div class="col-md-12">
                     <div
                         class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -254,9 +250,11 @@
                         </div>
                         <div class="col-auto d-none d-lg-block">
                             <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
-                                role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
                                 <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#FFD280" /><text x="12%" y="50%" fill="#F6F6F6">매너온도 ★★★★★</text>
+                                <rect width="100%" height="100%" fill="#FFD280" /><text x="12%" y="50%"
+                                    fill="#F6F6F6">매너온도 ★★★★★</text>
                             </svg>
                         </div>
                     </div>
@@ -277,7 +275,9 @@
                     <table class="table">
 
                         <thead>
-                            <td><h4>✔판매내역</h4></td>
+                            <td>
+                                <h4>✔판매내역</h4>
+                            </td>
                         </thead>
                         <tbody>
                             <tr>
@@ -301,12 +301,14 @@
                 </form>
                 <br><br>
 
-                <form action="마이상세(판매).jsp">
+                <form action="Go마이상세(판매).jsp">
                     <table class="table">
-
                         <thead>
-
-                            <td><h4>✔구매내역</h4></td>
+                            <tr>
+                                <td>
+                                    <h4>✔구매내역</h4>
+                                </td>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
@@ -324,15 +326,17 @@
                         </tbody>
                     </table>
                     <div style="text-align: right;">
-                        <button class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
-
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;"
+                            type="submit">더보기</button>
                     </div>
                 </form>
                 <br><br>
                 <form action="마이상세(찜).jsp">
                     <table class="table">
                         <thead>
-                            <td><h4>❤찜목록</h4></td>
+                            <td>
+                                <h4>❤찜목록</h4>
+                            </td>
                         </thead>
                         <tbody>
                             <tr>
@@ -350,30 +354,30 @@
                     <div style="text-align: right;">
                         <button class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
                     </div>
-            </form>
+                </form>
             </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <br><br><br><br>
-            
+
         </div>
 
 
-<!--아래 까만거  -->
+        <!--아래 까만거  -->
         <footer class="footer-section">
             <div class="container">
                 <div class="row">
