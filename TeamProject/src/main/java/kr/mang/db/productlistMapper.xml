@@ -10,40 +10,32 @@
 	<!-- 등록물품 리스트 -->
 	<select id="productlist" resultType="kr.mang.model.ProductlistVO"><!-- resultType은 select할때 사용 -->
   	SELECT A.ITEMS_ID
-      	  ,A.TITLE
+          ,A.TITLE
           ,A.ITEMS_STATE
           ,A.PRICE
-          ,A.USER_ID
-          ,A.UP_DATE
-          ,B.ITEMS_IMG_ID
+          ,A.UP_DATE   
+          ,C.USER_ID
           ,C.AREA
-          ,D.TAG_CONT
-      FROM ITEMS A,ITEMS_IMG B, USER_INFO C,TAG_INFO D
-     WHERE A.ITEMS_IMG_ID = B.ITEMS_IMG_ID
+      FROM ITEMS A,USER_INFO C;
      ORDER BY ITEMS_ID DESC;
   </select>
   <!-- 등록물품 상세보기 -->
   <select id="productdetail" parameterType="int" resultType="kr.mang.model.ProductlistVO">
-  		SELECT A.ITEMS_ID
-      	      ,A.TITLE
-              ,A.ITEMS_STATE
-              ,A.PRICE
-              ,A.USER_ID
-              ,A.UP_DATE
-              ,B.ITEMS_IMG_ID
-               ,D.TAG_CONT
-          FROM ITEMS A,ITEMS_IMG B, USER_INFO C,TAG_INFO D
+  		SELECT A.ITEMS_ID, A.TITLE, A.ITEMS_STATE, A.PRICE, A.USER_ID, A.UP_DATE, B.ITEMS_IMG_ID, D.TAG_CONT
+          FROM ITEMS A LEFT JOIN ITEMS_IMG B ON A.ITEMS_IMG_ID = B.ITEMS_IMG_ID
+                       LEFT JOIN USER_INFO C ON A.USER_ID = C.USER_ID
+          	           LEFT JOIN TAG_INFO D ON A.TAG_ID = D.TAG_ID
 		 WHERE A.ITEMS_ID = A.#{items_id}
   </select>
   <!-- 물품 판매글 등록 -->
-  <insert id="productinput" parameterType="kr.mang.model.ImgUploadVO">
-  	insert into ITEMS(ITEMS_ID,TITLE,ITEMS_STATE,PRICE,UP_DATE,USER_ID,ITEMS_IMG_ID,TAG_ID)
-  	values('B'||ITEMS_ID.nextval,#{title},#{items_state},#{price},sysdate)
+  <insert id="productinput" parameterType="kr.mang.model.ProductlistVO">
+  	insert into ITEMS(ITEMS_ID, TITLE, ITEMS_STATE, PRICE, UP_DATE, ITEMS_IMG_ID,USER_ID,TAG_ID)
+  	values('B'||ITEMS_ID.nextval, #{title}, #{items_state}, #{price}, sysdate,NULL,NULL,NULL)
   </insert>
   
-  <insert id="imginput" parameterType="kr.mang.model.ImgUploadVO">
-  	insert into ITEMS_IMG(ITEMS_IMG_ID,PATH_IMG,UPLOAD_DATE,FILE_NAME)
-  	values('I'||ITEMS_IMG_ID.nextval,#{path_img},sysdate,#{file_name})
+  <insert id="imginput" parameterType="kr.mang.model.ProductlistVO">
+  	insert into ITEMS_IMG(ITEMS_IMG_ID, PATH_IMG, FILE_NAME)
+  	values('I'||ITEMS_IMG_ID.nextval, NULL,#{file_name})
   </insert>
   
 </mapper>

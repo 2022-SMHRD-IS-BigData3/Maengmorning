@@ -318,6 +318,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                        
                         <c:forEach items="${Blist}"  var="list">
                             <tr>
                             <td>${list.b_id}</td>
