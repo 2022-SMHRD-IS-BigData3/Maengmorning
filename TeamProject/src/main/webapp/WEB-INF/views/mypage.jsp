@@ -169,32 +169,35 @@
             }
             
            /* 상단바 위아래 선 코드 */
-    header .nav-item {
-    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
-    border-top: 2px solid rgb(204, 201, 201); /* 위 선 */
-    }
-    h4 {
-    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
-    padding-bottom: 10px;
-    }
-    .productShopDetail, .communityShopDetail {
-        margin-left: 1050px;
-        margin-top: 20px;
-    }
+    		header .nav-item {
+    		border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    		border-top: 2px solid rgb(204, 201, 201); /* 위 선 */
+    		}
+    		
+   			h4 {
+   			border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    		padding-bottom: 10px;
+    		}
+    		
+    		.productShopDetail, .communityShopDetail {
+        	margin-left: 1050px;
+        	margin-top: 20px;
+    		}
 
-    .nav-item,
-    .hero-section,
-    .row {
-      max-width: 1200px;
-      margin: 0 auto;
+    		.nav-item,
+    		.hero-section,
+    		.row {
+      		max-width: 1200px;
+      		margin: 0 auto;
+	
+      		.nav-item>a {
+        	padding-left: 0px;
+      		}
 
-      .nav-item>a {
-        padding-left: 0;
-      }
-
-      .nav-item>a {
-        margin-left: 0;
-      }
+      		.nav-item>a {
+        	margin-left: 0;
+      		}
+           
            
             
             
