@@ -54,53 +54,143 @@
 </head>
 <body>
 
-	<br>
-		<h2 id="double"><찜목록></h2>
-		<br></div>
-		
-		
-<table>
-      <thead>
-        <tr>
-          <th>판매자</th>
-          <th>상품명</th>
-          <th>금액</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-        <td>판매자</td>
-          <td>상품A</td>
-          <td>500,000원</td>
-        </tr>
-        <tr>
-        <td>판매자</td>
-          <td>상품B</td>
-          <td>300,000원</td>
-        </tr>
-        <tr>
-        <td>판매자</td>
-          <td>상품C</td>
-          <td>200,000원</td>
-        </tr>
-        <tr>
-         <td>판매자</td>
-          <td>상품D</td>
-          <td>400,000원</td>
-        </tr>
-        <tr>
-         <td>판매자</td>
-          <td>상품E</td>
-          <td>600,000원</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th colspan="2">합계</th>
-          <td>2,000,000원</td>
-        </tr>
-      </tfoot>
-    </table>
+	<body>
+
+    <br><br><br><br>
+    <!-- 판매내역 -->
+    <div class="container">
+        <div class="col-lg-12">
+            <form action="마이상세(판매).jsp">
+                <td>
+                    <h4 style="text-align:center;">찜✔</h4>
+                </td>
+                <table></table>
+                <table class="table table-bordered">
+                    <thead class="table-warning">
+
+                        <div class="col-md-12">
+                            <div
+                                class="row g-0 border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative">
+                                <div class="col-auto d-none d-lg-block">
+                                    <svg class="bd-placeholder-img" width="200" height="220"
+                                        xmlns="http://www.w3.org/2000/svg" role="img"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="" /><text x="12%" y="50%"
+                                            fill="#F6F6F6">상품사진들어갈공간</text>
+                                    </svg>
+                                </div>
+                                <div class="col p-4 d-flex flex-column position-static">
+                                    <p class="d-inline-block mb-2 text-secondary">2023.04.26</p>
+                                    <p><a href="#" class="link-dark">
+                                            <h3>상품이름</h3>
+                                        </a></p>
+                                    <strong class="mb-1 text-body-secondary">12,000원</strong>
+                                    <p class="d-inline-block mb-2 text-secondary">판매자이름</p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12">
+                            <div
+                                class="row g-0 border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative">
+                                <div class="col-auto d-none d-lg-block">
+                                    <svg class="bd-placeholder-img" width="200" height="220"
+                                        xmlns="http://www.w3.org/2000/svg" role="img"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="" /><text x="12%" y="50%"
+                                            fill="#F6F6F6">상품사진들어갈공간</text>
+                                    </svg>
+                                </div>
+                                <div class="col p-4 d-flex flex-column position-static">
+                                    <p class="d-inline-block mb-2 text-secondary">2023.04.26</p>
+                                    <p><a href="#" class="link-dark">
+                                            <h3>상품이름</h3>
+                                        </a></p>
+                                    <strong class="mb-1 text-body-secondary">12,000원</strong>
+                                    <p class="d-inline-block mb-2 text-secondary">판매자이름</p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-12">
+                            <div
+                                class="row g-0 border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative">
+                                <div class="col-auto d-none d-lg-block">
+                                    <svg class="bd-placeholder-img" width="200" height="220"
+                                        xmlns="http://www.w3.org/2000/svg" role="img"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="" /><text x="12%" y="50%"
+                                            fill="#F6F6F6">상품사진들어갈공간</text>
+                                    </svg>
+                                </div>
+                                <div class="col p-4 d-flex flex-column position-static">
+                                    <p class="d-inline-block mb-2 text-secondary">2023.04.26</p>
+                                    <p><a href="#" class="link-dark">
+                                            <h3>상품이름</h3>
+                                        </a></p>
+                                    <strong class="mb-1 text-body-secondary">12,000원</strong>
+                                    <p class="d-inline-block mb-2 text-secondary">판매자이름</p>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-12">
+                            <div
+                                class="row g-0 border rounded overflow-hidden flex-md-row mb-2 shadow-sm h-md-250 position-relative">
+                                <div class="col-auto d-none d-lg-block">
+                                    <svg class="bd-placeholder-img" width="200" height="220"
+                                        xmlns="http://www.w3.org/2000/svg" role="img"
+                                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="" /><text x="12%" y="50%"
+                                            fill="#F6F6F6">상품사진들어갈공간</text>
+                                    </svg>
+                                </div>
+                                <div class="col p-4 d-flex flex-column position-static">
+                                    <p class="d-inline-block mb-2 text-secondary">2023.04.26</p>
+                                    <p><a href="#" class="link-dark">
+                                            <h3>상품이름</h3>
+                                        </a></p>
+                                    <strong class="mb-1 text-body-secondary">12,000원</strong>
+                                    <p class="d-inline-block mb-2 text-secondary">판매자이름</p>
+
+                                </div>
+                        <br><br><br><br>
+                            </div>
+
+                        </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
 	
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
