@@ -12,7 +12,7 @@
 
     /* 테이블 스타일 */
     table {
- 	 
+     
       width: 100%;
       border-collapse: collapse;
       border: 1px solid black;
@@ -60,14 +60,15 @@
 </head>
 
 <body>
-	
+   
 
-	<br><br><br><br>
+   <br><br><br><br>
+        <br><br><br><br>
         <!-- 판매내역 -->
         <div class="container">
             <div class="col-lg-12">
-                <form action="./Gomypagesell.do">
-                    <td><h4 style="text-align:center;">판매내역✔</h4></td>
+                <form action="마이상세(판매).jsp">
+                    <td><h4 style="text-align:center;">구매내역✔</h4></td>
                     <table></table>
                     <table class="table table-bordered">
                         <thead class="table-warning">
@@ -76,7 +77,7 @@
                             <tr>
                                 <td>날짜</td>
                                 <td>상품명</td>
-                                <td>구매자</td>
+                                <td>구판매자</td>
                                 <td>판매금액</td>
                             </tr>
                         </thead>
@@ -84,37 +85,37 @@
                             <tr>
                                 <td>DB에서 날짜</td>
                                 <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매자</td>
                                 <td>DB에서 판매금액</td>
                             </tr>
                             <tr>
                                 <td>DB에서 날짜</td>
                                 <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매자</td>
                                 <td>DB에서 판매금액</td>
                             </tr>
                             <tr>
                                 <td>DB에서 날짜</td>
                                 <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매자</td>
                                 <td>DB에서 판매금액</td>
                             </tr>
                             <tr>
                                 <td>DB에서 날짜</td>
                                 <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매자</td>
                                 <td>DB에서 판매금액</td>
                             </tr>
                             <tr>
                                 <td>DB에서 날짜</td>
                                 <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매자</td>
                                 <td>DB에서 판매금액</td>
                             </tr>
                             <tr>
                                 <td>DB에서 날짜</td>
                                 <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
+                                <td>DB에서 판매자</td>
                                 <td>DB에서 판매금액</td>
                             </tr>
                         </tbody>

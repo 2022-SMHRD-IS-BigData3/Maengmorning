@@ -144,7 +144,7 @@
                     <div class="row">
                         <div class="col-lg-2 col-md-2">
 
-                            <a href="./index.html">
+                            <a href="./Gomain.do">
                                 <img src="./img/로고.png" alt="">
                             </a>
 
@@ -185,7 +185,7 @@
                             <li class="active"><a href="./Gomain.do">Home</a></li>
 
 
-                            <li><a href="#">중고거래</a>
+                            <li><a href="./Goproductlist.do">중고거래</a>
                                 <ul class="dropdown">
                                     <li><a href="#">외출용품</a></li>
                                     <li><a href="#"> 장난감/도서</a></li>
@@ -197,7 +197,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="#">커뮤니티</a>
+                            <li><a href="./Goboardlist.do">커뮤니티</a>
                                 <ul class="dropdown">
                                     <li><a href="#">잡담</a></li>
                                     <li><a href="#">그외</a></li>
@@ -205,9 +205,9 @@
                                 </ul>
                             </li>
 
-                            <li><a href="#">마이페이지</a>
+                            <li><a href="./Gomypage.do">마이페이지</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">판매/구매목록</a></li>
+                                    <li><a href="GOmy.do">판매/구매목록</a></li>
                                     <li><a href="#">매너온도</a></li>
                                     <li><a href="#">개인정보 수정</a></li>
                                     <li><a href="#">좋아요 목록</a></li>
@@ -271,7 +271,7 @@
                 <div class="row">
                 </div>
 
-                <form action="마이상세(판매).jsp">
+                <form action="./Gomypagesell.do">
                     <table class="table">
 
                         <thead>
@@ -296,12 +296,12 @@
                     </table>
 
                     <div style="text-align: right;">
-                        <button class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="submit">더보기</button>
                     </div>
                 </form>
                 <br><br>
 
-                <form action="Go마이상세(판매).jsp">
+                <form action="./Gomypagebuy.do">
                     <table class="table">
                         <thead>
                             <tr>
@@ -331,7 +331,7 @@
                     </div>
                 </form>
                 <br><br>
-                <form action="마이상세(찜).jsp">
+                <form action="./Gomypageselect.do">
                     <table class="table">
                         <thead>
                             <td>
@@ -352,7 +352,7 @@
                         </tbody>
                     </table>
                     <div style="text-align: right;">
-                        <button class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="submit">더보기</button>
                     </div>
                 </form>
             </div>
