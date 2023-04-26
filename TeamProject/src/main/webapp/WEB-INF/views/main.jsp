@@ -27,9 +27,46 @@
       <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
       <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
       <link rel="stylesheet" href="css/style.css" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
 
   <style>
+   /* 검색창 */
+    .search-container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+      }
+      
+      .search-button {
+        background-color: rgb(230, 177, 0);
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        margin-top: 8px;
+        margin-left: -5px;
+        cursor: pointer;
+      }
+      
+      .search-button:hover {
+        background-color: #ccc;
+      }
+
+      input#search {
+        width: 400px;
+      }
+
+      button.search-button {
+        width: 40px;
+        height: 40px;
+      }
     /* 상단바 줄이고 가운데정렬하는 코드입니당.*/
 
     /* 상단바 위아래 선 코드 */
@@ -123,13 +160,13 @@
                 <img src="./img/로고.png" alt="">
               </a>
             </div>
-            <div class="col-lg-6 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
-              <div class="advanced-search">
-                <div class="input-group">
-                  <input type="text" placeholder="검색">
-                  <button type="button"><i class="ti-search"></i></button>
-                </div>
-              </div>
+             <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
+                <div class="search-container">
+                    <form action="/search">
+                      <input class="border" id="search" type="text" placeholder="검색" name="search">
+                      <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
+                    </form>
+                  </div>
             </div>
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
@@ -197,19 +234,27 @@
 
     <!-- 배너 -->
  
-
-    <div class="Banner">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<div class="Banner">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./img/맹모닝배너1-001.png" style="width: 1200px; margin-left: 350px;" class="mainBanner" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./img/맹모닝배너2-001.png" style="width: 1200px; margin-left: 350px;" class="mainBanner" alt="...">
-          </div>
-          
+            <div class="carousel-item active">
+                <img src="./img/맹모닝배너1-001.png" style="width: 1200px; margin-left: 350px;" class="mainBanner" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/맹모닝배너2-001.png" style="width: 1200px; margin-left: 350px;" class="mainBanner" alt="...">
+            </div>
         </div>
-      </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">이전</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">다음</span>
+        </a>
     </div>
 
     
@@ -272,7 +317,7 @@
           </div>
 
           <div class="productShopDetail">
-            <button type="button" class="btn btn-secondary">더보기</button>
+            <button type="button" class="btn btn-warning">더보기</button>
             <br>
         </div>
 
@@ -340,7 +385,7 @@
             </div>
 
             <div class="productShopDetail">
-                <button type="button" class="btn btn-secondary">더보기</button>
+                <button type="button" class="btn btn-warning">더보기</button>
                 <br>
             </div>
 
