@@ -56,11 +56,11 @@
 
 	<body>
 
-    <br><br><br><br>
+     <br><br><br><br>
     <!-- 판매내역 -->
     <div class="container">
         <div class="col-lg-12">
-            <form action="./Gomypageselect">
+            <form action="마이상세(판매).jsp">
                 <td>
                     <h4 style="text-align:center;">찜✔</h4>
                 </td>
@@ -88,7 +88,10 @@
                                     <strong class="mb-1 text-body-secondary">12,000원</strong>
                                     <p class="d-inline-block mb-2 text-secondary">판매자이름</p>
 
-                         
+                                </div>
+                            </div>
+
+                        </div>
 
                         <div class="col-md-12">
                             <div
@@ -165,11 +168,11 @@
                                     <p class="d-inline-block mb-2 text-secondary">판매자이름</p>
 
                                 </div>
+                            </div>
+
+                        </div>
+
                         <br><br><br><br>
-                            </div>
-
-                        </div>
-   </div>
 
 
 
