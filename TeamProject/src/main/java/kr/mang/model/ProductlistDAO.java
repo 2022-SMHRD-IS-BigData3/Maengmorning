@@ -49,7 +49,7 @@ public class ProductlistDAO {
 	public void productInput(ProductlistVO vo) {
 		SqlSession session = null;
 		try {
-			System.out.println("Starting productInput");
+			System.out.println("글 등록 시작");
 	        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
 			System.out.println("등록하러왔다.");
 			session = sqlSessionFactory.openSession();
@@ -58,7 +58,7 @@ public class ProductlistDAO {
 			session.commit();
 			System.out.println("등록했다.");
 		}catch (Exception e) {
-	        System.out.println("Error inserting ProductlistVO into database");
+	        System.out.println("글 db저장중 에러 발생");
 	        e.printStackTrace(); 
 		}finally {
 			System.out.println("닫았다.");

@@ -227,7 +227,7 @@
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="${list.imgurl}">
+                                        <img src="${list.file_name}">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
@@ -235,9 +235,9 @@
                                     <div class="pi-text">
                                         <div class="catagory-name">외출용품</div>
                                         <a href="#">
-                                            <span>${list.pro_id}</span>
+                                            <span>${list.items_id}</span>
                                            <h5 id="title">
-                                            <a href="Productdetail.do?pro_id=${list.pro_id}">
+                                            <a href="Productdetail.do?items_id=${list.items_id}">
                                             	${list.title}
                                             </a>
                                            </h5>
@@ -246,7 +246,7 @@
                                             ${list.price}원<br>
                                         </div>
                                         <a class="area">${list.area }</a>
-                                        <a class="date"><fmt:formatDate value="${list.pro_date}" pattern="yyyy.MM.dd"/></a>
+                                        <a class="date"><fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
                                     </div>
                                 </div>
                             </div>

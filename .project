@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+	<name>Maengmorning1</name>
+=======
 	<name>Maengmorning</name>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
 	<comment></comment>
 	<projects>
 	</projects>
