@@ -45,7 +45,7 @@ public class JoinService implements Command {
 			request.setAttribute("nickName", nickName);
 			return "메인.jsp";
 		}else {
-			return "회원가입.jsp";
+			return "GoJoin.do";
 		}
 		
 	}

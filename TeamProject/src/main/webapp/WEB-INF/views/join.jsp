@@ -139,7 +139,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="register-form">
                         <h2>회원가입</h2>
-                        <form action="Join.do" method = "post">
+                        <form action="GoJoin.do" method = "post">
                             <div class="group-input">
                                 <label for="username">이름</label>
                                 <input type="text" id="name" name ="name">
