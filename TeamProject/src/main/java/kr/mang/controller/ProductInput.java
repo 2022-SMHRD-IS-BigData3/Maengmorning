@@ -24,9 +24,9 @@ public class ProductInput implements Command {
 		String items_state = request.getParameter("items_state");
 		String price = request.getParameter("price");
 		Date up_date = new Date();
-		System.out.println("title");
-		System.out.println("items_state");
-		System.out.println("price");
+		System.out.println(title);
+		System.out.println(items_state);
+		System.out.println(price);
 		// 위에서 받아온 데이터 파라메터 수집
 		ProductlistVO vo = new ProductlistVO();
 		vo.setTitle(title);
