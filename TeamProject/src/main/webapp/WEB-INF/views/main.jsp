@@ -134,7 +134,7 @@
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
                 <li class="heart-icon">
-                  <a href="#">
+                  <a href="./Gologin.do">
                     <i class="icon_MSY_alt">로그인</i>
                   </a>
                 </li>
@@ -152,8 +152,8 @@
             <header>
                 <nav>
                   <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">중고거래</a>
+                    <li><a href="./Gomain.do">Home</a></li>
+                    <li><a href="./Goproductlist.do">중고거래</a>
                         <ul class="dropdown">
                             <li><a href="#">외출용품</a></li>
                             <li><a href="#"> 장난감/도서</a></li>
@@ -164,14 +164,14 @@
                             <li><a href="#">기타</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">커뮤니티</a>
+                    <li><a href="./Goboardlist.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">잡담</a></li>
                             <li><a href="#">그외</a></li>
                             <li><a href="#">등등</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">마이페이지</a>
+                    <li><a href="./Gomypage.do">마이페이지</a>
                         <ul class="dropdown">
                             <li><a href="#">판매/구매목록</a></li>
                             <li><a href="#">매너온도</a></li>
