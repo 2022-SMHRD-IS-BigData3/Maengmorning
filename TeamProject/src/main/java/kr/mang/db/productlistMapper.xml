@@ -9,16 +9,21 @@
 	
 	<!-- 등록물품 리스트 -->
 	<select id="productlist" resultType="kr.mang.model.ProductlistVO"><!-- resultType은 select할때 사용 -->
-  	select* from 등록물품 order by pro_id desc 
+  	select* from ITEMS order by ITEMS_ID desc 
   </select>
   <!-- 등록물품 상세보기 -->
   <select id="productdetail" parameterType="int" resultType="kr.mang.model.ProductlistVO">
-  	SELECT * FROM 등록물품 WHERE PRO_ID = #{pro_id}
+  	SELECT * FROM ITEMS WHERE ITEMS_ID = #{items_id}
   </select>
-  <!-- 물품 등록 -->
-  <insert id="productinput" parameterType="kr.mang.model.ProductlistVO">
-  	insert into 등록물품(PRO_ID,SELLERID,IMGURL,PRICE,TITLE,AREA,PRO_STATE,PRO_DATE)
-  	values('B'||seq_name.nextval,'smhrd',#{imgurl},#{price},#{title},#{area},#{pro_state},sysdate)
+  <!-- 물품 판매글 등록 -->
+  <insert id="productinput" parameterType="kr.mang.model.ImgUploadVO">
+  	insert into ITEMS(ITEMS_ID,TITLE,ITEMS_STATE,PRICE,UP_DATE,USER_ID,ITEMS_IMG_ID,TAG_ID)
+  	values('B'||ITEMS_ID.nextval,#{title},#{items_state},#{price},sysdate)
+  </insert>
+  
+  <insert id="imginput" parameterType="kr.mang.model.ImgUploadVO">
+  	insert into ITEMS_IMG(ITEMS_IMG_ID,PATH_IMG,UPLOAD_DATE,FILE_NAME)
+  	values('I'||ITEMS_IMG_ID.nextval,#{path_img},sysdate,#{file_name})
   </insert>
   
 </mapper>
