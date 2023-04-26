@@ -60,7 +60,7 @@
     <!-- 판매내역 -->
     <div class="container">
         <div class="col-lg-12">
-            <form action="마이상세(판매).jsp">
+            <form action="./Gomypageselect">
                 <td>
                     <h4 style="text-align:center;">찜✔</h4>
                 </td>

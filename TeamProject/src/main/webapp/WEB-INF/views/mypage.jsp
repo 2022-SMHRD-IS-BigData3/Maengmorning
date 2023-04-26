@@ -331,7 +331,7 @@
                     </div>
                 </form>
                 <br><br>
-                <form action="마이상세(찜).jsp">
+                <form action="./Gomypageselect">
                     <table class="table">
                         <thead>
                             <td>
@@ -352,7 +352,7 @@
                         </tbody>
                     </table>
                     <div style="text-align: right;">
-                        <button class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="submit">더보기</button>
                     </div>
                 </form>
             </div>
