@@ -22,7 +22,7 @@ public class Boarddetail implements Command {
 	
 		request.setAttribute("detail", vo);
 
-		return "커뮤니티상세.jsp";
+		return "GoBoarddetail.do";
 	}
 
 }

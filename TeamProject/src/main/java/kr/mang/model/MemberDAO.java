@@ -35,6 +35,8 @@ public class MemberDAO {
 		System.out.println(row);
 		return row ;
 	}
+	
+	
 	public String login(MemberVO vo) {
 		String uId = null; 
 		try {

@@ -13,6 +13,6 @@ public class ProductDetail implements Command{
 		ProductlistDAO dao = new ProductlistDAO();
 		ProductlistVO vo = dao.detail(pro_id);
 		request.setAttribute("detail", vo);
-		return "상품상세정보.jsp";
+		return "GoProductdetail.do";
 	}
 }
