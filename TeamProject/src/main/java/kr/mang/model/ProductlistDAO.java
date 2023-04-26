@@ -23,22 +23,25 @@ public class ProductlistDAO {
 	public List<ProductlistVO> productList() {
 		SqlSession session = null;
 		List<ProductlistVO> list = null;
+		System.out.println("리스트가져와야지");
 		try {
 			session = sqlSessionFactory.openSession();
 			list = session.selectList("productlist");
 		} finally {
+			System.out.println("리스트 가져옴");
 			session.close();
 		}
 		return list;
 	}
 
 	// 중고거래 물품 상세페이지
-	public ProductlistVO detail(int pro_id) {
+	public ProductlistVO detail(int items_id) {
 		SqlSession session = null;
 		ProductlistVO detail = null;
+		System.out.println("");
 		try {
 			session = sqlSessionFactory.openSession();
-			detail = session.selectOne("productdetail", pro_id);
+			detail = session.selectOne("productdetail", items_id);
 		} finally {
 			session.close();
 		}
