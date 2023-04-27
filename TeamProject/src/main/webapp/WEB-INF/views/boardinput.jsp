@@ -1,3 +1,8 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -206,8 +211,8 @@
             </div>
         </div>
     </div>
-
-    <form action="./Goboardlist.do">
+<!-- 커뮤니티 글 및 이미지 등록 하는 곳 -->
+   <form action="./Goboardlist.do" method="post" enctype="multipart/form-data" class ="comment-form">
     <table id="Product_Style" align="center">
         <tr class="border-bottom">
           <th colspan="2" >
@@ -218,12 +223,13 @@
         <tr class="border-bottom">
           <td class="Product_Style_td">이미지</td>
           <td>
+  <!-- 이미지 미리보기 -->
             <div class="logo">
-                <img src="img/free-icon-camera-685655.png" alt="">
+                <img id="previewImage" src="#" alt="Preview Image" width="200" height="200">
             </div>
+   <!-- 이미지 업로드  -->
             <div class="input-group mb-3">
-                <input type="file" class="form-control" id="inputGroupFile02">
-                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                 <input name="file_name" type="file" class="form-co/ntrol" id="file_name" onchange="previewImage(event)"> 
               </div>
           </td>
         </tr>
@@ -232,7 +238,7 @@
           <td>글 제목</td>
           <td>
             <div>
-                <input class="ProductTitle" type="text" placeholder="글 제목">
+                <input id="title" name="title" class="ProductTitle" type="text" placeholder="글 제목">
             </div>
           </td>
         </tr>
@@ -254,7 +260,7 @@
             <td>글 내용</td>
             <td>
                 <div>
-                    <textarea class="ProductText" placeholder="회원들과 공유하고 싶은 정보들을 자유롭게 작성해주세요. (10자 이상)"></textarea>  
+                    <textarea id="board_content" name="board_content" class="ProductText" placeholder="회원들과 공유하고 싶은 정보들을 자유롭게 작성해주세요. (10자 이상)"></textarea>  
                 </div>
             </td>
           </tr>
@@ -276,7 +282,7 @@
         
 
       </table>
-      </form>
+     </form>
 
 
 
@@ -403,6 +409,26 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <!-- 이미지 프리뷰 함수 -->
+    <script>
+    function previewImage(event) {
+        var preview = document.getElementById('previewImage'); // 미리보기 이미지 요소 가져오기
+        var file = event.target.files[0]; // 선택한 파일 가져오기
+        var reader = new FileReader(); // 새 FileReader 개체 만들기
+
+        reader.onload = function() {
+            preview.src = reader.result; // 미리보기 이미지 소스를 업로드된 이미지로 설정
+        };
+        if (file) {
+            reader.readAsDataURL(file); // 선택한 파일을 DataURL로 읽기
+        } else {
+            preview.src = "#"; // 파일을 선택하지 않은 경우 미리보기 이미지 소스를 자리 표시자로 설정합니다.
+        }
+    }
+    // 파일 입력 요소에 previewImage 함수를 연결합니다.
+    var fileInput = document.getElementById('file_name');
+    fileInput.addEventListener('change', previewImage);
+</script>
 </body>
 
 </html>

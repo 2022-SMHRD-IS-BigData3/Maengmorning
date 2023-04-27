@@ -54,7 +54,7 @@ public class BoardDAO {
 		public void productInput(BoardVO vo) {
 			SqlSession session = null;
 			try {
-				System.out.println("중고물품 등록 시작");
+				System.out.println("커뮤니티 글 등록 시작");
 		        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
 				session = sqlSessionFactory.openSession();
 				System.out.println("session: " + session);
@@ -62,7 +62,7 @@ public class BoardDAO {
 				session.commit();
 				System.out.println("등록했다.");
 			}catch (Exception e) {
-		        System.out.println("물품 db저장중 에러 발생");
+		        System.out.println("글 db저장중 에러 발생");
 		        e.printStackTrace(); 
 			}finally {
 				System.out.println("닫았다.");
@@ -74,7 +74,7 @@ public class BoardDAO {
 			public void imgInput(BoardVO vo) {
 				SqlSession session = null;
 				try {
-					System.out.println("중고물품 등록 시작");
+					System.out.println("커뮤니티 이미지 등록 시작");
 			        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
 					session = sqlSessionFactory.openSession();
 					System.out.println("session: " + session);

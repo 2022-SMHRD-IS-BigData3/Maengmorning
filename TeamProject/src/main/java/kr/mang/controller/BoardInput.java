@@ -31,7 +31,6 @@ public class BoardInput implements Command {
     ProductlistVO vo = new ProductlistVO();
     vo.setTitle(title);
     vo.setItems_state(board_content);
-   
     vo.setFile_name(file_name);
     System.out.println("파라메터 수집 ");
     // 데이터 넘겨받아서 db에 저장 (productlistDAO로 이동)
@@ -40,6 +39,6 @@ public class BoardInput implements Command {
     dao.imgInput(vo);
     System.out.println("돌아옴");
     // 사용자를 성공 페이지로 리디렉션
-    return "Goproductlist.do";
+    return "GoBoardList.do";
   }
 }
