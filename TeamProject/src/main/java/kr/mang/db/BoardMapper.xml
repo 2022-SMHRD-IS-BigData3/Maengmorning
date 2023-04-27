@@ -32,6 +32,11 @@
   	insert into BOARD_IMG(BOARD_IMG_ID, PATH_IMG, FILE_NAME)
   	values('B'||BOARD_IMG_ID.nextval, NULL,#{file_name})
   </insert>
+  
+  <insert id="selectList" parameterType="kr.mang.model.BoardVO">
+  	insert into board_comment
+  	values('abs',#{comment},'123',NULL)
+  </insert>
 
 
 	

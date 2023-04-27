@@ -7,6 +7,8 @@ import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import kr.mang.model.BoardDAO;
 import kr.mang.model.BoardVO;
@@ -18,7 +20,9 @@ public class comment implements Command{
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
-		String comment = request.getParameter("comment");
+//		String comment = request.getParameter("comment");
+		HttpSession session = request.getSession();
+		String comment = (String)session.getAttribute("comment");
 		
 		System.out.println(comment);
 		
@@ -26,10 +30,10 @@ public class comment implements Command{
 		vo.setBoard_comment(comment);
 		
 		BoardDAO dao = new BoardDAO();
-		List<BoardVO> list = dao.BoardList();
+		List<BoardVO> list = dao.commentlist(comment);
 		
-		request.setAttribute("comment", comment);
-		
+		request.setAttribute("list", list);
+//		request.setAttribute("board_comment", comment);
 		
 		return "boarddetail.jsp";
 	}
