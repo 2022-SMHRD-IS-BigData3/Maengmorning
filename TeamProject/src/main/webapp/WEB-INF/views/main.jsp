@@ -318,7 +318,7 @@
             </div>
           </div>
 
-          <div class="productShopDetail">
+          <div class="./Goproductlist.do">
             <button type="button" class="btn btn-warning">더보기</button>
             <br>
         </div>
@@ -386,7 +386,7 @@
               </div>
             </div>
 
-            <div class="productShopDetail">
+            <div class="./Goboardlist.do">
                 <button type="button" class="btn btn-warning">더보기</button>
                 <br>
             </div>
