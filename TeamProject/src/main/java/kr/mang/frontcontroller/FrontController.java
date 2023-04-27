@@ -65,6 +65,7 @@ public class FrontController extends HttpServlet {
 		if (finaluri.contains("Go")) {
 			System.out.println("들어옴1");
 			finalpath = finaluri.replaceAll("Go", "").toLowerCase().replaceAll(".do", ".jsp");
+			System.out.println(finalpath);
 		}else {
 			com =map.get(finaluri);
 			finalpath = com.execute(request, response);
@@ -74,10 +75,10 @@ public class FrontController extends HttpServlet {
 		else if (finalpath.contains("redirect:/")) {
 			response.sendRedirect(finalpath.substring(10));
 		} else {
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/" + finalpath);
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/" +finalpath);
 			rd.forward(request, response);
 		}
-		System.out.println(finalpath);
+		System.out.println("여기가 프론트 마지막");
 	}
 
 }

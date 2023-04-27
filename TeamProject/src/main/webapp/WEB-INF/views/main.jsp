@@ -201,7 +201,7 @@
                             <li><a href="#">기타</a></li>
                         </ul>
                     </li>
-                    <li><a href="./Goboardlist.do">커뮤니티</a>
+                    <li><a href="BoardList.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">잡담</a></li>
                             <li><a href="#">그외</a></li>

@@ -21,8 +21,9 @@ public class BoardList implements Command {
 		
 		List<BoardVO> list = dao.BoardList();
 		request.setAttribute("Blist",list );
+		System.out.println(list);
 
-		return "GoBoardList.do";
+		return "redirect:/GoBoardList.do";
 	}
 
 }
