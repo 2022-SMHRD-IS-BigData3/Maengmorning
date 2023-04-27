@@ -78,11 +78,7 @@
     <div class="container">
         <ul class="note-list">
             <li class="note-item">
-                <div>
-                    <button class = "button">받은쪽지</button>
-                    <button class = "button">보낸쪽지</button>
-                </div>
-                
+
                 <div class="note-title">닉네임 : DB에서 받아올 데이터(닉네임)</div>
                 <div class="note-info">내용 : DB에서 받아올 데이터(내용)</div>
                 <button class="delete-btn">삭제</button>
