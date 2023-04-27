@@ -65,21 +65,23 @@ public class FrontController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String finalpath = null;
 		if (finaluri.contains("Go")) {
-			System.out.println("들어옴1");
-			finalpath = finaluri.replaceAll("Go", "").toLowerCase().replaceAll(".do", ".jsp");
+			finalpath = finaluri.replaceAll("Go","").toLowerCase().replaceAll(".do", ".jsp");
 		}else {
 			com =map.get(finaluri);
 			finalpath = com.execute(request, response);
 		}
+		
 		if(finalpath == null) {
 		}
 		else if (finalpath.contains("redirect:/")) {
 			response.sendRedirect(finalpath.substring(10));
 		} else {
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/" + finalpath);
+			System.out.println(finalpath);
+			
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/" +finalpath);
+		
 			rd.forward(request, response);
 		}
-		System.out.println(finalpath);
 	}
 
 }

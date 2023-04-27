@@ -7,14 +7,17 @@
 
 <mapper namespace="kr.mang.model.BoardDAO">
 
-
 	<!-- 게시판 글 목록 쿼리문 -->
 	<select id="selectList" resultType="kr.mang.model.BoardVO">
-		select BOARD_ID,TITLE, USER_ID  from BOARD order by BOARD_ID desc
+		select BOARD_ID,TITLE,USER_ID
+		from BOARD
+		order by BOARD_ID desc
+	
 	</select>
 
 	<!-- 게시판 글 클릭 수 나오는 상세페이지 쿼리 -->
-	<select id="detail" parameterType="int" resultType="kr.mang.model.BoardVO">
+	<select id="detail" parameterType="int"
+		resultType="kr.mang.model.BoardVO">
 		select * from BOARD WHERE B_ID = #{b_id}
 
 	</select>

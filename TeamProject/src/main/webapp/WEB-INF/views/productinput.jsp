@@ -1,8 +1,3 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
-<%@ page import="java.io.File" %>
-<%@ page import="java.util.Enumeration" %>
-<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
-<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -34,49 +29,6 @@
 
 <style>
 
-/* 검색창 */
-    .search-container {
-        display: flex;
-        justify-content: center;
-      }
-      
-      input[type=text] {
-        padding: 6px;
-        margin-top: 8px;
-        font-size: 17px;
-        border: none;
-        border-bottom: 2px solid #ccc;
-      }
-      
-      .search-button {
-        background-color: rgb(230, 177, 0);
-        border: none;
-        border-radius: 3px;
-        padding: 5px;
-        margin-top: 8px;
-        margin-left: -5px;
-        cursor: pointer;
-      }
-      
-      .search-button:hover {
-        background-color: #ccc;
-      }
-
-      input#search {
-        width: 400px;
-      }
-
-      button.search-button {
-        width: 40px;
-        height: 40px;
-      }
-      
-      /* 상단바 위아래 선 코드 */
-  
-    
-    
-
-/*여기까지*/
 
     div .leave-comment {
         margin-top: 100px;
@@ -145,13 +97,16 @@
         height: 400px;
     }
     
-    div {
-    	margin-top 10px;
-    }
-    /*상단바 스타일태그 넣으면 다 깨지는중 미쳤음 해결해야함*/
-    .border-bottom div, div .nice-select sorting, input.area {
-    padding-bottom: 10px;
-    }
+    /*표*/
+     table #Product_Style {
+    width: 100%;
+    border: 2px solid #777676;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #777676;
+    padding: 10px;
+  }
     
 </style>
 
@@ -161,93 +116,95 @@
         <div class="loader"></div>
     </div>
 
-     <!-- Header Section Begin -->
+    <!-- Header Section Begin -->
     <header class="header-section">
-
-      <div class="container">
-        <div class="inner-header">
-          <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
-            <div class="col-lg-2 col-md-2">
-              <a href="./index.html">
-                <img src="./img/로고.png" alt="">
-              </a>
-            </div>
-             <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
-                <div class="search-container">
-                    <form action="/search">
-                      <input class="border" id="search" type="text" placeholder="검색" name="search">
-                      <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
-                    </form>
-                  </div>
-            </div>
-            <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
-              <ul class="nav-right">
-                <li class="heart-icon">
-                
-                  
-                 
-                  	  <a href="./Gologin.do">로그인</a>
-                  	  <a href="./Gojoin.do">회원가입</a>
-                  	
-                
-                  		
-                  	
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-     
-      <div class="nav-item">
+        
         <div class="container">
-          <nav class="nav-menu mobile-menu">
-            
+            <div class="inner-header">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
 
-            <header>
-                <nav>
-                  <ul>
-                    <li><a href="./Gomain.do">Home</a></li>
-                    <li><a href="./Goproductlist.do">중고거래</a>
-                        <ul class="dropdown">
-                            <li><a href="#">외출용품</a></li>
-                            <li><a href="#"> 장난감/도서</a></li>
-                            <li><a href="#">의류</a></li>
-                            <li><a href="#">가구</a></li>
-                            <li><a href="#">침구류</a></li>
-                            <li><a href="#"> 생활용품</a></li>
-                            <li><a href="#">기타</a></li>
+                        <a href="./Gomain.do">
+                            <img src="./img/로고.png" alt="">
+                        </a>
+
+                            <a href="./Gomain.do">
+                                <img src="./메인사진파일/로고.png" alt="">
+                            </a>
+                     
+
+                    </div>
+
+                    
+                    <div class="col-lg-7 col-md-7">
+                        <div class="advanced-search">
+                            <div class="input-group">
+                                <input type="text" placeholder="검색">
+                                <button type="button"><i class="ti-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="col-lg-3 text-right col-md-3">
+                        
+                        <ul class="nav-right">
+                            <li class="heart-icon">
+                                <a href="./Gologin.do">
+                                    <i class="icon_MSY_alt">로그인</i>
+                                </a>
+                            </li>
                         </ul>
-                    </li>
-                    <li><a href="./Goboardlist.do">커뮤니티</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <div class="container">
+                <div class="nav-depart">
+                    
+                </div>
+                <nav class="nav-menu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="./index.html">Home</a></li>
+                       
+                       
+                        <li><a href="./Goproductlist.do">중고거래</a>
+                            <ul class="dropdown">
+                                <li><a href="#">외출용품</a></li>
+                                <li><a href="#"> 장난감/도서</a></li>
+                                <li><a href="#">의류</a></li>
+                                <li><a href="#">가구</a></li>
+                                <li><a href="#">침구류</a></li>
+                                <li><a href="#"> 생활용품</a></li>
+                                <li><a href="#">기타</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="./Goboardlist.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">정보공유</a></li>
                             <li><a href="#">자유게시판</a></li>
                         </ul>
                     </li>
-                    <li><a href="./Gomypage.do">마이페이지</a>
-                        <ul class="dropdown">
-                            <li><a href="#">판매/구매목록</a></li>
-                            <li><a href="#">매너온도</a></li>
-                            <li><a href="#">개인정보 수정</a></li>
-                            <li><a href="#">좋아요 목록</a></li>
-                        </ul>
-                    </li>
-                  </ul>
+
+                        <li><a href="./Gomypage.do">마이페이지</a>
+                            <ul class="dropdown">
+                                <li><a href="#">판매/구매목록</a></li>
+                                <li><a href="#">매너온도</a></li>
+                                <li><a href="#">개인정보 수정</a></li>
+                                <li><a href="#">좋아요 목록</a></li>
+                            </ul>
+                        </li>
+                       
+                    </ul>
                 </nav>
-              </header>
-
-    
-            
-          </nav>
-          <div id="mobile-menu-wrap"></div>
+                <div id="mobile-menu-wrap"></div>
+            </div>
         </div>
-      </div>
-      
     </header>
-
     <!-- Header End -->
-
 
     <!-- Breadcrumb Section Begin -->
     <div class="breacrumb-section">
@@ -264,42 +221,41 @@
         </div>
     </div>
 <!-- 중고거래 글 및 이미지 등록 하는 곳 -->
-      <form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
-    <table id="Product_Style" align="center">
-        <tr class="border-bottom" >
+   <form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
+    <table id="Product_Style" align="center" >
+        <tr class="border-bottom">
           <th colspan="2" >
             <h4>물품등록</h4>
           </th>
         </tr>
 
-        <tr class="border-bottom">
+        <tr>
           <td class="Product_Style_td">상품이미지</td>
           <td>
             <div class="logo">
+                <img src="img/free-icon-camera-685655.png" alt="">
      <!-- 이미지 미리보기 -->
                <img id="previewImage" src="#" alt="Preview Image" width="200" height="200">
             </div>
             <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
      <!-- 이미지 업로드  -->
                <input name="file_name" type="file" class="form-co/ntrol" id="file_name" onchange="previewImage(event)"> 
                
               </div>
           </td>
         </tr>
-   
 
-        <tr class="border-bottom">
+        <tr>
           <td>글 제목</td>
           <td>
             <div>
-                <input id="title" name="title" type="text" placeholder="글 제목">
-                
+                <input class="ProductTitle" type="text" placeholder="글 제목">
             </div>
-            
           </td>
         </tr>
 
-        <tr class="border-bottom">
+        <tr>
           <td>카테고리</td>
           <td>
             <div class="category-option">
@@ -316,7 +272,7 @@
           </td>
         </tr>
 
-        <tr class="border-bottom">
+        <tr>
             <td>거래지역</td>
             <td>
                 <div class="area">
@@ -325,7 +281,7 @@
             </td>
           </tr>
 
-        <tr class="border-bottom">
+       <tr>
             <td>상품가격</td>
             <td>
                 <div class="price">
@@ -333,8 +289,8 @@
                 </div>
             </td>
           </tr>
-
-        <tr class="border-bottom">
+          
+          <tr class="border-bottom">
             <td>상품설명</td>
             <td>
                 <div>
@@ -342,8 +298,8 @@
                 </div>
             </td>
           </tr>
-
-        <tr class="border-bottom">
+          
+          <tr class="border-bottom">
             <td>상품태그</td>
             <td>
                 <div>
@@ -352,129 +308,17 @@
             </td>
           </tr>
         
-        <tr class="border-bottom" align="center">
+        <tr align="center">
             <td colspan="2">
-               <input type="submit" class="btn btn-primary btn-sm px-3 gap-3" value="등록">
+                <button type="submit" class="site-btn">등록</button>
             </td>
         </tr>
         
 
       </table>
-   </form>
+      </form>
 
 
-
-    <!-- Partner Logo Section Begin -->
-    <div class="partner-logo">
-        <div class="container">
-            <div class="logo-carousel owl-carousel">
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-1.png" alt="">
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-2.png" alt="">
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-3.png" alt="">
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-4.png" alt="">
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-5.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Partner Logo Section End -->
-
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="footer-left">
-                        <div class="footer-logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
-                        </div>
-                        <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello.colorlib@gmail.com</li>
-                        </ul>
-                        <div class="footer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 offset-lg-1">
-                    <div class="footer-widget">
-                        <h5>Information</h5>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="footer-widget">
-                        <h5>My Account</h5>
-                        <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Shopping Cart</a></li>
-                            <li><a href="#">Shop</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="newslatter-item">
-                        <h5>Join Our Newsletter Now</h5>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Enter Your Mail">
-                            <button type="button">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-reserved">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copyright-text">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved |
-                            This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </div>
-                        <div class="payment-pic">
-                            <img src="img/payment-method.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>

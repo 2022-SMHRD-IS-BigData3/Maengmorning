@@ -32,7 +32,6 @@ public class MemberDAO {
 		} finally {
 			session.close();
 		}
-		System.out.println(row);
 		return row ;
 	}
 	
@@ -50,6 +49,22 @@ public class MemberDAO {
 		
 		
 		return uId;
+	}
+
+
+	public List<MemberVO> getArea() {
+		List<MemberVO> area = null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			area = session.selectList("get");
+		
+	} finally {
+		session.close();
+	}
+	
+		
+		return area;
+		
 	}
 
 

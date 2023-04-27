@@ -17,7 +17,9 @@ public class BoardVO {
 	// board_img
 	private String file_name;
 	
+	
 	public BoardVO() {}
+	
 	
 	public BoardVO(int board_id, String title, String board_content, Date write_date, String user_id,
 			String b_comment_id, String board_img_id, String board_comment, Date c_write_date, String file_name) {
