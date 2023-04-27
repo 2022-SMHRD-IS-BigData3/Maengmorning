@@ -95,6 +95,39 @@ public class BoardDAO {
 					session.close();
 				}
 			}
+			
+			
+			public List<BoardVO> commentlist(String comment) {
+			    SqlSession session = null;
+			    List<BoardVO> commentlist = null;
+			    
+			    try {
+			        System.out.println("댓글 조회 시작");
+			        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
+			        session = sqlSessionFactory.openSession();
+			        System.out.println("session: " + session);
+			        
+			        commentlist = session.selectList("selectList",comment);
+			        System.out.println("조회 완료");
+//			    } catch (Exception e) {
+//			        System.out.println("조회 실패");
+//			        e.printStackTrace();
+			    } finally {
+			        System.out.println("세션 닫기");
+			        session.close();
+			    }
+			    return commentlist;
+			}
+
+
+
+
+
+
+			
+			
+			
+			
 	
 	
 	
