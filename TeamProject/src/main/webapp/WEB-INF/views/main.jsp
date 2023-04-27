@@ -28,8 +28,6 @@
       <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
       <link rel="stylesheet" href="css/style.css" type="text/css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  </head>
-
   <style>
    /* 검색창 */
     .search-container {
@@ -127,16 +125,9 @@
       }
       
      
-     
- 
-     
-     
-      
-      
-      
-      
-      
   </style>
+  </head>
+
 
   <body>
 
@@ -180,7 +171,7 @@
                   </c:if>
                   		
                   	<c:if test="${!empty uId}">
-                  	<a href="./Gologout.do">로그인</a>
+                  	<a href="./Gologout.do">로그아웃</a>
                   	</c:if>
                   
                   
@@ -215,9 +206,8 @@
                     </li>
                     <li><a href="./Goboardlist.do">커뮤니티</a>
                         <ul class="dropdown">
-                            <li><a href="#">잡담</a></li>
-                            <li><a href="#">그외</a></li>
-                            <li><a href="#">등등</a></li>
+                            <li><a href="#">정보공유</a></li>
+                            <li><a href="#">자유게시판</a></li>
                         </ul>
                     </li>
                     <li><a href="./Gomypage.do">마이페이지</a>
