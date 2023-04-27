@@ -212,7 +212,7 @@
         </div>
     </div>
 
-      <form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
+    <form action="ProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
     <table id="Product_Style" align="center">
         <tr class="border-bottom">
           <th colspan="2" >
