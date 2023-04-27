@@ -95,6 +95,9 @@ public class BoardDAO {
 					session.close();
 				}
 			}
+			
+			
+			
 	
 	
 	

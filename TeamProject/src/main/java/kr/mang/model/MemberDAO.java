@@ -66,6 +66,8 @@ public class MemberDAO {
 		return area;
 		
 	}
+	
+	
 
 
 	
