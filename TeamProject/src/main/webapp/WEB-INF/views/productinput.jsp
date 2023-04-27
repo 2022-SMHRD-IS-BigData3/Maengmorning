@@ -221,7 +221,7 @@
         </div>
     </div>
 <!-- 중고거래 글 및 이미지 등록 하는 곳 -->
-   <form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
+   <form action="GoProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
     <table id="Product_Style" align="center" >
         <tr class="border-bottom">
           <th colspan="2" >
@@ -238,9 +238,8 @@
                <img id="previewImage" src="#" alt="Preview Image" width="200" height="200">
             </div>
             <div class="input-group mb-3">
-                <input type="file" class="form-control" id="inputGroupFile02">
      <!-- 이미지 업로드  -->
-               <input name="file_name" type="file" class="form-co/ntrol" id="file_name" onchange="previewImage(event)"> 
+               <input name="fileName" type="file" class="form-co/ntrol" id="fileName" onchange="previewImage(event)"> 
                
               </div>
           </td>
@@ -250,7 +249,7 @@
           <td>글 제목</td>
           <td>
             <div>
-                <input class="ProductTitle" type="text" placeholder="글 제목">
+                <input id="title" name="title" class="ProductTitle" type="text" placeholder="글 제목">
             </div>
           </td>
         </tr>
@@ -294,7 +293,7 @@
             <td>상품설명</td>
             <td>
                 <div>
-                    <textarea id="items_state" name="items_state" class="ProductText" placeholder="여러 장의 상품 사진과 구입연도, 브랜드, 사용감, 하자유무 등 구매자에게 꼭 필요한 정보를 포함해주세요. (10자 이상)"></textarea>  
+                    <textarea id="itemsState" name="itemsState" class="ProductText" placeholder="여러 장의 상품 사진과 구입연도, 브랜드, 사용감, 하자유무 등 구매자에게 꼭 필요한 정보를 포함해주세요. (10자 이상)"></textarea>  
                 </div>
             </td>
           </tr>
@@ -303,7 +302,7 @@
             <td>상품태그</td>
             <td>
                 <div>
-                    <input class="tag_id" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
+                    <input id="tagId" name="tagId" class="tagId" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
                  </div>
             </td>
           </tr>

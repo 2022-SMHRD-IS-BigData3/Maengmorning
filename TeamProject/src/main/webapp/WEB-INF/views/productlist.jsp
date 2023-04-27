@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -263,7 +264,7 @@
                 <div class="col-lg-9 order-1 order-lg-2">
                  
 
-                    <form action="./Goproductinput.do">
+                    <form action="ProductInput.do">
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
@@ -296,7 +297,7 @@
                                         </div>
                                     </div>
                                     <div class="pi-text">
-                                        <div class="catagory-name">외출용품</div>
+                                        <div class="catagory-name">외출용품 </div>
                                            </h5>
                                         </a>
                                     
@@ -304,20 +305,31 @@
                             </div>
                             </div>
                             </div>
-                  <c:forEach items="${productlist}" var="list" varStatus="status">
-                                        <img src="${pageContext.request.contextPath}/uploads/${product.file_name}">
-                                            <span>${list.items_id}</span>
-                                            <a href="Productdetail.do?items_id=${list.items_id}">
-                                        <a href="#">
-                                           <h5 id="title">
-                                            	${list.title}
-                                            </a>
-                                        <div class="product-price">
-                                            ${list.price}원<br>
-                                        </div>
-                                        <a class="area">${area[status.index].area }</a>
-                                        <a class="date"><fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
-                        </c:forEach>
+<c:forEach items="${productlist}" var="list" varStatus="status">
+  <div class="product-item">
+    <div class="product-image">
+      <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
+      <img src="${pageContext.request.contextPath}/uploads/${imglist[status.index]['fileName']}.jpg">
+    </div>
+    <div class="product-details">
+      <span>${list.itemsId}</span>
+      <a href="Productdetail.do?items_id=${list.itemsId}">
+        <h5 id="title">${list.title}</h5>
+      </a>
+      <div class="product-price">
+        ${list.price}원<br>
+      </div>
+      <div class="product-area">
+        <a class="area">${area[status.index].area}</a>
+      </div>
+      <div class="product-date">
+        <a class="date"><fmt:formatDate value="${list.upDate}" pattern="yyyy.MM.dd"/></a>
+      </div>
+    </div>
+  </div>
+</c:forEach>
+
+ 
                 </div>
             </div>
         </div>
