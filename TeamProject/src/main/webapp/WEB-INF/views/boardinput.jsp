@@ -212,7 +212,7 @@
         </div>
     </div>
 <!-- 커뮤니티 글 및 이미지 등록 하는 곳 -->
-   <form action="./Goboardlist.do" method="post" enctype="multipart/form-data" class ="comment-form">
+   <form action="BoardInput.do" method="post" enctype="multipart/form-data" class ="comment-form">
     <table id="Product_Style" align="center">
         <tr class="border-bottom">
           <th colspan="2" >

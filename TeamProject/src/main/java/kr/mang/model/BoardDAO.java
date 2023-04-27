@@ -51,14 +51,14 @@ public class BoardDAO {
 
 	
 	// 커뮤니티 글 등록페이지
-		public void productInput(BoardVO vo) {
+		public void BoardInput(BoardVO vo) {
 			SqlSession session = null;
 			try {
 				System.out.println("커뮤니티 글 등록 시작");
 		        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
 				session = sqlSessionFactory.openSession();
 				System.out.println("session: " + session);
-				session.insert("productinput", vo);
+				session.insert("boardinput", vo);
 				session.commit();
 				System.out.println("등록했다.");
 			}catch (Exception e) {
@@ -78,7 +78,7 @@ public class BoardDAO {
 			        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
 					session = sqlSessionFactory.openSession();
 					System.out.println("session: " + session);
-					session.insert("imginput", vo);
+					session.insert("b_imginput", vo);
 					session.commit();
 					System.out.println("등록했다.");
 				}catch (Exception e) {

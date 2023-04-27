@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.mang.controller.ProductList;
+import kr.mang.controller.BoardInput;
 import kr.mang.controller.BoardList;
 import kr.mang.controller.Boarddetail;
 import kr.mang.controller.Command;
@@ -49,6 +50,7 @@ public class FrontController extends HttpServlet {
 		map.put("ProductInput.do", new ProductInput());
 		map.put("BoardList.do", new BoardList());
 		map.put("Boarddetail.do", new Boarddetail());
+		map.put("BoardInput.do", new BoardInput());
 		
 
 	}

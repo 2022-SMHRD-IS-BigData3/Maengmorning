@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
+import kr.mang.model.BoardDAO;
+import kr.mang.model.BoardVO;
 import kr.mang.model.ProductlistDAO;
 import kr.mang.model.ProductlistVO;
 
@@ -28,14 +31,14 @@ public class BoardInput implements Command {
     
     System.out.println(up_date);
     // 위에서 받아온 데이터 파라메터 수집
-    ProductlistVO vo = new ProductlistVO();
+    BoardVO vo = new BoardVO();
     vo.setTitle(title);
-    vo.setItems_state(board_content);
+    vo.setBoard_content(board_content);
     vo.setFile_name(file_name);
     System.out.println("파라메터 수집 ");
     // 데이터 넘겨받아서 db에 저장 (productlistDAO로 이동)
-    ProductlistDAO dao = new ProductlistDAO();
-    dao.productInput(vo);
+    BoardDAO dao = new BoardDAO();
+    dao.BoardInput(vo);
     dao.imgInput(vo);
     System.out.println("돌아옴");
     // 사용자를 성공 페이지로 리디렉션
