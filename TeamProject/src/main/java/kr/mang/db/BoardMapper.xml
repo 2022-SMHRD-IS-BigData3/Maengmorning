@@ -10,7 +10,7 @@
 
 	<!-- 게시판 글 목록 쿼리문 -->
 	<select id="selectList" resultType="kr.mang.model.BoardVO">
-		select B_ID,USERID, TITLE, AREA from BOARD order by b_id desc
+		select BOARD_ID,TITLE, USER_ID,  from BOARD order by BOARD_ID desc
 	</select>
 
 	<!-- 게시판 글 클릭 수 나오는 상세페이지 쿼리 -->
