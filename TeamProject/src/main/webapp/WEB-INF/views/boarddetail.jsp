@@ -253,7 +253,7 @@
                             <h1>${detail.title}</h1>
                         </div>
 
-                        <p>작성자:${detail.userid }| 작성일: | 동네: ${detail.area} | 조회수 : 1</p>
+                        <p>작성자:${detail.user_id} | 작성일: ${write_date} | 동네: ${detail.title} | 조회수 : 2</p>
                     </div>
 
 
