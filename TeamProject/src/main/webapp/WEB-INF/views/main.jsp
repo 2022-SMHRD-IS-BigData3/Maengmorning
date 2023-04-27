@@ -171,9 +171,21 @@
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
                 <li class="heart-icon">
-                  <a href="./Gologin.do">
-                    <i class="icon_MSY_alt">로그인</i>
-                  </a>
+                
+                  
+                  <c:if test="${empty uId}">
+                  	  <a href="./Gologin.do">로그인</a>
+                  	  <a href="./Gojoin.do">회원가입</a>
+                  	
+                  </c:if>
+                  		
+                  	<c:if test="${!empty uId}">
+                  	<a href="./Gologout.do">로그인</a>
+                  	</c:if>
+                  
+                  
+                    
+                  
                 </li>
               </ul>
             </div>
