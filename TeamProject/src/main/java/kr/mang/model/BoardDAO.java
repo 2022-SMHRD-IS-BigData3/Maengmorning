@@ -49,4 +49,49 @@ public class BoardDAO {
 
 	}
 
+	
+	// 커뮤니티 글 등록페이지
+		public void productInput(BoardVO vo) {
+			SqlSession session = null;
+			try {
+				System.out.println("중고물품 등록 시작");
+		        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
+				session = sqlSessionFactory.openSession();
+				System.out.println("session: " + session);
+				session.insert("productinput", vo);
+				session.commit();
+				System.out.println("등록했다.");
+			}catch (Exception e) {
+		        System.out.println("물품 db저장중 에러 발생");
+		        e.printStackTrace(); 
+			}finally {
+				System.out.println("닫았다.");
+				session.close();
+			}
+		}
+		
+		// 커뮤니티 이미지 등록페이지
+			public void imgInput(BoardVO vo) {
+				SqlSession session = null;
+				try {
+					System.out.println("중고물품 등록 시작");
+			        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
+					session = sqlSessionFactory.openSession();
+					System.out.println("session: " + session);
+					session.insert("imginput", vo);
+					session.commit();
+					System.out.println("등록했다.");
+				}catch (Exception e) {
+			        System.out.println("이미지 db저장중 에러 발생");
+			        e.printStackTrace(); 
+				}finally {
+					System.out.println("닫았다.");
+					session.close();
+				}
+			}
+	
+	
+	
+	
+	
 }
