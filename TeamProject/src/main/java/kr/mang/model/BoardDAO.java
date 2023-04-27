@@ -23,7 +23,7 @@ public class BoardDAO {
 			e.printStackTrace();
 		}
 	}
-
+	// 커뮤니티 리스트
 	SqlSession session = null;
 
 	public List<BoardVO> BoardList() {
@@ -40,7 +40,7 @@ public class BoardDAO {
 
 		return list;
 	}
-
+ // 커뮤니티 상세페이지
 	public BoardVO BoardDetail(int board_id) {
 		BoardVO detail = null;
 		try {

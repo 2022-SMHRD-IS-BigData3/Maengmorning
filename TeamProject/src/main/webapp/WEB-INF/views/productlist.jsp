@@ -286,37 +286,37 @@
                     </div>
        <!-- 물품목록 
        dao productlist기능 이용, productVO에 있는 변수 활용 -->
-                  <c:forEach items="${productlist}" var="list">
                     <div class="product-list">
                         <div class="row">
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="${pageContext.request.contextPath}/uploads/${product.file_name}">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
                                     </div>
                                     <div class="pi-text">
                                         <div class="catagory-name">외출용품</div>
-                                        <a href="#">
-                                            <span>${list.items_id}</span>
-                                           <h5 id="title">
-                                            <a href="Productdetail.do?items_id=${list.items_id}">
-                                            	${list.title}
-                                            </a>
                                            </h5>
                                         </a>
-                                        <div class="product-price">
-                                            ${list.price}원<br>
-                                        </div>
-                                        <a class="area">${list.area }</a>
-                                        <a class="date"><fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             </div>
                             </div>
+                  <c:forEach items="${productlist}" var="list" varStatus="status">
+                                        <img src="${pageContext.request.contextPath}/uploads/${product.file_name}">
+                                            <span>${list.items_id}</span>
+                                            <a href="Productdetail.do?items_id=${list.items_id}">
+                                        <a href="#">
+                                           <h5 id="title">
+                                            	${list.title}
+                                            </a>
+                                        <div class="product-price">
+                                            ${list.price}원<br>
+                                        </div>
+                                        <a class="area">${area[status.index].area }</a>
+                                        <a class="date"><fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
                         </c:forEach>
                 </div>
             </div>
