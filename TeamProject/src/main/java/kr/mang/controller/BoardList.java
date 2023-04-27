@@ -17,9 +17,11 @@ public class BoardList implements Command {
 			throws IOException, ServletException {
 		
 		BoardDAO dao = new BoardDAO();
+		System.out.println("여기 오나");
+		
 		List<BoardVO> list = dao.BoardList();
 		request.setAttribute("Blist",list );
-		
+	
 		return "GoBoardList.do";
 	}
 
