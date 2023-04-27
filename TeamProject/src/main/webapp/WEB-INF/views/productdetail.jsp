@@ -3,7 +3,6 @@
 <%@ page import="java.util.Enumeration" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@ page import="com.oreilly.servlet.MultipartRequest"%>
-<%pageContext.setAttribute("crcn", "\n");%><!-- 엔터기능 -->
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -116,11 +115,11 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
 
-                        <a href="./메인.jsp">
+                        <a href="./Gomain.do">
                             <img src="./img/로고.png" alt="">
                         </a>
 
-                            <a href="./index.html">
+                            <a href="./Gomain.do">
                                 <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
@@ -143,7 +142,7 @@
                         
                         <ul class="nav-right">
                             <li class="heart-icon">
-                                <a href="#">
+                                <a href="./Gologin.do">
                                     <i class="icon_MSY_alt">로그인</i>
                                 </a>
                             </li>
@@ -159,10 +158,10 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li class="active"><a href="./Gomain.do">Home</a></li>
                        
                        
-                        <li><a href="#">중고거래</a>
+                        <li><a href="./Goproductlist.do">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="#"> 장난감/도서</a></li>
@@ -174,7 +173,7 @@
                             </ul>
                         </li>
                         
-                        <li><a href="#">커뮤니티</a>
+                        <li><a href="./Goboardlist.do">커뮤니티</a>
                             <ul class="dropdown">
                                 <li><a href="#">잡담</a></li>
                                 <li><a href="#">그외</a></li>
@@ -182,7 +181,7 @@
                             </ul>
                         </li>
 
-                        <li><a href="#">마이페이지</a>
+                        <li><a href="./Gomypage">마이페이지</a>
                             <ul class="dropdown">
                                 <li><a href="#">판매/구매목록</a></li>
                                 <li><a href="#">매너온도</a></li>
@@ -205,7 +204,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
-                        <a href="./home.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
                         <a href="./shop.html">Shop</a>
                         <span>Detail</span>
                     </div>
@@ -284,7 +283,6 @@
                         
                         <div>
                             <table class="border-bottom">
-                             
                                 <tr>
                                     <td>
                                     <h4>
@@ -333,11 +331,8 @@
                         </tr>
                         <tr>
                             <td>
-                            <c:set var="imgPath" value="${pageContext.request.contextPath}/uploads/${product.file_name}" />
-                             <img src="${imgPath}" alt="Product Image">
-                            ${fn:replace(detail.items_state, crcn, "<br/>")
-                            샀는데 저희아기한테 안맞네요
                             ${detail.items_state}
+                            샀는데 저희아기한테 안맞네요
 
                             포장 그대로있는 새상품이구요
                             돌전후 아기한테 맞아요!
@@ -349,9 +344,6 @@
                         </tr>
 
                         </table>
-
-
-                    
 
                         
                         <table class="Community">
