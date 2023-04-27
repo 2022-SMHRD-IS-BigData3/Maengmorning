@@ -186,7 +186,7 @@
                             </ul>
                         </li>
                         
-                        <li><a href="./Goboardlist.do">커뮤니티</a>
+                        <li><a href="BoardList.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">정보공유</a></li>
                             <li><a href="#">자유게시판</a></li>
