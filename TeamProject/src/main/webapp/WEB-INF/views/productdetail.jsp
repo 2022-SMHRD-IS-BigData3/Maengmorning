@@ -320,7 +320,7 @@
                             </table>
                             <div align ="center">
                                 <button type="button" class="btn btn-secondary btn-lg">❤︎찜</button>
-                                <button type="button" class="btn btn-warning btn-lg">✉쪽지</button>
+                                <button class="btn btn-secondary btn-lg" type="button" onclick="window.open('./Gomessage.do', '_blank', 'width=600,height=600')">✉쪽지</button>
                                 <button type="button" class="btn btn-danger btn-lg">바로구매</button>
                             </div>
                         </div>
