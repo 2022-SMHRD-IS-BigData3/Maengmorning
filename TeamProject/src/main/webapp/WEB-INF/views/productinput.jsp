@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <style>
@@ -275,11 +276,11 @@
           <td class="Product_Style_td">상품이미지</td>
           <td>
             <div class="logo">
-                <img src="img/free-icon-camera-685655.png" alt="">
-              <!--   <input name="imgurl" type="file" class="form-control" id="imgurl">-->
+     <!-- 이미지 미리보기 -->
+               <img id="previewImage" src="#" alt="Preview Image" width="200" height="200">
             </div>
             <div class="input-group mb-3">
-               <img id="preview-image" src="#" alt="Preview Image">
+     <!-- 이미지 업로드  -->
                <input name="file_name" type="file" class="form-co/ntrol" id="file_name" onchange="previewImage(event)"> 
                
               </div>
@@ -485,24 +486,30 @@
     <script src="js/jquery.dd.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    
     <script src="js/main.js"></script>
     <!-- 이미지 프리뷰 함수 -->
     <script>
     function previewImage(event) {
-		var preview = document.getElementById('preview-image');
-		var file = event.target.files[0];
-		var reader = new FileReader();
-		
-		reader.onlaod = function(){
-			preview.src = reader.result;
-		};
-		if(file){
-			reader.readAsDataURL(file);
-		}else{
-			preview.src="#";
-		}
-	}
-    </script>
+        var preview = document.getElementById('previewImage'); // 미리보기 이미지 요소 가져오기
+        var file = event.target.files[0]; // 선택한 파일 가져오기
+        var reader = new FileReader(); // 새 FileReader 개체 만들기
+
+        reader.onload = function() {
+            preview.src = reader.result; // 미리보기 이미지 소스를 업로드된 이미지로 설정
+        };
+
+        if (file) {
+            reader.readAsDataURL(file); // 선택한 파일을 DataURL로 읽기
+        } else {
+            preview.src = "#"; // 파일을 선택하지 않은 경우 미리보기 이미지 소스를 자리 표시자로 설정합니다.
+        }
+    }
+
+    // 파일 입력 요소에 previewImage 함수를 연결합니다.
+    var fileInput = document.getElementById('file_name');
+    fileInput.addEventListener('change', previewImage);
+</script>
 </body>
 
 </html>
