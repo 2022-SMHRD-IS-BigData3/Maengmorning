@@ -252,6 +252,10 @@
                     
                     <h3>커뮤니티</h3>
 
+<<<<<<< HEAD
+=======
+                    <form action="./Goboardinput.do">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
