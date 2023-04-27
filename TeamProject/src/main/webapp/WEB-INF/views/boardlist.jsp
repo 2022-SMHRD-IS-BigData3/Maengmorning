@@ -92,7 +92,41 @@
 
     <!-- Header Section Begin -->
     <header class="header-section">
+<<<<<<< HEAD
         
+=======
+
+      <div class="container">
+        <div class="inner-header">
+          <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
+            <div class="col-lg-2 col-md-2">
+              <a href="./Gomain.do">
+                <img src="./img/로고.png" alt="">
+              </a>
+            </div>
+             <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
+                <div class="search-container">
+                    <form action="/search">
+                      <input class="border" id="search" type="text" placeholder="검색" name="search">
+                      <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
+                    </form>
+                  </div>
+            </div>
+            <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
+              <ul class="nav-right">
+                <li class="heart-icon">
+                  <a href="./Gologin.do">
+                    <i class="icon_MSY_alt">로그인</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="nav-item">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
         <div class="container">
             <div class="inner-header">
                 <div class="row">
