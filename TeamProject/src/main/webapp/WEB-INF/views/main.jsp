@@ -180,7 +180,7 @@
                   </c:if>
                   		
                   	<c:if test="${!empty uId}">
-                  	<a href="./Gologout.do">로그인</a>
+                  	<a href="./Gologout.do">로그아웃</a>
                   	</c:if>
                   
                   

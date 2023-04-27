@@ -3,6 +3,7 @@
 <%@ page import="java.util.Enumeration" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@ page import="com.oreilly.servlet.MultipartRequest"%>
+<%pageContext.setAttribute("crcn", "\n");%><!-- 엔터기능 -->
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -331,8 +332,9 @@
                         </tr>
                         <tr>
                             <td>
-                            ${detail.items_state}
+                            ${fn:replace(detail.items_state, crcn, "<br/>")
                             샀는데 저희아기한테 안맞네요
+                            ${detail.items_state}
 
                             포장 그대로있는 새상품이구요
                             돌전후 아기한테 맞아요!

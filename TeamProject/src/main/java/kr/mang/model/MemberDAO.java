@@ -54,6 +54,9 @@ public class MemberDAO {
 
 
 	
+
+
+	
 //	public MemberVO login(MemberVO vo) {
 //		SqlSession session  = null;
 //		MemberVO mvo = null;
