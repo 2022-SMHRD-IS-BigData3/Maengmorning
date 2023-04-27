@@ -293,7 +293,7 @@
                 <title>Placeholder</title>
                 <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
               </svg>
-
+		
               <div class="card-body">
                 <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
               </div>
@@ -328,10 +328,12 @@
             </div>
           </div>
 
+        <form action="./Goproductlist.do">
           <div class="productShopDetail">
-            <button type="button" class="btn btn-warning">더보기</button>
+            <button type="submit" class="btn btn-warning">더보기</button>
             <br>
         </div>
+        </form>
 
         </div>
       </div>
@@ -396,18 +398,16 @@
               </div>
             </div>
 
+            <form action="./Goboardlist.do">
             <div class="productShopDetail">
-                <button type="button" class="btn btn-warning">더보기</button>
+                <button type="submit" class="btn btn-warning">더보기</button>
                 <br>
             </div>
+            </form>
 
           </div>
         </div>
  </div>
-
-        
-        
-
 
 <br><br><br>
 
