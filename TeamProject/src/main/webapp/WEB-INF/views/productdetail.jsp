@@ -291,6 +291,11 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                	<td>
+                                	 	<img alt="Product Image" src="${detail.fileName}">
+                                	</td>
+                                </tr>
+                                <tr>
                                     <td>
                                     <h2>${detail.price} 10,000원</h2>
                                     </td>

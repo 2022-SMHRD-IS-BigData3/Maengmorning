@@ -264,7 +264,7 @@
                 <div class="col-lg-9 order-1 order-lg-2">
                  
 
-                    <form action="ProductInput.do">
+                    <form action="./GoProductinput.do">
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">

@@ -46,9 +46,11 @@ public class FrontController extends HttpServlet {
 		map = new HashMap<>();
 		map.put("Login.do",new LoginService());
 		map.put("Join.do",new JoinService());
+		
 		map.put("ProductList.do",new ProductList());
 		map.put("Productdetail.do", new ProductDetail());
 		map.put("ProductInput.do", new ProductInput());
+		
 		map.put("BoardList.do", new BoardList());
 		map.put("Boarddetail.do", new Boarddetail());
 		map.put("BoardInput.do", new BoardInput());

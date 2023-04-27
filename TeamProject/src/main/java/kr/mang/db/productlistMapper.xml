@@ -22,13 +22,11 @@
   <!-- 등록물품 상세보기 -->
   <select id="productdetail" parameterType="int" resultType="kr.mang.model.ProductlistVO">
   		SELECT A.ITEMS_ID, A.TITLE, A.ITEMS_STATE, A.PRICE, A.USER_ID, A.UP_DATE, B.FILE_NAME
-          FROM ITEMS A, ITEMS_IMG B
-		 WHERE A.ITEMS_IMG_ID = B.ITEMS_IMG_ID  AND A.ITEMS_ID = #{itemsId}
+          FROM ITEMS A INNER JOIN ITEMS_IMG B ON(A.ITEMS_IMG_ID = B.ITEMS_IMG_ID )
+		 WHERE A.ITEMS_ID = #{itemsId}
 		 
   </select>
-  <select id="" >
-  	
-  </select>
+
   
   
   <!-- 물품 판매글 등록 -->
