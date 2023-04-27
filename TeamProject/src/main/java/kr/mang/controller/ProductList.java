@@ -12,10 +12,11 @@ import kr.mang.model.ProductlistVO;
 
 public class ProductList implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	System.out.println("리스트");
         ProductlistDAO dao = new ProductlistDAO();
 		List<ProductlistVO> list = dao.productList();
 		request.setAttribute("productlist", list);
-      
+		System.out.println(list);
 		return "GoProductList.do";
     }
 }

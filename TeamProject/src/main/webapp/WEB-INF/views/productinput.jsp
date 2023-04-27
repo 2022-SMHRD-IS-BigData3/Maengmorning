@@ -229,7 +229,7 @@
             </div>
             <div class="input-group mb-3">
                <input name="file_name" type="file" class="form-co/ntrol" id="file_name"> 
-                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+               
               </div>
           </td>
         </tr>
