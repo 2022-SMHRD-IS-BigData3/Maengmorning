@@ -28,13 +28,11 @@ public class BoardDAO {
 
 	public List<BoardVO> BoardList() {
 		List<BoardVO> list = null;
-		List<String> test = null;
+	
 		try {
 			session = sqlSessionFactory.openSession(true);
 			list = session.selectList("selectList");
 			
-			System.out.println(test);
-			System.out.println(list);
 			
 		} finally {
 			session.close();
@@ -43,15 +41,16 @@ public class BoardDAO {
 		return list;
 	}
 
-	public BoardVO BoardDetail(int b_id) {
+	public BoardVO BoardDetail(int board_id) {
 		BoardVO detail = null;
 		try {
 			session = sqlSessionFactory.openSession(true);
-			detail = session.selectOne("detail", b_id);
+			detail = session.selectOne("detail", board_id);
 			session.commit();
 		} finally {
 			session.close();
 		}
+		System.out.println();
 		return detail;
 
 	}

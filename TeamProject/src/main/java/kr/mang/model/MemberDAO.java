@@ -32,7 +32,6 @@ public class MemberDAO {
 		} finally {
 			session.close();
 		}
-		System.out.println(row);
 		return row ;
 	}
 	

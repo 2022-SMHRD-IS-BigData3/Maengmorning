@@ -3,6 +3,7 @@ package kr.mang.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,15 +23,14 @@ public class BoardList implements Command {
 		MemberDAO mdao = new MemberDAO();
 		
 		List<BoardVO> list = dao.BoardList();
-//		List<MemberVO> area = mdao.getArea();
-
-		System.out.println("여기로 와야 리스트에 값이 들어가는데");
+		List<MemberVO> area = mdao.getArea();
+		
 		
 		request.setAttribute("Blist",list );
-//		request.setAttribute("area", area);
+		request.setAttribute("area", area);
 		
+		return "boardlist.jsp";
 		
-		return "redirect:/GoBoardList.do";
 	}
 
 }

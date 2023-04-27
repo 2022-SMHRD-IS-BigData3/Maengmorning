@@ -244,17 +244,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${Blist}" var="list">
+                	    <c:forEach items="${Blist}" var="list" varStatus="status">
                             <tr>
-                            	<td>${list.BOARD_ID}</td>
-                            	<td> ${list.TITLE} </td>
-                            	<td>${list.USER_ID}</td>
-                          		  <td></td>
+                            	<td>${list.board_id}</td>
+                            	<td> ${list.title} </td>
+                            	<td>${list.user_id}</td>
+                          		  <td>${area[status.index].area}</td>
                             </tr>
                         </c:forEach>
                         </tbody>
                         </table>
-
 
 
                 </div>
