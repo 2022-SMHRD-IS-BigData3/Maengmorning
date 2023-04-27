@@ -173,6 +173,11 @@
                 <li class="heart-icon">
                   <a href="./Gologin.do">
                     <i class="icon_MSY_alt">로그인</i>
+                    
+                    <c:if>
+                    
+                    </c:if>
+                    
                   </a>
                 </li>
               </ul>
