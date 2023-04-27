@@ -28,6 +28,8 @@
       <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
       <link rel="stylesheet" href="css/style.css" type="text/css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+
   <style>
    /* 검색창 */
     .search-container {
@@ -125,9 +127,16 @@
       }
       
      
+     
+ 
+     
+     
+      
+      
+      
+      
+      
   </style>
-  </head>
-
 
   <body>
 
@@ -171,7 +180,7 @@
                   </c:if>
                   		
                   	<c:if test="${!empty uId}">
-                  	<a href="./Gologout.do">로그아웃</a>
+                  	<a href="./Gologout.do">로그인</a>
                   	</c:if>
                   
                   
@@ -206,8 +215,9 @@
                     </li>
                     <li><a href="./Goboardlist.do">커뮤니티</a>
                         <ul class="dropdown">
-                            <li><a href="#">정보공유</a></li>
-                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">잡담</a></li>
+                            <li><a href="#">그외</a></li>
+                            <li><a href="#">등등</a></li>
                         </ul>
                     </li>
                     <li><a href="./Gomypage.do">마이페이지</a>
@@ -283,7 +293,7 @@
                 <title>Placeholder</title>
                 <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
               </svg>
-
+		
               <div class="card-body">
                 <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
               </div>
@@ -318,10 +328,12 @@
             </div>
           </div>
 
+        <form action="./Goproductlist.do">
           <div class="productShopDetail">
-            <button type="button" class="btn btn-warning">더보기</button>
+            <button type="submit" class="btn btn-warning">더보기</button>
             <br>
         </div>
+        </form>
 
         </div>
       </div>
@@ -386,18 +398,16 @@
               </div>
             </div>
 
+            <form action="./Goboardlist.do">
             <div class="productShopDetail">
-                <button type="button" class="btn btn-warning">더보기</button>
+                <button type="submit" class="btn btn-warning">더보기</button>
                 <br>
             </div>
+            </form>
 
           </div>
         </div>
  </div>
-
-        
-        
-
 
 <br><br><br>
 
