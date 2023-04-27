@@ -1,3 +1,8 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -8,7 +13,7 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>커뮤니티글등록</title>
+    <title>중고거래글등록</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -109,11 +114,11 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
 
-                        <a href="./메인.jsp">
+                        <a href="./Gomain.do">
                             <img src="./img/로고.png" alt="">
                         </a>
 
-                            <a href="./index.html">
+                            <a href="./Gomain.do">
                                 <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
@@ -136,7 +141,7 @@
                         
                         <ul class="nav-right">
                             <li class="heart-icon">
-                                <a href="#">
+                                <a href="./Gologin.do">
                                     <i class="icon_MSY_alt">로그인</i>
                                 </a>
                             </li>
@@ -155,7 +160,7 @@
                         <li class="active"><a href="./index.html">Home</a></li>
                        
                        
-                        <li><a href="#">중고거래</a>
+                        <li><a href="./Goproductlist.do">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="#"> 장난감/도서</a></li>
@@ -167,7 +172,7 @@
                             </ul>
                         </li>
                         
-                        <li><a href="#">커뮤니티</a>
+                        <li><a href="./Goboardlist.do">커뮤니티</a>
                             <ul class="dropdown">
                                 <li><a href="#">잡담</a></li>
                                 <li><a href="#">그외</a></li>
@@ -175,7 +180,7 @@
                             </ul>
                         </li>
 
-                        <li><a href="#">마이페이지</a>
+                        <li><a href="./Gomypage.do">마이페이지</a>
                             <ul class="dropdown">
                                 <li><a href="#">판매/구매목록</a></li>
                                 <li><a href="#">매너온도</a></li>
@@ -198,8 +203,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
-                        <a href="./home.html"><i class="fa fa-home"></i> Home</a>
-                        <a href="./shop.html">중고거래</a>
+                        <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
+                        <a href="./Goproductlist.do">중고거래</a>
                         <span>물품등록</span>
                     </div>
                 </div>
@@ -207,31 +212,35 @@
         </div>
     </div>
 
+      <form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
     <table id="Product_Style" align="center">
         <tr class="border-bottom">
           <th colspan="2" >
-            <h4>커뮤니티 글 등록</h4>
+            <h4>물품등록</h4>
           </th>
         </tr>
 
         <tr class="border-bottom">
-          <td class="Product_Style_td">이미지</td>
+          <td class="Product_Style_td">상품이미지</td>
           <td>
             <div class="logo">
                 <img src="img/free-icon-camera-685655.png" alt="">
+              <!--   <input name="imgurl" type="file" class="form-control" id="imgurl">-->
             </div>
             <div class="input-group mb-3">
-                <input type="file" class="form-control" id="inputGroupFile02">
-                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+               <input name="file_name" type="file" class="form-co/ntrol" id="file_name"> 
+               
               </div>
           </td>
         </tr>
+   
 
         <tr class="border-bottom">
           <td>글 제목</td>
           <td>
             <div>
-                <input class="ProductTitle" type="text" placeholder="글 제목">
+                <input id="title" name="title" type="text" placeholder="글 제목">
+                
             </div>
           </td>
         </tr>
@@ -241,19 +250,41 @@
           <td>
             <div class="category-option">
                 <select class="sorting">
-                    <option value="">정보공유</option>
-                    <option value="">자유게시판</option>
-                    
+                    <option value="">외출용품</option>
+                    <option value="">장난감/도서</option>
+                    <option value="">의류</option>
+                    <option value="">가구</option>
+                    <option value="">침구류</option>
+                    <option value="">생활용품</option>
+                    <option value="">기타</option>
                 </select>
             </div> 
           </td>
         </tr>
 
         <tr class="border-bottom">
-            <td>글 내용</td>
+            <td>거래지역</td>
+            <td>
+                <div class="area">
+                    <input id="area" name="area" type="text" placeholder="거래지역">
+                </div> 
+            </td>
+          </tr>
+
+        <tr class="border-bottom">
+            <td>상품가격</td>
+            <td>
+                <div class="price">
+                   <input id="price" name="price" type="text" placeholder="가격 작성">
+                </div>
+            </td>
+          </tr>
+
+        <tr class="border-bottom">
+            <td>상품설명</td>
             <td>
                 <div>
-                    <textarea class="ProductText" placeholder="회원들과 공유하고 싶은 정보들을 자유롭게 작성해주세요. (10자 이상)"></textarea>  
+                    <textarea id="items_state" name="items_state" class="ProductText" placeholder="여러 장의 상품 사진과 구입연도, 브랜드, 사용감, 하자유무 등 구매자에게 꼭 필요한 정보를 포함해주세요. (10자 이상)"></textarea>  
                 </div>
             </td>
           </tr>
@@ -262,19 +293,20 @@
             <td>상품태그</td>
             <td>
                 <div>
-                    <input class="ProductTag" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
+                    <input class="tag_id" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
                  </div>
             </td>
           </tr>
         
         <tr class="border-bottom" align="center">
             <td colspan="2">
-                <button type="submit" class="site-btn">등록</button>
+               <input type="submit" class="btn btn-primary btn-sm px-3 gap-3" value="등록">
             </td>
         </tr>
         
 
       </table>
+	</form>
 
 
 

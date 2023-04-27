@@ -8,7 +8,7 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fashi | Template</title>
+    <title>커뮤니티글등록</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -25,8 +25,78 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
+<style>
+    div .leave-comment {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    div .category-option {
+        margin-bottom: 30px;
+        margin-left: 15px;
+
+    
+    }
+
+    div .logo {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 25px;
+    }
+
+    div .sorting {
+        height: 50px;
+        width: 280px;
+        margin-right: 25px;
+    }
+
+    div .option {
+        height: 50px;
+        width: 280px;
+        margin-right: 25px;
+    }
+
+    div #area, .area {
+        height: 50px;
+        width: 280px;
+        margin-right: 25px;
+    }
+
+    div #price, .price {
+        height: 50px;
+        width: 280px;
+        margin-right: 25px;
+    }
+
+    #Product_Style {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        width: 900px;
+    }
+
+    div.logo {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .Product_Style_td {
+        margin-right: 20px;
+    
+    }
+
+    .ProductTitle, div.nice-select.sorting, .ProductArea, .ProductPrice, .ProductTag {
+        width: 675px;
+    }
+
+    .ProductText {
+        width: 675px;
+        height: 400px;
+    }
+    
+</style>
+
 <body>
-    <!-- Page Preloder -->
+<!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -38,11 +108,16 @@
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
-                     
+
+                        <a href="./Gomain.do">
+                            <img src="./img/로고.png" alt="">
+                        </a>
+
                             <a href="./Gomain.do">
                                 <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
+
                     </div>
 
                     
@@ -80,7 +155,7 @@
                         <li class="active"><a href="./index.html">Home</a></li>
                        
                        
-                        <li><a href="./Goproductlist">중고거래</a>
+                        <li><a href="./Goproductlist.do">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="#"> 장난감/도서</a></li>
@@ -92,7 +167,7 @@
                             </ul>
                         </li>
                         
-                        <li><a href="./Goboardlist">커뮤니티</a>
+                        <li><a href="./Goboardlist.do">커뮤니티</a>
                             <ul class="dropdown">
                                 <li><a href="#">잡담</a></li>
                                 <li><a href="#">그외</a></li>
@@ -100,7 +175,7 @@
                             </ul>
                         </li>
 
-                        <li><a href="./Gomypage">마이페이지</a>
+                        <li><a href="./Gomypage.do">마이페이지</a>
                             <ul class="dropdown">
                                 <li><a href="#">판매/구매목록</a></li>
                                 <li><a href="#">매너온도</a></li>
@@ -122,64 +197,89 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="breadcrumb-text">
+                    <div class="breadcrumb-text product-more">
                         <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
-                        <span>Register</span>
+                        <a href="./Goproductlist.do">중고거래</a>
+                        <span>물품등록</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb Form Section Begin -->
 
-    <!-- Register Section Begin -->
-    <div class="register-login-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="register-form">
-                        <h2>회원가입</h2>
-                        <form action="./Gologin.do" method = "post">
-                            <div class="group-input">
-                                <label for="username">이름</label>
-                                <input type="text" id="name" name ="name">
-                            </div>
-                            <div class="group-input">
-                                <label for="con-pass">전화번호</label>
-                                <input type="text" id="tel" name= "tel">
-                            </div>
-                            <div class="group-input">
-                                <label for="username">사용하실 아이디</label>
-                                <input type="text" id="id" name = "id">
-                            </div>
-                            <div class="group-input">
-                                <label for="pass">사용하실 비밀번호</label>
-                                <input type="password" id="pw" name = "pw">
-                            </div>
-                            <div class="group-input">
-                                <label for="con-pass">비밀번호 확인</label>
-                                <input type="password" id="pw">
-                            </div>
-                            <div class="group-input">
-                                <label for="con-pass">사용하실 닉네임</label>
-                                <input type="text" id="nickName" name ="nickName">
-                            </div>
-                            <div class="group-input">
-                                <label for="con-pass">거래희망 지역</label>
-                                <input type="text" id="area" name = "area">
-                            </div>
-                            <button type="submit" class="site-btn register-btn">회원가입</button>
-                        </form>
-                        <div class="switch-login">
-                            <a href="./Gologin.do" class="or-login">로그인</a>
-                        </div>
-                    </div>
-                </div>
+    <form action="./Goboardlist.do">
+    <table id="Product_Style" align="center">
+        <tr class="border-bottom">
+          <th colspan="2" >
+            <h4>커뮤니티 글 등록</h4>
+          </th>
+        </tr>
+
+        <tr class="border-bottom">
+          <td class="Product_Style_td">이미지</td>
+          <td>
+            <div class="logo">
+                <img src="img/free-icon-camera-685655.png" alt="">
             </div>
-        </div>
-    </div>
-    <!-- Register Form Section End -->
-    
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+              </div>
+          </td>
+        </tr>
+
+        <tr class="border-bottom">
+          <td>글 제목</td>
+          <td>
+            <div>
+                <input class="ProductTitle" type="text" placeholder="글 제목">
+            </div>
+          </td>
+        </tr>
+
+        <tr class="border-bottom">
+          <td>카테고리</td>
+          <td>
+            <div class="category-option">
+                <select class="sorting">
+                    <option value="">정보공유</option>
+                    <option value="">자유게시판</option>
+                    
+                </select>
+            </div> 
+          </td>
+        </tr>
+
+        <tr class="border-bottom">
+            <td>글 내용</td>
+            <td>
+                <div>
+                    <textarea class="ProductText" placeholder="회원들과 공유하고 싶은 정보들을 자유롭게 작성해주세요. (10자 이상)"></textarea>  
+                </div>
+            </td>
+          </tr>
+
+        <tr class="border-bottom">
+            <td>상품태그</td>
+            <td>
+                <div>
+                    <input class="ProductTag" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
+                 </div>
+            </td>
+          </tr>
+        
+        <tr class="border-bottom" align="center">
+            <td colspan="2">
+                <button type="submit" class="site-btn">등록</button>
+            </td>
+        </tr>
+        
+
+      </table>
+      </form>
+
+
+
     <!-- Partner Logo Section Begin -->
     <div class="partner-logo">
         <div class="container">
@@ -276,8 +376,11 @@
                     <div class="col-lg-12">
                         <div class="copyright-text">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                            This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </div>
                         <div class="payment-pic">
                             <img src="img/payment-method.png" alt="">

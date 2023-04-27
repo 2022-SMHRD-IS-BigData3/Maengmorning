@@ -1,4 +1,5 @@
 package kr.mang.controller;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -10,12 +11,12 @@ import kr.mang.model.ProductlistDAO;
 import kr.mang.model.ProductlistVO;
 
 public class ProductList implements Command {
-	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ProductlistDAO dao = new ProductlistDAO();
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	System.out.println("리스트");
+        ProductlistDAO dao = new ProductlistDAO();
 		List<ProductlistVO> list = dao.productList();
 		request.setAttribute("productlist", list);
-		
-		return "ProductList.jsp";
-	
-	}
+		System.out.println(list);
+		return "GoProductList.do";
+    }
 }

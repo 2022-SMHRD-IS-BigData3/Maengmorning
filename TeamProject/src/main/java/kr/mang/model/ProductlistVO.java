@@ -3,60 +3,89 @@ package kr.mang.model;
 import java.util.Date;
 
 public class ProductlistVO {
-	private int pro_id;
-	private String sellerid;
-	private String imgurl;
-	private String price;
+	private int items_id;
 	private String title;
-	private String area;
-	private String pro_state;
-	private Date pro_date;
+	private String items_state;
+	private String price;
+	private Date up_date;
+	private String user_id;
+	private String items_img_id;
+	private String tag_id;
+	
+	
+	private String path_img;
+	private Date upload_date;
+	private String file_name;
+	
+	
+	
+	public String getPath_img() {
+		return path_img;
+	}
+
+
+
+	public void setPath_img(String path_img) {
+		this.path_img = path_img;
+	}
+
+
+
+	public Date getUpload_date() {
+		return upload_date;
+	}
+
+
+
+	public void setUpload_date(Date upload_date) {
+		this.upload_date = upload_date;
+	}
+
+
+
+	public String getFile_name() {
+		return file_name;
+	}
+
+
+
+	public void setFile_name(String file_name) {
+		this.file_name = file_name;
+	}
+
+
 	
 	public ProductlistVO() {}
 	
-	public ProductlistVO(int pro_id, String sellerid, String imgurl, String price, String title, String area,
-			String pro_state, Date pro_date) {
+	
+	
+	
+
+
+	public ProductlistVO(int items_id, String title, String items_state, String price, Date up_date, String user_id,
+			String items_img_id, String tag_id, String path_img, Date upload_date, String file_name) {
 		super();
-		this.pro_id = pro_id;
-		this.sellerid = sellerid;
-		this.imgurl = imgurl;
-		this.price = price;
+		this.items_id = items_id;
 		this.title = title;
-		this.area = area;
-		this.pro_state = pro_state;
-		this.pro_date = pro_date;
-	}
-
-	public int getPro_id() {
-		return pro_id;
-	}
-
-	public void setPro_id(int pro_id) {
-		this.pro_id = pro_id;
-	}
-
-	public String getSellerid() {
-		return sellerid;
-	}
-
-	public void setSellerid(String sellerid) {
-		this.sellerid = sellerid;
-	}
-
-	public String getImgurl() {
-		return imgurl;
-	}
-
-	public void setImgurl(String imgurl) {
-		this.imgurl = imgurl;
-	}
-
-	public String getPrice() {
-		return price;
-	}
-
-	public void setPrice(String price) {
+		this.items_state = items_state;
 		this.price = price;
+		this.up_date = up_date;
+		this.user_id = user_id;
+		this.items_img_id = items_img_id;
+		this.tag_id = tag_id;
+		this.path_img = path_img;
+		this.upload_date = upload_date;
+		this.file_name = file_name;
+	}
+
+
+
+	public int getItems_id() {
+		return items_id;
+	}
+
+	public void setItems_id(int items_id) {
+		this.items_id = items_id;
 	}
 
 	public String getTitle() {
@@ -67,30 +96,58 @@ public class ProductlistVO {
 		this.title = title;
 	}
 
-	public String getArea() {
-		return area;
+	public String getItems_state() {
+		return items_state;
 	}
 
-	public void setArea(String area) {
-		this.area = area;
+	public void setItems_state(String items_state) {
+		this.items_state = items_state;
 	}
 
-	public String getPro_state() {
-		return pro_state;
+	public String getPrice() {
+		return price;
 	}
 
-	public void setPro_state(String pro_state) {
-		this.pro_state = pro_state;
+	public void setPrice(String price) {
+		this.price = price;
 	}
 
-	public Date getPro_date() {
-		return pro_date;
+	public Date getUp_date() {
+		return up_date;
 	}
 
-	public void setPro_date(Date pro_date) {
-		this.pro_date = pro_date;
+	public void setUp_date(Date up_date) {
+		this.up_date = up_date;
 	}
 
+	public String getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+
+	public String getItems_img_id() {
+		return items_img_id;
+	}
+
+	public void setItems_img_id(String items_img_id) {
+		this.items_img_id = items_img_id;
+	}
+
+	public String getTag_id() {
+		return tag_id;
+	}
+
+	public void setTag_id(String tag_id) {
+		this.tag_id = tag_id;
+	}
+
+	
+	
+
+	
 	
 	
 	
