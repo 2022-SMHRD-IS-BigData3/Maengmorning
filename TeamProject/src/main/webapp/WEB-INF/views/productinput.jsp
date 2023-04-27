@@ -229,7 +229,8 @@
               <!--   <input name="imgurl" type="file" class="form-control" id="imgurl">-->
             </div>
             <div class="input-group mb-3">
-               <input name="file_name" type="file" class="form-co/ntrol" id="file_name"> 
+               <img id="preview-image" src="#" alt="Preview Image">
+               <input name="file_name" type="file" class="form-co/ntrol" id="file_name" onchange="previewImage(event)"> 
                
               </div>
           </td>
@@ -434,6 +435,23 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <!-- 이미지 프리뷰 함수 -->
+    <script>
+    function previewImage(event) {
+		var preview = document.getElementById('preview-image');
+		var file = event.target.files[0];
+		var reader = new FileReader();
+		
+		reader.onlaod = function(){
+			preview.src = reader.result;
+		};
+		if(file){
+			reader.readAsDataURL(file);
+		}else{
+			preview.src="#";
+		}
+	}
+    </script>
 </body>
 
 </html>

@@ -284,6 +284,7 @@
                         
                         <div>
                             <table class="border-bottom">
+                             
                                 <tr>
                                     <td>
                                     <h4>
@@ -332,6 +333,8 @@
                         </tr>
                         <tr>
                             <td>
+                            <c:set var="imgPath" value="${pageContext.request.contextPath}/uploads/${product.file_name}" />
+                             <img src="${imgPath}" alt="Product Image">
                             ${fn:replace(detail.items_state, crcn, "<br/>")
                             샀는데 저희아기한테 안맞네요
                             ${detail.items_state}

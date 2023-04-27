@@ -1,6 +1,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@page import="kr.mang.model.ProductlistVO"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -274,14 +279,15 @@
                           
                         </div>
                     </div>
-       <!-- dao productlist기능 이용, productVO에 있는 변수 활용 -->
+       <!-- 물품목록 
+       dao productlist기능 이용, productVO에 있는 변수 활용 -->
                   <c:forEach items="${productlist}" var="list">
                     <div class="product-list">
                         <div class="row">
                             <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
-                                        <img src="${list.file_name}">
+                                        <img src="${pageContext.request.contextPath}/uploads/${product.file_name}">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
@@ -307,171 +313,6 @@
                             </div>
                             </div>
                         </c:forEach>
-                         <!-- 
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/189551586_1_1679277101_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">외출용품</div>
-                                        <a href="#">
-                                            <h5>유아운동화</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            13,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/221668090_1_1681957202_w856.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">장난감/도서</div>
-                                        <a href="#">
-                                            <h5>티니핑 키링 (미개봉)</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            2,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/219784588_1_1680334787_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">장난감/도서</div>
-                                        <a href="#">
-                                            <h5>아이 스마트 팔레트 안드로이드 패드 그림그리기 색칠공부 [미개봉 새제품]</h5>
-                                        </a>
-                                        <div class="product-price">
-                                           9,900원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/173217013_1_1639641301_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">가구</div>
-                                        <a href="#">
-                                            <h5>유아 식탁의자</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            45,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/221237820_2_1681569669_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">장난감/도서</div>
-                                        <a href="#">
-                                            <h5>시크릿쥬쥬 가방 시큐릿쥬쥬 진주엔젤 크로스 백</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            13,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/189991743_1_1679976156_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">침구류</div>
-                                        <a href="#">
-                                            <h5>낮잠이불</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            35,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/201725750_1_1665328203_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">기타</div>
-                                        <a href="#">
-                                            <h5>데이지생일풍선세트</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            18,900원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="https://media.bunjang.co.kr/product/211308153_1_1676522062_w1100.jpg" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">생활용품</div>
-                                        <a href="#">
-                                            <h5>tgm 젖병. 젖꼭지2개씩 새것이에요.</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            10,000원
-                                        </div>
-                                        <a class="area">용봉동</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
-               
                 </div>
             </div>
         </div>
