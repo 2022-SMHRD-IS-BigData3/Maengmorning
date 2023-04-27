@@ -171,7 +171,7 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li class="active"><a href="./Gomain.do">Home</a></li>
                        
                        
                         <li><a href="./Goproductlist.do">중고거래</a>
@@ -186,7 +186,7 @@
                             </ul>
                         </li>
                         
-                        <li><a href="./Goboardlist.do">커뮤니티</a>
+                        <li><a href="BoardList.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">정보공유</a></li>
                             <li><a href="#">자유게시판</a></li>
