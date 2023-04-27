@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.mang.model.BoardDAO;
 import kr.mang.model.BoardVO;
+import kr.mang.model.MemberDAO;
+import kr.mang.model.MemberVO;
 
 public class BoardList implements Command {
 
@@ -17,12 +19,17 @@ public class BoardList implements Command {
 			throws IOException, ServletException {
 		
 		BoardDAO dao = new BoardDAO();
-		System.out.println("여기 오나");
+		MemberDAO mdao = new MemberDAO();
 		
 		List<BoardVO> list = dao.BoardList();
-		request.setAttribute("Blist",list );
-		System.out.println(list);
+//		List<MemberVO> area = mdao.getArea();
 
+		System.out.println("여기로 와야 리스트에 값이 들어가는데");
+		
+		request.setAttribute("Blist",list );
+//		request.setAttribute("area", area);
+		
+		
 		return "redirect:/GoBoardList.do";
 	}
 

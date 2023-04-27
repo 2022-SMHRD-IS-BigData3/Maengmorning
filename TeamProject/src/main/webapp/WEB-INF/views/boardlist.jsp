@@ -240,20 +240,18 @@
                             <th>글번호</th>
                             <th>제목</th>
                             <th>작성자</th>
-                            <th>동네</th>
+                            <th>지역</th>
                             </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${Blist}"  var="list">
+                        <c:forEach items="${Blist}" var="list">
                             <tr>
-                            <td>${list.board_id}</td>
-                            <td>
-                            <a href="Boarddetail.do?b_id=${list.board_id}">${list.title}</a>
-                            </td>
-                            <td>${list.user_id}</td>
-                            <td>유저 정보에서 가져온 지역</td>
+                            	<td>${list.BOARD_ID}</td>
+                            	<td> ${list.TITLE} </td>
+                            	<td>${list.USER_ID}</td>
+                          		<td>유저 지역</td>
                             </tr>
-                            </c:forEach>
+                        </c:forEach>
                         </tbody>
                         </table>
 

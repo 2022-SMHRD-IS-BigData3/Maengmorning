@@ -53,6 +53,22 @@ public class MemberDAO {
 	}
 
 
+	public List<MemberVO> getArea() {
+		List<MemberVO> area = null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			area = session.selectList("get");
+		
+	} finally {
+		session.close();
+	}
+	
+		
+		return area;
+		
+	}
+
+
 	
 //	public MemberVO login(MemberVO vo) {
 //		SqlSession session  = null;

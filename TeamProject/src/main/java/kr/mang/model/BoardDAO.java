@@ -4,6 +4,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -26,9 +28,14 @@ public class BoardDAO {
 
 	public List<BoardVO> BoardList() {
 		List<BoardVO> list = null;
+		List<String> test = null;
 		try {
 			session = sqlSessionFactory.openSession(true);
 			list = session.selectList("selectList");
+			
+			System.out.println(test);
+			System.out.println(list);
+			
 		} finally {
 			session.close();
  		}
