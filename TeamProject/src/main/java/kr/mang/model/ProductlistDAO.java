@@ -80,7 +80,7 @@ public class ProductlistDAO {
 				session.commit();
 				System.out.println("등록했다.");
 			}catch (Exception e) {
-		        System.out.println("물품 db저장중 에러 발생");
+		        System.out.println("이미지 db저장중 에러 발생");
 		        e.printStackTrace(); 
 			}finally {
 				System.out.println("닫았다.");
