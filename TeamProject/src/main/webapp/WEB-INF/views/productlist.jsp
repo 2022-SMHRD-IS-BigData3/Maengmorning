@@ -198,9 +198,8 @@
                     </li>
                     <li><a href="./Goboardlist.do">커뮤니티</a>
                         <ul class="dropdown">
-                            <li><a href="#">잡담</a></li>
-                            <li><a href="#">그외</a></li>
-                            <li><a href="#">등등</a></li>
+                            <li><a href="#">정보공유</a></li>
+                            <li><a href="#">자유게시판</a></li>
                         </ul>
                     </li>
                     <li><a href="./Gomypage.do">마이페이지</a>
@@ -259,9 +258,12 @@
                         </ul>
                     </div>
                    
-               
+               </div>
               
                 <div class="col-lg-9 order-1 order-lg-2">
+                 
+
+                    <form action="./Goproductinput.do">
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
@@ -272,12 +274,15 @@
                                     </select>
                                 </div>
                             </div>
-                          
                             <div class="col-lg-5 col-md-5 text-right">
-                               <a href="./Goproductinput.do">물품등록</a>
+                                <button id="registration">물품 등록</button>
                             </div>
+                       
+                    </div>
+                    
+                    </form>
                           
-                        </div>
+                        
                     </div>
        <!-- 물품목록 
        dao productlist기능 이용, productVO에 있는 변수 활용 -->
