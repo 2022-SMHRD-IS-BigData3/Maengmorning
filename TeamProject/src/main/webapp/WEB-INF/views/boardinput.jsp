@@ -23,9 +23,12 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <style>
+
+
     div .leave-comment {
         margin-top: 100px;
         margin-bottom: 100px;
@@ -92,6 +95,17 @@
         width: 675px;
         height: 400px;
     }
+    
+    /*표*/
+     table #Product_Style {
+    width: 100%;
+    border: 2px solid #777676;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #777676;
+    padding: 10px;
+  }
     
 </style>
 
@@ -168,12 +182,11 @@
                         </li>
                         
                         <li><a href="./Goboardlist.do">커뮤니티</a>
-                            <ul class="dropdown">
-                                <li><a href="#">잡담</a></li>
-                                <li><a href="#">그외</a></li>
-                                <li><a href="#">등등</a></li>
-                            </ul>
-                        </li>
+                        <ul class="dropdown">
+                            <li><a href="#">정보공유</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                        </ul>
+                    </li>
 
                         <li><a href="./Gomypage.do">마이페이지</a>
                             <ul class="dropdown">
@@ -199,8 +212,8 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
                         <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
-                        <a href="./Goproductlist.do">중고거래</a>
-                        <span>물품등록</span>
+                        <a href="./Goproductlist.do">커뮤니티</a>
+                        <span>글 등록</span>
                     </div>
                 </div>
             </div>
@@ -208,14 +221,14 @@
     </div>
 
     <form action="./Goboardlist.do">
-    <table id="Product_Style" align="center">
+    <table id="Product_Style" align="center" >
         <tr class="border-bottom">
           <th colspan="2" >
             <h4>커뮤니티 글 등록</h4>
           </th>
         </tr>
 
-        <tr class="border-bottom">
+        <tr>
           <td class="Product_Style_td">이미지</td>
           <td>
             <div class="logo">
@@ -228,7 +241,7 @@
           </td>
         </tr>
 
-        <tr class="border-bottom">
+        <tr>
           <td>글 제목</td>
           <td>
             <div>
@@ -237,7 +250,7 @@
           </td>
         </tr>
 
-        <tr class="border-bottom">
+        <tr>
           <td>카테고리</td>
           <td>
             <div class="category-option">
@@ -250,7 +263,7 @@
           </td>
         </tr>
 
-        <tr class="border-bottom">
+        <tr>
             <td>글 내용</td>
             <td>
                 <div>
@@ -259,7 +272,7 @@
             </td>
           </tr>
 
-        <tr class="border-bottom">
+        <tr>
             <td>상품태그</td>
             <td>
                 <div>
@@ -268,7 +281,7 @@
             </td>
           </tr>
         
-        <tr class="border-bottom" align="center">
+        <tr align="center">
             <td colspan="2">
                 <button type="submit" class="site-btn">등록</button>
             </td>
@@ -279,118 +292,6 @@
       </form>
 
 
-
-    <!-- Partner Logo Section Begin -->
-    <div class="partner-logo">
-        <div class="container">
-            <div class="logo-carousel owl-carousel">
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-1.png" alt="">
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-2.png" alt="">
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-3.png" alt="">
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-4.png" alt="">
-                    </div>
-                </div>
-                <div class="logo-item">
-                    <div class="tablecell-inner">
-                        <img src="img/logo-carousel/logo-5.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Partner Logo Section End -->
-
-    <!-- Footer Section Begin -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="footer-left">
-                        <div class="footer-logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
-                        </div>
-                        <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello.colorlib@gmail.com</li>
-                        </ul>
-                        <div class="footer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 offset-lg-1">
-                    <div class="footer-widget">
-                        <h5>Information</h5>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Checkout</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="footer-widget">
-                        <h5>My Account</h5>
-                        <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Shopping Cart</a></li>
-                            <li><a href="#">Shop</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="newslatter-item">
-                        <h5>Join Our Newsletter Now</h5>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#" class="subscribe-form">
-                            <input type="text" placeholder="Enter Your Mail">
-                            <button type="button">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-reserved">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copyright-text">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved |
-                            This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                                href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </div>
-                        <div class="payment-pic">
-                            <img src="img/payment-method.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
