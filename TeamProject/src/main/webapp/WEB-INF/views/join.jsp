@@ -139,7 +139,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="register-form">
                         <h2>회원가입</h2>
-                        <form action="Join.do" method = "post">
+                        <form action="./Gologin.do" method = "post">
                             <div class="group-input">
                                 <label for="username">이름</label>
                                 <input type="text" id="name" name ="name">
@@ -171,7 +171,7 @@
                             <button type="submit" class="site-btn register-btn">회원가입</button>
                         </form>
                         <div class="switch-login">
-                            <a href="./login.html" class="or-login">로그인</a>
+                            <a href="./Gologin.do" class="or-login">로그인</a>
                         </div>
                     </div>
                 </div>
