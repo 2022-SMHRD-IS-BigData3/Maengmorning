@@ -253,7 +253,7 @@
         <div class="inner-header">
           <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
             <div class="col-lg-2 col-md-2">
-              <a href="./index.html">
+              <a href="./Gomain.do">
                 <img src="./img/로고.png" alt="">
               </a>
             </div>
@@ -409,7 +409,8 @@
                     </table>
 
                     <div style="text-align: right;">
-                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="submit">더보기</button>
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
+                            onclick="window.open('./Gomypagesell.do', '_blank', 'width=1200,height=600')">더보기</button>
                     </div>
                 </form>
                 <br><br>
@@ -439,8 +440,8 @@
                         </tbody>
                     </table>
                     <div style="text-align: right;">
-                        <button class="btn btn-warning" style="color: white; font-weight: bold;"
-                            type="submit">더보기</button>
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
+                            onclick="window.open('./Gomypagebuy.do', '_blank', 'width=1200,height=600')">더보기</button>
                     </div>
                 </form>
                 <br><br>
@@ -465,7 +466,8 @@
                         </tbody>
                     </table>
                     <div style="text-align: right;">
-                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="submit">더보기</button>
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
+                            onclick="window.open('./Gomypageselect.do', '_blank', 'width=1200,height=600')">더보기</button>
                     </div>
                 </form>
             </div>
