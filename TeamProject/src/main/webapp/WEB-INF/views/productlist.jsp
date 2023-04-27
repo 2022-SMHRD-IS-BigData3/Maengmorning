@@ -281,7 +281,7 @@
                             </div>
                           
                             <div class="col-lg-5 col-md-5 text-right">
-                               <a href="productinput.jsp">물품등록</a>
+                               <a href="./Goproductinput.do">물품등록</a>
                             </div>
                           
                         </div>
