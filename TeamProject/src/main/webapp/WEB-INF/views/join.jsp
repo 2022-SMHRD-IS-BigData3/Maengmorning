@@ -77,10 +77,10 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li class="active"><a href="./Gomain.do">Home</a></li>
                        
                        
-                        <li><a href="./Goproductlist">중고거래</a>
+                        <li><a href="./Goproductlist.do">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="#"> 장난감/도서</a></li>
@@ -92,7 +92,7 @@
                             </ul>
                         </li>
                         
-                        <li><a href="./Goboardlist">커뮤니티</a>
+                        <li><a href="./Goboardlist.do">커뮤니티</a>
                             <ul class="dropdown">
                                 <li><a href="#">잡담</a></li>
                                 <li><a href="#">그외</a></li>
@@ -100,7 +100,7 @@
                             </ul>
                         </li>
 
-                        <li><a href="./Gomypage">마이페이지</a>
+                        <li><a href="./Gomypage.do">마이페이지</a>
                             <ul class="dropdown">
                                 <li><a href="#">판매/구매목록</a></li>
                                 <li><a href="#">매너온도</a></li>

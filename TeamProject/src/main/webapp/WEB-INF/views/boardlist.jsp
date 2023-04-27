@@ -249,7 +249,7 @@
                             	<td>${list.BOARD_ID}</td>
                             	<td> ${list.TITLE} </td>
                             	<td>${list.USER_ID}</td>
-                          		<td>유저 지역</td>
+                          		  <td></td>
                             </tr>
                         </c:forEach>
                         </tbody>
