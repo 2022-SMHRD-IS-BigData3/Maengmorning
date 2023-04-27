@@ -284,7 +284,7 @@
 
                     
 
-                    <form action="">
+                    <form action="comment.do">
                     <div class="comment">
                         댓글  <input name ="comment" type="text">
                         <button type="submit">등록</button>

@@ -1,6 +1,7 @@
 package kr.mang.controller;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Set;
 
 import javax.servlet.ServletException;
@@ -23,12 +24,14 @@ public class comment implements Command{
 		
 		BoardVO vo = new BoardVO();
 		vo.setBoard_comment(comment);
-	
+		
 		BoardDAO dao = new BoardDAO();
+		List<BoardVO> list = dao.BoardList();
+		
+		request.setAttribute("comment", comment);
 		
 		
-		
-		return null;
+		return "boarddetail.jsp";
 	}
 
 }
