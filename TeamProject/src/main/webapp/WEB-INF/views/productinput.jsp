@@ -1,5 +1,4 @@
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
-<%@page import="kr.mang.model.ImgUploadVO"%>
 <%@ page import="java.io.File" %>
 <%@ page import="java.util.Enumeration" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
@@ -230,7 +229,7 @@
             </div>
             <div class="input-group mb-3">
                <input name="file_name" type="file" class="form-co/ntrol" id="file_name"> 
-                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+               
               </div>
           </td>
         </tr>
