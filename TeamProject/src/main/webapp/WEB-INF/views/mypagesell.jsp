@@ -62,12 +62,12 @@
 <body>
 	
 
-	<br><br><br><br>
+	<br><br><br>
         <!-- 판매내역 -->
         <div class="container">
             <div class="col-lg-12">
                 <form action="./Gomypagesell.do">
-                    <td><h4 style="text-align:center;">판매내역✔</h4></td>
+                    <td><h4 style="text-align:center; margin-bottom: 20px;">판매내역✔</h4></td>
                     <table></table>
                     <table class="table table-bordered">
                         <thead class="table-warning">

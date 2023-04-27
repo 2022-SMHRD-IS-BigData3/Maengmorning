@@ -28,9 +28,55 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <style>
+
+/* 검색창 */
+    .search-container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+      }
+      
+      .search-button {
+        background-color: rgb(230, 177, 0);
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        margin-top: 8px;
+        margin-left: -5px;
+        cursor: pointer;
+      }
+      
+      .search-button:hover {
+        background-color: #ccc;
+      }
+
+      input#search {
+        width: 400px;
+      }
+
+      button.search-button {
+        width: 40px;
+        height: 40px;
+      }
+      
+      /* 상단바 위아래 선 코드 */
+  
+    
+    
+
+/*여기까지*/
+
     div .leave-comment {
         margin-top: 100px;
         margin-bottom: 100px;
@@ -98,6 +144,14 @@
         height: 400px;
     }
     
+    div {
+    	margin-top 10px;
+    }
+    /*상단바 스타일태그 넣으면 다 깨지는중 미쳤음 해결해야함*/
+    .border-bottom div, div .nice-select sorting, input.area {
+    padding-bottom: 10px;
+    }
+    
 </style>
 
 <body>
@@ -106,96 +160,93 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
+     <!-- Header Section Begin -->
     <header class="header-section">
-        
+
+      <div class="container">
+        <div class="inner-header">
+          <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
+            <div class="col-lg-2 col-md-2">
+              <a href="./index.html">
+                <img src="./img/로고.png" alt="">
+              </a>
+            </div>
+             <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
+                <div class="search-container">
+                    <form action="/search">
+                      <input class="border" id="search" type="text" placeholder="검색" name="search">
+                      <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
+                    </form>
+                  </div>
+            </div>
+            <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
+              <ul class="nav-right">
+                <li class="heart-icon">
+                
+                  
+                 
+                  	  <a href="./Gologin.do">로그인</a>
+                  	  <a href="./Gojoin.do">회원가입</a>
+                  	
+                
+                  		
+                  	
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="nav-item">
         <div class="container">
-            <div class="inner-header">
-                <div class="row">
-                    <div class="col-lg-2 col-md-2">
+          <nav class="nav-menu mobile-menu">
+            
 
-                        <a href="./Gomain.do">
-                            <img src="./img/로고.png" alt="">
-                        </a>
-
-                            <a href="./Gomain.do">
-                                <img src="./메인사진파일/로고.png" alt="">
-                            </a>
-                     
-
-                    </div>
-
-                    
-                    <div class="col-lg-7 col-md-7">
-                        <div class="advanced-search">
-                            <div class="input-group">
-                                <input type="text" placeholder="검색">
-                                <button type="button"><i class="ti-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    
-                    <div class="col-lg-3 text-right col-md-3">
-                        
-                        <ul class="nav-right">
-                            <li class="heart-icon">
-                                <a href="./Gologin.do">
-                                    <i class="icon_MSY_alt">로그인</i>
-                                </a>
-                            </li>
+            <header>
+                <nav>
+                  <ul>
+                    <li><a href="./Gomain.do">Home</a></li>
+                    <li><a href="./Goproductlist.do">중고거래</a>
+                        <ul class="dropdown">
+                            <li><a href="#">외출용품</a></li>
+                            <li><a href="#"> 장난감/도서</a></li>
+                            <li><a href="#">의류</a></li>
+                            <li><a href="#">가구</a></li>
+                            <li><a href="#">침구류</a></li>
+                            <li><a href="#"> 생활용품</a></li>
+                            <li><a href="#">기타</a></li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="nav-item">
-            <div class="container">
-                <div class="nav-depart">
-                    
-                </div>
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li class="active"><a href="./index.html">Home</a></li>
-                       
-                       
-                        <li><a href="./Goproductlist.do">중고거래</a>
-                            <ul class="dropdown">
-                                <li><a href="#">외출용품</a></li>
-                                <li><a href="#"> 장난감/도서</a></li>
-                                <li><a href="#">의류</a></li>
-                                <li><a href="#">가구</a></li>
-                                <li><a href="#">침구류</a></li>
-                                <li><a href="#"> 생활용품</a></li>
-                                <li><a href="#">기타</a></li>
-                            </ul>
-                        </li>
-                        
-                        <li><a href="./Goboardlist.do">커뮤니티</a>
-                            <ul class="dropdown">
-                                <li><a href="#">잡담</a></li>
-                                <li><a href="#">그외</a></li>
-                                <li><a href="#">등등</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="./Gomypage.do">마이페이지</a>
-                            <ul class="dropdown">
-                                <li><a href="#">판매/구매목록</a></li>
-                                <li><a href="#">매너온도</a></li>
-                                <li><a href="#">개인정보 수정</a></li>
-                                <li><a href="#">좋아요 목록</a></li>
-                            </ul>
-                        </li>
-                       
-                    </ul>
+                    </li>
+                    <li><a href="./Goboardlist.do">커뮤니티</a>
+                        <ul class="dropdown">
+                            <li><a href="#">정보공유</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./Gomypage.do">마이페이지</a>
+                        <ul class="dropdown">
+                            <li><a href="#">판매/구매목록</a></li>
+                            <li><a href="#">매너온도</a></li>
+                            <li><a href="#">개인정보 수정</a></li>
+                            <li><a href="#">좋아요 목록</a></li>
+                        </ul>
+                    </li>
+                  </ul>
                 </nav>
-                <div id="mobile-menu-wrap"></div>
-            </div>
+              </header>
+
+    
+            
+          </nav>
+          <div id="mobile-menu-wrap"></div>
         </div>
+      </div>
+      
     </header>
+
     <!-- Header End -->
+
 
     <!-- Breadcrumb Section Begin -->
     <div class="breacrumb-section">
@@ -212,10 +263,9 @@
         </div>
     </div>
 
-
-   <form action="ProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
+      <form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
     <table id="Product_Style" align="center">
-        <tr class="border-bottom">
+        <tr class="border-bottom" >
           <th colspan="2" >
             <h4>물품등록</h4>
           </th>
@@ -244,6 +294,7 @@
                 <input id="title" name="title" type="text" placeholder="글 제목">
                 
             </div>
+            
           </td>
         </tr>
 
@@ -308,7 +359,7 @@
         
 
       </table>
-	</form>
+   </form>
 
 
 

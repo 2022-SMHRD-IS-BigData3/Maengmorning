@@ -8,7 +8,7 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fashi | Template</title>
+    <title>회원가입</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -23,6 +23,75 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+<style>
+   /* 검색창 */
+    .search-container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+      }
+      
+      .search-button {
+        background-color: rgb(230, 177, 0);
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        margin-top: 8px;
+        margin-left: -5px;
+        cursor: pointer;
+      }
+      
+      .search-button:hover {
+        background-color: #ccc;
+      }
+
+      input#search {
+        width: 400px;
+      }
+
+      button.search-button {
+        width: 40px;
+        height: 40px;
+      }
+      
+      /* 상단바 위아래 선 코드 */
+    header .nav-item {
+    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    border-top: 2px solid rgb(204, 201, 201); /* 위 선 */
+    }
+    h4 {
+    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    padding-bottom: 10px;
+    }
+    .productShopDetail, .communityShopDetail {
+        margin-left: 1050px;
+        margin-top: 20px;
+    }
+
+    .nav-item,
+    .hero-section,
+    .row {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .nav-item>a {
+        padding-left: 0;
+      }
+
+      .nav-item>a {
+        margin-left: 0;
+      }
+      
+ </style>
 </head>
 
 <body>
@@ -33,88 +102,89 @@
 
     <!-- Header Section Begin -->
     <header class="header-section">
-        
+
+      <div class="container">
+        <div class="inner-header">
+          <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
+            <div class="col-lg-2 col-md-2">
+              <a href="./index.html">
+                <img src="./img/로고.png" alt="">
+              </a>
+            </div>
+             <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
+                <div class="search-container">
+                    <form action="/search">
+                      <input class="border" id="search" type="text" placeholder="검색" name="search">
+                      <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
+                    </form>
+                  </div>
+            </div>
+            <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
+              <ul class="nav-right">
+                <li class="heart-icon">
+                
+                  
+                 
+                  	  <a href="./Gologin.do">로그인</a>
+                  	  <a href="./Gojoin.do">회원가입</a>
+                  	
+                
+                  		
+                  	
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="nav-item">
         <div class="container">
-            <div class="inner-header">
-                <div class="row">
-                    <div class="col-lg-2 col-md-2">
-                     
-                            <a href="./Gomain.do">
-                                <img src="./메인사진파일/로고.png" alt="">
-                            </a>
-                     
-                    </div>
+          <nav class="nav-menu mobile-menu">
+            
 
-                    
-                    <div class="col-lg-7 col-md-7">
-                        <div class="advanced-search">
-                            <div class="input-group">
-                                <input type="text" placeholder="검색">
-                                <button type="button"><i class="ti-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    
-                    <div class="col-lg-3 text-right col-md-3">
-                        
-                        <ul class="nav-right">
-                            <li class="heart-icon">
-                                <a href="./Gologin.do">
-                                    <i class="icon_MSY_alt">로그인</i>
-                                </a>
-                            </li>
+            <header>
+                <nav>
+                  <ul>
+                    <li><a href="./Gomain.do">Home</a></li>
+                    <li><a href="./Goproductlist.do">중고거래</a>
+                        <ul class="dropdown">
+                            <li><a href="#">외출용품</a></li>
+                            <li><a href="#"> 장난감/도서</a></li>
+                            <li><a href="#">의류</a></li>
+                            <li><a href="#">가구</a></li>
+                            <li><a href="#">침구류</a></li>
+                            <li><a href="#"> 생활용품</a></li>
+                            <li><a href="#">기타</a></li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="nav-item">
-            <div class="container">
-                <div class="nav-depart">
-                    
-                </div>
-                <nav class="nav-menu mobile-menu">
-                    <ul>
-                        <li class="active"><a href="./Gomain.do">Home</a></li>
-                       
-                       
-                        <li><a href="./Goproductlist.do">중고거래</a>
-                            <ul class="dropdown">
-                                <li><a href="#">외출용품</a></li>
-                                <li><a href="#"> 장난감/도서</a></li>
-                                <li><a href="#">의류</a></li>
-                                <li><a href="#">가구</a></li>
-                                <li><a href="#">침구류</a></li>
-                                <li><a href="#"> 생활용품</a></li>
-                                <li><a href="#">기타</a></li>
-                            </ul>
-                        </li>
-                        
-                        <li><a href="./Goboardlist.do">커뮤니티</a>
-                            <ul class="dropdown">
-                                <li><a href="#">잡담</a></li>
-                                <li><a href="#">그외</a></li>
-                                <li><a href="#">등등</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="./Gomypage.do">마이페이지</a>
-                            <ul class="dropdown">
-                                <li><a href="#">판매/구매목록</a></li>
-                                <li><a href="#">매너온도</a></li>
-                                <li><a href="#">개인정보 수정</a></li>
-                                <li><a href="#">좋아요 목록</a></li>
-                            </ul>
-                        </li>
-                       
-                    </ul>
+                    </li>
+                    <li><a href="./Goboardlist.do">커뮤니티</a>
+                        <ul class="dropdown">
+                            <li><a href="#">정보공유</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./Gomypage.do">마이페이지</a>
+                        <ul class="dropdown">
+                            <li><a href="#">판매/구매목록</a></li>
+                            <li><a href="#">매너온도</a></li>
+                            <li><a href="#">개인정보 수정</a></li>
+                            <li><a href="#">좋아요 목록</a></li>
+                        </ul>
+                    </li>
+                  </ul>
                 </nav>
-                <div id="mobile-menu-wrap"></div>
-            </div>
+              </header>
+
+    
+            
+          </nav>
+          <div id="mobile-menu-wrap"></div>
         </div>
+      </div>
+      
     </header>
+
     <!-- Header End -->
 
     <!-- Breadcrumb Section Begin -->
@@ -124,7 +194,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
                         <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
-                        <span>Register</span>
+                        <span>회원가입</span>
                     </div>
                 </div>
             </div>
