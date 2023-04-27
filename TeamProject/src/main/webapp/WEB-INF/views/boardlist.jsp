@@ -288,7 +288,6 @@
                     <h3>커뮤니티</h3>
 
                     <form action="./Goboardinput.do">
-                    <table>
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
@@ -299,12 +298,11 @@
                                     </select>
                                 </div>
                             </div>
-                            </div>
                             <div class="col-lg-5 col-md-5 text-right">
                                 <button id="registration">글 등록</button>
                             </div>
                         </div>
-                    </table>
+                    </div>
                     
                     </form>
                    
@@ -319,16 +317,14 @@
                         </thead>
                         <tbody>
                         
-                        <c:forEach items="${Blist}"  var="list">
+                            <c:forEach items="${Blist}" var="list" varStatus="status">
                             <tr>
-                            <td>${list.b_id}</td>
-                            <td>
-                            <a href="Boarddetail.do?b_id=${list.b_id}">${list.title}</a>
-                            </td>
-                            <td>${list.userid}</td>
-                            <td>${list.area}</td>
+                            	<td>${list.board_id}</td>
+                            	<td> ${list.title} </td>
+                            	<td>${list.user_id}</td>
+                          		  <td>${area[status.index].area}</td>
                             </tr>
-                            </c:forEach>
+                        </c:forEach>
                         </tbody>
                         </table>
 

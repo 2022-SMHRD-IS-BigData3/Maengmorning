@@ -6,9 +6,9 @@ public class BoardVO {
 	private String title;
 	private String board_content;
 	private int write_date;
-	private int user_id;
-	private int b_comment_id;
-	private int board_img_id;
+	private String user_id;
+	private String b_comment_id;
+	private String board_img_id;
 
 	public int getBoard_id() {
 		return board_id;
@@ -42,32 +42,32 @@ public class BoardVO {
 		this.write_date = write_date;
 	}
 
-	public int getUser_id() {
+	public String getUser_id() {
 		return user_id;
 	}
 
-	public void setUser_id(int user_id) {
+	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
 
-	public int getB_comment_id() {
+	public String getB_comment_id() {
 		return b_comment_id;
 	}
 
-	public void setB_comment_id(int b_comment_id) {
+	public void setB_comment_id(String b_comment_id) {
 		this.b_comment_id = b_comment_id;
 	}
 
-	public int getBoard_img_id() {
+	public String getBoard_img_id() {
 		return board_img_id;
 	}
 
-	public void setBoard_img_id(int board_img_id) {
+	public void setBoard_img_id(String board_img_id) {
 		this.board_img_id = board_img_id;
 	}
 
-	public BoardVO(int board_id, String title, String board_content, int write_date, int user_id, int b_comment_id,
-			int board_img_id) {
+	public BoardVO(int board_id, String title, String board_content, int write_date, String user_id, String b_comment_id,
+			String board_img_id) {
 		super();
 		this.board_id = board_id;
 		this.title = title;

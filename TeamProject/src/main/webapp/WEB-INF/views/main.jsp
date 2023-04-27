@@ -156,7 +156,7 @@
         <div class="inner-header">
           <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
             <div class="col-lg-2 col-md-2">
-              <a href="./index.html">
+              <a href="./Gomain.do">
                 <img src="./img/로고.png" alt="">
               </a>
             </div>
@@ -213,7 +213,7 @@
                             <li><a href="#">기타</a></li>
                         </ul>
                     </li>
-                    <li><a href="./Goboardlist.do">커뮤니티</a>
+                    <li><a href="BoardList.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">잡담</a></li>
                             <li><a href="#">그외</a></li>
