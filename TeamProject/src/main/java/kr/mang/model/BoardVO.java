@@ -2,45 +2,20 @@ package kr.mang.model;
 
 public class BoardVO {
 
-	private int b_id;
-	private int com_id;
-	private String userid;
+	private int board_id;
 	private String title;
-	private String cont;
-	private int view_cnt;
-	private int writer_date;
-	private String area;
+	private String board_content;
+	private int write_date;
+	private int user_id;
+	private int b_comment_id;
+	private int board_img_id;
 
-	public String getArea() {
-		return area;    
+	public int getBoard_id() {
+		return board_id;
 	}
 
-	public void setArea(String area) {
-		this.area = area;
-	}
-
-	public int getB_id() {
-		return b_id;
-	}
-
-	public void setB_id(int b_id) {
-		this.b_id = b_id;
-	}
-
-	public int getCom_id() {
-		return com_id;
-	}
-
-	public void setCom_id(int com_id) {
-		this.com_id = com_id;
-	}
-
-	public String getUserid() {
-		return userid;
-	}
-
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setBoard_id(int board_id) {
+		this.board_id = board_id;
 	}
 
 	public String getTitle() {
@@ -51,40 +26,56 @@ public class BoardVO {
 		this.title = title;
 	}
 
-	public String getCont() {
-		return cont;
+	public String getBoard_content() {
+		return board_content;
 	}
 
-	public void setCont(String cont) {
-		this.cont = cont;
+	public void setBoard_content(String board_content) {
+		this.board_content = board_content;
 	}
 
-	public int getView_cnt() {
-		return view_cnt;
+	public int getWrite_date() {
+		return write_date;
 	}
 
-	public void setView_cnt(int view_cnt) {
-		this.view_cnt = view_cnt;
+	public void setWrite_date(int write_date) {
+		this.write_date = write_date;
 	}
 
-	public int getWriter_date() {
-		return writer_date;
+	public int getUser_id() {
+		return user_id;
 	}
 
-	public void setWriter_date(int writer_date) {
-		this.writer_date = writer_date;
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
 	}
 
-	public BoardVO(int b_id, int com_id, String userid, String title, String cont, int view_cnt, int writer_date, String area) {
+	public int getB_comment_id() {
+		return b_comment_id;
+	}
+
+	public void setB_comment_id(int b_comment_id) {
+		this.b_comment_id = b_comment_id;
+	}
+
+	public int getBoard_img_id() {
+		return board_img_id;
+	}
+
+	public void setBoard_img_id(int board_img_id) {
+		this.board_img_id = board_img_id;
+	}
+
+	public BoardVO(int board_id, String title, String board_content, int write_date, int user_id, int b_comment_id,
+			int board_img_id) {
 		super();
-		this.b_id = b_id;
-		this.com_id = com_id;
-		this.userid = userid;
+		this.board_id = board_id;
 		this.title = title;
-		this.cont = cont;
-		this.view_cnt = view_cnt;
-		this.writer_date = writer_date;
-		this.area = area;
+		this.board_content = board_content;
+		this.write_date = write_date;
+		this.user_id = user_id;
+		this.b_comment_id = b_comment_id;
+		this.board_img_id = board_img_id;
 	}
 
 	public BoardVO() {
