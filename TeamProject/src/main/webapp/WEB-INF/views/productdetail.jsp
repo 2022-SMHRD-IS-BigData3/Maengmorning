@@ -318,7 +318,7 @@
                            
                            
                             </table>
-                            <div align ="center">
+                            <div align ="left">
                                 <button type="button" class="btn btn-secondary btn-lg btn-danger">❤︎찜</button>
                                 <button class="btn btn-secondary btn-lg btn btn-danger" type="button" onclick="window.open('./Gomessage.do', '_blank', 'width=600,height=600')">✉쪽지</button>
                                 <button class="btn btn-secondary btn-lg btn btn-danger" type="button" onclick="window.open('./Gopayment.do', '_blank', 'width=600,height=600')">바로구매</button>
