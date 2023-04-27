@@ -69,6 +69,73 @@
         width: 40px;
         height: 40px;
       }
+      
+    
+     /* 상단바 위아래 선 코드 */
+    header .nav-item {
+    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    border-top: 2px solid rgb(204, 201, 201); /* 위 선 */
+    }
+    h4 {
+    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    padding-bottom: 10px;
+    }
+    .productShopDetail, .communityShopDetail {
+        margin-left: 1050px;
+        margin-top: 20px;
+    }
+
+    .nav-item,
+    .hero-section,
+    .row {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .nav-item>a {
+        padding-left: 0;
+      }
+
+      .nav-item>a {
+        margin-left: 0;
+      }
+      
+    
+    /* 검색창 */
+    .search-container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+      }
+      
+      .search-button {
+        background-color: rgb(230, 177, 0);
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        margin-top: 8px;
+        margin-left: -5px;
+        cursor: pointer;
+      }
+      
+      .search-button:hover {
+        background-color: #ccc;
+      }
+
+      input#search {
+        width: 400px;
+      }
+
+      button.search-button {
+        width: 40px;
+        height: 40px;
+      }
     
         /* 상단바 줄이고 가운데정렬하는 코드입니당.*/
         .nav-item,
@@ -168,40 +235,7 @@
                 font-weight: 700;
             }
             
-           /* 상단바 위아래 선 코드 */
-    		header .nav-item {
-    		border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
-    		border-top: 2px solid rgb(204, 201, 201); /* 위 선 */
-    		}
-    		
-   			h4 {
-   			border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
-    		padding-bottom: 10px;
-    		}
-    		
-    		.productShopDetail, .communityShopDetail {
-        	margin-left: 1050px;
-        	margin-top: 20px;
-    		}
-
-    		.nav-item,
-    		.hero-section,
-    		.row {
-      		max-width: 1200px;
-      		margin: 0 auto;
-	
-      		.nav-item>a {
-        	padding-left: 0px;
-      		}
-
-      		.nav-item>a {
-        	margin-left: 0;
-      		}
-           
-           
-            
-            
-            
+          
     </style>
 
     <body>
@@ -210,7 +244,7 @@
             <div class="loader"></div>
         </div>
 
-       <!-- Header Section Begin -->
+        <!-- Header Section Begin -->
     <header class="header-section">
 
       <div class="container">
@@ -232,9 +266,15 @@
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
                 <li class="heart-icon">
-                  <a href="./Gologin.do">
-                    <i class="icon_MSY_alt">로그인</i>
-                  </a>
+                
+                  
+                 
+                  	  <a href="./Gologin.do">로그인</a>
+                  	  <a href="./Gojoin.do">회원가입</a>
+                  	
+                
+                  		
+                  	
                 </li>
               </ul>
             </div>
@@ -264,9 +304,8 @@
                     </li>
                     <li><a href="./Goboardlist.do">커뮤니티</a>
                         <ul class="dropdown">
-                            <li><a href="#">잡담</a></li>
-                            <li><a href="#">그외</a></li>
-                            <li><a href="#">등등</a></li>
+                            <li><a href="#">정보공유</a></li>
+                            <li><a href="#">자유게시판</a></li>
                         </ul>
                     </li>
                     <li><a href="./Gomypage.do">마이페이지</a>
