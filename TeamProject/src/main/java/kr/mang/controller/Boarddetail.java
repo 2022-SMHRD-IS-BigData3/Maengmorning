@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.mang.model.BoardDAO;
 import kr.mang.model.BoardVO;
+import kr.mang.model.MemberDAO;
+import kr.mang.model.MemberVO;
 
 public class Boarddetail implements Command {
 
@@ -15,14 +17,21 @@ public class Boarddetail implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
-		int b_id = Integer.parseInt(request.getParameter("b_id"));
+		int board_id = Integer.parseInt(request.getParameter("board_id"));
 		
 		BoardDAO dao = new BoardDAO();
-		BoardVO vo =dao.BoardDetail(b_id);
-	
-		request.setAttribute("detail", vo);
+		MemberDAO mdao = new MemberDAO();
+		
+		System.out.println("1");
+		BoardVO vo =dao.BoardDetail(board_id);
+		System.out.println("2");
+		MemberVO mvo = mdao.BoardDetail(board_id);
+		System.out.println("3");
 
-		return "GoBoarddetail.do";
+		request.setAttribute("detail", vo);
+		request.setAttribute("mdetail", mvo);
+		
+		return "boarddetail.jsp";
 	}
 
 }

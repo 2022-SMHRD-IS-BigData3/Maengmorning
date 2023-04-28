@@ -212,7 +212,7 @@
                             <li><a href="#">기타</a></li>
                         </ul>
                     </li>
-                    <li><a href="BoardList.do">커뮤니티</a>
+                    <li><a href="./Goboardlist.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">정보공유</a></li>
                             <li><a href="#">자유게시판</a></li>
@@ -308,13 +308,16 @@
                         </thead>
                         <tbody>
                         
-
-                         <c:forEach items="${Blist}" var="list" varStatus="status">
-							<tr>
+                          <c:forEach items="${Blist}" var="list" varStatus="status">
+                            <tr>
                             	<td>${list.board_id}</td>
-                            	<td> ${list.title} </td>
+                            	 <td>
+                            	 <a href="Boarddetail.do?board_id=${list.board_id}">${list.title}
+                            	 </a>
+                            	 </td> 
+                            
                             	<td>${list.user_id}</td>
-                          		 <td>${area[status.index].area}</td>
+                          		  <td>${area[status.index].area}</td>
                             </tr>
                         </c:forEach>
                         </tbody>

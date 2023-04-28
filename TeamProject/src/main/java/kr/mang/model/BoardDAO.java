@@ -50,7 +50,6 @@ public class BoardDAO {
 		} finally {
 			session.close();
 		}
-		System.out.println();
 		return detail;
 
 	}

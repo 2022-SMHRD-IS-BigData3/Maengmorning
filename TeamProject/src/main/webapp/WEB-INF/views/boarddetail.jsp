@@ -253,7 +253,7 @@
                             <h1>${detail.title}</h1>
                         </div>
 
-                        <p>작성자:${detail.userid }| 작성일: | 동네: ${detail.area} | 조회수 : 1</p>
+                        <p>작성자:${mdetail.id} | 작성일:<fmt:formatDate value="${detail.write_date}" pattern="yyyy/MM/dd" /> | 동네: ${mdetail.area} | 조회수 : 1</p>
                     </div>
 
 
@@ -287,7 +287,7 @@
                         <table>
                             <tr>
                                 <p>
-                                   ${detail.cont}
+									${detail.board_content}
 
                                 </p>
                                 <p>#태그</p>
