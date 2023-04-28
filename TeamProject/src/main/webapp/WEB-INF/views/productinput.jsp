@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -29,6 +28,42 @@
 </head>
 
 <style>
+
+     /* 검색창 */
+     .search-container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+       
+      }
+      
+      .search-button {
+        background-color: rgb(230, 177, 0);
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        margin-top: 8px;
+        margin-left: -5px;
+        cursor: pointer;
+      }
+      
+      .search-button:hover {
+        background-color: #ccc;
+      }
+
+      input#search {
+        width: 400px;
+      }
+
+      button.search-button {
+        width: 40px;
+        height: 40px;
+      }
 
 
     div .leave-comment {
@@ -101,13 +136,19 @@
     /*표*/
      table #Product_Style {
     width: 100%;
-    border: 2px solid #777676;
+    border: 2px solid #c4c1c1;
     border-collapse: collapse;
   }
   th, td {
-    border: 1px solid #777676;
+    border: 1px solid #c4c1c1;
     padding: 10px;
   }
+  td.imgInput {
+  height: 400px;
+   }
+   .tag_id {
+    width: 675px;
+   }
     
 </style>
 
@@ -137,13 +178,13 @@
                     </div>
 
                     
-                    <div class="col-lg-7 col-md-7">
-                        <div class="advanced-search">
-                            <div class="input-group">
-                                <input type="text" placeholder="검색">
-                                <button type="button"><i class="ti-search"></i></button>
-                            </div>
-                        </div>
+                    <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
+                        <div class="search-container">
+                            <form action="/search">
+                              <input class="border" id="search" type="text" placeholder="검색" name="search">
+                              <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
+                            </form>
+                          </div>
                     </div>
 
 
@@ -183,7 +224,7 @@
                             </ul>
                         </li>
                         
-                        <li><a href="./Goboardlist.do">커뮤니티</a>
+                        <li><a href="BoardList.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">정보공유</a></li>
                             <li><a href="#">자유게시판</a></li>
@@ -222,27 +263,27 @@
         </div>
     </div>
 <!-- 중고거래 글 및 이미지 등록 하는 곳 -->
-   <form action="./GoProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
-    <table id="Product_Style" align="center" >
+   <form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
+      
+    <table id="Product_Style" align="center">
         <tr class="border-bottom">
-          <th colspan="2" >
-            <h4>물품등록</h4>
-          </th>
-        </tr>
-
+            <th colspan="2">
+              <h4>물품등록</h4>
+            </th>
+          </tr>
         <tr>
           <td class="Product_Style_td">상품이미지</td>
-          <td>
-            <div class="logo">
-                <img src="img/free-icon-camera-685655.png" alt="">
+          <td class="imgInput">
+          
+         
      <!-- 이미지 미리보기 -->
-               <img id="previewImage" src="#" alt="Preview Image" width="200" height="200">
-            </div>
-            <div class="input-group mb-3">
-     <!-- 이미지 업로드  -->
-               <input name="fileName" type="file" class="form-co/ntrol" id="fileName" onchange="previewImage(event)"> 
-               
-              </div>
+               <img id="previewImage" src="#" alt="Preview Image" width="200px" height="200px">
+            
+               <div class="input-group mb-3" style="margin:0 auto;">
+                <!-- 이미지 업로드  -->
+                          <input name="file_name" type="file" class="form-co/ntrol" id="file_name" onchange="previewImage(event)"> 
+                          
+                         </div>
           </td>
         </tr>
 
@@ -250,7 +291,7 @@
           <td>글 제목</td>
           <td>
             <div>
-                <input id="title" name="title" class="ProductTitle" type="text" placeholder="글 제목">
+                <input class="ProductTitle" type="text" placeholder="글 제목">
             </div>
           </td>
         </tr>
@@ -294,7 +335,7 @@
             <td>상품설명</td>
             <td>
                 <div>
-                    <textarea id="itemsState" name="itemsState" class="ProductText" placeholder="여러 장의 상품 사진과 구입연도, 브랜드, 사용감, 하자유무 등 구매자에게 꼭 필요한 정보를 포함해주세요. (10자 이상)"></textarea>  
+                    <textarea id="items_state" name="items_state" class="ProductText" placeholder="여러 장의 상품 사진과 구입연도, 브랜드, 사용감, 하자유무 등 구매자에게 꼭 필요한 정보를 포함해주세요. (10자 이상)"></textarea>  
                 </div>
             </td>
           </tr>
@@ -303,7 +344,7 @@
             <td>상품태그</td>
             <td>
                 <div>
-                    <input id="tagId" name="tagId" class="tagId" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
+                    <input class="tag_id" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
                  </div>
             </td>
           </tr>
