@@ -7,5 +7,6 @@ encoding//src/main/webapp/WEB-INF/views/message.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/messagebox.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/payment.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/productdetail.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/productinput.jsp=UTF-8
 encoding//src/main/webapp/css/style.css=UTF-8
 separateDerivedEncodings=true

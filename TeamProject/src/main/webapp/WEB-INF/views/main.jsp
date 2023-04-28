@@ -67,7 +67,7 @@
         width: 40px;
         height: 40px;
       }
-    /* 상단바 줄이고 가운데정렬하는 코드입니당.*/
+    
 
     /* 상단바 위아래 선 코드 */
     header .nav-item {
