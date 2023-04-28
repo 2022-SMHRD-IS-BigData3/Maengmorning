@@ -74,14 +74,14 @@
       }
 
     #registration{
-	display: inline-block;
-	font-size: 16px;
-	color: #636363;
-	padding: 5px 15px;
-	border: 1px solid #ebebeb;
-	margin-right: 5px;
-	margin-bottom: 9px;
-	border-radius: 2px;
+   display: inline-block;
+   font-size: 16px;
+   color: #636363;
+   padding: 5px 15px;
+   border: 1px solid #ebebeb;
+   margin-right: 5px;
+   margin-bottom: 9px;
+   border-radius: 2px;
 }
 
 .single-banner {
@@ -297,24 +297,15 @@
                                         </div>
                                     </div>
                                     <div class="pi-text">
-
                                         <div class="catagory-name">외출용품 </div>
                                            </h5>
                                         </a>
-
                                         <div class="catagory-name">외출용품</div>
-                                   
-
-                                    
                                 </div>
                             </div>
                             </div>
                             </div>
-
                   <c:forEach items="${productlist}" var="list" varStatus="status">
-                  				
-                  				
-                  				
                                         <img src="./uploads/${imglist[status.index].file_name}" alt="이미지"><br>
                                             <span>글번호:${list.items_id}</span>
                                            <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
