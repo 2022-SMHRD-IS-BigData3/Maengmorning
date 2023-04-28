@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -263,7 +264,7 @@
                 <div class="col-lg-9 order-1 order-lg-2">
                  
 
-                    <form action="./Goproductinput.do">
+                    <form action="./GoProductinput.do">
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
@@ -296,13 +297,20 @@
                                         </div>
                                     </div>
                                     <div class="pi-text">
+<<<<<<< HEAD
+                                        <div class="catagory-name">외출용품 </div>
+                                           </h5>
+                                        </a>
+
                                         <div class="catagory-name">외출용품</div>
                                    
+
                                     
                                 </div>
                             </div>
                             </div>
                             </div>
+
                   <c:forEach items="${productlist}" var="list" varStatus="status">
                                         <img src="${pageContext.request.contextPath}/uploads/${product.file_name}">
                                             <span>${list.items_id}</span>
@@ -317,6 +325,7 @@
                                         <a class="area">${area[status.index].area }</a>
                                         <a class="date"><fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
                         </c:forEach>
+
                 </div>
             </div>
         </div>
