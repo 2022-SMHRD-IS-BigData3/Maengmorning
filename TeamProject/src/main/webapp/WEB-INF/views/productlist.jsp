@@ -197,7 +197,7 @@
                             <li><a href="#">기타</a></li>
                         </ul>
                     </li>
-                    <li><a href="./Goboardlist.do">커뮤니티</a>
+                    <li><a href="BoardList.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">정보공유</a></li>
                             <li><a href="#">자유게시판</a></li>
@@ -297,39 +297,35 @@
                                         </div>
                                     </div>
                                     <div class="pi-text">
+<<<<<<< HEAD
                                         <div class="catagory-name">외출용품 </div>
                                            </h5>
                                         </a>
+
+                                        <div class="catagory-name">외출용품</div>
+                                   
+
                                     
                                 </div>
                             </div>
                             </div>
                             </div>
-<c:forEach items="${productlist}" var="list" varStatus="status">
-  <div class="product-item">
-    <div class="product-image">
-      <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
-      <img src="${pageContext.request.contextPath}/uploads/${imglist.fileName[status.index]}.jpg">
-    </div>
-    <div class="product-details">
-      <span>${list.itemsId}</span>
-      <a href="Productdetail.do?items_id=${list.itemsId}">
-        <h5 id="title">${list.title}</h5>
-      </a>
-      <div class="product-price">
-        ${list.price}원<br>
-      </div>
-      <div class="product-area">
-        <a class="area">${area[status.index].area}</a>
-      </div>
-      <div class="product-date">
-        <a class="date"><fmt:formatDate value="${list.upDate}" pattern="yyyy.MM.dd"/></a>
-      </div>
-    </div>
-  </div>
-</c:forEach>
 
- 
+                  <c:forEach items="${productlist}" var="list" varStatus="status">
+                                        <img src="${pageContext.request.contextPath}/uploads/${product.file_name}">
+                                            <span>${list.items_id}</span>
+                                            <a href="Productdetail.do?items_id=${list.items_id}">
+                                           <h5 id="title">
+                                            	${list.title}
+                                            	</h5>
+                                            </a>
+                                        <div class="product-price">
+                                            ${list.price}원<br>
+                                        </div>
+                                        <a class="area">${area[status.index].area }</a>
+                                        <a class="date"><fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
+                        </c:forEach>
+
                 </div>
             </div>
         </div>

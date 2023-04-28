@@ -10,7 +10,6 @@ public class MemberVO {
 	private String nickName;
 	private String manner;
 	
-	
 	public MemberVO(String id, String pw, String tel, String area, String name, String nickName, String manner) {
 		super();
 		this.id = id;
@@ -81,6 +80,6 @@ public class MemberVO {
 	public void setManner(String manner) {
 		this.manner = manner;
 	}
-
+	
 	
 }
