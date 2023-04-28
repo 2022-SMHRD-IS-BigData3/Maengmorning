@@ -31,7 +31,126 @@
   </head>
 
   <style>
-   /* 검색창 */
+  /* 스타일링 */
+ 	 .search-container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+      }
+      
+      .search-button {
+        background-color: rgb(230, 177, 0);
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        margin-top: 8px;
+        margin-left: -5px;
+        cursor: pointer;
+      }
+      
+      .search-button:hover {
+        background-color: #ccc;
+      }
+
+      input#search {
+        width: 400px;
+      }
+
+      button.search-button {
+        width: 40px;
+        height: 40px;
+      }
+      
+      /* 상단바 위아래 선 코드 */
+    header .nav-item {
+    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    border-top: 2px solid rgb(204, 201, 201); /* 위 선 */
+    }
+    h4 {
+    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    padding-bottom: 10px;
+    }
+    .productShopDetail, .communityShopDetail {
+        margin-left: 1050px;
+        margin-top: 20px;
+    }
+
+    
+
+      .nav-item>a {
+        padding-left: 0;
+      }
+
+      .nav-item>a {
+        margin-left: 0;
+      }
+ 	
+     table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #e7ab3c;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #ddd;
+      }
+      h3 {
+        margin-bottom: 20px;
+      }
+       .product-shop.spad {
+        padding-top: 0px;
+    }
+    
+     #registration{
+   display: inline-block;
+   font-size: 16px;
+   color: #636363;
+   padding: 5px 15px;
+   border: 1px solid #ebebeb;
+   margin-right: 5px;
+   margin-bottom: 9px;
+   border-radius: 2px;
+   
+   .single-banner {
+         width: 570.98px;
+         height: 330.55px;
+         overflow: hidden;
+     }
+     .single-banner {
+         width: 570.00px;
+         height: 330.55px;
+         overflow: hidden;
+     }
+     
+     .col-lg-12{
+         margin-top: 10px;
+         margin-left: 1700px;
+     }
+ 
+     .logo {
+         width: 300px;
+         
+     }
+   
+    
+  
+  /* 검색창 */
     .search-container {
         display: flex;
         justify-content: center;
@@ -69,6 +188,9 @@
       }
     
 
+      
+    
+
     /* 상단바 위아래 선 코드 */
     header .nav-item {
     border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
@@ -83,15 +205,7 @@
         margin-top: 20px;
     }
 
-    .nav-item,
-    .hero-section,
-    .row {
-      max-width: 1200px;
-      margin: 0 auto;
-
-      .nav-item>a {
-        padding-left: 0;
-      }
+   
 
       .nav-item>a {
         margin-left: 0;
@@ -126,7 +240,9 @@
         border-bottom: solid 2px;
       }
       
-     
+     .productShopDetail {
+     margin-left: 1600px
+     }
      
  
      
@@ -190,10 +306,7 @@
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-     
-      <div class="nav-item">
+        </div><div class="nav-item">
         <div class="container">
           <nav class="nav-menu mobile-menu">
             
@@ -231,7 +344,10 @@
                   </ul>
                 </nav>
               </header>
-
+        
+      </div>
+     
+      
     
             
           </nav>
@@ -285,49 +401,22 @@
           </div>
 
 		
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
           
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <image src="./uploads/" alt="이미지" width="100%" height="225" />
-              </svg>
-              <div class="card-body">
-                <p class="card-text">제목 : <br><br> 상세설명 : 장소:</p>
+			 <div class="row">
+			  <c:forEach items="${productlist}" var="list" varStatus="status">
+			    <c:if test="${status.index<3}">
+			      <div class="col-sm-4">
+			        <div class="card shadow-sm">
+			          <div class="card-body">
+			            <img width="300px" height="300px" src="./uploads/${imglist[status.index].file_name}" alt="이미지">
+			            <p class="card-text" name="title">제목: ${list.title}<br><br> 상세설명: ${list.items_state}</p>
+			          </div>
+			        </div>
+			      </div>
+			    </c:if>
+			  </c:forEach>
+			</div>
           
-              </div>
-            </div>
-          </div>
- 
-          <div class="col">
-   <c:forEach items="${productlist}" var="list" varStatus="status">
-           <c:if test="${status.index<3}">
-            <div class="card shadow-sm">
-              
-              <div class="card-body">
-                <img src="./uploads/${imglist[status.index].file_name}" alt="이미지" >
-                <p class="card-text" name="title">제목 :${list.title}<br><br> 상세설명 : ${list.items_state}</p>
-              </div>
-            </div>
-           </c:if>
-  </c:forEach>
-          </div>
-          
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
-              </svg>
-
-              <div class="card-body">
-                <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
-              </div>
-            </div>
-          </div>
    
 
         <form action="./Goproductlist.do">
@@ -346,55 +435,36 @@
       <div class="album py-5 bg-body-tertiary">
         <div class="container">
             <div class="productShop">
-                <h4>카테고리</h4>
+                <h4>커뮤니티</h4>
                 <br>
             </div>
 
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Placeholder</title>
-                  <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
-                </svg>
+	
+			<div class="col">
+                     <table>
+                     <thead>
+                            <tr>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>동네</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                           <c:forEach items="${Blist}" var="blist" varStatus="status">
+                       	 <c:if test="${status.index<5}">
+                            	<td>${blist.title}</td>
+                            	<td>${blist.user_id}</td>
+                          		  <td>${area[status.index].area}</td>
+                          		  </tr>
+                          		  </c:if>
+                        </c:forEach>
+                        </tbody>
+                        </table>
+                        
+                       
 
-                <div class="card-body">
-                  <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
-                </div>
-              </div>
-            </div>
 
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Placeholder</title>
-                  <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Placeholder</title>
-                  <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
-                </div>
-              </div>
-            </div>
 
             <form action="./Goboardlist.do">
             <div class="productShopDetail">
