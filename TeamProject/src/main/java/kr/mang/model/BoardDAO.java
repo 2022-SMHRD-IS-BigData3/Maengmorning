@@ -95,37 +95,6 @@ public class BoardDAO {
 					session.close();
 				}
 			}
-			
-			
-			public List<BoardVO> commentlist(String comment) {
-			    SqlSession session = null;
-			    List<BoardVO> commentlist = null;
-			    
-			    try {
-			        System.out.println("댓글 조회 시작");
-			        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
-			        session = sqlSessionFactory.openSession(true);
-			        System.out.println("session: " + session);
-			        // insert 후에 자동 생성된 ID 값을 받아오기 위해 selectOne 메소드 사용
-			        int insertResult = session.insert("board_comment", comment);
-			        // insert 후 자동 생성된 ID 값을 selectOne 메소드로 받아옴
-			        commentlist = session.selectList("selectList", insertResult);
-			        session.commit();
-			    } catch (Exception e) {
-			        System.out.println("조회 실패");
-			        e.printStackTrace();
-			    } finally {
-			        System.out.println("세션 닫기");
-			        if (session != null) {
-			            session.close();
-			        }
-			    }
-			    return commentlist;
-			}
-			
-			
-			
-			
 	
 	
 	

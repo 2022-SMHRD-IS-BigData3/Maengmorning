@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.mang.controller.ProductList;
-import kr.mang.controller.comment;
 import kr.mang.controller.BoardInput;
 import kr.mang.controller.BoardList;
 import kr.mang.controller.Boarddetail;
@@ -52,7 +51,6 @@ public class FrontController extends HttpServlet {
 		map.put("BoardList.do", new BoardList());
 		map.put("Boarddetail.do", new Boarddetail());
 		map.put("BoardInput.do", new BoardInput());
-		map.put("comment.do", new comment());
 		
 
 	}
@@ -78,7 +76,6 @@ public class FrontController extends HttpServlet {
 		else if (finalpath.contains("redirect:/")) {
 			response.sendRedirect(finalpath.substring(10));
 		} else {
-			System.out.println(finalpath);
 			
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/" +finalpath);
 		
