@@ -32,6 +32,13 @@
   	values('B'||BOARD_IMG_ID.nextval, NULL,#{file_name})
   </insert>
 
-
+<insert id="board_comment" parameterType="kr.mang.model.BoardVO">
+  	insert into board_comment(b_comment_id, board_comment, user_id, c_write_date) 
+  	values('cAbvffgvc',#{comment},'123',null)
+  </insert>
+  
+  <select id="get_comments" resultType="kr.mang.model.BoardVO">
+  	select * from board_comment
+  </select>
 	
 </mapper>
