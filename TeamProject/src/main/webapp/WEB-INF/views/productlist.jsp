@@ -1,4 +1,3 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -74,14 +73,14 @@
       }
 
     #registration{
-   display: inline-block;
-   font-size: 16px;
-   color: #636363;
-   padding: 5px 15px;
-   border: 1px solid #ebebeb;
-   margin-right: 5px;
-   margin-bottom: 9px;
-   border-radius: 2px;
+	display: inline-block;
+	font-size: 16px;
+	color: #636363;
+	padding: 5px 15px;
+	border: 1px solid #ebebeb;
+	margin-right: 5px;
+	margin-bottom: 9px;
+	border-radius: 2px;
 }
 
 .single-banner {
@@ -197,7 +196,7 @@
                             <li><a href="#">기타</a></li>
                         </ul>
                     </li>
-                    <li><a href="BoardList.do">커뮤니티</a>
+                    <li><a href="./Goboardlist.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">정보공유</a></li>
                             <li><a href="#">자유게시판</a></li>
@@ -264,7 +263,7 @@
                 <div class="col-lg-9 order-1 order-lg-2">
                  
 
-                    <form action="./GoProductinput.do">
+                    <form action="./Goproductinput.do">
                     <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
@@ -297,27 +296,21 @@
                                         </div>
                                     </div>
                                     <div class="pi-text">
-<<<<<<< HEAD
-                                        <div class="catagory-name">외출용품 </div>
+                                        <div class="catagory-name">외출용품</div>
                                            </h5>
                                         </a>
-
-                                        <div class="catagory-name">외출용품</div>
-                                   
-
                                     
                                 </div>
                             </div>
                             </div>
                             </div>
-
                   <c:forEach items="${productlist}" var="list" varStatus="status">
                                         <img src="${pageContext.request.contextPath}/uploads/${product.file_name}">
                                             <span>${list.items_id}</span>
                                             <a href="Productdetail.do?items_id=${list.items_id}">
+                                        <a href="#">
                                            <h5 id="title">
-                                               ${list.title}
-                                               </h5>
+                                            	${list.title}
                                             </a>
                                         <div class="product-price">
                                             ${list.price}원<br>
@@ -325,7 +318,6 @@
                                         <a class="area">${area[status.index].area }</a>
                                         <a class="date"><fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
                         </c:forEach>
-
                 </div>
             </div>
         </div>

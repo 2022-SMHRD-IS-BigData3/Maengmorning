@@ -1,11 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@page import="kr.mang.model.ProductlistVO"%>
-<%@ page import="java.io.File" %>
-<%@ page import="java.util.Enumeration" %>
-<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
-<%@ page import="com.oreilly.servlet.MultipartRequest"%>
   <!DOCTYPE html>
   <html lang="zxx">
 
@@ -187,7 +180,7 @@
                   </c:if>
                   		
                   	<c:if test="${!empty uId}">
-                  	<a href="./Gologout.do">로그아웃</a>
+                  	<a href="./Gologout.do">로그인</a>
                   	</c:if>
                   
                   
@@ -209,7 +202,7 @@
                 <nav>
                   <ul>
                     <li><a href="./Gomain.do">Home</a></li>
-                    <li><a href="ProductList.do">중고거래</a>
+                    <li><a href="./Goproductlist.do">중고거래</a>
                         <ul class="dropdown">
                             <li><a href="#">외출용품</a></li>
                             <li><a href="#"> 장난감/도서</a></li>
@@ -293,21 +286,20 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
-           
+            
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                 role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <title>Placeholder</title>
-                 <img src="${pageContext.request.contextPath}/uploads/${product.fileName}">
                 <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
               </svg>
 		
               <div class="card-body">
-                <p class="card-text" id="title">${list.title}</p><br><p><br> </p>
+                <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
               </div>
             </div>
-
           </div>
+ 
           <div class="col">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"

@@ -76,7 +76,10 @@
     border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
     border-top: 2px solid rgb(204, 201, 201); /* 위 선 */
     }
-  
+    h4 {
+    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    padding-bottom: 10px;
+    }
     .productShopDetail, .communityShopDetail {
         margin-left: 1050px;
         margin-top: 20px;
@@ -134,7 +137,63 @@
         height: 40px;
       }
     
-       
+        /* 상단바 줄이고 가운데정렬하는 코드입니당.*/
+        .nav-item,
+        .hero-section,
+        .row {
+            max-width: 1100px;
+            margin: 0 auto;
+
+
+
+            .logo {
+                width: 300px;
+
+            }
+
+            div>.container {
+                margin-left: 600px;
+            }
+
+
+
+            .table {
+                margin-top: -45px;
+            }
+
+            #registration {
+                display: inline-block;
+                font-size: 16px;
+                color: #636363;
+                padding: 5px 15px;
+                border: 1px solid #ebebeb;
+                margin-right: 5px;
+                margin-bottom: 9px;
+                border-radius: 2px;
+            }
+
+            .single-banner {
+                width: 570.98px;
+                height: 330.55px;
+                overflow: hidden;
+            }
+
+            .single-banner {
+                width: 570.00px;
+                height: 330.55px;
+                overflow: hidden;
+            }
+
+            .col-lg-12 {
+                margin-top: 10px;
+                margin-left: 1700px;
+            }
+
+            .logo {
+                width: 300px;
+
+            }
+
             /* 스타일링 */
             .post-info {
                 border-bottom: 1px solid #ccc;
