@@ -196,7 +196,7 @@
                             <li><a href="#">기타</a></li>
                         </ul>
                     </li>
-                    <li><a href="./Goboardlist.do">커뮤니티</a>
+                    <li><a href="BoardList.do">커뮤니티</a>
                         <ul class="dropdown">
                             <li><a href="#">정보공유</a></li>
                             <li><a href="#">자유게시판</a></li>
@@ -297,8 +297,7 @@
                                     </div>
                                     <div class="pi-text">
                                         <div class="catagory-name">외출용품</div>
-                                           </h5>
-                                        </a>
+                                   
                                     
                                 </div>
                             </div>
@@ -308,9 +307,9 @@
                                         <img src="${pageContext.request.contextPath}/uploads/${product.file_name}">
                                             <span>${list.items_id}</span>
                                             <a href="Productdetail.do?items_id=${list.items_id}">
-                                        <a href="#">
                                            <h5 id="title">
                                             	${list.title}
+                                            	</h5>
                                             </a>
                                         <div class="product-price">
                                             ${list.price}원<br>
