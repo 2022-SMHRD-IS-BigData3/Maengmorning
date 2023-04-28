@@ -28,15 +28,6 @@ public class ProductlistDAO {
 			session = sqlSessionFactory.openSession();
 			list = session.selectList("productlist");
 			System.out.println(list);
-		//	ProductlistDAO dao = new ProductlistDAO();
-		//	 list = dao.productList();
-
-		//	for (ProductlistVO product : list) {
-			 
-		//	    System.out.println("file_name"+product.getFile_name());
-			//     and so on for other properties you want to check
-		//}
-		
 		} finally {
 			System.out.println("리스트 가져옴");
 			session.close();
@@ -60,7 +51,10 @@ public class ProductlistDAO {
 		return imglist;
 	}
 	
-
+	
+	
+	 
+/////////////////////////////////////////////////////////////////////////////////////////
 	// 중고거래 물품 상세페이지
 	public ProductlistVO detail(int items_id) {
 		SqlSession session = null;

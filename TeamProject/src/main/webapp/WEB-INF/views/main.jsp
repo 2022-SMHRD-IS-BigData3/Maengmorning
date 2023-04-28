@@ -284,36 +284,37 @@
               <br>
           </div>
 
+		
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
-            
+          
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                 role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <title>Placeholder</title>
-                <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
+                <image src="./uploads/" alt="이미지" width="100%" height="225" />
               </svg>
-		
               <div class="card-body">
-                <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
+                <p class="card-text">제목 : <br><br> 상세설명 : 장소:</p>
+          
               </div>
             </div>
           </div>
  
           <div class="col">
+   <c:forEach items="${productlist}" var="list" varStatus="status">
+           <c:if test="${status.index<3}">
             <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
-              </svg>
-
+              
               <div class="card-body">
-                <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
+                <img src="./uploads/${imglist[status.index].file_name}" alt="이미지" >
+                <p class="card-text" name="title">제목 :${list.title}<br><br> 상세설명 : ${list.items_state}</p>
               </div>
             </div>
+           </c:if>
+  </c:forEach>
           </div>
-
+          
           <div class="col">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
@@ -327,6 +328,7 @@
               </div>
             </div>
           </div>
+   
 
         <form action="./Goproductlist.do">
           <div class="productShopDetail">
@@ -334,12 +336,8 @@
             <br>
         </div>
         </form>
-
         </div>
       </div>
-
-
-      
  </div>
    
       <!-- 커뮤니티 -->
