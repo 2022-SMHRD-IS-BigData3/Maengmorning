@@ -34,8 +34,8 @@
   </insert>
   
   <insert id="selectList" parameterType="kr.mang.model.BoardVO">
-  	insert into board_comment
-  	values('abs',#{comment},'123',NULL)
+  	insert into board_comment(b_comment_id, board_comment, user_id, c_write_date)
+  values('abs',123,'123',NULL)
   </insert>
 
 
