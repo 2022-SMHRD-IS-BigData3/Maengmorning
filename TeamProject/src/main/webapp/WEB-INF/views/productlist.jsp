@@ -309,7 +309,7 @@
   <div class="product-item">
     <div class="product-image">
       <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
-      <img src="${pageContext.request.contextPath}/uploads/${imglist[status.index]['fileName']}.jpg">
+      <img src="${pageContext.request.contextPath}/uploads/${imglist.fileName[status.index]}.jpg">
     </div>
     <div class="product-details">
       <span>${list.itemsId}</span>
