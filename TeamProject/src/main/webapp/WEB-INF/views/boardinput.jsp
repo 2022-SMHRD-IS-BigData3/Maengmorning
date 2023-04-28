@@ -33,6 +33,43 @@
 
 <style>
 
+/* 검색창 */
+     .search-container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+       
+      }
+      
+      .search-button {
+        background-color: rgb(230, 177, 0);
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        margin-top: 8px;
+        margin-left: -5px;
+        cursor: pointer;
+      }
+      
+      .search-button:hover {
+        background-color: #ccc;
+      }
+
+      input#search {
+        width: 400px;
+      }
+
+      button.search-button {
+        width: 40px;
+        height: 40px;
+      }
+
+
 
     div .leave-comment {
         margin-top: 100px;
@@ -101,16 +138,22 @@
         height: 400px;
     }
     
-    /*표*/
+   /*표*/
      table #Product_Style {
     width: 100%;
-    border: 2px solid #777676;
+    border: 2px solid #c4c1c1;
     border-collapse: collapse;
   }
   th, td {
-    border: 1px solid #777676;
+    border: 1px solid #c4c1c1;
     padding: 10px;
   }
+  td.imgInput {
+  height: 400px;
+   }
+   .tag_id {
+    width: 675px;
+   }
     
 </style>
 
@@ -140,13 +183,13 @@
                     </div>
 
                     
-                    <div class="col-lg-7 col-md-7">
-                        <div class="advanced-search">
-                            <div class="input-group">
-                                <input type="text" placeholder="검색">
-                                <button type="button"><i class="ti-search"></i></button>
-                            </div>
-                        </div>
+                     <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
+                        <div class="search-container">
+                            <form action="/search">
+                              <input class="border" id="search" type="text" placeholder="검색" name="search">
+                              <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
+                            </form>
+                          </div>
                     </div>
 
 
@@ -226,24 +269,27 @@
     </div>
 
 <!-- 커뮤니티 글 및 이미지 등록 하는 곳 -->
-   <form action="BoardInput.do" method="post" enctype="multipart/form-data" class ="comment-form">
+<form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
+      
     <table id="Product_Style" align="center">
         <tr class="border-bottom">
-          <th colspan="2" >
-            <h4>커뮤니티 글 등록</h4>
-          </th>
-        </tr>
+            <th colspan="2">
+              <h4>커뮤니티 글 등록</h4>
+            </th>
+          </tr>
         <tr>
           <td class="Product_Style_td">이미지</td>
-          <td>
-  <!-- 이미지 미리보기 -->
-            <div class="logo">
-                <img id="previewImage" src="#" alt="Preview Image" width="200" height="200">
-            </div>
-   <!-- 이미지 업로드  -->
-            <div class="input-group mb-3">
-                 <input name="file_name" type="file" class="form-co/ntrol" id="file_name" onchange="previewImage(event)"> 
-              </div>
+          <td class="imgInput">
+          
+         
+     <!-- 이미지 미리보기 -->
+               <img id="previewImage" src="#" alt="Preview Image" width="200px" height="200px">
+            
+               <div class="input-group mb-3" style="margin:0 auto;">
+                <!-- 이미지 업로드  -->
+                          <input name="file_name" type="file" class="form-co/ntrol" id="file_name" onchange="previewImage(event)"> 
+                          
+                         </div>
           </td>
         </tr>
 
