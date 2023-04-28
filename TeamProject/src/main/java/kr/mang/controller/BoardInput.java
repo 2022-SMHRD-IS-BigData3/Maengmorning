@@ -23,7 +23,6 @@ public class BoardInput implements Command {
     String file_name = multi.getFilesystemName("file_name");
     String title = multi.getParameter("title");
     String board_content = multi.getParameter("board_content");
-   
     Date up_date = new Date();
     System.out.println(file_name);
     System.out.println(title);

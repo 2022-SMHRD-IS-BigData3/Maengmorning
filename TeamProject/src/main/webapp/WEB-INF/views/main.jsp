@@ -357,11 +357,18 @@
                   xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                   preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>Placeholder</title>
-                  <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
                 </svg>
-
                 <div class="card-body">
-                  <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
+                  <p class="card-text">    
+                  <c:forEach items="${Blist}" var="blist" varStatus="status">
+                  		<c:if test="${status.index<3}">
+							<tr>
+                            	<td> 제목 : ${blist.title} </td>
+                            	<td>작성자 :${blist.user_id}</td>
+                          		 <td>장소: ${area[status.index].area}</td>
+                            </tr>
+                            </c:if>
+                        </c:forEach></p>
                 </div>
               </div>
             </div>
