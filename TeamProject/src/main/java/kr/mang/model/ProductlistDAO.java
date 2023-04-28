@@ -33,15 +33,34 @@ public class ProductlistDAO {
 		}
 		return list;
 	}
-
-	// 중고거래 물품 상세페이지
-	public ProductlistVO detail(int items_id) {
+	
+	// 중고거래 등록 이미지 전체 리스트 가져오기
+	public List<ProductlistVO> imgList(){
 		SqlSession session = null;
-		ProductlistVO detail = null;
-		System.out.println("");
+		List<ProductlistVO> imglist = null;
+		System.out.println("리스트가져와야지");
 		try {
 			session = sqlSessionFactory.openSession();
-			detail = session.selectOne("productdetail", items_id);
+			imglist = session.selectList("imglist");
+			System.out.println(imglist);
+		} finally {
+			System.out.println("리스트 가져옴");
+			session.close();
+		}
+		return imglist;
+	}
+	
+
+	// 중고거래 물품 상세페이지
+	public ProductlistVO detail(int itemsId) {
+		SqlSession session = null;
+		ProductlistVO detail = null;
+		System.out.println("물건등록");
+		try {
+			session = sqlSessionFactory.openSession();
+			detail = session.selectOne("productdetail", itemsId);
+			System.out.println(detail);
+			System.out.println("등록했다.");
 		} finally {
 			session.close();
 		}

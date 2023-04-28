@@ -13,23 +13,31 @@
   		  FROM ITEMS
   		 ORDER BY ITEMS_ID DESC
   </select>
+  <select id="imglist" resultType="kr.mang.model.ProductlistVO">
+  		SELECT ITEMS_IMG_ID, FILE_NAME
+  		  FROM ITEMS_IMG
+  		 ORDER BY ITEMS_IMG_ID DESC
+  </select>
+  
   <!-- 등록물품 상세보기 -->
   <select id="productdetail" parameterType="int" resultType="kr.mang.model.ProductlistVO">
-  		SELECT A.ITEMS_ID, A.TITLE, A.ITEMS_STATE, A.PRICE, A.USER_ID, A.UP_DATE, B.ITEMS_IMG_ID, D.TAG_CONT
-          FROM ITEMS A LEFT JOIN ITEMS_IMG B ON A.ITEMS_IMG_ID = B.ITEMS_IMG_ID
-                       LEFT JOIN USER_INFO C ON A.USER_ID = C.USER_ID
-          	           LEFT JOIN TAG_INFO D ON A.TAG_ID = D.TAG_ID
-		 WHERE A.ITEMS_ID = A.#{items_id}
+  		SELECT A.ITEMS_ID, A.TITLE, A.ITEMS_STATE, A.PRICE, A.USER_ID, A.UP_DATE, B.FILE_NAME
+          FROM ITEMS A INNER JOIN ITEMS_IMG B ON(A.ITEMS_IMG_ID = B.ITEMS_IMG_ID )
+		 WHERE A.ITEMS_ID = #{itemsId}
+		 
   </select>
+
+  
+  
   <!-- 물품 판매글 등록 -->
   <insert id="productinput" parameterType="kr.mang.model.ProductlistVO">
   	insert into ITEMS(ITEMS_ID, TITLE, ITEMS_STATE, PRICE, UP_DATE, ITEMS_IMG_ID,USER_ID,TAG_ID)
-  	values(ITEMS_ID.nextval, #{title}, #{items_state}, #{price}, sysdate, NULL, NULL, NULL)
+  	values(ITEMS_ID.nextval, #{title}, #{itemsState}, #{price}, sysdate, NULL, NULL, NULL)
   </insert>
   
   <insert id="imginput" parameterType="kr.mang.model.ProductlistVO">
   	insert into ITEMS_IMG(ITEMS_IMG_ID, PATH_IMG, FILE_NAME)
-  	values('U'||ITEMS_IMG_ID.nextval, NULL,#{file_name})
+  	values('U'||ITEMS_IMG_ID.nextval, NULL,#{fileName})
   </insert>
   
 </mapper>

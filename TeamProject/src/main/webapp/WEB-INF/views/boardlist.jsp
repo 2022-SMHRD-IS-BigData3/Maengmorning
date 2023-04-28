@@ -308,12 +308,13 @@
                         </thead>
                         <tbody>
                         
-                          <c:forEach items="${Blist}" var="list" varStatus="status">
-                            <tr>
+
+                         <c:forEach items="${Blist}" var="list" varStatus="status">
+							<tr>
                             	<td>${list.board_id}</td>
                             	<td> ${list.title} </td>
                             	<td>${list.user_id}</td>
-                          		  <td>${area[status.index].area}</td>
+                          		 <td>${area[status.index].area}</td>
                             </tr>
                         </c:forEach>
                         </tbody>
