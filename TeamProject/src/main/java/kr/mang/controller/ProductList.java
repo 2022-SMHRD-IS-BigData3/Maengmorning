@@ -21,15 +21,13 @@ public class ProductList implements Command {
 		
         List<ProductlistVO> list = dao.productList();
 		List<MemberVO> area = mdao.getArea();
-		List<ProductlistVO> fileName = dao.imgList();
-		System.out.println(fileName.size());
-		System.out.println(area.size());
-		System.out.println(list.size());
+		//List<ProductlistVO> fileName = dao.imgList();
+		
 		
 		request.setAttribute("productlist", list);
 		request.setAttribute("area", area);
-		request.setAttribute("imglist", fileName);
-		System.out.println(fileName.size());
+		//request.setAttribute("imglist", fileName);
+		//System.out.println(fileName.size());
 		System.out.println(area.size());
 		System.out.println(list.size());
 		

@@ -297,7 +297,7 @@
                                         </div>
                                     </div>
                                     <div class="pi-text">
-<<<<<<< HEAD
+
                                         <div class="catagory-name">외출용품 </div>
                                            </h5>
                                         </a>
@@ -312,9 +312,11 @@
                             </div>
 
                   <c:forEach items="${productlist}" var="list" varStatus="status">
-                                        <img src="${pageContext.request.contextPath}/uploads/${product.file_name}">
-                                            <span>${list.items_id}</span>
-                                            <a href="Productdetail.do?items_id=${list.items_id}">
+                  				
+                                        <img src="${pageContext.request.contextPath}/uploads/${list.fileName}">
+                                            <span>${list.itemsId}</span>
+                                           <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
+                                            <a href="Productdetail.do?itemsId=${list.itemsId}">
                                            <h5 id="title">
                                             	${list.title}
                                             	</h5>
@@ -323,7 +325,7 @@
                                             ${list.price}원<br>
                                         </div>
                                         <a class="area">${area[status.index].area }</a>
-                                        <a class="date"><fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
+                                        <a class="date"><fmt:formatDate value="${list.upDate}" pattern="yyyy.MM.dd"/></a>
                         </c:forEach>
 
                 </div>

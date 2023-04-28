@@ -11,12 +11,14 @@
 	<select id="productlist" resultType="kr.mang.model.ProductlistVO"><!-- resultType은 select할때 사용 -->
   		SELECT ITEMS_ID,TITLE,ITEMS_STATE,PRICE,UP_DATE,USER_ID
   		  FROM ITEMS
-  		 ORDER BY ITEMS_ID DESC
+  		 ORDER BY ITEMS_IMG_ID DESC
   </select>
   <select id="imglist" resultType="kr.mang.model.ProductlistVO">
-  		SELECT ITEMS_IMG_ID, FILE_NAME
-  		  FROM ITEMS_IMG
-  		 ORDER BY ITEMS_IMG_ID DESC
+  		SELECT i.ITEMS_ID, i.TITLE,i.ITEMS_STATE,i.PRICE,i.UP_DATE,i.USER_ID,img.FILE_NAME
+		  FROM ITEMS i
+				LEFT OUTER JOIN ITEMS_IMG img ON i.ITEMS_ID = img.ITEMS_ID
+		 ORDER BY i.UP_DATE DESC
+
   </select>
   
   <!-- 등록물품 상세보기 -->

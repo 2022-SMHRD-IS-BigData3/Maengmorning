@@ -12,7 +12,7 @@ import kr.mang.model.ProductlistVO;
 
 public class ProductInput implements Command {
   public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String savePath = request.getServletContext().getRealPath("/uploads");
+    String savePath = request.getServletContext().getRealPath("/")+"uploads/";
     int maxSize = 1024 * 1024 * 10; // 10MB
 
     MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, "UTF-8", new DefaultFileRenamePolicy());

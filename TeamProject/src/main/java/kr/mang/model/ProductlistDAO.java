@@ -27,6 +27,7 @@ public class ProductlistDAO {
 		try {
 			session = sqlSessionFactory.openSession();
 			list = session.selectList("productlist");
+			System.out.println(list);
 		} finally {
 			System.out.println("리스트 가져옴");
 			session.close();
@@ -38,13 +39,12 @@ public class ProductlistDAO {
 	public List<ProductlistVO> imgList(){
 		SqlSession session = null;
 		List<ProductlistVO> imglist = null;
-		System.out.println("리스트가져와야지");
+		System.out.println("img리스트가져와야지");
 		try {
 			session = sqlSessionFactory.openSession();
 			imglist = session.selectList("imglist");
-			System.out.println(imglist);
 		} finally {
-			System.out.println("리스트 가져옴");
+			System.out.println("img리스트 가져옴");
 			session.close();
 		}
 		return imglist;
