@@ -67,6 +67,20 @@ public class MemberDAO {
 		
 	}
 
+public MemberVO BoardDetail(int board_id) {
+		
+		MemberVO mdetail = null;
+	
+		try {
+			session = sqlSessionFactory.openSession(true);
+			 mdetail = session.selectOne("getuser",board_id);
+			
+	} finally {
+		session.close();
+	}
+				
+		return mdetail;
+	}
 
 	
 
