@@ -12,10 +12,10 @@ import kr.mang.model.ProductlistVO;
 public class ProductDetail implements Command{
 	private ProductlistDAO productlistDAO;
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int itemsId = Integer.parseInt(request.getParameter("itemsId"));
-		System.out.println(itemsId);
+		int items_id = Integer.parseInt(request.getParameter("items_id"));
+		System.out.println(items_id);
 		ProductlistDAO dao = new ProductlistDAO();
-		ProductlistVO vo = dao.detail(itemsId);
+		ProductlistVO vo = dao.detail(items_id);
 		//MemberVO mvo = mdao.selectOne(vo.getUser_id());
 		System.out.println(vo);
 		request.setAttribute("detail", vo);

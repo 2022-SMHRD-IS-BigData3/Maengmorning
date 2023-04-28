@@ -292,7 +292,7 @@
                                 </tr>
                                 <tr>
                                 	<td>
-                                	 	<img alt="Product Image" src="${detail.fileName}">
+                                	 	<img alt="Product Image" src="${detail.file_name}">
                                 	</td>
                                 </tr>
                                 <tr>
@@ -306,7 +306,7 @@
                             <table class="ProductHeader">
                                 <tr>
                                     <td class="tdTitle">- 판매자</td>
-                                    <td class="tdText">${detail.userId }성영맘</td>
+                                    <td class="tdText">${detail.user_id }성영맘</td>
                                 </tr>
                                 <tr>
                                     <td class="tdTitle">- 거래지역</td>
@@ -318,7 +318,7 @@
                                 </tr>
                                 <tr>
                                     <td class="tdTitle">- 상품태그</td>
-                                    <td class="tdText">${detail.tag}#유아용품 #유아의류</td>
+                                    <td class="tdText">${detail.tag_id}#유아용품 #유아의류</td>
                                 </tr>
                            
                            
@@ -336,7 +336,7 @@
                         </tr>
                         <tr>
                             <td>
-                            ${detail.itemsState}
+                            ${detail.items_state}
                             샀는데 저희아기한테 안맞네요
 
                             포장 그대로있는 새상품이구요

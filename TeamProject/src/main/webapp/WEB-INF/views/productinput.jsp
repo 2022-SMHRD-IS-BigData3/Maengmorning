@@ -263,7 +263,7 @@
         </div>
     </div>
 <!-- 중고거래 글 및 이미지 등록 하는 곳 -->
-   <form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
+   <form action="./GoProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
       
     <table id="Product_Style" align="center">
         <tr class="border-bottom">
@@ -291,7 +291,7 @@
           <td>글 제목</td>
           <td>
             <div>
-                <input class="ProductTitle" type="text" placeholder="글 제목">
+                <input id="title" name="title" class="ProductTitle" type="text" placeholder="글 제목">
             </div>
           </td>
         </tr>

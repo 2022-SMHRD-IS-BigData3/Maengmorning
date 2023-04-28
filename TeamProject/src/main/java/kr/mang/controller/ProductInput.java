@@ -12,27 +12,27 @@ import kr.mang.model.ProductlistVO;
 
 public class ProductInput implements Command {
   public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String savePath = request.getServletContext().getRealPath("/")+"uploads/";
+    String savePath = request.getServletContext().getRealPath("/uploads");
     int maxSize = 1024 * 1024 * 10; // 10MB
 
     MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, "UTF-8", new DefaultFileRenamePolicy());
     
-    String fileName = multi.getFilesystemName("fileName");
+    String file_name = multi.getFilesystemName("file_name");
     String title = multi.getParameter("title");
-    String itemsState = multi.getParameter("itemsState");
+    String items_state = multi.getParameter("items_state");
     String price = multi.getParameter("price");
-    Date upDate = new Date();
-    System.out.println(fileName);
+    Date upload_date = new Date();
+    System.out.println(file_name);
     System.out.println(title);
-    System.out.println(itemsState);
+    System.out.println(items_state);
     System.out.println(price);
-    System.out.println(upDate);
+    System.out.println(upload_date);
     // 위에서 받아온 데이터 파라메터 수집
     ProductlistVO vo = new ProductlistVO();
     vo.setTitle(title);
-    vo.setItemsState(itemsState);
+    vo.setItems_state(items_state);
     vo.setPrice(price);
-    vo.setFileName(fileName);
+    vo.setFile_name(file_name);
     System.out.println("파라메터 수집 ");
     // 데이터 넘겨받아서 db에 저장 (productlistDAO로 이동)
     ProductlistDAO dao = new ProductlistDAO();
@@ -40,6 +40,6 @@ public class ProductInput implements Command {
     dao.imgInput(vo);
     System.out.println("돌아옴");
     // 사용자를 성공 페이지로 리디렉션
-    return "Goproductlist.do";
+    return "productlist.do";
   }
 }

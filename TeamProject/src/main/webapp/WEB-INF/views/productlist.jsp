@@ -313,19 +313,22 @@
 
                   <c:forEach items="${productlist}" var="list" varStatus="status">
                   				
-                                        <img src="${pageContext.request.contextPath}/uploads/${list.fileName}">
-                                            <span>${list.itemsId}</span>
+                  				
+                  				
+                                        <img src="./uploads/${imglist[status.index].file_name}" alt="이미지"><br>
+                                            <span>글번호:${list.items_id}</span>
                                            <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
-                                            <a href="Productdetail.do?itemsId=${list.itemsId}">
+                                            <a href="Productdetail.do?items_id=${list.items_id}">
                                            <h5 id="title">
-                                            	${list.title}
+                                            	제목:${list.title}
                                             	</h5>
                                             </a>
                                         <div class="product-price">
-                                            ${list.price}원<br>
+                                           가격: ${list.price}원<br>
                                         </div>
-                                        <a class="area">${area[status.index].area }</a>
-                                        <a class="date"><fmt:formatDate value="${list.upDate}" pattern="yyyy.MM.dd"/></a>
+                                        <a class="area">장소:${area[status.index].area }</a>
+                                        <a class="date">작성날짜:<fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
+                        <br>
                         </c:forEach>
 
                 </div>

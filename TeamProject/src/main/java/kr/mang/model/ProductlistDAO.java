@@ -28,6 +28,15 @@ public class ProductlistDAO {
 			session = sqlSessionFactory.openSession();
 			list = session.selectList("productlist");
 			System.out.println(list);
+		//	ProductlistDAO dao = new ProductlistDAO();
+		//	 list = dao.productList();
+
+		//	for (ProductlistVO product : list) {
+			 
+		//	    System.out.println("file_name"+product.getFile_name());
+			//     and so on for other properties you want to check
+		//}
+		
 		} finally {
 			System.out.println("리스트 가져옴");
 			session.close();
@@ -43,6 +52,7 @@ public class ProductlistDAO {
 		try {
 			session = sqlSessionFactory.openSession();
 			imglist = session.selectList("imglist");
+			System.out.println(imglist);
 		} finally {
 			System.out.println("img리스트 가져옴");
 			session.close();
@@ -52,13 +62,13 @@ public class ProductlistDAO {
 	
 
 	// 중고거래 물품 상세페이지
-	public ProductlistVO detail(int itemsId) {
+	public ProductlistVO detail(int items_id) {
 		SqlSession session = null;
 		ProductlistVO detail = null;
 		System.out.println("물건등록");
 		try {
 			session = sqlSessionFactory.openSession();
-			detail = session.selectOne("productdetail", itemsId);
+			detail = session.selectOne("productdetail", items_id);
 			System.out.println(detail);
 			System.out.println("등록했다.");
 		} finally {
