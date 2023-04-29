@@ -171,11 +171,11 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
 
-                        <a href="./Gomain.do">
+                        <a href="./main.do">
                             <img src="./img/로고.png" alt="">
                         </a>
 
-                            <a href="./Gomain.do">
+                            <a href="./main.do">
                                 <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
@@ -214,7 +214,7 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./Gomain.do">Home</a></li>
+                        <li class="active"><a href="./main.do">Home</a></li>
                        
                        
                         <li><a href="./ProductList.do">중고거래</a>
@@ -259,7 +259,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
-                        <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
+                        <a href="./main.do"><i class="fa fa-home"></i> Home</a>
                         <a href="./Goproductlist.do">커뮤니티</a>
                         <span>글 등록</span>
                     </div>
@@ -269,7 +269,7 @@
     </div>
 
 <!-- 커뮤니티 글 및 이미지 등록 하는 곳 -->
-<form action="./GoProductinput.do" method="post" enctype="multipart/form-data" class="comment-form">
+<form action="./ProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
       
     <table id="Product_Style" align="center">
         <tr class="border-bottom">
