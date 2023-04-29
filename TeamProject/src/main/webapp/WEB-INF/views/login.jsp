@@ -109,7 +109,7 @@
         <div class="inner-header">
           <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
             <div class="col-lg-2 col-md-2">
-              <a href="./index.html">
+              <a href="./main.do">
                 <img src="./img/로고.png" alt="">
               </a>
             </div>
