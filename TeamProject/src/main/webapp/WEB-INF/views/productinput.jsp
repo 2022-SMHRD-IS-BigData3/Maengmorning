@@ -212,7 +212,7 @@
                         <li class="active"><a href="./index.html">Home</a></li>
                        
                        
-                        <li><a href="./Goproductlist.do">중고거래</a>
+                        <li><a href="./ProductList.do">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="#"> 장난감/도서</a></li>
@@ -263,7 +263,7 @@
         </div>
     </div>
 <!-- 중고거래 글 및 이미지 등록 하는 곳 -->
-   <form action="./GoProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
+   <form action="./ProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
       
     <table id="Product_Style" align="center">
         <tr class="border-bottom">

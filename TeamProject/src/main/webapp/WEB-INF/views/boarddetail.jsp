@@ -162,7 +162,7 @@
                         <li class="active"><a href="./Gomain.do">Home</a></li>
 
 
-                        <li><a href="./Goproductlist.do">중고거래</a>
+                        <li><a href="./ProductList.do">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="#"> 장난감/도서</a></li>
@@ -296,19 +296,22 @@
 
                     
 
+                    <form action="Comment.do">
                     <div class="comment">
-                        댓글  <input type="text">
-                        <button>등록</button>
+                        댓글  <input name="comment" type="text">
+                        <button type="submit">등록</button>
                     </div>
+                    </form>
 
                     <br>
                     <ul class="list-group">
-                        <li class="list-group-item"> <a class="nickname">성영맘</a> 루루 귀여워요~~~ <button>ㅇㅈ</button></li>
-                        <li class="list-group-item"> <a class="nickname">성영</a> 도연이언니 <button>바보</button></li>
-                        <li class="list-group-item"> <a class="nickname">가수</a> 이승기<button>삭제</button></li>
-                        <li class="list-group-item"> <a class="nickname">팀장님</a> 힘내세뇨 <button>!!!</button></li>
-                        <li class="list-group-item"> <a class="nickname">성영맘</a> 루루 귀여워요~~~ <button>ㅇㅈ</button></li>
-                      </ul>
+					  <c:forEach var="comment" items="${comments}">
+					    <li class="list-group-item">
+					      <p>${comment.board_comment}</p>
+					      <button>삭제</button>
+					    </li>
+					  </c:forEach>
+					</ul>
 
                     </div>
 
