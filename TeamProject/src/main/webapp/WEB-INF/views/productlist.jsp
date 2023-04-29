@@ -152,7 +152,7 @@
         <div class="inner-header">
           <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
             <div class="col-lg-2 col-md-2">
-              <a href="./Gomain.do">
+              <a href="./main.do">
                 <img src="./img/로고.png" alt="">
               </a>
             </div>
@@ -185,7 +185,7 @@
             <header>
                 <nav>
                   <ul>
-                    <li><a href="./Gomain.do">Home</a></li>
+                    <li><a href="./main.do">Home</a></li>
                     <li><a href="./ProductList.do">중고거래</a>
                         <ul class="dropdown">
                             <li><a href="#">외출용품</a></li>
@@ -233,7 +233,7 @@
                 <div class="row">
                     <div class="col-lg-10">
                         <div class="breadcrumb-text">
-                            <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
+                            <a href="./main.do"><i class="fa fa-home"></i> Home</a>
                             <span>중고거래</span>
                         </div>
                     </div>
