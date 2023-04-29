@@ -344,7 +344,7 @@
             <td>상품태그</td>
             <td>
                 <div>
-                    <input id="tag_id" name="tag_id" class="tag_id" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
+                    <input id="tag_content" name="tag_content" class="tag" type="text" placeholder="연관태그를 꼭 입력해 주세요. (최대 5개)">
                  </div>
             </td>
           </tr>
