@@ -230,7 +230,9 @@
                                     <a href="#" class="forget-pass">비밀번호 찾기</a>
                                 </div>
                             </div>
+                            
                             <button type="submit" class="site-btn login-btn">로그인</button>
+                            
                         </form>
                         <div class="switch-login">
                             <a href="./Gojoin.do" class="or-login">회원가입</a>
