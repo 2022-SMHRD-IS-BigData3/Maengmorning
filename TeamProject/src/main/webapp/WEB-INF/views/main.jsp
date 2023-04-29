@@ -405,7 +405,7 @@
           
 			 <div class="row">
 			  <c:forEach items="${productlist}" var="list" varStatus="status">
-			 <a href="./Goproductlist.do" >
+			 <a href="./ProductList.do" >
 			    <c:if test="${status.index<3}">
 			      <div class="col-sm-4">
 			        <div class="card shadow-sm">
@@ -456,7 +456,7 @@
                           
                            <c:forEach items="${Blist}" var="blist" varStatus="status">
                        	 <c:if test="${status.index<5}">
-                           			 <a href="./Goproductlist.do" >
+                           			 <a href="./ProductList.do" >
                             	<td>${blist.title}</td>
                           		  </a>
                             	<td>${blist.user_id}</td>
