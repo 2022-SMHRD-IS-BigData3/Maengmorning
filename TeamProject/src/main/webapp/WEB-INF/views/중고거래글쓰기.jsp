@@ -206,8 +206,8 @@
             <header>
                 <nav>
                   <ul>
-                    <li><a href="./Gomain.do">Home</a></li>
-                    <li><a href="./Goproductlist.do">중고거래</a>
+                    <li><a href="./main.do">Home</a></li>
+                    <li><a href="./ProductList.do">중고거래</a>
                         <ul class="dropdown">
                             <li><a href="#">외출용품</a></li>
                             <li><a href="#"> 장난감/도서</a></li>
@@ -254,7 +254,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
-                        <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
+                        <a href="./main.do"><i class="fa fa-home"></i> Home</a>
                         <a href="./Goproductlist.do">중고거래</a>
                         <span>물품등록</span>
                     </div>

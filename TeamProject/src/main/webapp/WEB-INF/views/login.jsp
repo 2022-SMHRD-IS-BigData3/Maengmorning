@@ -148,8 +148,8 @@
             <header>
                 <nav>
                   <ul>
-                    <li><a href="./Gomain.do">Home</a></li>
-                    <li><a href="./Goproductlist.do">중고거래</a>
+                    <li><a href="./main.do">Home</a></li>
+                    <li><a href="./ProductList.do">중고거래</a>
                         <ul class="dropdown">
                             <li><a href="#">외출용품</a></li>
                             <li><a href="#"> 장난감/도서</a></li>
@@ -195,7 +195,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
+                        <a href="./main.do"><i class="fa fa-home"></i> Home</a>
                         <span>Login</span>
                     </div>
                 </div>
@@ -230,7 +230,9 @@
                                     <a href="#" class="forget-pass">비밀번호 찾기</a>
                                 </div>
                             </div>
+                            
                             <button type="submit" class="site-btn login-btn">로그인</button>
+                            
                         </form>
                         <div class="switch-login">
                             <a href="./Gojoin.do" class="or-login">회원가입</a>
