@@ -217,7 +217,7 @@
                         <li class="active"><a href="./Gomain.do">Home</a></li>
                        
                        
-                        <li><a href="./Goproductlist.do">중고거래</a>
+                        <li><a href="./ProductList.do">중고거래</a>
                             <ul class="dropdown">
                                 <li><a href="#">외출용품</a></li>
                                 <li><a href="#"> 장난감/도서</a></li>

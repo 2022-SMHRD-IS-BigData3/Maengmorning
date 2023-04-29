@@ -31,6 +31,7 @@
   </head>
 
   <style>
+
   /* 스타일링 */
  	 .search-container {
         display: flex;
@@ -254,7 +255,7 @@
       
   </style>
 
-  <body>
+  <body link="black" vlink="black">
 
 
 
@@ -315,7 +316,7 @@
                 <nav>
                   <ul>
                     <li><a href="./Gomain.do">Home</a></li>
-                    <li><a href="./Goproductlist.do">중고거래</a>
+                    <li><a href="./ProductList.do">중고거래</a>
                         <ul class="dropdown">
                             <li><a href="#">외출용품</a></li>
                             <li><a href="#"> 장난감/도서</a></li>
@@ -404,19 +405,20 @@
           
 			 <div class="row">
 			  <c:forEach items="${productlist}" var="list" varStatus="status">
+			 <a href="./Goproductlist.do" >
 			    <c:if test="${status.index<3}">
 			      <div class="col-sm-4">
 			        <div class="card shadow-sm">
 			          <div class="card-body">
 			            <img width="300px" height="300px" src="./uploads/${imglist[status.index].file_name}" alt="이미지">
 			            <p class="card-text" name="title">제목: ${list.title}<br><br> 상세설명: ${list.items_state}</p>
+   					         </a>
 			          </div>
 			        </div>
 			      </div>
 			    </c:if>
 			  </c:forEach>
 			</div>
-          
    
 
         <form action="./Goproductlist.do">
@@ -451,19 +453,20 @@
                         </thead>
                         <tbody>
                         <tr>
+                          
                            <c:forEach items="${Blist}" var="blist" varStatus="status">
                        	 <c:if test="${status.index<5}">
+                           			 <a href="./Goproductlist.do" >
                             	<td>${blist.title}</td>
+                          		  </a>
                             	<td>${blist.user_id}</td>
                           		  <td>${area[status.index].area}</td>
                           		  </tr>
                           		  </c:if>
                         </c:forEach>
+                        
                         </tbody>
                         </table>
-                        
-                       
-
 
 
             <form action="./Goboardlist.do">
@@ -491,6 +494,9 @@
             <script src="js/jquery.slicknav.js"></script>
             <script src="js/owl.carousel.min.js"></script>
             <script src="js/main.js"></script>
+            <script>
+            
+            </script>
     </body>
 
     </html>
