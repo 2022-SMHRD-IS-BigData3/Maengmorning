@@ -260,16 +260,16 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://pbs.twimg.com/media/DSELP_bUMAMGQkH?format=jpg&name=large"
+                                <img alt="Board Image1" src="./boarduploads/${detail.file_name}
                                     class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LrQZz83PzJgeO7gdEw7dfI6RotVYriNxNQ&usqp=CAU"
+                                <img alt="Board Image2" src="./boarduploads/${detail.file_name}
                                     class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://i.pinimg.com/736x/5b/11/c4/5b11c4d24f4744b0bf638d60342e68cc.jpg"
-                                    class="d-block w-100" alt="...">
+                                <img alt="Board Image3" src="./boarduploads/${detail.file_name}
+                                    class="d-block w-100" alt="..."">
                             </div>
                         </div>
 

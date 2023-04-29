@@ -17,8 +17,8 @@
 
 	<!-- 게시판 글 클릭 수 나오는 상세페이지 쿼리 -->
 	<select id="detail" parameterType="int" resultType="kr.mang.model.BoardVO">
-		select TITLE,BOARD_CONTENT,WRITE_DATE, USER_ID 
-		from BOARD 
+		SELECT A.TITLE,A.BOARD_CONTENT,A.WRITE_DATE, A.USER_ID, B.FILE_NAME 
+		FROM BOARD A RIGHT OUTER JOIN BOARD_IMG B ON (A.BOARD_IMG_ID = B.BOARD_IMG_ID)
 		WHERE BOARD_ID = #{board_id}
 
 	</select>

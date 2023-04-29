@@ -27,6 +27,9 @@ public class Boarddetail implements Command {
 		System.out.println("2");
 		MemberVO mvo = mdao.BoardDetail(board_id);
 		System.out.println("3");
+		
+		System.out.println("vo>>"+vo);
+		System.out.println("mvo>>"+mvo);
 
 		request.setAttribute("detail", vo);
 		request.setAttribute("mdetail", mvo);

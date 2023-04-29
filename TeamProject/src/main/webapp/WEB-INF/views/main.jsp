@@ -284,7 +284,7 @@
               <br>
           </div>
 
-		 <c:forEach items="${productlist}" var="list" varStatus="status">
+		 <c:forEach items="${mainlist}" var="list" varStatus="status">
    
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
