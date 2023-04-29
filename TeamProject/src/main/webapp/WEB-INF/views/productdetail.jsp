@@ -3,6 +3,8 @@
 <%@ page import="java.util.Enumeration" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@ page import="com.oreilly.servlet.MultipartRequest"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -282,22 +284,22 @@
                         </div>
                         
                         <div>
-                            <table class="border-bottom">
+                            <table class="border-bottom" border="bliack">
                                 <tr>
                                     <td>
                                     <h4>
-                                    ${detail.title}
-                                    새상품,아기슈퍼맨 바디수트 판매합니다</h4> 
+                                    제목 : ${detail.title}
+                                    </h4> 
                                     </td>
                                 </tr>
                                 <tr>
                                 	<td>
-                                	 	<img alt="Product Image" src="${detail.file_name}">
+                                	 	<img alt="Product Image" src="./uploads/${detail.file_name}">
                                 	</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                    <h2>${detail.price} 10,000원</h2>
+                                    <h2>가격: ${detail.price}</h2>
                                     </td>
                                 </tr>
 
@@ -305,12 +307,12 @@
 
                             <table class="ProductHeader">
                                 <tr>
-                                    <td class="tdTitle">- 판매자</td>
-                                    <td class="tdText">${detail.user_id }성영맘</td>
+                                    <td class="tdTitle">- 판매자: ${detail.user_id}</td>
+                                    <td class="tdText"></td>
                                 </tr>
                                 <tr>
-                                    <td class="tdTitle">- 거래지역</td>
-                                    <td class="tdText">${detail.area }광주전체</td>
+                                    <td class="tdTitle">- 거래지역: ${prodetail.area}</td>
+                                    <td class="tdText"></td>
                                 </tr>
                                 <tr>
                                     <td class="tdTitle">- 카테고리</td>
@@ -318,10 +320,8 @@
                                 </tr>
                                 <tr>
                                     <td class="tdTitle">- 상품태그</td>
-                                    <td class="tdText">${detail.tag_id}#유아용품 #유아의류</td>
+                                    <td class="tdText">${detail.tag_id}</td>
                                 </tr>
-                           
-                           
                             </table>
                             <div align ="left">
                                 <button type="button" class="btn btn-secondary btn-lg btn-danger">❤︎찜</button>
@@ -333,19 +333,12 @@
                         <table class="ProductText">
                         <tr class="border-bottom">
                             <td> <h4>상품정보</h4> </td>
-                        </tr>
-                        <tr>
                             <td>
                             ${detail.items_state}
-                            샀는데 저희아기한테 안맞네요
-
-                            포장 그대로있는 새상품이구요
-                            돌전후 아기한테 맞아요!
-                            사진이 찐하게나왔는데 주황색입니다!
-                            메이드인 코리아 입니다
-                            
-                            반값택배 가능합니다!
                             </td>
+                        </tr>
+                        <tr>
+                            <td>작성날짜:<fmt:formatDate value="${detail.up_date}" pattern="yyyy.MM.dd"/></td>
                         </tr>
 
                         </table>

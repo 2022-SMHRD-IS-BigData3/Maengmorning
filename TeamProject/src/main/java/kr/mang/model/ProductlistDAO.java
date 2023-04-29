@@ -59,18 +59,24 @@ public class ProductlistDAO {
 	public ProductlistVO detail(int items_id) {
 		SqlSession session = null;
 		ProductlistVO detail = null;
-		System.out.println("물건등록");
+		System.out.println("데이터가지러 들어가자");
 		try {
 			session = sqlSessionFactory.openSession();
 			detail = session.selectOne("productdetail", items_id);
 			System.out.println(detail);
-			System.out.println("등록했다.");
+			System.out.println("가져왔다.");
+			session.commit();
 		} finally {
+			System.out.println("나왔다.");
 			session.close();
 		}
 		return detail;
 	}
 	
+
+	
+	
+/////////////////////////////////////////////////////////////////////////
 	// 중고거래 물품 등록페이지
 	public void productInput(ProductlistVO vo) {
 		SqlSession session = null;

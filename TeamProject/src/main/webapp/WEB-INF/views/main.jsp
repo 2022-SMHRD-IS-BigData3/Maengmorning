@@ -284,7 +284,8 @@
               <br>
           </div>
 
-		
+		 <c:forEach items="${productlist}" var="list" varStatus="status">
+   
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
           
@@ -302,8 +303,7 @@
           </div>
  
           <div class="col">
-   <c:forEach items="${productlist}" var="list" varStatus="status">
-           <c:if test="${status.index<3}">
+          <c:if test="${status.index<3}">
             <div class="card shadow-sm">
               
               <div class="card-body">

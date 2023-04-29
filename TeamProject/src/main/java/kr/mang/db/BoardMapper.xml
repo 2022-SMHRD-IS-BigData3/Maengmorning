@@ -17,7 +17,9 @@
 
 	<!-- 게시판 글 클릭 수 나오는 상세페이지 쿼리 -->
 	<select id="detail" parameterType="int" resultType="kr.mang.model.BoardVO">
-		select TITLE,BOARD_CONTENT,WRITE_DATE, USER_ID from BOARD WHERE BOARD_ID = #{board_id}
+		select TITLE,BOARD_CONTENT,WRITE_DATE, USER_ID 
+		from BOARD 
+		WHERE BOARD_ID = #{board_id}
 
 	</select>
 

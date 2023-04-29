@@ -82,6 +82,23 @@ public MemberVO BoardDetail(int board_id) {
 		return mdetail;
 	}
 
+
+public MemberVO areaDetail(int items_id) {
+	
+	MemberVO prodetail = null;
+	System.out.println("여기왔어!");
+	try {
+		session = sqlSessionFactory.openSession(true);
+		prodetail = session.selectOne("itemget",items_id);
+		System.out.println("값들어왔냐?"+prodetail);
+	} finally {
+		System.out.println("나간다 ㅅㄱ");
+		session.close();
+	}
+	
+	return prodetail;
+}
+
 	
 
 
