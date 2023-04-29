@@ -405,14 +405,12 @@
           
 			 <div class="row">
 			  <c:forEach items="${productlist}" var="list" varStatus="status">
-			 <a href="./Goproductlist.do" >
 			    <c:if test="${status.index<3}">
 			      <div class="col-sm-4">
 			        <div class="card shadow-sm">
 			          <div class="card-body">
 			            <img width="300px" height="300px" src="./uploads/${imglist[status.index].file_name}" alt="이미지">
-			            <p class="card-text" name="title">제목: ${list.title}<br><br> 상세설명: ${list.items_state}</p>
-   					         </a>
+			            <p class="card-text" name="title">제목: ${list.title}상세설명: ${list.items_state}</p>
 			          </div>
 			        </div>
 			      </div>
