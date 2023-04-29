@@ -117,11 +117,11 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
 
-                        <a href="./Gomain.do">
+                        <a href="./main.do">
                             <img src="./img/로고.png" alt="">
                         </a>
 
-                            <a href="./Gomain.do">
+                            <a href="./main.do">
                                 <img src="./메인사진파일/로고.png" alt="">
                             </a>
                      
@@ -160,7 +160,7 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./Gomain.do">Home</a></li>
+                        <li class="active"><a href="./main.do">Home</a></li>
                        
                        
                         <li><a href="./ProductList.do">중고거래</a>
@@ -206,7 +206,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
-                        <a href="./Gomain.do"><i class="fa fa-home"></i> Home</a>
+                        <a href="./main.do"><i class="fa fa-home"></i> Home</a>
                         <a href="./shop.html">Shop</a>
                         <span>Detail</span>
                     </div>
