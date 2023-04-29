@@ -464,6 +464,7 @@
             $('#carouselExampleControls').carousel();
         });
     </script>
+    <script type="text/javascript">
 </body>
 
 </html>
