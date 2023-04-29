@@ -362,8 +362,6 @@
                     </div>
 
 
-
-
                     </nav>
                     <div id="mobile-menu-wrap"></div>
                 </div>
@@ -417,24 +415,21 @@
 
 
                     <div class="row">
-                        <c:forEach items="${productlist}" var="list" varStatus="status">
-                            <a href="./ProductList.do">
-                                <c:if test="${status.index<3}">
-                                    <div class="col-sm-4">
-                                        <div class="card shadow-sm">
-                                            <div class="card-body">
-                                                <img width="300px" height="300px"
-                                                    src="./uploads/${imglist[status.index].file_name}" alt="이미지">
-                                                <p class="card-text" name="title">제목: ${list.title}<br><br> 상세설명:
-                                                    ${list.items_state}</p>
-                            </a>
-                    </div>
-                </div>
-            </div>
-            </c:if>
-            </c:forEach>
-        </div>
-
+					  <c:forEach items="${productlist}" var="list" varStatus="status">
+					    <c:if test="${status.index<3}">
+					      <div class="col-sm-4">
+					        <div class="card shadow-sm">
+					          <div class="card-body">
+					            <a href="./ProductList.do">
+					              <img width="300px" height="300px" src="./uploads/${imglist[status.index].file_name}" alt="이미지">
+					              <p class="card-text" name="title">제목: ${list.title}<br><br> 상세설명: ${list.items_state}</p>
+					            </a>
+					          </div>
+					        </div>
+					      </div>
+					    </c:if>
+					  </c:forEach>
+					</div>
 
         <form action="./ProductList.do">
             <div class="productShopDetail" style="text-align: left;">
@@ -472,7 +467,7 @@
                                 <c:forEach items="${Blist}" var="blist" varStatus="status">
                                     <c:if test="${status.index<5}">
                             <tr>
-                                <td>${blist.title}</td>
+                                <td><a href="./ProductList.do">${blist.title}</a></td>
                                 <td>${blist.user_id}</td>
                                 <td>${area[status.index].area}</td>
                             </tr>
@@ -482,8 +477,6 @@
                         </tbody>
                     </table>
                     
-                    
-
 
                     <form action="./BoardList.do">
                         <div class="productShopDetail">
