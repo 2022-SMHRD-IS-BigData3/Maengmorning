@@ -32,6 +32,7 @@ public class LoginService implements Command {
 		vo.setPw(pw);
 		MemberDAO dao = new MemberDAO();
 		String mvo= dao.login(vo);
+		System.out.println("로그인 서비스 >>"+mvo);
 		
 		if (mvo != null) {
 			HttpSession session = request.getSession();

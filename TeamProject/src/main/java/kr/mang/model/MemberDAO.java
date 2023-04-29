@@ -41,7 +41,7 @@ public class MemberDAO {
 		try {
 				session = sqlSessionFactory.openSession(true);
 				uId = session.selectOne("login",vo);
-			
+				session.commit();
 		} finally {
 			session.close();
 		}
