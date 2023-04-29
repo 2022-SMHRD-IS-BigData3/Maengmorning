@@ -38,7 +38,7 @@ public class LoginService implements Command {
 			session.setAttribute("uId", mvo);
 		}
 		
-		return "redirect:/Gomain.do";
+		return "redirect:/main.do";
 	}
 
 }
