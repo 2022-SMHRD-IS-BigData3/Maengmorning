@@ -358,62 +358,20 @@
                                 <th>글번호</th>
                                 <th>제목</th>
                                 <th>작성자</th>
-                                <th>동네</th>
                             </tr>
                            
                             <tbody>
-                                <tr>
-                                <td>1</td>
-                                <td>첫 번째 글</td>
-                                <td>작성자1</td>
-                                <td>용봉동</td>
-                                </tr>
-                                <tr>
-                                <td>2</td>
-                                <td>두 번째 글</td>
-                                <td>작성자2</td>
-                                <td>용봉동</td>
-                                </tr>
-                                <tr>
-                                <td>3</td>
-                                <td>세 번째 글</td>
-                                <td>작성자3</td>
-                                <td>용봉동</td>
-                                </tr>
-                                <tr>
-                                <td>4</td>
-                                <td>네 번째 글</td>
-                                <td>작성자1</td>
-                                <td>용봉동</td>
-                                </tr>
-                                <tr>
-                                <td>5</td>
-                                <td>다섯 번째 글</td>
-                                <td>작성자2</td>
-                                <td>용봉동</td>
-                                </tr>
-                        </div> 
-                </div>
-                            </table>
-
-
-
-
-                       
-                       
                             
-    
-                          
-
-
-
-
-
-
-
-
-                        
-
+                            
+							 <c:forEach items="${list}" var="item" varStatus="status">
+							    <tr>
+							        <td>${item.items_id}</td>
+							        <td>${item.title}</td>
+							        <td>${item.user_id}</td>
+							    </tr>
+							</c:forEach>
+							</tbody>
+                            </table>
                         
     </section>
    

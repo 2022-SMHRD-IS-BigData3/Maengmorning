@@ -115,6 +115,26 @@ public class ProductlistDAO {
 				System.out.println("닫았다.");
 				session.close();
 			}
+			
+		}
+		
+		public List<ProductlistVO> listif() {
+		    SqlSession session = null;
+		    List<ProductlistVO> list = null;
+		    try {
+		        System.out.println("조건조회 시작");
+		        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
+		        session = sqlSessionFactory.openSession(true);
+		        System.out.println("세션: " + session);
+		        list = session.selectList("get_commentif");
+		        System.out.println("조건 조회 결과: " + list.get(0).getItems_id());
+		    } catch (Exception e) {
+		        System.out.println("에러");
+		        e.printStackTrace();
+		    } finally {
+		        session.close();
+		    }
+		    return list;
 		}
 	
 }
