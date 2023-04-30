@@ -107,7 +107,7 @@
         <div class="inner-header">
           <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
             <div class="col-lg-2 col-md-2">
-              <a href="./index.html">
+              <a href="./main.do">
                 <img src="./img/로고.png" alt="">
               </a>
             </div>
@@ -220,7 +220,7 @@
                             </div>
                             <div class="group-input">
                                 <label for="username">사용하실 아이디</label>
-                                <input type="text" id="id" name = "id">
+                                <input type="text" id="id" name = "user_id">
                             </div>
                             <div class="group-input">
                                 <label for="pass">사용하실 비밀번호</label>

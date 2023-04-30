@@ -214,7 +214,7 @@
                         <form action="Login.do" method = "post">
                             <div class="group-input">
                                 <label for="username">ID</label>
-                                <input type="text" id="username" name = "id">
+                                <input type="text" id="username" name = "user_id">
                             </div>
                             <div class="group-input">
                                 <label for="pass">Password</label>

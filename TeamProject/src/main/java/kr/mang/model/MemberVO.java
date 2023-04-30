@@ -2,7 +2,7 @@ package kr.mang.model;
 
 public class MemberVO {
 
-	private String id ;
+	private String user_id ;
 	private String pw ;
 	private String tel ;
 	private String area ;
@@ -10,9 +10,10 @@ public class MemberVO {
 	private String nickName;
 	private String manner;
 	
-	public MemberVO(String id, String pw, String tel, String area, String name, String nickName, String manner) {
+
+	public MemberVO(String user_id, String pw, String tel, String area, String name, String nickName, String manner) {
 		super();
-		this.id = id;
+		this.user_id = user_id;
 		this.pw = pw;
 		this.tel = tel;
 		this.area = area;
@@ -20,17 +21,12 @@ public class MemberVO {
 		this.nickName = nickName;
 		this.manner = manner;
 	}
-	
-	public MemberVO() {
-		
+	public String getUser_id() {
+		return user_id;
 	}
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
 
 	public String getPw() {
@@ -79,6 +75,10 @@ public class MemberVO {
 
 	public void setManner(String manner) {
 		this.manner = manner;
+	}
+
+	public MemberVO() {
+		
 	}
 	
 	

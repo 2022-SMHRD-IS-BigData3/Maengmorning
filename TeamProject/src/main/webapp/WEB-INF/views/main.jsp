@@ -33,7 +33,7 @@
   <style>
 
   /* 스타일링 */
- 	 .search-container {
+     .search-container {
         display: flex;
         justify-content: center;
       }
@@ -92,7 +92,7 @@
       .nav-item>a {
         margin-left: 0;
       }
- 	
+    
      table {
         border-collapse: collapse;
         width: 100%;
@@ -290,15 +290,15 @@
                 <li class="heart-icon">
                 
                   
-                  <c:if test="${empty uId}">
-                  	  <a href="./Gologin.do">로그인</a>
-                  	  <a href="./Gojoin.do">회원가입</a>
-                  	
+                   <c:if test="${empty member}">
+                       <a href="./Gologin.do">로그인</a>
+                       <a href="./Gojoin.do">회원가입</a>
                   </c:if>
-                  		
-                  	<c:if test="${!empty uId}">
-                  	<a href="./Gologout.do">로그인</a>
-                  	</c:if>
+                        
+                     <c:if test="${!empty member}">
+                     <a>${member.nickName}님 환영합니다~</a>
+                     <a>로그아웃</a>
+                     </c:if>
                   
                   
                     
@@ -401,22 +401,24 @@
               <br>
           </div>
 
-		
+      
           
-			 <div class="row">
-			  <c:forEach items="${productlist}" var="list" varStatus="status">
-			    <c:if test="${status.index<3}">
-			      <div class="col-sm-4">
-			        <div class="card shadow-sm">
-			          <div class="card-body">
-			            <img width="300px" height="300px" src="./uploads/${imglist[status.index].file_name}" alt="이미지">
-			            <p class="card-text" name="title">제목: ${list.title}상세설명: ${list.items_state}</p>
-			          </div>
-			        </div>
-			      </div>
-			    </c:if>
-			  </c:forEach>
-			</div>
+          <div class="row">
+           <c:forEach items="${productlist}" var="list" varStatus="status">
+          <a href="./ProductList.do" >
+             <c:if test="${status.index<3}">
+               <div class="col-sm-4">
+                 <div class="card shadow-sm">
+                   <div class="card-body">
+                     <img width="300px" height="300px" src="./uploads/${imglist[status.index].file_name}" alt="이미지">
+                     <p class="card-text" name="title">제목: ${list.title}<br><br> 상세설명: ${list.items_state}</p>
+                           </a>
+                   </div>
+                 </div>
+               </div>
+             </c:if>
+           </c:forEach>
+         </div>
    
 
         <form action="./Goproductlist.do">
@@ -439,8 +441,8 @@
                 <br>
             </div>
 
-	
-			<div class="col">
+   
+         <div class="col">
                      <table>
                      <thead>
                             <tr>
@@ -453,14 +455,14 @@
                         <tr>
                           
                            <c:forEach items="${Blist}" var="blist" varStatus="status">
-                       	 <c:if test="${status.index<5}">
-                           			 <a href="./Goproductlist.do" >
-                            	<td>${blist.title}</td>
-                          		  </a>
-                            	<td>${blist.user_id}</td>
-                          		  <td>${area[status.index].area}</td>
-                          		  </tr>
-                          		  </c:if>
+                           <c:if test="${status.index<5}">
+                                     <a href="./ProductList.do" >
+                               <td>${blist.title}</td>
+                                  </a>
+                               <td>${blist.user_id}</td>
+                                  <td>${area[status.index].area}</td>
+                                  </tr>
+                                  </c:if>
                         </c:forEach>
                         
                         </tbody>
