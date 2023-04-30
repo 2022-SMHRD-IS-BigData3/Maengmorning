@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+
 public class MemberDAO {
 	private static SqlSessionFactory sqlSessionFactory;
 	static {
@@ -36,19 +37,23 @@ public class MemberDAO {
 	}
 	
 	
-	public String login(MemberVO vo) {
-		String uId = null; 
+	public MemberVO login(MemberVO vo) {
+		SqlSession session = null;
+		MemberVO result = null; 
+		System.out.println("dao vo °ª >>"+vo);
 		try {
-				session = sqlSessionFactory.openSession(true);
-				uId = session.selectOne("login",vo);
-			
+				session = sqlSessionFactory.openSession();
+				result = session.selectOne("login",vo);
+				
+				System.out.println("durl" + result);
+				session.commit();
 		} finally {
 			session.close();
 		}
 		
 		
 		
-		return uId;
+		return result;
 	}
 
 
