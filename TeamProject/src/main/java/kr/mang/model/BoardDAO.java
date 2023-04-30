@@ -43,11 +43,15 @@ public class BoardDAO {
 	// 커뮤니티 상세페이지
 	public BoardVO BoardDetail(int board_id) {
 		BoardVO detail = null;
+		System.out.println("커뮤상세페이지 가려고 데이터 가지러옴");
 		try {
 			session = sqlSessionFactory.openSession(true);
 			detail = session.selectOne("detail", board_id);
+			System.out.println("데이터 있냐?"+board_id);
+			System.out.println("디테일 확인>>"+detail);
 			session.commit();
 		} finally {
+			System.out.println("데이터 가지고 간다 ㅅㄱ");
 			session.close();
 		}
 		return detail;

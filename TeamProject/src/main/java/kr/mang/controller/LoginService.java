@@ -19,20 +19,20 @@ public class LoginService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		request.setCharacterEncoding("UTF-8");
-		String user_id =request.getParameter("id");
+		String user_id =request.getParameter("user_id");
 		String pw = request.getParameter("pw");
 		
-		System.out.println(user_id);
+		System.out.println("입력한 유저 아이디 >> " + user_id);
 		System.out.println(pw);
 		
 		
 		MemberVO vo = new MemberVO();
 		
-		vo.setId(user_id);
+		vo.setUser_id(user_id);
 		vo.setPw(pw);
 		MemberDAO dao = new MemberDAO();
 		MemberVO result= dao.login(vo);
-		System.out.println("�α��� ���� >>"+result);
+		System.out.println("이거 뭐들어오내"+ result.getNickName());
 		
 		if (result != null) {
 			HttpSession session = request.getSession();

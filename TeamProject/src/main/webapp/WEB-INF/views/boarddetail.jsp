@@ -143,9 +143,15 @@
 
                         <ul class="nav-right">
                             <li class="heart-icon">
-                                <a href="./Gologin.do">
-                                    <i class="icon_MSY_alt">로그인</i>
-                                </a>
+                                <c:if test="${empty member}">
+                       <a href="./Gologin.do">로그인</a>
+                       <a href="./Gojoin.do">회원가입</a>
+                  </c:if>
+                     
+                     <c:if test="${!empty member}">
+                     <a>${member.nickName}님 환영합니다~</a>
+                     <a>로그아웃</a>
+                     </c:if>
                             </li>
                         </ul>
                     </div>
@@ -253,24 +259,27 @@
                             <h1>${detail.title}</h1>
                         </div>
 
-                        <p>작성자:${mdetail.id} | 작성일:<fmt:formatDate value="${detail.write_date}" pattern="yyyy/MM/dd" /> | 동네: ${mdetail.area} | 조회수 : 1</p>
+                        <p>작성자:${detail.user_id} | 작성일:<fmt:formatDate value="${detail.write_date}" pattern="yyyy/MM/dd" /> | 동네: ${mdetail.area} | 조회수 : 1</p>
                     </div>
 
 
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://pbs.twimg.com/media/DSELP_bUMAMGQkH?format=jpg&name=large"
+                                <img alt="Board Image1" src="./boarduploads/${detail.file_name}
+                                    ">
+                            </div>
+                         
+                          <!-- 이거 속성 때문에 이미지가 출력이 안되네요. 확인 부탁들립니다.   
+                          
+                           <div class="carousel-item">
+                                <img alt="Board Image2" src="./boarduploads/${detail.file_name}
                                     class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8LrQZz83PzJgeO7gdEw7dfI6RotVYriNxNQ&usqp=CAU"
+                                <img alt="Board Image3" src="./boarduploads/${detail.file_name}
                                     class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://i.pinimg.com/736x/5b/11/c4/5b11c4d24f4744b0bf638d60342e68cc.jpg"
-                                    class="d-block w-100" alt="...">
-                            </div>
+                            </div>-->
                         </div>
 
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
@@ -458,12 +467,14 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
 
     <script>
         $(document).ready(function () {
             $('#carouselExampleControls').carousel();
         });
-    </script>
+        </script>
+        
 </body>
 
 </html>

@@ -13,7 +13,7 @@ values (#{id}, #{pw}, #{tel}, #{area}, #{name}, #{nickName})
 </insert>
 
 <select id="login" parameterType="kr.mang.model.MemberVO" resultType="kr.mang.model.MemberVO">
-select user_id from user_info
+select user_id,nickname from user_info
 where user_id = #{user_id} 
 and pw = #{pw}
 </select>
@@ -30,6 +30,13 @@ from user_info A , Board B
 where B.board_id = #{board_id} and A.user_id = B.user_id 
 
 </select>
+<!-- 중고물품 상세페이지 주소값 가져오기. -->
+<select id="itemget" resultType="kr.mang.model.MemberVO">
+SELECT g.AREA as area
+from USER_INFO g 
+RIGHT OUTER JOIN ITEMS h ON (g.USER_ID = h.USER_ID)
+WHERE h.ITEMS_ID = #{itmes_id}
 
+</select>
 
 </mapper>

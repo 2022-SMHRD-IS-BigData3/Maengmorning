@@ -16,33 +16,38 @@ import kr.mang.model.ProductlistVO;
 
 public class mainList implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       System.out.println("¸®½ºÆ®");
+       System.out.println("ì—¬ê¸°ì™”ë”°.");
         
-       ProductlistDAO dao = new ProductlistDAO();
+
+    	ProductlistDAO dao = new ProductlistDAO();
         MemberDAO mdao = new MemberDAO();
         BoardDAO bdao = new BoardDAO();
-      MemberDAO bmdao = new MemberDAO();
-      // Áß°í¹°Ç° °Ô½ÃÆÇ ¸®½ºÆ® ¸ŞÀÎ Ãâ·Â
+		MemberDAO bmdao = new MemberDAO();
+		// ì¤‘ê³ ë¬¼í’ˆ ê²Œì‹œíŒ ë¦¬ìŠ¤íŠ¸ ë©”ì¸ ì¶œë ¥
         List<ProductlistVO> list = dao.productList();
-      List<MemberVO> area = mdao.getArea();
-      List<ProductlistVO> file_name = dao.imgList();
+		List<MemberVO> area = mdao.getArea();
+		List<ProductlistVO> file_name = dao.imgList();
 
-      // Ä¿¹Â´ÏÆ¼ °Ô½ÃÆÇ ¸®½ºÆ® ¸ŞÀÎ Ãâ·Â
-      List<BoardVO> blist = bdao.BoardList();
-      List<MemberVO> barea = bmdao.getArea();
+		// ì»¤ë®¤ë‹ˆí‹° ê²Œì‹œíŒ ë¦¬ìŠ¤íŠ¸ ë©”ì¸ ì¶œë ¥
+		List<BoardVO> blist = bdao.BoardList();
+		List<MemberVO> barea = bmdao.getArea();
+		
+		// ì¤‘ê³ ë¬¼í’ˆ ê²Œì‹œíŒ ë¦¬ìŠ¤íŠ¸ ê°’ ê°€ì ¸ì˜¤ê¸°
+		request.setAttribute("productlist", list);
+		request.setAttribute("area", area);
+		request.setAttribute("imglist", file_name);
+		System.out.println(file_name.size());
+		System.out.println(area.size());
+		System.out.println(list);
+		System.out.println(file_name);
+		// ì»¤ë®¤ë‹ˆí‹° ê²Œì‹œíŒ ë¦¬ìŠ¤íŠ¸ ê°’ ê°€ì ¸ì˜¤ê¸°
+		request.setAttribute("Blist",blist );
+		request.setAttribute("barea", barea);
+		
+    	
+    	
+		return "main.jsp";
+
       
-      // Áß°í¹°Ç° °Ô½ÃÆÇ ¸®½ºÆ® °ª °¡Á®¿À±â
-      request.setAttribute("productlist", list);
-      request.setAttribute("area", area);
-      request.setAttribute("imglist", file_name);
-      System.out.println(file_name.size());
-      System.out.println(area.size());
-      System.out.println(list);
-      System.out.println(file_name);
-      // Ä¿¹Â´ÏÆ¼ °Ô½ÃÆÇ ¸®½ºÆ® °ª °¡Á®¿À±â
-      request.setAttribute("Blist",blist );
-      request.setAttribute("barea", barea);
-      
-      return "main.jsp";
     }
 }

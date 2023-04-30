@@ -40,12 +40,12 @@ public class MemberDAO {
 	public MemberVO login(MemberVO vo) {
 		SqlSession session = null;
 		MemberVO result = null; 
-		System.out.println("dao vo �� >>"+vo);
+		System.out.println("dao vo �� >>"+vo);
 		try {
 				session = sqlSessionFactory.openSession();
 				result = session.selectOne("login",vo);
 				
-				System.out.println("durl" + result);
+				System.out.println("DAO닉네임 >> " + result.getNickName());
 				session.commit();
 		} finally {
 			session.close();
@@ -86,6 +86,23 @@ public MemberVO BoardDetail(int board_id) {
 				
 		return mdetail;
 	}
+
+
+public MemberVO areaDetail(int items_id) {
+	
+	MemberVO prodetail = null;
+	System.out.println("여기왔어!");
+	try {
+		session = sqlSessionFactory.openSession(true);
+		prodetail = session.selectOne("itemget",items_id);
+		System.out.println("값들어왔냐?"+prodetail);
+	} finally {
+		System.out.println("나간다 ㅅㄱ");
+		session.close();
+	}
+	
+	return prodetail;
+}
 
 	
 

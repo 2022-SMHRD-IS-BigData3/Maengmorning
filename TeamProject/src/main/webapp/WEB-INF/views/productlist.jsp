@@ -167,9 +167,16 @@
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
                 <li class="heart-icon">
-                  <a href="./Gologin.do">
-                    <i class="icon_MSY_alt">로그인</i>
-                  </a>
+                  
+                   <c:if test="${empty member}">
+                       <a href="./Gologin.do">로그인</a>
+                       <a href="./Gojoin.do">회원가입</a>
+                  </c:if>
+                     
+                     <c:if test="${!empty member}">
+                     <a>${member.nickName}님 환영합니다~</a>
+                     <a>로그아웃</a>
+                     </c:if>
                 </li>
               </ul>
             </div>
@@ -263,7 +270,7 @@
               
                 <div class="col-lg-9 order-1 order-lg-2">
                  
-
+<c:if test="${!empty member}">
                     <form action="./GoProductinput.do">
                     <div class="product-show-option">
                         <div class="row">
@@ -275,14 +282,15 @@
                                     </select>
                                 </div>
                             </div>
+                             
                             <div class="col-lg-5 col-md-5 text-right">
                                 <button id="registration">물품 등록</button>
                             </div>
-                       
+                         
                     </div>
                     
                     </form>
-                          
+                    </c:if>      
                         
                     </div>
        <!-- 물품목록 
@@ -314,6 +322,9 @@
                                             	제목:${list.title}
                                             	</h5>
                                             </a>
+                                        <div class="product-price">
+                                           판매자: ${list.user_id}<br>
+                                        </div>
                                         <div class="product-price">
                                            가격: ${list.price}원<br>
                                         </div>

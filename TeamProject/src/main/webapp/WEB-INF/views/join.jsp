@@ -220,7 +220,7 @@
                             </div>
                             <div class="group-input">
                                 <label for="username">사용하실 아이디</label>
-                                <input type="text" id="id" name = "id">
+                                <input type="text" id="id" name = "user_id">
                             </div>
                             <div class="group-input">
                                 <label for="pass">사용하실 비밀번호</label>
