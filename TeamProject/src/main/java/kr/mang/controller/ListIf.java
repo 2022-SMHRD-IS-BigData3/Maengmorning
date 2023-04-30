@@ -17,7 +17,7 @@ import kr.mang.model.ProductlistVO;
  * Servlet implementation class ListIf
  */
 @WebServlet("/ListIf")
-public class ListIf extends HttpServlet {
+public class ListIf implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 	        throws IOException, ServletException {
 	    System.out.println("조회시작");

@@ -23,6 +23,7 @@ import kr.mang.controller.Boarddetail;
 import kr.mang.controller.Command;
 import kr.mang.controller.Comment;
 import kr.mang.controller.JoinService;
+import kr.mang.controller.ListIf;
 import kr.mang.controller.LoginService;
 import kr.mang.controller.ProductDetail;
 import kr.mang.controller.ProductInput;
@@ -56,6 +57,7 @@ public class FrontController extends HttpServlet {
 		map.put("Boarddetail.do", new Boarddetail());
 		map.put("BoardInput.do", new BoardInput());
 		map.put("Comment.do", new Comment());
+		map.put("ListIf", new ListIf());
 		
 
 	}
