@@ -18,26 +18,26 @@ public class LoginService implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-
-		String id =request.getParameter("id");
+		request.setCharacterEncoding("UTF-8");
+		String user_id =request.getParameter("user_id");
 		String pw = request.getParameter("pw");
 		
-		System.out.println(id);
+		System.out.println("입력한 유저 아이디 >> " + user_id);
 		System.out.println(pw);
 		
 		
 		MemberVO vo = new MemberVO();
 		
-		vo.setId(id);
+		vo.setUser_id(user_id);
 		vo.setPw(pw);
 		MemberDAO dao = new MemberDAO();
-		String mvo= dao.login(vo);
+		MemberVO result= dao.login(vo);
+		System.out.println("이거 뭐들어오내"+ result.getNickName());
 		
-		if (mvo != null) {
+		if (result != null) {
 			HttpSession session = request.getSession();
-			session.setAttribute("uId", mvo);
+			session.setAttribute("member", result);
 		}
-		
 		return "redirect:/main.do";
 	}
 

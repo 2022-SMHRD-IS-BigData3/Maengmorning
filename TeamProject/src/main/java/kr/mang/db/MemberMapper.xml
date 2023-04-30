@@ -13,7 +13,9 @@ values (#{id}, #{pw}, #{tel}, #{area}, #{name}, #{nickName})
 </insert>
 
 <select id="login" parameterType="kr.mang.model.MemberVO" resultType="kr.mang.model.MemberVO">
-select user_id from user_info where user_id = #{id} and pw = #{pw}
+select user_id,nickname from user_info
+where user_id = #{user_id} 
+and pw = #{pw}
 </select>
 
 <select id="get" resultType="kr.mang.model.MemberVO">

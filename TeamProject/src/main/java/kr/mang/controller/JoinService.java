@@ -15,14 +15,14 @@ public class JoinService implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
-		String id = request.getParameter("id");
+		String user_id = request.getParameter("user_id");
 		String pw = request.getParameter("pw");
 		String tel = request.getParameter("tel");
 		String area = request.getParameter("area");
 		String name = request.getParameter("name");
 		String nickName = request.getParameter("nickName");
 
-		System.out.println(id);
+		System.out.println(user_id);
 		System.out.println(pw);
 		System.out.println(tel);
 		System.out.println(area);
@@ -31,7 +31,7 @@ public class JoinService implements Command {
 
 		MemberVO vo = new MemberVO();
 
-		vo.setId(id);
+		vo.setUser_id(user_id);
 		vo.setPw(pw);
 		vo.setTel(tel);
 		vo.setArea(area);
