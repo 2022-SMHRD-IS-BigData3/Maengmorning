@@ -302,16 +302,16 @@
                                 <li class="heart-icon">
 
 
-                                    <c:if test="${empty uId}">
-                                        <a href="./Gologin.do">로그인</a>
-                                        <a href="./Gojoin.do">회원가입</a>
-
-                                    </c:if>
-
-                                    <c:if test="${!empty uId}">
-                                        <a href="./Gologout.do">로그인</a>
-                                    </c:if>
-
+                        <c:if test="${empty member}">
+                       <a href="./Gologin.do">로그인</a>
+                       <a href="./Gojoin.do">회원가입</a>
+                  </c:if>
+                        
+                     <c:if test="${!empty member}">
+                     <a>${member.nickName}님 환영합니다~</a>
+                     <a>로그아웃</a>
+                     </c:if>
+                  
 
 
 

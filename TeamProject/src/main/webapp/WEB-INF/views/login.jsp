@@ -109,7 +109,7 @@
         <div class="inner-header">
           <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
             <div class="col-lg-2 col-md-2">
-              <a href="./main.do">
+              <a href="./index.html">
                 <img src="./img/로고.png" alt="">
               </a>
             </div>
@@ -214,7 +214,7 @@
                         <form action="Login.do" method = "post">
                             <div class="group-input">
                                 <label for="username">ID</label>
-                                <input type="text" id="username" name = "id">
+                                <input type="text" id="username" name = "user_id">
                             </div>
                             <div class="group-input">
                                 <label for="pass">Password</label>
