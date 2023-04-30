@@ -143,9 +143,15 @@
 
                         <ul class="nav-right">
                             <li class="heart-icon">
-                                <a href="./Gologin.do">
-                                    <i class="icon_MSY_alt">로그인</i>
-                                </a>
+                                <c:if test="${empty member}">
+                       <a href="./Gologin.do">로그인</a>
+                       <a href="./Gojoin.do">회원가입</a>
+                  </c:if>
+                     
+                     <c:if test="${!empty member}">
+                     <a>${member.nickName}님 환영합니다~</a>
+                     <a>로그아웃</a>
+                     </c:if>
                             </li>
                         </ul>
                     </div>
@@ -253,7 +259,7 @@
                             <h1>${detail.title}</h1>
                         </div>
 
-                        <p>작성자:${mdetail.id} | 작성일:<fmt:formatDate value="${detail.write_date}" pattern="yyyy/MM/dd" /> | 동네: ${mdetail.area} | 조회수 : 1</p>
+                        <p>작성자:${detail.user_id} | 작성일:<fmt:formatDate value="${detail.write_date}" pattern="yyyy/MM/dd" /> | 동네: ${mdetail.area} | 조회수 : 1</p>
                     </div>
 
 
@@ -261,16 +267,19 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img alt="Board Image1" src="./boarduploads/${detail.file_name}
-                                    class="d-block w-100" alt="...">
+                                    ">
                             </div>
-                            <div class="carousel-item">
+                         
+                          <!-- 이거 속성 때문에 이미지가 출력이 안되네요. 확인 부탁들립니다.   
+                          
+                           <div class="carousel-item">
                                 <img alt="Board Image2" src="./boarduploads/${detail.file_name}
                                     class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
                                 <img alt="Board Image3" src="./boarduploads/${detail.file_name}
-                                    class="d-block w-100" alt="..."">
-                            </div>
+                                    class="d-block w-100" alt="...">
+                            </div>-->
                         </div>
 
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button"

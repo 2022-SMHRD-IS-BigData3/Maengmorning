@@ -26,12 +26,12 @@
 	<!-- 물품 판매글 등록 -->
   <insert id="boardinput" parameterType="kr.mang.model.BoardVO">
   	insert into BOARD(BOARD_ID, TITLE, BOARD_CONTENT, VIEW_CONT, WRITE_DATE, USER_ID, B_COMMENT_ID, BOARD_IMG_ID)
-  	values(BOARD_ID.nextval, #{title}, #{board_content}, NULL, sysdate, NULL, NULL, NULL)
+  	values(BOARD_ID.nextval, #{title}, #{board_content}, NULL, sysdate, #{user_id}, NULL, 'B'||BBOARD_IMG_ID.nextval)
   </insert>
-  
+  <!-- 이미지 등록 -->
   <insert id="b_imginput" parameterType="kr.mang.model.BoardVO">
-  	insert into BOARD_IMG(BOARD_IMG_ID, PATH_IMG, FILE_NAME)
-  	values('B'||BOARD_IMG_ID.nextval, NULL,#{file_name})
+  	insert into BOARD_IMG(BOARD_IMG_ID, FILE_NAME)
+  	values('B'||BOARD_IMG_ID.nextval,#{file_name})
   </insert>
 
 <insert id="board_comment" parameterType="kr.mang.model.BoardVO">

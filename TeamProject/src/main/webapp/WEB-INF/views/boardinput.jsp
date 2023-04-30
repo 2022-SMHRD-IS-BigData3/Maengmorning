@@ -198,9 +198,14 @@
                         
                         <ul class="nav-right">
                             <li class="heart-icon">
-                                <a href="./Gologin.do">
-                                    <i class="icon_MSY_alt">로그인</i>
-                                </a>
+                    <c:if test="${empty member}">
+                       <a href="./Gologin.do">로그인</a>
+                       <a href="./Gojoin.do">회원가입</a>
+                  </c:if>
+                   <c:if test="${!empty member}">
+                     <a>${member.nickName}님 환영합니다~</a>
+                     <a>로그아웃</a>
+                     </c:if>
                             </li>
                         </ul>
                     </div>
@@ -269,14 +274,16 @@
     </div>
 
 <!-- 커뮤니티 글 및 이미지 등록 하는 곳 -->
-<form action="./ProductInput.do" method="post" enctype="multipart/form-data" class="comment-form">
+<form action="./BoardInput.do" method="post" enctype="multipart/form-data" class="comment-form">
       
     <table id="Product_Style" align="center">
+        <c:if test="${!empty member}">
         <tr class="border-bottom">
             <th colspan="2">
               <h4>커뮤니티 글 등록</h4>
             </th>
           </tr>
+         </c:if>
         <tr>
           <td class="Product_Style_td">이미지</td>
           <td class="imgInput">
@@ -301,7 +308,12 @@
             </div>
           </td>
         </tr>
-
+	<td>작성자</td>
+          <td>
+            <div>
+            <input id="user_id" name="user_id" class="ProductTitle" type="text" placeholder="작성자">
+            </div>
+          </td>
         <tr>
           <td>카테고리</td>
           <td>

@@ -48,6 +48,7 @@ public class BoardDAO {
 			session = sqlSessionFactory.openSession(true);
 			detail = session.selectOne("detail", board_id);
 			System.out.println("데이터 있냐?"+board_id);
+			System.out.println("디테일 확인>>"+detail);
 			session.commit();
 		} finally {
 			System.out.println("데이터 가지고 간다 ㅅㄱ");
