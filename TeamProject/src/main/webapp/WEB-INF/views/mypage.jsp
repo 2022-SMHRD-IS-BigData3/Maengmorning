@@ -206,24 +206,12 @@
             </div>
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
+
                 <li class="heart-icon">
-                
-                  
-                 
-                  <c:if test="${empty member}">
-                       <a href="./Gologin.do">로그인</a>
-                       <a href="./Gojoin.do">회원가입</a>
-                  </c:if>
-                        
                      <c:if test="${!empty member}">
-                       <a>${member.nickName}님 환영합니다~</a>
-                       <a>로그아웃</a>
+                     <a>${member.nickName}님 환영합니다 '◡'✿ </a>
+                     <a href="Gologout.do">| 로그아웃</a>
                      </c:if>
-                     
-                
-                        
-                     
-                </li>
               </ul>
             </div>
           </div>
@@ -344,7 +332,7 @@
                             </tr>
                             <tr>
                                 <td>DB에서 날짜</td>
-                                <td>DB에서 상품명${detail.title}</td>
+                                <td>DB에서 상품명</td>
                                 <td>DB에서 구매자</td>
                                 <td>DB에서 판매금액</td>
                             </tr>
