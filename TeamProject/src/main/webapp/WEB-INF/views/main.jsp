@@ -415,7 +415,7 @@
           
    
 
-        <form action="./Goproductlist.do">
+        <form action="./ProductList.do">
           <div class="productShopDetail">
             <button type="submit" class="btn btn-warning">더보기</button>
             <br>
@@ -462,7 +462,7 @@
 
 
 
-            <form action="./Goboardlist.do">
+            <form action="./BoardList.do">
             <div class="productShopDetail">
                 <button type="submit" class="btn btn-warning">더보기</button>
                 <br>
@@ -487,6 +487,10 @@
             <script src="js/jquery.slicknav.js"></script>
             <script src="js/owl.carousel.min.js"></script>
             <script src="js/main.js"></script>
+<<<<<<< HEAD
+            
+=======
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
     </body>
 
     </html>
