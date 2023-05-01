@@ -1,6 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -366,7 +367,7 @@
                             
 							 <c:forEach items="${list}" var="item" varStatus="status">
 							    <tr>
-							        <td>${item.items_id}</td>
+							        <td>${item.board_id}</td>
 							        <td>${item.title}</td>
 							        <td>${item.user_id}</td>
 							    </tr>
