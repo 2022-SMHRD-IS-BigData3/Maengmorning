@@ -370,31 +370,12 @@
                         </table>
 
                         
-                        <table class="Community">
-                            <tr class="border-bottom">
-                                <td > <p class="community1">관련커뮤니티</p> </td>
-                            </tr> 
-                            <tr class="CommunityTitle">
-                                <th>글번호</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                            </tr>
-                           
-                            <tbody>
-                            
-                            
-							 <c:forEach items="${list}" var="item" varStatus="status">
-							    <tr>
-							        <td>${item.items_id}</td>
-							        <td>${item.title}</td>
-							        <td>${item.user_id}</td>
-							    </tr>
-							</c:forEach>
-							</tbody>
-                            </table>
-                        
     </section>
    
+                        	<div style="text-align: center;">
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
+                            onclick="window.open('./main2.do', '_blank', 'width=1200,height=600')">관련 커뮤니티 글 보러가기</button>
+                 		   </div>
         
             <!-- Js Plugins -->
             <script src="js/jquery-3.3.1.min.js"></script>

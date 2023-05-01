@@ -314,6 +314,7 @@
                                         <img src="./uploads/${imglist[status.index].file_name}" alt="이미지"><br>
                                             <span>글번호:${list.items_id}</span>
                                            <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
+<
                                             <a href="./ListIf.do">
                                            <a href="Productdetail.do?items_id=${list.items_id}">
                                            <h5 id="title">
