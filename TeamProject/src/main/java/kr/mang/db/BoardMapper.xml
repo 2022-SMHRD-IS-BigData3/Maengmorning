@@ -25,8 +25,8 @@
 
 	<!-- 물품 판매글 등록 -->
   <insert id="boardinput" parameterType="kr.mang.model.BoardVO">
-  	insert into BOARD(BOARD_ID, TITLE, BOARD_CONTENT, VIEW_CONT, WRITE_DATE, USER_ID, B_COMMENT_ID, BOARD_IMG_ID)
-  	values(BOARD_ID.nextval, #{title}, #{board_content}, NULL, sysdate, #{user_id}, NULL, 'B'||BBOARD_IMG_ID.nextval)
+  	insert into BOARD(BOARD_ID, TITLE, BOARD_CONTENT, VIEW_CONT, WRITE_DATE, USER_ID, B_COMMENT_ID, BOARD_IMG_ID, TAG_ID)
+  	values(BOARD_ID.nextval, #{title}, #{board_content}, NULL, sysdate, #{user_id}, NULL, 'B'||BBOARD_IMG_ID.nextval, NULL)
   </insert>
   <!-- 이미지 등록 -->
   <insert id="b_imginput" parameterType="kr.mang.model.BoardVO">
@@ -36,7 +36,7 @@
 
 <insert id="board_comment" parameterType="kr.mang.model.BoardVO">
   	insert into board_comment(b_comment_id, board_comment, user_id, c_write_date) 
-  	values('cAbvffgvc',#{comment},'123',null)
+  	values('ggggg',#{comment},'123445',null)
   </insert>
   
  

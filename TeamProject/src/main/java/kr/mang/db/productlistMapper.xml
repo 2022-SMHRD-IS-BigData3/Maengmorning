@@ -48,7 +48,7 @@
   </insert>
   
   <select id="get_listif" resultType="kr.mang.model.ProductlistVO">
-    select * from items where tag_id='12'
+    select * from board where tag_id='12'
   </select>
   
      
