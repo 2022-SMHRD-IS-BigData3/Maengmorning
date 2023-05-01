@@ -146,7 +146,7 @@ public class ProductlistDAO {
 			try {
 				session = sqlSessionFactory.openSession();
 				mylist = session.selectList("getmypage");
-				System.out.println(mylist);
+				System.out.println("MYLIST>>"+mylist);
 			} finally {
 				System.out.println("my리스트 가져옴");
 				session.close();

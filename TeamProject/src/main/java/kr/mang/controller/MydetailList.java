@@ -12,15 +12,15 @@ import kr.mang.model.MemberVO;
 import kr.mang.model.ProductlistDAO;
 import kr.mang.model.ProductlistVO;
 
-public class MyList implements Command {
+public class MydetailList implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	System.out.println("MY리스트");
+    	System.out.println("MYsell리스트");
         
     	ProductlistDAO dao = new ProductlistDAO();
         List<ProductlistVO> mylist = dao.myList();
-		System.out.println("mylist>>"+mylist);
+		System.out.println("myselllist>>"+mylist);
         request.setAttribute("getmylist", mylist);
 		
-		return "mypage.jsp";
+		return "mypagesell.jsp";
     }
 }

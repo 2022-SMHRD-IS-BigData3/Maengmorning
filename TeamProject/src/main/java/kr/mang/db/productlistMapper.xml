@@ -53,8 +53,9 @@
    
    <!-- 마이페이지 판매 및 구매내역 -->
    <select id="getmypage" resultType="kr.mang.model.ProductlistVO">
-   		SELECT *
-          FROM ITEMS_HISTORY
+  select  A.PRICE, A.TITLE, A.UP_DATE, A.USER_ID,B.BUY_USER_ID, B.TRADE_DATE
+  from ITEMS A LEFT OUTER JOIN ITEMS_HISTORY B ON (A.ITEMS_ID = B.ITEMS_ID)
+
    </select>
      
   

@@ -1,3 +1,12 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@page import="kr.mang.model.ProductlistVO"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -79,12 +88,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                             <tr>
-                                <td>23.05.01</td>
-                                <td>TITLE</td>
-                                <td>USER_ID</td>
-                                <td>PRICE:2000</td>
+                           <c:forEach items="${getmylist }" var="my" varStatus="status">
+                            <tr>
+                                <tr>
+                                <td><fmt:formatDate value="${my.trade_date}" pattern="yyyy.MM.dd"/></td>
+                                <td>${my.title }</td>
+                                <td>${my.buy_user_id }</td>
+                                <td>${my.price }</td>
                             </tr>
+                           </c:forEach>
                              <tr>
                                 <td>23.05.03</td>
                                 <td>TITLE</td>
