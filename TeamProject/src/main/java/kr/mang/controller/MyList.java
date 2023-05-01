@@ -18,7 +18,8 @@ public class MyList implements Command {
         
     	ProductlistDAO dao = new ProductlistDAO();
         List<ProductlistVO> mylist = dao.myList();
-		request.setAttribute("getmylist", mylist);
+		System.out.println("mylist"+mylist);
+        request.setAttribute("getmylist", mylist);
 		
 		return "mypagesell.jsp";
     }
