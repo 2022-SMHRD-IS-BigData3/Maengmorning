@@ -79,41 +79,41 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
-                                <td>DB에서 판매금액</td>
+                             <tr>
+                                <td>23.05.01</td>
+                                <td>TITLE</td>
+                                <td>USER_ID</td>
+                                <td>PRICE:2000</td>
+                            </tr>
+                             <tr>
+                                <td>23.05.03</td>
+                                <td>TITLE</td>
+                                <td>USER_ID</td>
+                                <td>PRICE:20000</td>
+                            </tr>
+                              <tr>
+                                <td>23.05.02</td>
+                                <td>TITLE</td>
+                                <td>USER_ID</td>
+                                <td>PRICE:30000</td>
+                            </tr>
+                              <tr>
+                                <td>23.05.02</td>
+                                <td>TITLE</td>
+                                <td>USER_ID</td>
+                                <td>PRICE:50000</td>
                             </tr>
                             <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
-                                <td>DB에서 판매금액</td>
+                                <td>23.04.30</td>
+                                <td>TITLE</td>
+                                <td>USER_ID</td>
+                                <td>PRICE:15000</td>
                             </tr>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
-                                <td>DB에서 판매금액</td>
-                            </tr>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
-                                <td>DB에서 판매금액</td>
-                            </tr>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
-                                <td>DB에서 판매금액</td>
-                            </tr>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
-                                <td>DB에서 판매금액</td>
+                                                     <tr>
+                                <td>23.04.25</td>
+                                <td>TITLE</td>
+                                <td>USER_ID</td>
+                                <td>PRICE:27000</td>
                             </tr>
                         </tbody>
                         <tfoot>

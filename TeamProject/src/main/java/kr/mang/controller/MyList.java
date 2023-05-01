@@ -21,6 +21,6 @@ public class MyList implements Command {
 		System.out.println("mylist"+mylist);
         request.setAttribute("getmylist", mylist);
 		
-		return "mypagesell.jsp";
+		return "mypage.jsp";
     }
 }
