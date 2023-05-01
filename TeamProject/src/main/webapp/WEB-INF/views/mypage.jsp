@@ -323,7 +323,7 @@
                 <div class="row">
                 </div>
 
-                <form action="./Gomypagesell.do">
+                <form action="./GoMydetailList.do">
                     <table class="table">
 
                         <thead>
@@ -351,7 +351,7 @@
 
                     <div style="text-align: right;">
                         <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
-                            onclick="window.open('mypagesell.do', '_blank', 'width=1200,height=600')">더보기</button>
+                            onclick="window.open('./mypagesell.do', '_blank', 'width=1200,height=600')">더보기</button>
                     </div>
                 </form>
                 <br><br>
@@ -431,4 +431,3 @@
     </body>
 
     </html>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
