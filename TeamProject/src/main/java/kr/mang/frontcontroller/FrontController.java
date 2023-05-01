@@ -57,7 +57,7 @@ public class FrontController extends HttpServlet {
 		map.put("mypagebuy.do", new MydetailBuyList());
 		
 		map.put("ProductList.do",new ProductList());
-		map.put("Productdetail.do", new ProductDetail());
+		map.put("ProductDetail.do", new ProductDetail());
 		map.put("ProductInput.do", new ProductInput());
 		
 		map.put("BoardList.do", new BoardList());
@@ -65,7 +65,7 @@ public class FrontController extends HttpServlet {
 		map.put("BoardInput.do", new BoardInput());
 		map.put("Comment.do", new Comment());
 		map.put("ListIf.do", new ListIf());
-		map.put("BoardListIf.do", new BoardListIf());
+		map.put("main2.do", new BoardListIf());
 
 	}
 	
