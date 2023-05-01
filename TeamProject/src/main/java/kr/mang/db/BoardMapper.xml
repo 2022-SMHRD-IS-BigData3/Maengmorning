@@ -39,8 +39,6 @@
   	values('cAbvffgvc',#{comment},'123',null)
   </insert>
   
-  <select id="get_comments" resultType="kr.mang.model.BoardVO">
-  	select * from board_comment
-  </select>
+ 
 	
 </mapper>

@@ -126,7 +126,7 @@ public class ProductlistDAO {
 		        System.out.println("sqlSessionFactory: " + sqlSessionFactory);
 		        session = sqlSessionFactory.openSession(true);
 		        System.out.println("세션: " + session);
-		        list = session.selectList("get_commentif");
+		        list = session.selectList("get_listif");
 		        System.out.println("조건 조회 결과: " + list.get(0).getItems_id());
 		    } catch (Exception e) {
 		        System.out.println("에러");

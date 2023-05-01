@@ -47,9 +47,10 @@
   	values('U'||ITEMS_IMG_ID.nextval, #{file_name})
   </insert>
   
-  <select id="get_comments" resultType="kr.mang.model.ProductlistVO">
-  	select * from board_comment
+  <select id="get_listif" resultType="kr.mang.model.ProductlistVO">
+    select * from items where tag_id='12'
   </select>
   
+     
   
 </mapper>
