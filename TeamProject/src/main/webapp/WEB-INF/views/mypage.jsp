@@ -206,17 +206,15 @@
             </div>
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
-                <li class="heart-icon">
-                
-                  
-                 
+                  <c:if test="${empty member}">
                        <a href="./Gologin.do">로그인</a>
                        <a href="./Gojoin.do">회원가입</a>
+                  </c:if>
                      
-                
-                        
-                     
-                </li>
+                     <c:if test="${!empty member}">
+                     <a>${member.nickName}님 환영합니다 '◡'✿ </a>
+                     <a href="Gologout.do">| 로그아웃</a>
+                     </c:if>
               </ul>
             </div>
           </div>

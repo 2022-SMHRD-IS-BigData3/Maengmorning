@@ -31,7 +31,6 @@
   </head>
 
   <style>
-
   /* 스타일링 */
      .search-container {
         display: flex;
@@ -255,7 +254,7 @@
       
   </style>
 
-  <body link="black" vlink="black">
+  <body>
 
 
 
@@ -265,7 +264,7 @@
     <div id="preloder">
       <div class="loader"></div>
     </div>
- 
+
     <!-- Header Section Begin -->
     <header class="header-section">
 
@@ -273,7 +272,7 @@
         <div class="inner-header">
           <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
             <div class="col-lg-2 col-md-2">
-              <a href="./main.do">
+              <a href="main.do">
                 <img src="./img/로고.png" alt="">
               </a>
             </div>
@@ -286,25 +285,21 @@
                   </div>
             </div>
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
-              <ul class="nav-right">
-                <li class="heart-icon">
+             
                 
-                  
-                   <c:if test="${empty member}">
+                 <ul class="nav-right">
+                  <c:if test="${empty member}">
                        <a href="./Gologin.do">로그인</a>
                        <a href="./Gojoin.do">회원가입</a>
                   </c:if>
-                        
+                     
                      <c:if test="${!empty member}">
-                     <a>${member.nickName}님 환영합니다~</a>
-                     <a>로그아웃</a>
+                     <a>${member.nickName}님 환영합니다 '◡'✿ </a>
+                     <a href="Gologout.do">| 로그아웃</a>
                      </c:if>
-                  
-                  
-                    
-                  
-                </li>
               </ul>
+                  
+             
             </div>
           </div>
         </div><div class="nav-item">
@@ -315,8 +310,8 @@
             <header>
                 <nav>
                   <ul>
-                    <li><a href="./main.do">Home</a></li>
-                    <li><a href="./ProductList.do">중고거래</a>
+                    <li><a href="main.do">Home</a></li>
+                    <li><a href="./Goproductlist.do">중고거래</a>
                         <ul class="dropdown">
                             <li><a href="#">외출용품</a></li>
                             <li><a href="#"> 장난감/도서</a></li>
@@ -401,166 +396,47 @@
               <br>
           </div>
 
-
-
-   
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
-		
-          
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <image src="./uploads/" alt="이미지" width="100%" height="225" />
-              </svg>
-              <div class="card-body">
-                <p class="card-text">제목 : <br><br> 상세설명 : 장소:</p>
-          
-              </div>
-            </div>
-          </div>
-          </div>
- 
       
           
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
-              </svg>
-
-              <div class="card-body">
-                <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
-              </div>
-            </div>
-          </div>
-			 <div class="row">
-			  <c:forEach items="${productlist}" var="list" varStatus="status">
-			 <a href="./ProductList.do" >
-			    <c:if test="${status.index<3}">
-			      <div class="col-sm-4">
-			        <div class="card shadow-sm">
-			          <div class="card-body">
-			            <img width="300px" height="300px" src="./uploads/${imglist[status.index].file_name}" alt="이미지">
-			            <p class="card-text" name="title">제목: ${list.title}<br><br> 상세설명: ${list.items_state}</p>
-   					         </a>
-			          </div>
-			        </div>
-			      </div>
-			    </c:if>
-			  </c:forEach>
-			</div>
+          <div class="row">
+           <c:forEach items="${productlist}" var="list" varStatus="status">
+             <c:if test="${status.index<3}">
+               <div class="col-sm-4">
+                 <div class="card shadow-sm">
+                   <div class="card-body">
+                     <img width="300px" height="300px" src="./uploads/${imglist[status.index].file_name}" alt="이미지">
+                     <p class="card-text" name="title">제목: ${list.title}<br><br> 상세설명: ${list.items_state}</p>
+                   </div>
+                 </div>
+               </div>
+             </c:if>
+           </c:forEach>
+         </div>
+          
    
 
-                        
+        <form action="./Goproductlist.do">
+          <div class="productShopDetail">
+            <button type="submit" class="btn btn-warning">더보기</button>
+            <br>
+        </div>
+        </form>
+        </div>
+      </div>
+ </div>
+   
+      <!-- 커뮤니티 -->
 
-                                    
-
-
-
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <div class="container">
-                        <nav class="nav-menu mobile-menu">
-
-
-                            <header>
-                                <nav>
-                                    <ul>
-                                        <li><a href="./main.do">Home</a></li>
-                                        <li><a href="./ProductList.do">중고거래</a>
-                                            <ul class="dropdown">
-                                                <li><a href="#">외출용품</a></li>
-                                                <li><a href="#"> 장난감/도서</a></li>
-                                                <li><a href="#">의류</a></li>
-                                                <li><a href="#">가구</a></li>
-                                                <li><a href="#">침구류</a></li>
-                                                <li><a href="#"> 생활용품</a></li>
-                                                <li><a href="#">기타</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="BoardList.do">커뮤니티</a>
-                                            <ul class="dropdown">
-                                                <li><a href="#">잡담</a></li>
-                                                <li><a href="#">그외</a></li>
-                                                <li><a href="#">등등</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="./Gomypage.do">마이페이지</a>
-                                            <ul class="dropdown">
-                                                <li><a href="#">판매/구매목록</a></li>
-                                                <li><a href="#">매너온도</a></li>
-                                                <li><a href="#">개인정보 수정</a></li>
-                                                <li><a href="#">좋아요 목록</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </header>
-
-                    </div>
-
-
-
-
-                    </nav>
-                    <div id="mobile-menu-wrap"></div>
-                </div>
-            </div>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Placeholder</title>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">    
-                 
-                </div>
-              </div>
+      
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+            <div class="productShop">
+                <h4>커뮤니티</h4>
+                <br>
             </div>
 
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Placeholder</title>
-                  <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Placeholder</title>
-                  <image href="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg" width="100%" height="225" />
-                </svg>
-
-                <div class="card-body">
-                  <p class="card-text">제목 : 강아지<br><br> 상세설명 : 멍멍</p>
-                </div>
-              </div>
-            </div>
-	
-			<div class="col">
+   
+         <div class="col">
                      <table>
                      <thead>
                             <tr>
@@ -572,45 +448,19 @@
                         <tbody>
                         <tr>
                            <c:forEach items="${Blist}" var="blist" varStatus="status">
-                       	 <c:if test="${status.index<5}">
-                           			 <a href="./ProductList.do" >
-                            	<td>${blist.title}</td>
-                          		  </a>
-                            	<td>${blist.user_id}</td>
-                          		  <td>${area[status.index].area}</td>
-                          		  </tr>
-                          		</c:if>
+                           <c:if test="${status.index<5}">
+                               <td>${blist.title}</td>
+                               <td>${blist.user_id}</td>
+                                  <td>${area[status.index].area}</td>
+                                  </tr>
+                                  </c:if>
                         </c:forEach>
-                        
                         </tbody>
                         </table>
+                        
+                       
 
-        </header>
-        <!-- 배너 -->
 
-        <div class="Banner">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./img/맹모닝배너1-001.png" style="width: 1200px; margin-left: 350px;" class="mainBanner"
-                            alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./img/맹모닝배너2-001.png" style="width: 1200px; margin-left: 350px;" class="mainBanner"
-                            alt="...">
-                    </div>
-                </div>
-
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">이전</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">다음</span>
-                </a>
-            </div>
-          
 
             <form action="./Goboardlist.do">
             <div class="productShopDetail">
@@ -637,9 +487,6 @@
             <script src="js/jquery.slicknav.js"></script>
             <script src="js/owl.carousel.min.js"></script>
             <script src="js/main.js"></script>
-            <script>
-            
-            </script>
     </body>
 
     </html>
