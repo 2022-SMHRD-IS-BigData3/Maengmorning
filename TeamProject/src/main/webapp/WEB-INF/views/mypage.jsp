@@ -316,7 +316,7 @@
                 </div>
             </div>
         </div>
-
+.
         <!-- 게시판 글 -->
         <div class="container">
             <div class="col-lg-12">
