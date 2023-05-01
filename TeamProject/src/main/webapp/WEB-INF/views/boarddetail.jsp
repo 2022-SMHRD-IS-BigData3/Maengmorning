@@ -401,12 +401,13 @@
 
                     
 
-                    <form action="Comment.do">
+              
                     <div class="comment">
-                        댓글  <input name="comment" type="text">
-                        <button type="submit">등록</button>
+                        댓글  <input id="comment" type="text">
+                        	<input type="hidden" name ="board_id" value="">
+                        <button >등록</button>
                     </div>
-                    </form>
+                   
 
                     <br>
                     <ul class="list-group">
@@ -471,14 +472,49 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
         $(document).ready(function () {
             $('#carouselExampleControls').carousel();
         });
-        </script>
-        
+    </script>
+  
+    <%-- <script>
+    
+    	document.on('click',function(){
+    		var comment = $("#comment").val();
+    		var user_id = "${member.iser_id}"
+    		var board_id = ""
+    		$.ajax({
+    			url = "Comment",
+    			date = {
+    					"b_comment_content" : comment,
+    					"user_id" : user_id,
+    					"board_id" : board_id
+  		
+    			},
+    			type : "post",
+    			success : function(res){
+    					if (res == "success"){
+    						alert("등록성공")
+    				}
+    				$("#comment").val(''); // 댓글 등록 후 등록창 초기화하는 구문
+    				getComment();
+    			},
+    			error : function (){
+    				alert("등록실패")
+    			}
+    			
+    			
+    		})
+ 
+    	})
+    
+    
+    </script>
+        --%>
 </body>
 
 </html>
