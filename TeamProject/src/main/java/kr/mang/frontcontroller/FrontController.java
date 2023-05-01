@@ -26,6 +26,9 @@ import kr.mang.controller.Comment;
 import kr.mang.controller.JoinService;
 import kr.mang.controller.ListIf;
 import kr.mang.controller.LoginService;
+import kr.mang.controller.MyList;
+import kr.mang.controller.MydetailBuyList;
+import kr.mang.controller.MydetailList;
 import kr.mang.controller.ProductDetail;
 import kr.mang.controller.ProductInput;
 
@@ -49,6 +52,9 @@ public class FrontController extends HttpServlet {
 		map.put("Login.do",new LoginService());
 		map.put("Join.do",new JoinService());
 		map.put("main.do", new mainList());
+		map.put("mypage.do", new MyList());
+		map.put("mypagesell.do", new MydetailList());
+		map.put("mypagebuy.do", new MydetailBuyList());
 		
 		map.put("ProductList.do",new ProductList());
 		map.put("Productdetail.do", new ProductDetail());

@@ -17,15 +17,16 @@ public class ProductlistVO {
 
 	private String file_name;
 	
+	private String buy_user_id;
+	private String history_id;
+	private Date trade_date;
+	
 	public ProductlistVO() {}
-
-	
-	
-	
 	
 	
 	public ProductlistVO(int items_id, String title, String items_state, String price, Date up_date, String user_id,
-			String items_img_id, String tag_id, String path_img, String file_name) {
+			String items_img_id, String tag_id, String path_img, String file_name, String buy_user_id,
+			String history_id, Date trade_date) {
 		super();
 		this.items_id = items_id;
 		this.title = title;
@@ -37,13 +38,36 @@ public class ProductlistVO {
 		this.tag_id = tag_id;
 		this.path_img = path_img;
 		this.file_name = file_name;
+		this.buy_user_id = buy_user_id;
+		this.history_id = history_id;
+		this.trade_date = trade_date;
 	}
 
 
+	public String getBuy_user_id() {
+		return buy_user_id;
+	}
 
+	public void setBuy_user_id(String buy_user_id) {
+		this.buy_user_id = buy_user_id;
+	}
 
+	public String getHistory_id() {
+		return history_id;
+	}
 
+	public void setHistory_id(String history_id) {
+		this.history_id = history_id;
+	}
 
+	public Date getTrade_date() {
+		return trade_date;
+	}
+
+	public void setTrade_date(Date trade_date) {
+		this.trade_date = trade_date;
+	}
+	
 	public int getItems_id() {
 		return items_id;
 	}

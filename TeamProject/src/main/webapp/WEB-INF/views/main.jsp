@@ -329,7 +329,7 @@
                             <li><a href="#">등등</a></li>
                         </ul>
                     </li>
-                    <li><a href="./Gomypage.do">마이페이지</a>
+                    <li><a href="mypage.do">마이페이지</a>
                         <ul class="dropdown">
                             <li><a href="#">판매/구매목록</a></li>
                             <li><a href="#">매너온도</a></li>
@@ -487,10 +487,6 @@
             <script src="js/jquery.slicknav.js"></script>
             <script src="js/owl.carousel.min.js"></script>
             <script src="js/main.js"></script>
-<<<<<<< HEAD
-            
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
     </body>
 
     </html>
