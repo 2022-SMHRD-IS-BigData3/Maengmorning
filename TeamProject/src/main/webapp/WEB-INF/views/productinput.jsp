@@ -255,7 +255,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
                         <a href="./main.do"><i class="fa fa-home"></i> Home</a>
-                        <a href="./Goproductlist.do">중고거래</a>
+                        <a href="./ProductList.do">중고거래</a>
                         <span>물품등록</span>
                     </div>
                 </div>

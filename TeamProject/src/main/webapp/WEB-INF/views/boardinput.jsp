@@ -261,7 +261,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
                         <a href="./main.do"><i class="fa fa-home"></i> Home</a>
-                        <a href="./Goproductlist.do">커뮤니티</a>
+                        <a href="./ProductList.do">커뮤니티</a>
                         <span>글 등록</span>
                     </div>
                 </div>
