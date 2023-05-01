@@ -318,7 +318,7 @@
                             <tr>
                             	<td>${list.board_id}</td>
                             	 <td>
-                            	 <a href="./BoardListIf.do">${list.title}
+                            	 <a href="Boarddetail.do?board_id=${list.board_id}">${list.title}
                             	 </a>
                             	 </td> 
                             

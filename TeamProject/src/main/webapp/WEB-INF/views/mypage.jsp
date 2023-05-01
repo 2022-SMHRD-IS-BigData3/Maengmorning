@@ -1,4 +1,12 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@page import="kr.mang.model.ProductlistVO"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
     <!DOCTYPE html>
     <html lang="zxx">
 
@@ -14,6 +22,7 @@
             <!-- Google Font -->
             <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap"
                 rel="stylesheet">
+                
 
             <!-- Css Styles -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -176,7 +185,6 @@
                 font-weight: 700;
             }
             
-           
           
     </style>
 
@@ -207,11 +215,8 @@
             </div>
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
-                  <c:if test="${empty member}">
-                       <a href="./Gologin.do">로그인</a>
-                       <a href="./Gojoin.do">회원가입</a>
-                  </c:if>
-                     
+
+                <li class="heart-icon">
                      <c:if test="${!empty member}">
                      <a>${member.nickName}님 환영합니다 '◡'✿ </a>
                      <a href="Gologout.do">| 로그아웃</a>
@@ -295,7 +300,7 @@
                         class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
                             <strong class="d-inline-block mb-2 text-primary">아이디</strong>
-                            <h3 class="mb-0">닉네임</h3>
+                            <h3 class="mb-0">${member.nickName}</h3>
                             <div class="mb-1 text-body-secondary">그외</div>
                             <p class="card-text mb-auto">등등</p>
                         </div>
@@ -304,22 +309,22 @@
                                 role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice"
                                 focusable="false">
                                 <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#FFD280" />
-                                <text  x="12%" y="50%" fill="#F6F6F6">매너온도 ★★★★★</text>
+                                <rect width="100%" height="100%" fill="#FFD280" /><text x="12%" y="50%"
+                                    fill="#F6F6F6">매너온도 ★★★★★</text>
                             </svg>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+.
         <!-- 게시판 글 -->
         <div class="container">
             <div class="col-lg-12">
                 <div class="row">
                 </div>
 
-                <form action="./Gomypagesell.do">
+                <form action="./GoMydetailList.do">
                     <table class="table">
 
                         <thead>
@@ -334,23 +339,25 @@
                                 <td>구매자</td>
                                 <td>판매금액</td>
                             </tr>
+                           <c:forEach items="${getmylist }" var="my" varStatus="status">
                             <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 구매자</td>
-                                <td>DB에서 판매금액</td>
+                                <td><fmt:formatDate value="${my.trade_date}" pattern="yyyy.MM.dd"/></td>
+                                <td>${my.title }</td>
+                                <td>${my.buy_user_id }</td>
+                                <td>${my.price }</td>
                             </tr>
+                           </c:forEach>
                         </tbody>
                     </table>
-
-                    <div style="text-align: right;">
+							<div style="text-align: right;">
                         <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
-                            onclick="window.open('./Gomypagesell.do', '_blank', 'width=1200,height=600')">더보기</button>
+                            onclick="window.open('mypagesell.do', '_blank', 'width=1200,height=600')">더보기</button>
                     </div>
+                    
                 </form>
                 <br><br>
-
-                <form action="./Gomypagebuy.do">
+               
+                <form action="mypagebuy.do">
                     <table class="table">
                         <thead>
                             <tr>
@@ -366,49 +373,43 @@
                                 <td>판매자</td>
                                 <td>구매금액</td>
                             </tr>
+                          <c:forEach items="${getmylist }" var="my" varStatus="status">
                             <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 판매자</td>
-                                <td>DB에서 구매금액</td>
+                                <tr>
+                                <td><fmt:formatDate value="${my.up_date}" pattern="yyyy.MM.dd"/></td>
+                                <td>${my.title }</td>
+                                <td>${my.user_id }</td>
+                                <td>${my.price }</td>
                             </tr>
+                           </c:forEach>
                         </tbody>
                     </table>
                     <div style="text-align: right;">
                         <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
-                            onclick="window.open('./Gomypagebuy.do', '_blank', 'width=1200,height=600')">더보기</button>
+                            onclick="window.open('mypagebuy.do', '_blank', 'width=1200,height=600')">더보기</button>
                     </div>
                 </form>
                 <br><br>
                 <form action="./Gomypageselect.do">
                     <table class="table">
-                    
-                    <table class="table">
                         <thead>
-                            <tr>
-                                <td>
-                                    <h4>❤찜목록</h4>
-                                </td>
-                            </tr>
+                            <td>
+                                <h4>❤찜목록</h4>
+                            </td>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>날짜</td>
-                                <td>상품명</td>
                                 <td>판매자</td>
-                                <td>구매금액</td>
+                                <td>상품명</td>
+                                <td>금액</td>
                             </tr>
                             <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
                                 <td>DB에서 판매자</td>
-                                <td>DB에서 구매금액</td>
+                                <td>DB에서 상품명</td>
+                                <td>DB에서 금액</td>
                             </tr>
                         </tbody>
                     </table>
-                    
-                    
-                   
                     <div style="text-align: right;">
                         <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
                             onclick="window.open('./Gomypageselect.do', '_blank', 'width=1200,height=600')">더보기</button>
@@ -431,4 +432,3 @@
     </body>
 
     </html>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
