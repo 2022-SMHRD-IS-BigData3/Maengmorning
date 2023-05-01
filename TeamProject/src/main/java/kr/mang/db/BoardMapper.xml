@@ -25,9 +25,11 @@
 
 	<!-- 게시판글 등록 -->
   <insert id="boardinput" parameterType="kr.mang.model.BoardVO">
+
   	insert into BOARD(BOARD_ID, TITLE, BOARD_CONTENT, VIEW_CONT, WRITE_DATE, USER_ID, B_COMMENT_ID, FILE_NAME)
   	values(BOARD_ID.nextval, #{title}, #{board_content}, NULL, sysdate, #{user_id}, NULL, #{file_name})
-  </insert>
+
+  	</insert>
   <!-- 이미지 등록 -->
  <!-- <insert id="b_imginput" parameterType="kr.mang.model.BoardVO">
   	insert into BOARD_IMG(BOARD_IMG_ID, FILE_NAME)
@@ -36,7 +38,7 @@
 
 <insert id="board_comment" parameterType="kr.mang.model.BoardVO">
   	insert into board_comment(b_comment_id, board_comment, user_id, c_write_date) 
-  	values('cAbvffgvc',#{comment},'123',null)
+  	values('ggggg',#{comment},'123445',null)
   </insert>
   
  
