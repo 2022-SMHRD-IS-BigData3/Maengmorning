@@ -176,6 +176,7 @@
                 font-weight: 700;
             }
             
+           
           
     </style>
 
@@ -303,8 +304,8 @@
                                 role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice"
                                 focusable="false">
                                 <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#FFD280" /><text x="12%" y="50%"
-                                    fill="#F6F6F6">매너온도 ★★★★★</text>
+                                <rect width="100%" height="100%" fill="#FFD280" />
+                                <text  x="12%" y="50%" fill="#F6F6F6">매너온도 ★★★★★</text>
                             </svg>
                         </div>
                     </div>
@@ -381,24 +382,33 @@
                 <br><br>
                 <form action="./Gomypageselect.do">
                     <table class="table">
+                    
+                    <table class="table">
                         <thead>
-                            <td>
-                                <h4>❤찜목록</h4>
-                            </td>
+                            <tr>
+                                <td>
+                                    <h4>❤찜목록</h4>
+                                </td>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>판매자</td>
+                                <td>날짜</td>
                                 <td>상품명</td>
-                                <td>금액</td>
+                                <td>판매자</td>
+                                <td>구매금액</td>
                             </tr>
                             <tr>
-                                <td>DB에서 판매자</td>
+                                <td>DB에서 날짜</td>
                                 <td>DB에서 상품명</td>
-                                <td>DB에서 금액</td>
+                                <td>DB에서 판매자</td>
+                                <td>DB에서 구매금액</td>
                             </tr>
                         </tbody>
                     </table>
+                    
+                    
+                   
                     <div style="text-align: right;">
                         <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
                             onclick="window.open('./Gomypageselect.do', '_blank', 'width=1200,height=600')">더보기</button>
