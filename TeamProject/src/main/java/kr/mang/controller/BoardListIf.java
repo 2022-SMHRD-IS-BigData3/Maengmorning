@@ -27,7 +27,7 @@ public class BoardListIf implements Command {
 		list = dao.boardlistif();
 		request.setAttribute("list", list);
 		
-		return "boarddetail.jsp";
+		return "main2.jsp";
 	}
 
 }
