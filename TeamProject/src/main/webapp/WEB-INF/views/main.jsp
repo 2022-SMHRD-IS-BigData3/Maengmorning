@@ -415,7 +415,7 @@
           
    
 
-        <form action="./Goproductlist.do">
+        <form action="./ProductList.do">
           <div class="productShopDetail">
             <button type="submit" class="btn btn-warning">더보기</button>
             <br>
@@ -462,7 +462,7 @@
 
 
 
-            <form action="./Goboardlist.do">
+            <form action="./BoardList.do">
             <div class="productShopDetail">
                 <button type="submit" class="btn btn-warning">더보기</button>
                 <br>
