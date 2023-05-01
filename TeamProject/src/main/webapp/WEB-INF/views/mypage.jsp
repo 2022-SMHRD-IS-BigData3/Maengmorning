@@ -351,7 +351,7 @@
 
                     <div style="text-align: right;">
                         <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
-                            onclick="window.open('./Gomypagesell.do', '_blank', 'width=1200,height=600')">더보기</button>
+                            onclick="window.open('mypagesell.do', '_blank', 'width=1200,height=600')">더보기</button>
                     </div>
                 </form>
                 <br><br>

@@ -1,3 +1,12 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@page import="kr.mang.model.ProductlistVO"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -82,12 +91,15 @@
                             </tr>
                         </thead>
                         <tbody>
+                               <c:forEach items="${getmylist }" var="my" varStatus="status">
                             <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 판매자</td>
-                                <td>DB에서 판매금액</td>
+                                <tr>
+                                <td><fmt:formatDate value="${my.up_date}" pattern="yyyy.MM.dd"/></td>
+                                <td>${my.title }</td>
+                                <td>${my.user_id }</td>
+                                <td>${my.price }</td>
                             </tr>
+                           </c:forEach>
                             <tr>
                                 <td>DB에서 날짜</td>
                                 <td>DB에서 상품명</td>
