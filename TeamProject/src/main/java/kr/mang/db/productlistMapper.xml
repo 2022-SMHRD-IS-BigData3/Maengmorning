@@ -50,7 +50,12 @@
   <select id="get_listif" resultType="kr.mang.model.ProductlistVO">
     select * from board where tag_id='12'
   </select>
-  
+   
+   <!-- 마이페이지 구매내역 -->
+   <select id="getmypage" resultType="kr.mang.model.ProductlistVO">
+   		select A.USER_ID, A.PRICE, A.UP_DATE,A.TITLE
+   		from ITEMS A LEFT OUTER JOIN ITEMS_HISTORY B ON (A.ITEMS_ID = B.ITEMS_ID)
+   </select>
      
   
 </mapper>

@@ -136,5 +136,24 @@ public class ProductlistDAO {
 		    }
 		    return list;
 		}
+		
+		// 마이페이지 조회
+		
+		public List<ProductlistVO> myList() {
+			SqlSession session = null;
+			List<ProductlistVO> mylist = null;
+			System.out.println("my리스트가져와야지");
+			try {
+				session = sqlSessionFactory.openSession();
+				mylist = session.selectList("getmypage");
+				System.out.println(mylist);
+			} finally {
+				System.out.println("my리스트 가져옴");
+				session.close();
+			}
+			return mylist;
+		}
+		
+		
 	
 }

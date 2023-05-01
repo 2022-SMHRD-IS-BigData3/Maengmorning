@@ -210,8 +210,15 @@
                 
                   
                  
+                  <c:if test="${empty member}">
                        <a href="./Gologin.do">로그인</a>
                        <a href="./Gojoin.do">회원가입</a>
+                  </c:if>
+                        
+                     <c:if test="${!empty member}">
+                       <a>${member.nickName}님 환영합니다~</a>
+                       <a>로그아웃</a>
+                     </c:if>
                      
                 
                         
@@ -296,7 +303,7 @@
                         class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
                             <strong class="d-inline-block mb-2 text-primary">아이디</strong>
-                            <h3 class="mb-0">닉네임</h3>
+                            <h3 class="mb-0">${member.nickName}</h3>
                             <div class="mb-1 text-body-secondary">그외</div>
                             <p class="card-text mb-auto">등등</p>
                         </div>
@@ -337,7 +344,7 @@
                             </tr>
                             <tr>
                                 <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
+                                <td>DB에서 상품명${detail.title}</td>
                                 <td>DB에서 구매자</td>
                                 <td>DB에서 판매금액</td>
                             </tr>
