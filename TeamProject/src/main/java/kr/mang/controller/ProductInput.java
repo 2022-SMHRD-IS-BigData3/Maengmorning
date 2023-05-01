@@ -53,6 +53,6 @@ public class ProductInput implements Command {
     dao.imgInput(vo);
     System.out.println("돌아옴");
     // 사용자를 성공 페이지로 리디렉션
-    return "GoProductList.do";
+    return "ProductList.do";
   }
 }

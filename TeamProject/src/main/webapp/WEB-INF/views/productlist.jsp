@@ -314,10 +314,12 @@
                                         <img src="./uploads/${imglist[status.index].file_name}" alt="이미지"><br>
                                             <span>글번호:${list.items_id}</span>
                                            <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
+                                           <a href="Productdetail.do?items_id=${list.items_id}">
                                             <a href="./ListIf.do">
                                            <h5 id="title">
                                             	제목:${list.title}
                                             	</h5>
+                                            	</a>
                                             </a>
                                         <div class="product-price">
                                            판매자: ${list.user_id}<br>

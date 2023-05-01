@@ -21,12 +21,12 @@ public class ProductDetail implements Command{
 		ProductlistDAO dao = new ProductlistDAO();
 		MemberDAO mdao = new MemberDAO();
 		
-		System.out.println("1");
+		System.out.println("디테일 간다1");
 		ProductlistVO vo = dao.detail(items_id);
-		System.out.println("2");
-		System.out.println(vo);
+		System.out.println("디테일2");
+		System.out.println("디테일"+vo);
 		MemberVO mvo = mdao.areaDetail(items_id);
-		System.out.println("3");
+		System.out.println("디테일3");
 		System.out.println(mvo);
 		
 		request.setAttribute("detail", vo);

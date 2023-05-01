@@ -27,7 +27,7 @@ public class ProductList implements Command {
 		request.setAttribute("productlist", list);
 		request.setAttribute("area", area);
 		request.setAttribute("imglist", file_name);
-		System.out.println(file_name.size());
+		System.out.println("file>>"+file_name.size());
 		System.out.println(area.size());
 		System.out.println(list);
 		System.out.println(file_name);
