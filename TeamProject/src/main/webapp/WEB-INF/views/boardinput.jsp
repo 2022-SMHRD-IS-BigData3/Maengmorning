@@ -197,10 +197,7 @@
                     <div class="col-lg-3 text-right col-md-3">
                         
                         <ul class="nav-right">
-                  <c:if test="${empty member}">
-                       <a href="./Gologin.do">로그인</a>
-                       <a href="./Gojoin.do">회원가입</a>
-                  </c:if>
+                  
                      
                      <c:if test="${!empty member}">
                      <a>${member.nickName}님 환영합니다 '◡'✿ </a>

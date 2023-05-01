@@ -119,9 +119,6 @@
       h3 {
         margin-bottom: 20px;
       }
-       .product-shop.spad {
-        padding-top: 0px;
-    }
     
     /* 상단바 위아래 선 코드 */
     header .nav-item {
@@ -150,6 +147,11 @@
       .nav-item>a {
         margin-left: 0;
       }
+      
+      .product-shop {
+		padding-top: 0px;
+		padding-bottom: 80px;
+}
 
  
 </style>
@@ -260,7 +262,7 @@
                 <br>
 
     <!-- 카테고리/ 태그 -->
-    <section class="product-shop spad">
+    <section class="product-shop">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">

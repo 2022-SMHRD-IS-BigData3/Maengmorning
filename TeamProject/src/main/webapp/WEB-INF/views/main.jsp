@@ -449,7 +449,7 @@
                         <tr>
                            <c:forEach items="${Blist}" var="blist" varStatus="status">
                            <c:if test="${status.index<5}">
-                               <td>${blist.title}</td>
+                               <td><a href = "./ProductList.do">${blist.title}</a></td>
                                <td>${blist.user_id}</td>
                                   <td>${area[status.index].area}</td>
                                   </tr>
@@ -487,10 +487,6 @@
             <script src="js/jquery.slicknav.js"></script>
             <script src="js/owl.carousel.min.js"></script>
             <script src="js/main.js"></script>
-<<<<<<< HEAD
-            
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
     </body>
 
     </html>
