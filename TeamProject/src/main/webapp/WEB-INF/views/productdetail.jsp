@@ -30,8 +30,59 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <style>
+ /* 상단바 위아래 선 코드 */
+    header .nav-item {
+    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    border-top: 2px solid rgb(204, 201, 201); /* 위 선 */
+    }
+    h4 {
+    border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
+    padding-bottom: 10px;
+    }
+    .productShopDetail, .communityShopDetail {
+        margin-left: 1050px;
+        margin-top: 20px;
+    }
+
+    /* 검색창 */
+    .search-container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+      }
+      
+      .search-button {
+        background-color: rgb(230, 177, 0);
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        margin-top: 8px;
+        margin-left: -5px;
+        cursor: pointer;
+      }
+      
+      .search-button:hover {
+        background-color: #ccc;
+      }
+
+      input#search {
+        width: 400px;
+      }
+
+      button.search-button {
+        width: 40px;
+        height: 40px;
+      }
     
       h4 {
         margin-bottom: 20px;
@@ -101,6 +152,9 @@
     .Community tr:hover {
         background-color: #ddd;
       }
+    p.community1 {
+    font-size: 30px;
+    }
     
 </style>
 
@@ -110,7 +164,18 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Header Section Begin -->
+   
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <div class="breacrumb-section">
+    
+    
+    
+    
+    
+        <div class="container">
+         <!-- Header Section Begin -->
     <header class="header-section">
         
         <div class="container">
@@ -129,18 +194,14 @@
 
                     </div>
 
-                    
-                    <div class="col-lg-7 col-md-7">
-                        <div class="advanced-search">
-                            <div class="input-group">
-                                <input type="text" placeholder="검색">
-                                <button type="button"><i class="ti-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    
+                    <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
+                <div class="search-container">
+                    <form action="/search">
+                      <input class="border" id="search" type="text" placeholder="검색" name="search">
+                      <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
+                    </form>
+                  </div>
+            </div>
                     <div class="col-lg-3 text-right col-md-3">
                         
                         <ul class="nav-right">
@@ -165,7 +226,7 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./main.do">Home</a></li>
+                        <li><a href="./main.do">Home</a></li>
                        
                        
                         <li><a href="./ProductList.do">중고거래</a>
@@ -182,10 +243,9 @@
                         
                         <li><a href="BoardList.do">커뮤니티</a>
                             <ul class="dropdown">
-                                <li><a href="#">잡담</a></li>
-                                <li><a href="#">그외</a></li>
-                                <li><a href="#">등등</a></li>
-                            </ul>
+                            <li><a href="#">정보공유</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                        </ul>
                         </li>
 
                         <li><a href="./Gomypage.do">마이페이지</a>
@@ -203,11 +263,6 @@
             </div>
         </div>
     </header>
-    <!-- Header End -->
-
-    <!-- Breadcrumb Section Begin -->
-    <div class="breacrumb-section">
-        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
@@ -230,29 +285,16 @@
                         <h4 class="fw-title">카테고리</h4>
                         <ul class="filter-catagories">
                             <li><a href="#">외출용품</a></li>
-                            <li><a href="#">목욕용품</a></li>
-                            <li><a href="#">유아용품</a></li>
-                            <li><a href="#">장난감2</a></li>
-                            <li><a href="#">장난감3</a></li>
-                            <li><a href="#">장난감4</a></li>
-                            <li><a href="#">장난감5</a></li>
-                            <li><a href="#">장난감6</a></li>
+                            <li><a href="#">장난감/도서</a></li>
+                            <li><a href="#">의류</a></li>
+                            <li><a href="#">가구</a></li>
+                            <li><a href="#">침구류</a></li>
+                            <li><a href="#">생활용품</a></li>
+                            <li><a href="#">기타</a></li>
                         </ul>
                     </div>
 
-                    <!--태그 작성하는 곳-->
-                    <div class="filter-widget">
-                        <h4 class="fw-title">태그</h4>
-                        <div class="fw-tags">
-                            <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
-                            <a href="#">저장된태그</a>
-                        </div>
-                    </div>
-                </div>
+                   </div>
 
                 <!-- 중고거래 글 내용 -->
                 <div class="col-lg-9">
@@ -262,45 +304,23 @@
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="https://media.bunjang.co.kr/product/221627450_1_1681906167_w1100.jpg"
-                                                class="d-block w-100" alt="...">
+                                           <img alt="Product Image" src="./uploads/${detail.file_name}">
                                         </div>
-                                        <div class="carousel-item">
-                                            <img src="https://media.bunjang.co.kr/product/221627450_2_1681906167_w1100.jpg"
-                                                class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="https://media.bunjang.co.kr/product/221627450_3_1681906167_w1100.jpg"
-                                                class="d-block w-100" alt="...">
-                                        </div>
+                                        
                                     </div>
             
-                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                                        data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">이전</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                                        data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">다음</span>
-                                    </a>
+                                   
                                 </div>
                         </div>
                         
                         <div>
-                            <table class="border-bottom" border="bliack">
+                            <table>
                                 <tr>
-                                    <td>
-                                    <h4>
+                                    <td id=detailTitle>
+                                    <h3>
                                     제목 : ${detail.title}
-                                    </h4> 
+                                    </h3> 
                                     </td>
-                                </tr>
-                                <tr>
-                                	<td>
-                                	 	<img alt="Product Image" src="./uploads/${detail.file_name}">
-                                	</td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -332,12 +352,13 @@
                                 <button type="button" class="btn btn-secondary btn-lg btn-danger">❤︎찜</button>
                                 <button class="btn btn-secondary btn-lg btn btn-danger" type="button" onclick="window.open('./Gomessage.do', '_blank', 'width=600,height=600')">✉쪽지</button>
                                 <button class="btn btn-secondary btn-lg btn btn-danger" type="button" onclick="window.open('./Gopayment.do', '_blank', 'width=600,height=600')">바로구매</button>
-                            </div>
+                            
+                        </div>
                         </div>
                
                         <table class="ProductText">
                         <tr class="border-bottom">
-                            <td> <h4>상품정보</h4> </td>
+                            <td> <h3>상품정보</h3> </td>
                             <td>
                             ${detail.items_state}
                             </td>
@@ -351,7 +372,7 @@
                         
                         <table class="Community">
                             <tr class="border-bottom">
-                                <td > <h4>관련커뮤니티</h4> </td>
+                                <td > <p class="community1">관련커뮤니티</p> </td>
                             </tr> 
                             <tr class="CommunityTitle">
                                 <th>글번호</th>
