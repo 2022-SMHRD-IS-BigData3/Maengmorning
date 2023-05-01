@@ -341,7 +341,7 @@
                             </tr>
                            <c:forEach items="${getmylist }" var="my" varStatus="status">
                             <tr>
-                                <td><fmt:formatDate value="${my.trade_date}" pattern=""/></td>
+                                <td><fmt:formatDate value="${my.trade_date}" pattern="yyyy.MM.dd"/></td>
                                 <td>${my.title }</td>
                                 <td>${my.buy_user_id}</td>
                                 <td>${my.price }</td>
