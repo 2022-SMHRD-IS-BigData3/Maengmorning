@@ -40,7 +40,7 @@ public class BoardInput implements Command {
     // 데이터 넘겨받아서 db에 저장 (productlistDAO로 이동)
     BoardDAO dao = new BoardDAO();
     dao.BoardInput(vo);
-    dao.imgInput(vo);
+   // dao.imgInput(vo);
     System.out.println("돌아옴");
     // 사용자를 성공 페이지로 리디렉션
     return "GoBoardList.do";

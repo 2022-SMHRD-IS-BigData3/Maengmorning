@@ -38,8 +38,8 @@
   
   <!-- 물품 판매글 등록 -->
   <insert id="productinput" parameterType="kr.mang.model.ProductlistVO">
-  	insert into ITEMS(ITEMS_ID, TITLE, ITEMS_STATE, PRICE, UP_DATE, ITEMS_IMG_ID,USER_ID,TAG_ID)
-  	values(ITEMS_ID.nextval, #{title}, #{items_state}, #{price}, sysdate,'U'||UITEMS_IMG_ID.nextval , #{user_id},TAG_ID.nextval)
+  	insert into ITEMS(ITEMS_ID, TITLE, ITEMS_STATE, PRICE, UP_DATE,USER_ID,TAG_ID, ITEMS_IMG_ID)
+  	values(ITEMS_ID.nextval, #{title}, #{items_state}, #{price}, sysdate , #{user_id},TAG_ID.nextval,'U'||UITEMS_IMG_ID.nextval)
   </insert>
   
   <insert id="imginput" parameterType="kr.mang.model.ProductlistVO">

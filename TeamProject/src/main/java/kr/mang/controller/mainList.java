@@ -26,7 +26,7 @@ public class mainList implements Command {
 		// 중고물품 게시판 리스트 메인 출력
         List<ProductlistVO> list = dao.productList();
 		List<MemberVO> area = mdao.getArea();
-		List<ProductlistVO> file_name = dao.imgList();
+		//List<ProductlistVO> file_name = dao.imgList();
 
 		// 커뮤니티 게시판 리스트 메인 출력
 		List<BoardVO> blist = bdao.BoardList();
@@ -35,11 +35,11 @@ public class mainList implements Command {
 		// 중고물품 게시판 리스트 값 가져오기
 		request.setAttribute("productlist", list);
 		request.setAttribute("area", area);
-		request.setAttribute("imglist", file_name);
-		System.out.println(file_name.size());
+		//request.setAttribute("imglist", file_name);
+		//System.out.println(file_name.size());
 		System.out.println(area.size());
 		System.out.println(list);
-		System.out.println(file_name);
+		//System.out.println(file_name);
 		// 커뮤니티 게시판 리스트 값 가져오기
 		request.setAttribute("Blist",blist );
 		request.setAttribute("barea", barea);

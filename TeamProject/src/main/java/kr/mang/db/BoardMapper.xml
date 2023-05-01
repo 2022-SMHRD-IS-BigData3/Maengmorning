@@ -8,31 +8,31 @@
 <mapper namespace="kr.mang.model.BoardDAO">
 
 	<!-- 게시판 글 목록 쿼리문 -->
-	<select id="selectList" resultType="kr.mang.model.BoardVO">
-		select BOARD_ID,TITLE,USER_ID
+<select id="selectList" resultType="kr.mang.model.BoardVO">
+		select BOARD_ID,TITLE,USER_ID,FILE_NAME
 		from BOARD
 		order by BOARD_ID desc
 	
 	</select>
 
 	<!-- 게시판 글 클릭 수 나오는 상세페이지 쿼리 -->
-	<select id="detail" parameterType="int" resultType="kr.mang.model.BoardVO">
-		SELECT A.TITLE,A.BOARD_CONTENT,A.WRITE_DATE, A.USER_ID, B.FILE_NAME 
-		FROM BOARD A RIGHT OUTER JOIN BOARD_IMG B ON (A.BOARD_IMG_ID = B.BOARD_IMG_ID)
+<select id="detail" parameterType="int" resultType="kr.mang.model.BoardVO">
+		SELECT TITLE,BOARD_CONTENT,WRITE_DATE, USER_ID, FILE_NAME 
+		FROM BOARD 
 		WHERE BOARD_ID = #{board_id}
 
 	</select>
 
-	<!-- 물품 판매글 등록 -->
+	<!-- 게시판글 등록 -->
   <insert id="boardinput" parameterType="kr.mang.model.BoardVO">
-  	insert into BOARD(BOARD_ID, TITLE, BOARD_CONTENT, VIEW_CONT, WRITE_DATE, USER_ID, B_COMMENT_ID, BOARD_IMG_ID)
-  	values(BOARD_ID.nextval, #{title}, #{board_content}, NULL, sysdate, #{user_id}, NULL, 'B'||BBOARD_IMG_ID.nextval)
+  	insert into BOARD(BOARD_ID, TITLE, BOARD_CONTENT, VIEW_CONT, WRITE_DATE, USER_ID, B_COMMENT_ID, FILE_NAME)
+  	values(BOARD_ID.nextval, #{title}, #{board_content}, NULL, sysdate, #{user_id}, NULL, #{file_name})
   </insert>
   <!-- 이미지 등록 -->
-  <insert id="b_imginput" parameterType="kr.mang.model.BoardVO">
+ <!-- <insert id="b_imginput" parameterType="kr.mang.model.BoardVO">
   	insert into BOARD_IMG(BOARD_IMG_ID, FILE_NAME)
   	values('B'||BOARD_IMG_ID.nextval,#{file_name})
-  </insert>
+  </insert> -->
 
 <insert id="board_comment" parameterType="kr.mang.model.BoardVO">
   	insert into board_comment(b_comment_id, board_comment, user_id, c_write_date) 
