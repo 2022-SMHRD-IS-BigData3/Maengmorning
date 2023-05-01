@@ -487,10 +487,6 @@
             <script src="js/jquery.slicknav.js"></script>
             <script src="js/owl.carousel.min.js"></script>
             <script src="js/main.js"></script>
-<<<<<<< HEAD
-            
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/Maengmorning.git
     </body>
 
     </html>
