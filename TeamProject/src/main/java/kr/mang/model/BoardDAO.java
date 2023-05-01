@@ -47,8 +47,8 @@ public class BoardDAO {
 		try {
 			session = sqlSessionFactory.openSession(true);
 			detail = session.selectOne("detail", board_id);
-			System.out.println("데이터 있냐?"+board_id);
-			System.out.println("디테일 확인>>"+detail);
+			System.out.println("데이터 있냐?" + board_id);
+			System.out.println("디테일 확인>>" + detail);
 			session.commit();
 		} finally {
 			System.out.println("데이터 가지고 간다 ㅅㄱ");
@@ -121,6 +121,29 @@ public class BoardDAO {
 			session.close();
 		}
 		return comments;
+	}
+
+	public List<BoardVO> boardlistif() {
+
+		SqlSession session = null;
+		List<BoardVO> list = null;
+
+		try {
+			System.out.println("조건조회시작");
+			System.out.println("sqlSessionFactory: " + sqlSessionFactory);
+			session = sqlSessionFactory.openSession(true);
+			System.out.println("세션: " + session);
+			list = session.selectList("get_boardlistif");
+			System.out.println("조건 조회 결과: " + list.get(0).getTitle());
+
+		} catch (Exception e) {
+			System.out.println("에러발생");
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+
+		return list;
 	}
 
 }
