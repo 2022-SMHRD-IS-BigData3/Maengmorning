@@ -26,7 +26,6 @@ public class BoardListIf implements Command {
 		
 		list = dao.boardlistif();
 		request.setAttribute("list", list);
-		System.out.println("리스트 값 : "+ list.get(0).getTitle());
 		
 		return "boarddetail.jsp";
 	}
