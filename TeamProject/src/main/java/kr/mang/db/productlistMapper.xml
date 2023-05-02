@@ -12,14 +12,14 @@
   		SELECT i.ITEMS_ID, i.TITLE,i.ITEMS_STATE,i.PRICE,i.UP_DATE,i.USER_ID,img.FILE_NAME
 		  FROM ITEMS i
 				LEFT OUTER JOIN ITEMS_IMG img ON i.ITEMS_IMG_ID = img.ITEMS_IMG_ID
-		 ORDER BY i.ITEMS_IMG_ID DESC
+		 ORDER BY i.UP_DATE DESC
   </select>
 	
 	<select id="imglist" resultType="kr.mang.model.ProductlistVO"><!-- resultType은 select할때 사용 -->
   		SELECT c.FILE_NAME as file_name
 		  FROM ITEMS x 
 		  LEFT OUTER JOIN ITEMS_IMG c ON x.ITEMS_IMG_ID = c.ITEMS_IMG_ID
-		 ORDER BY x.ITEMS_IMG_ID DESC
+		 ORDER BY x.UP_DATE DESC
   </select>
   
   
@@ -39,7 +39,7 @@
   <!-- 물품 판매글 등록 -->
   <insert id="productinput" parameterType="kr.mang.model.ProductlistVO">
   	insert into ITEMS(ITEMS_ID, TITLE, ITEMS_STATE, PRICE, UP_DATE,USER_ID,TAG_ID, ITEMS_IMG_ID)
-  	values(ITEMS_ID.nextval, #{title}, #{items_state}, #{price}, sysdate , #{user_id},TAG_ID.nextval,'U'||UITEMS_IMG_ID.nextval)
+  	values(ITEMS_ID.nextval, #{title}, #{items_state}, #{price}, sysdate , #{user_id},'12','U'||UITEMS_IMG_ID.nextval)
   </insert>
   
   <insert id="imginput" parameterType="kr.mang.model.ProductlistVO">
