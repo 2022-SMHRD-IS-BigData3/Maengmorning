@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.mang.controller.ProductList;
+import kr.mang.controller.ProductSearch;
 import kr.mang.controller.mainList;
 import kr.mang.controller.BoardInput;
 import kr.mang.controller.BoardList;
@@ -23,6 +24,7 @@ import kr.mang.controller.BoardListIf;
 import kr.mang.controller.Boarddetail;
 import kr.mang.controller.Command;
 import kr.mang.controller.Comment;
+import kr.mang.controller.GetComment;
 import kr.mang.controller.JoinService;
 import kr.mang.controller.ListIf;
 import kr.mang.controller.LoginService;
@@ -64,9 +66,11 @@ public class FrontController extends HttpServlet {
 		map.put("Boarddetail.do", new Boarddetail());
 		map.put("BoardInput.do", new BoardInput());
 		map.put("Comment.do", new Comment());
+		map.put("GetComment.do", new GetComment());
+		map.put("ListIf.do", new ListIf());
 		map.put("main3.do", new ListIf());
 		map.put("main2.do", new BoardListIf());
-
+		map.put("ProductSearch.do", new ProductSearch());
 	}
 	
 	// ---> service 메소드 완성 !!! ---> 더이상 손 안대도 됨!!

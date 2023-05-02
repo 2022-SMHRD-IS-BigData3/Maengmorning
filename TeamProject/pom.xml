@@ -37,6 +37,12 @@
 			<artifactId>mybatis</artifactId>
 			<version>3.5.13</version>
 		</dependency>
+		<!-- jquery -->
+      <dependency>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.5.1 </version>
+        </dependency>
 	</dependencies>
 	<!--  -->
 	<build>

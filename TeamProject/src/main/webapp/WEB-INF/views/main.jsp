@@ -280,7 +280,7 @@
             </div>
              <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
                 <div class="search-container">
-                    <form action="/search">
+                    <form action="./ProductSearch.do">
                       <input class="border" id="search" type="text" placeholder="검색" name="search">
                       <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
                     </form>

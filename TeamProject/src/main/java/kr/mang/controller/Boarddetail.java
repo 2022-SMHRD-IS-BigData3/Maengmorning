@@ -32,6 +32,7 @@ public class Boarddetail implements Command {
 		System.out.println("mvo>>"+mvo);
 
 		request.setAttribute("detail", vo);
+		System.out.println(vo.getBoard_id());
 		request.setAttribute("mdetail", mvo);
 		
 		return "boarddetail.jsp";
