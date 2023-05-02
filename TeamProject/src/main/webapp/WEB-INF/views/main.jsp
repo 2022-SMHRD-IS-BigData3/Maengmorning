@@ -451,7 +451,7 @@
                         <tr>
                            <c:forEach items="${Blist}" var="blist" varStatus="status">
                            <c:if test="${status.index<5}">
-                               <td><a href = "./ProductList.do" style="color:black">${blist.title}</a></td>
+                               <td><a href = "./BoardList.do" style="color:black">${blist.title}</a></td>
                                <td>${blist.user_id}</td>
                                   <td>${area[status.index].area}</td>
                                   </tr>
