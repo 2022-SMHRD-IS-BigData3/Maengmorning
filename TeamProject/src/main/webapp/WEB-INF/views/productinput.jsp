@@ -29,6 +29,10 @@
 
 <style>
 
+	.nav-right a{
+  		 color: black;
+  	}
+
      /* 검색창 */
      .search-container {
         display: flex;

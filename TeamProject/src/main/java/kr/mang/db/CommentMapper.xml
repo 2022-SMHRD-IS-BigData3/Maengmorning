@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- sql를 기술하는 공간 -->
+
+<mapper namespace="kr.mang.model.CommentDAO">
+
+<insert id="commentInput" parameterType="kr.mang.model.CommentVO">
+  	insert into board_comment(
+  	b_comment_id
+  	,board_comment
+  	,user_id
+  	,c_write_date
+  	,board_id) 
+  values('C'||COMMENT_SEQ.NEXTVAL
+  	,#{board_comment}
+  	,#{user_id}
+  	,SYSDATE
+  	,#{board_id})
+</insert>
+<select id ="commentList" parameterType="kr.mang.model.CommentVO" resultType="kr.mang.model.CommentVO">
+select * from board_comment where board_id = #{board_id} 
+</select>
+	
+</mapper>
