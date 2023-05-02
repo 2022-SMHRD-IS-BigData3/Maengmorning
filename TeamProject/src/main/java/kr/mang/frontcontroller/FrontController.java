@@ -21,6 +21,7 @@ import kr.mang.controller.mainList;
 import kr.mang.controller.BoardInput;
 import kr.mang.controller.BoardList;
 import kr.mang.controller.BoardListIf;
+import kr.mang.controller.BoardSearch;
 import kr.mang.controller.Boarddetail;
 import kr.mang.controller.Command;
 import kr.mang.controller.Comment;
@@ -72,6 +73,7 @@ public class FrontController extends HttpServlet {
 		map.put("main3.do", new ListIf());
 		map.put("main2.do", new BoardListIf());
 		map.put("ProductSearch.do", new ProductSearch());
+		map.put("BoardSearch.do", new BoardSearch());
 	}
 	
 	// ---> service 메소드 완성 !!! ---> 더이상 손 안대도 됨!!
