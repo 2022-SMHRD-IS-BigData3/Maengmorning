@@ -151,7 +151,8 @@
       .product-shop {
 		padding-top: 0px;
 		padding-bottom: 80px;
-}
+		}
+		
 
  
 </style>
@@ -277,9 +278,6 @@
                     
                 <div class="col-lg-9 order-1 order-lg-2">
                     
-                    
-                    
-
                     <form action="./Goboardinput.do">
                     <table>
                     <div class="product-show-option">
@@ -336,7 +334,11 @@
         </div>
     </section>
     <!-- Product Shop Section End -->
-
+		<div class="footer">
+		<br><br><br><br>
+	
+		
+		</div>
     
 
     <!-- Js Plugins -->

@@ -336,7 +336,11 @@
     </section>
     <!-- Product Shop Section End -->
 
-    
+    <div class="footer">
+		<br><br><br><br>
+	
+		
+		</div>
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
