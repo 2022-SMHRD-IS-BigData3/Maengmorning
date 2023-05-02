@@ -29,6 +29,13 @@
 
 <style>
 /* 검색창 */
+	.nav-right a{
+  		 color: black;
+  	}
+	.table-scroll a{
+  		 color: black;
+  	}
+
     .search-container {
         display: flex;
         justify-content: center;

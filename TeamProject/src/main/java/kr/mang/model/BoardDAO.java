@@ -47,11 +47,9 @@ public class BoardDAO {
 		try {
 			session = sqlSessionFactory.openSession(true);
 			detail = session.selectOne("detail", board_id);
-			System.out.println("데이터 있냐?" + board_id);
-			System.out.println("디테일 확인>>" + detail);
+			
 			session.commit();
 		} finally {
-			System.out.println("데이터 가지고 간다 ㅅㄱ");
 			session.close();
 		}
 		return detail;
@@ -98,31 +96,7 @@ public class BoardDAO {
 		}
 	}
 
-	// 댓글 등록
-	public List<BoardVO> comment(BoardVO board) {
-		List<BoardVO> comments = null;
-		try {
-			System.out.println("댓글등록");
-			System.out.println("sqlSessionFactory: " + sqlSessionFactory);
-			session = sqlSessionFactory.openSession(true);
-			System.out.println("세션: " + session);
-
-			session.insert("board_comment", board.getBoard_comment()); // BoardVO 객체에서 코멘트 값 삽입
-			System.out.println("등록");
-
-			comments = session.selectList("get_comments");
-			System.out.println("모든 댓글 조회 결과:" + comments.get(0).getBoard_comment());
-
-		} catch (Exception e) {
-			System.out.println("에러");
-			e.printStackTrace();
-		} finally {
-			System.out.println("닫기");
-			session.close();
-		}
-		return comments;
-	}
-
+	
 	public List<BoardVO> boardlistif() {
 
 		SqlSession session = null;

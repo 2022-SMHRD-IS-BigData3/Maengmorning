@@ -31,7 +31,9 @@
 /* Template default CSS
 /*----------------------------------------*/
 
-
+a {
+	color: #111111 !important;
+}
 
 html,
 body {
@@ -98,10 +100,10 @@ textarea:focus {
 }
 
 a:hover,
-a:focus {
+a:focus, a {
 	text-decoration: none;
 	outline: none;
-	color: #fff;
+	color: #252525;
 }
 
 ul,
@@ -151,6 +153,8 @@ ol {
 	margin: 0 auto;
 }
 
+
+  	
 .section-title p {
 	color: #6e6e6e;
 }

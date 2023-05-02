@@ -378,22 +378,12 @@
                             </div>-->
                         </div>
 
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">이전</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">다음</span>
-                        </a>
+                       
 
                         <table>
                             <tr>
                                 <p>
 									${detail.board_content}
-
                                 </p>
                                 <p>#태그</p>
                             </tr>
@@ -401,24 +391,43 @@
 
                     
 
-                    <form action="Comment.do">
-                    <div class="comment">
-                        댓글  <input name="comment" type="text">
-                        <button type="submit">등록</button>
-                    </div>
-                    </form>
+              
+                   
+                        댓글  <input id="comment" type="text">
+                        <button id="Input">등록</button>
+                  
+                   
 
                     <br>
-                    <ul class="list-group">
-					  <c:forEach var="comment" items="${comments}">
-					    <li class="list-group-item">
-					      <p>${comment.board_comment}</p>
-					      <button>삭제</button>
-					    </li>
-					  </c:forEach>
-					</ul>
-					
-					<br>
+						 <table align="center" width="500" id="rtb">
+							<thead>
+								<td colspan="4"><b id="rCount">댓글목록</b></td>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</br>
+					<table class="Community">
+                            <tr class="border-bottom">
+                                <td > <h4>관련거래글</h4> </td>
+                            </tr> 
+                            <tr class="CommunityTitle">
+                                <th>글번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                            </tr>
+                           
+                            <tbody>
+
+							 <c:forEach items="${list}" var="item" varStatus="status">
+							    <tr>
+							        <td>${item.board_id}</td>
+							        <td>${item.title}</td>
+							        <td>${item.user_id}</td>
+							    </tr>
+							</c:forEach>
+							</tbody>
+                            </table>
 					
                     </div>
                 </div>
@@ -452,14 +461,104 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script>
+  <%--  <script>
         $(document).ready(function () {
             $('#carouselExampleControls').carousel();
         });
-        </script>
-        
+    </script>
+   --%>
+  <script>
+
+
+  $(document).ready(function() {
+      getComment();
+  });
+  
+	function getComment(){
+		let board_id = "${detail.board_id}";
+		console.log(board_id)
+		$.ajax({
+			url : "GetComment.do",
+			data : {
+				"board_id" :board_id 
+			},
+			type : "get",
+			dataType : 'json',
+			success : function(res){
+				console.log(res)
+			
+				var $tablebody = $('#rtb tbody')
+				console.log("테이블 바디",$tablebody)
+				$tablebody.html('') // 댓글 목록 창을 초기화 
+				$('rCount').text("댓글 ("+res.length+")") // 댓글 갯수 출력
+				if (res != null){
+					for(var i in res){
+						var $tr = $("<tr>");
+						var $rWriter = $("<td width='100'>").text(
+								res[i].user_id);
+						var $rContent = $("<td>").text(
+								res[i].board_comment);
+						var $rCreatDate = $("<td width='100'>").text(
+								res[i].write_date);
+
+						$tr.append($rWriter);
+						$tr.append($rContent);
+						$tr.append($rCreatDate);
+						$tablebody.append($tr);
+					
+						}
+				}
+			},error : function(){
+				console.log('에러')
+			}
+			
+		})
+	};
+	</script>
+  
+ <script>
+    $(document).ready(function(){
+    	$(document).on('click','#Input',function(){
+    		let board_comment = $("#comment").val();
+    		let user_id = "${member.user_id}"
+    		let board_id = "${detail.board_id}"
+    		console.log(board_comment)
+    		console.log(user_id)
+    		console.log(board_id)
+    		
+    		$.ajax({
+    			url : "Comment.do",
+    			data : {
+    					"board_comment" : board_comment,
+    					"user_id" : user_id,
+    					"board_id" : board_id
+    			},
+    			type : "post",
+    			success : function(res){
+    					if (res == "success"){
+    						
+    					}
+    						alert("등록성공")
+    				}
+    				$("#comment").val(''); // 댓글 등록 후 등록창 초기화하는 구문
+    					
+    						// 필요한 정보는 board_id 만 있으면 그에 해당하는 댓글 내용과 user_id 를 가져올 수 있을 듯 
+    				
+    			},
+    			error : function (){
+    				alert("등록실패")
+    			}
+    			
+    			});
+    	})
+    	
+     });
+    </script>
+
+	
 </body>
 
 </html>
