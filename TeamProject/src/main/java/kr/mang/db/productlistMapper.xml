@@ -57,7 +57,7 @@
    <select id="getmypage" resultType="kr.mang.model.ProductlistVO">
   select  A.PRICE, A.TITLE, A.UP_DATE, A.USER_ID,B.BUY_USER_ID, B.TRADE_DATE
   from ITEMS A LEFT OUTER JOIN ITEMS_HISTORY B ON (A.ITEMS_ID = B.ITEMS_ID)
-  
+  ORDER BY A.UP_DATE ,B.TRADE_DATE DESC
    </select>
    
    <select id="search" parameterType="kr.mang.model.ProductlistVO" resultType="kr.mang.model.ProductlistVO">
