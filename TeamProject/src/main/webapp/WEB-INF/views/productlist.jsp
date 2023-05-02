@@ -37,6 +37,17 @@
 
 <style>
 /* 검색창 */
+	#title{
+      padding-top: 10px;
+      padding-bottom: 5px;
+      font-weight:bold;
+   }
+   
+   .product-price{
+      padding-top: 5px;
+      padding-bottom: 5px;
+   }
+
 .nav-right a{
   		 color: black;
   	}
