@@ -19,6 +19,9 @@ public class MyList implements Command {
     	ProductlistDAO dao = new ProductlistDAO();
         List<ProductlistVO> mylist = dao.myList();
 		System.out.println("mylist>>"+mylist);
+		for (ProductlistVO product : mylist) {
+		    System.out.println("buy_user_id:date: " + product.getTrade_date());
+		}
         request.setAttribute("getmylist", mylist);
 		
 		return "mypage.jsp";
