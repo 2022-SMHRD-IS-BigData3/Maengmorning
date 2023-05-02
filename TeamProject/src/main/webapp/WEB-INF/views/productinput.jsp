@@ -235,7 +235,7 @@
                         </ul>
                     </li>
 
-                        <li><a href="./Gomypage.do">마이페이지</a>
+                        <li><a href="MyList.do">마이페이지</a>
                             <ul class="dropdown">
                                 <li><a href="#">판매/구매목록</a></li>
                                 <li><a href="#">매너온도</a></li>
