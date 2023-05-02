@@ -33,6 +33,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <style>
+	 p{
+      	font-size: 20px;
+      	font-weight: bold;
+      	color: black;
+      }
+      
+      p1{
+      	font-size: 20px;
+      	font-weight: bold;
+      	color: #003399;
+      }
+
  /* 상단바 위아래 선 코드 */
     header .nav-item {
     border-bottom: 2px solid rgb(204, 201, 201); /* 아래 선 */
@@ -97,12 +109,12 @@
         width: 700px;
       }
       .tdTitle{
-        width: 100px;
+        width: 150px;
         color: gray;
         font-weight: 700;
       }
       .tdText {
-        width: 300px;
+        width: 200px;
         font-weight: 700;
       }
      
@@ -119,6 +131,7 @@
       }
     .ProductText td {
         padding-top: 20px;
+        width: 900px;
     } 
     .Community {
         border-collapse: collapse;
@@ -267,7 +280,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
                         <a href="./main.do"><i class="fa fa-home"></i> Home</a>
-                        <a href="./shop.html">Shop</a>
+                        <a href="./shop.html">중고거래</a>
                         <span>Detail</span>
                     </div>
                 </div>
@@ -314,17 +327,16 @@
                         </div>
                         
                         <div>
+                        <br>
                             <table>
                                 <tr>
                                     <td id=detailTitle>
-                                    <h3>
-                                    제목 : ${detail.title}
-                                    </h3> 
+                                    <p class = "fw-title">${detail.title}</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                    <h2>가격: ${detail.price}</h2>
+                                    <p1>가격 : ${detail.price}원</p1>
                                     </td>
                                 </tr>
 
@@ -332,11 +344,11 @@
 
                             <table class="ProductHeader">
                                 <tr>
-                                    <td class="tdTitle">- 판매자: ${detail.user_id}</td>
+                                    <td class="tdTitle">- 판매자 : ${detail.user_id}</td>
                                     <td class="tdText"></td>
                                 </tr>
                                 <tr>
-                                    <td class="tdTitle">- 거래지역: ${prodetail.area}</td>
+                                    <td class="tdTitle">- 거래지역 : ${prodetail.area}</td>
                                     <td class="tdText"></td>
                                 </tr>
                                 <tr>
