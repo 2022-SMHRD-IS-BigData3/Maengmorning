@@ -37,6 +37,17 @@
 
 <style>
 /* 검색창 */
+	#title{
+      padding-top: 10px;
+      padding-bottom: 5px;
+      font-weight:bold;
+   }
+   
+   .product-price{
+      padding-top: 5px;
+      padding-bottom: 5px;
+   }
+
 .nav-right a{
   		 color: black;
   	}
@@ -316,7 +327,7 @@
                             <div class="card shadow-sm">
                                 <div class="card-body">
                                     <img src="./uploads/${imglist[status.index].file_name}" alt="이미지" width="250px" height="250px" align="center">
-                                    
+                                    <a href="ProductDetail.do?items_id=${list.items_id}">
                                         <h5 id="title">
                                             ${list.title}
                                         </h5>
