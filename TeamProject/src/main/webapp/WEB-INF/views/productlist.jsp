@@ -137,7 +137,11 @@
 
       .nav-item>a {
         margin-left: 0;
+        
       }
+      
+      
+      
 
  
 </style>
@@ -151,195 +155,203 @@
     <!-- Header Section Begin -->
     <header class="header-section">
 
-      <div class="container">
-        <div class="inner-header">
-          <div class="row justify-content-center"> <!-- 중앙 정렬 추가 -->
-            <div class="col-lg-2 col-md-2">
-              <a href="./main.do">
-                <img src="./img/로고.png" alt="">
-              </a>
-            </div>
-             <div class="col-lg-7 col-md-6"> <!-- 중앙 정렬 및 크기 변경 -->
-                <div class="search-container">
-                    <form action="/search">
-                      <input class="border" id="search" type="text" placeholder="검색" name="search">
-                      <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
-                    </form>
-                  </div>
-            </div>
-            <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
-              <ul class="nav-right">
-                  <c:if test="${empty member}">
-                       <a href="./Gologin.do">로그인</a>
-                       <a href="./Gojoin.do">회원가입</a>
-                  </c:if>
-                     
-                     <c:if test="${!empty member}">
-                     <a>${member.nickName}님 환영합니다 '◡'✿ </a>
-                     <a href="Gologout.do">| 로그아웃</a>
-                     </c:if>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-     
-      <div class="nav-item">
         <div class="container">
-          <nav class="nav-menu mobile-menu">
-            
+            <div class="inner-header">
+                <div class="row justify-content-center">
+                    <!-- 중앙 정렬 추가 -->
+                    <div class="col-lg-2 col-md-2">
+                        <a href="./main.do">
+                            <img src="./img/로고.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <!-- 중앙 정렬 및 크기 변경 -->
+                        <div class="search-container">
+                            <form action="/search">
+                                <input class="border" id="search" type="text" placeholder="검색" name="search">
+                                <button type="submit" class="search-button"><i class="fas fa-search" style="color: azure;"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 text-right col-md-2">
+                        <!-- 중앙 정렬 및 크기 변경 -->
+                        <ul class="nav-right">
+                            <c:if test="${empty member}">
+                                <a href="./Gologin.do">로그인</a>
+                                <a href="./Gojoin.do">회원가입</a>
+                            </c:if>
 
-            <header>
-                <nav>
-                  <ul>
-                    <li><a href="./main.do">Home</a></li>
-                    <li><a href="./ProductList.do">중고거래</a>
-                        <ul class="dropdown">
-                            <li><a href="#">외출용품</a></li>
-                            <li><a href="#"> 장난감/도서</a></li>
-                            <li><a href="#">의류</a></li>
-                            <li><a href="#">가구</a></li>
-                            <li><a href="#">침구류</a></li>
-                            <li><a href="#"> 생활용품</a></li>
-                            <li><a href="#">기타</a></li>
+                            <c:if test="${!empty member}">
+                                <a>${member.nickName}님 환영합니다 '◡'✿ </a>
+                                <a href="Gologout.do">| 로그아웃</a>
+                            </c:if>
                         </ul>
-                    </li>
-                    <li><a href="BoardList.do">커뮤니티</a>
-                        <ul class="dropdown">
-                            <li><a href="#">정보공유</a></li>
-                            <li><a href="#">자유게시판</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./Gomypage.do">마이페이지</a>
-                        <ul class="dropdown">
-                            <li><a href="#">판매/구매목록</a></li>
-                            <li><a href="#">매너온도</a></li>
-                            <li><a href="#">개인정보 수정</a></li>
-                            <li><a href="#">좋아요 목록</a></li>
-                        </ul>
-                    </li>
-                  </ul>
-                </nav>
-              </header>
-
-    
-            
-          </nav>
-          <div id="mobile-menu-wrap"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      
+
+        <div class="nav-item">
+            <div class="container">
+                <nav class="nav-menu mobile-menu">
+
+
+                    <header>
+                        <nav>
+                            <ul>
+                                <li><a href="./main.do">Home</a></li>
+                                <li><a href="./ProductList.do">중고거래</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">외출용품</a></li>
+                                        <li><a href="#"> 장난감/도서</a></li>
+                                        <li><a href="#">의류</a></li>
+                                        <li><a href="#">가구</a></li>
+                                        <li><a href="#">침구류</a></li>
+                                        <li><a href="#"> 생활용품</a></li>
+                                        <li><a href="#">기타</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="BoardList.do">커뮤니티</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">정보공유</a></li>
+                                        <li><a href="#">자유게시판</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./Gomypage.do">마이페이지</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">판매/구매목록</a></li>
+                                        <li><a href="#">매너온도</a></li>
+                                        <li><a href="#">개인정보 수정</a></li>
+                                        <li><a href="#">좋아요 목록</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </header>
+
+
+
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </div>
+
     </header>
 
     <!-- Header End -->
 
 
     <!-- 작은 위치 -->
-        <div class="breacrumb-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <div class="breadcrumb-text">
-                            <a href="./main.do"><i class="fa fa-home"></i> Home</a>
-                            <span>중고거래</span>
-                        </div>
+    <div class="breacrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="breadcrumb-text">
+                        <a href="./main.do"><i class="fa fa-home"></i> Home</a>
+                        <span>중고거래</span>
                     </div>
                 </div>
+            </div>
 
-                <br>
 
-    <!-- 카테고리/ 태그 -->
-    <section class="product-shop spad">
-        <div class="container">
-                <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
-                    <div class="filter-widget">
-                        <h4 class="fw-title">Categories</h4>
-                        <ul class="filter-catagories">
-                            <li><a href="#">외출용품</a></li>
-                            <li><a href="#">장난감/도서</a></li>
-                            <li><a href="#">의류</a></li>
-                            <li><a href="#">가구</a></li>
-                            <li><a href="#">침구류</a></li>
-                            <li><a href="#">생활용품</a></li>
-                            <li><a href="#">기타</a></li>
-                        </ul>
+            <br>
+
+            <!-- 카테고리/ 태그 -->
+            <div class="container">
+                <div class="row" width="auto" id = "row2">
+                    <div class="col-lg-3 col-md-6" id="cate" >
+                        <div class="filter-widget">
+                            <h4 class="fw-title">Categories</h4>
+                            <ul class="filter-catagories">
+                                <li><a href="#">외출용품</a></li>
+                                <li><a href="#">장난감/도서</a></li>
+                                <li><a href="#">의류</a></li>
+                                <li><a href="#">가구</a></li>
+                                <li><a href="#">침구류</a></li>
+                                <li><a href="#">생활용품</a></li>
+                                <li><a href="#">기타</a></li>
+                            </ul>
+                        </div>
                     </div>
-                   
-               </div>
-              
-					<c:if test="${!empty member}">
-                    <form action="./GoProductinput.do">
-                        <div class="row">
-                            <div class="col-lg-7 col-md-7">
-                                <div class="select-option">
-                                    <select class="sorting">
-                                        <option value="">최신순</option>
-                                        <option value="">인기순</option>
-                                    </select>
-                                </div>
-                            </div>
-                             
-                            <div class="col-lg-5 col-md-5 text-right">
-                                <button id="registration">물품 등록</button>
-                            </div>
-                         
-                    </div>
-                    
-                    </form>
-                    </c:if>      
-                     
-                    
-       <!-- 물품목록 
+
+
+                    <!-- 물품목록 
        dao productlist기능 이용, productVO에 있는 변수 활용 -->
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
+					<div style="width: 800px;">
+                    <div class="col-lg-9 order-1 order-lg-2">
+                        <c:if test="${!empty member}">
+                            <form action="./GoProductinput.do">
+                                <div class="row">
+
+                                    <div class="col-lg-7 col-md-7">
+                                        <div class="select-option">
+                                            <select class="sorting">
+                                                <option value="">최신순</option>
+                                                <option value="">인기순</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    
-                  						<c:forEach items="${productlist}" var="list" varStatus="status">
-                  						
-                  						<div class="col-sm-4">
-						                 <div class="card shadow-sm">
-						                   <div class="card-body">
-						                      <img src="./uploads/${imglist[status.index].file_name}" alt="이미지"  width="250px" height="250px" align="center">
-						                     <p>글번호:${list.items_id}</p>
-                                           <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
-                                              <a href="ProductDetail.do?items_id=${list.items_id}">
-                                           <h5 id="title">
-                                            	제목:${list.title}
-                                            	</h5>
-                                            </a>
-                                        <div class="product-price">
-                                           판매자: ${list.user_id}<br>
-                                        </div>
-                                        <div class="product-price">
-                                           가격: ${list.price}원<br>
-                                        </div>
-                                        <a class="area">장소:${area[status.index].area }</a>
-                                        <a class="date">작성날짜:<fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
-                        <br>
-						                   </div>
-						                 </div>
-						               </div>
-						                  						
-                                       
-                                            
-                        </c:forEach>
 
-                
-             </div> 
-        </div>
-    </section>
-    <!-- Product Shop Section End -->
 
-    <div class="footer">
-		<br><br><br><br>
-	
-		
-		</div>
+                                    <div class="col-lg-5 col-md-5 text-right">
+                                        <button id="registration">물품 등록</button>
+                                    </div>
 
+                                </div>
+
+                            </form>
+                        </c:if>
+                    </div>
+                    <div class="pi-pic">
+                        <div class="icon">
+                            <i class="icon_heart_alt"></i>
+                        </div>
+                    </div>
+                    
+                    
+					<div class="row">
+                    <c:forEach items="${productlist}" var="list" varStatus="status">
+
+                        <div class="col-sm-5 mb-3">
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <img src="./uploads/${imglist[status.index].file_name}" alt="이미지" width="250px" height="250px" align="center">
+                                    <p>글번호:${list.items_id}</p>
+                                    <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
+                                    <a href="ProductDetail.do?items_id=${list.items_id}">
+                                        <h5 id="title">
+                                            제목:${list.title}
+                                        </h5>
+                                    </a>
+                                    <div class="product-price">
+                                        판매자: ${list.user_id}<br>
+                                    </div>
+                                    <div class="product-price">
+                                        가격: ${list.price}원<br>
+                                    </div>
+                                    <a class="area">장소:${area[status.index].area }</a>
+                                    <a class="date">작성날짜:
+                                        <fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd" /></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <c:if test="${status.count % 2 == 0}">
+            </div><div class="row">
+        </c:if>
+                        
+                    </c:forEach>
+					</div>
+					</div>
+                    <!-- Product Shop Section End -->
+
+                    <div class="footer">
+                        <br><br><br><br>
+
+
+                   
+                </div>
+            </div>
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
