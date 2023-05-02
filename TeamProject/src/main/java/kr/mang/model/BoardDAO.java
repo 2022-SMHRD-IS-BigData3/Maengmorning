@@ -119,5 +119,23 @@ public class BoardDAO {
 
 		return list;
 	}
+	
+public List<BoardVO> BoardSearch(String keyword){
+		
+		SqlSession session = null;
+		List<BoardVO> list = null;
+		System.out.println("커뮤니티 검색하기");
+
+		try {
+			session = sqlSessionFactory.openSession();
+			list = session.selectList("search1", keyword);
+		} catch (Exception e) {
+			System.out.println("에러뜸");
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		return list;
+	}
 
 }

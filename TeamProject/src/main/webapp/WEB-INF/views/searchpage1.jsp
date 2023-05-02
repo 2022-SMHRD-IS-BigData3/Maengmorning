@@ -298,6 +298,10 @@
                                     </select>
                                 </div>
                             </div>
+                            
+                            	<div>
+                            	
+                                </div>
                             <div class="col-lg-5 col-md-5 text-right">
                                 <button id="registration">글 등록</button>
                             </div>
@@ -323,19 +327,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                        
-                          <c:forEach items="${Blist}" var="list" varStatus="status">
-                            <tr>
-                            	<td>${list.board_id}</td>
-                            	 <td>
-                            	 <a href="Boarddetail.do?board_id=${list.board_id}">${list.title}
-                            	 </a>
-                            	 </td> 
-                            
-                            	<td>${list.user_id}</td>
-                          		  <td>${area[status.index].area}</td>
-                            </tr>
-                        </c:forEach>
+                        <c:forEach items="${list}" var="item" varStatus="status">
+									<tr>
+										<td>${item.board_id}</td>
+										<td>${item.title}</td>
+										<td>${item.user_id}</td>
+										 <td>${area[status.index].area}</td>
+									</tr>
+						</c:forEach>
                         </tbody>
                         </table>
 						</div>
