@@ -42,6 +42,10 @@
 	WHERE title LIKE '%아이%'
   </select>
   
+  <select id="search1" parameterType="kr.mang.model.BoardVO" resultType="kr.mang.model.BoardVO">
+	SELECT * FROM board WHERE title LIKE  '%' || #{search} || '%'
+   </select>
+  
  
 	
 </mapper>
