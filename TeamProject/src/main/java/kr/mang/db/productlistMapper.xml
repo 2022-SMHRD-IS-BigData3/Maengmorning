@@ -59,6 +59,10 @@
   from ITEMS A LEFT OUTER JOIN ITEMS_HISTORY B ON (A.ITEMS_ID = B.ITEMS_ID)
   
    </select>
+   
+   <select id="search" parameterType="kr.mang.model.ProductlistVO" resultType="kr.mang.model.ProductlistVO">
+	SELECT * FROM items WHERE title LIKE  '%' || #{search} || '%'
+   </select>
      
   
 </mapper>
