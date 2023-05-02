@@ -1,6 +1,7 @@
 package kr.mang.model;
 
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -36,6 +37,25 @@ public class CommentDAO {
 			session.close();
 		}
 		return row;
+	}
+
+	public List<CommentVO> getComment(CommentVO vo) {
+		List<CommentVO> list = null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			// 댓글 테이블에 있는 댓글 내용과 댓글 작성자 댓글 작성 시간 가져오기 
+			list = session.selectList("commentList", vo);
+		
+			session.commit();
+		} finally {
+			session.close();
+		}
+		return list;
+		
+		
+		
+		
+		
 	}
 
 

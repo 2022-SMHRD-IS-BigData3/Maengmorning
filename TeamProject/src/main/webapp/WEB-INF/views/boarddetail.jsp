@@ -409,16 +409,14 @@
                    
 
                     <br>
-                    <ul class="list-group">
-					  <c:forEach var="comment" items="${comments}">
-					    <li class="list-group-item">
-					      <p>${comment.board_comment}</p>
-					      <button>삭제</button>
-					    </li>
-					  </c:forEach>
-					</ul>
-					
-					<br>
+						 <table align="center" width="500" border="1" id="rtb">
+							<thead>
+								<td colspan="4"><b id="rCount">댓글목록</b></td>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</br>
 					<table class="Community">
                             <tr class="border-bottom">
                                 <td > <h4>관련거래글</h4> </td>
@@ -480,7 +478,49 @@
         });
     </script>
   
+  <script>
+	function getComment(){
+		let board_id = "${detail.board_id}";
+		$.ajax({
+			url : 'GetComment.do',
+			data : {
+				"board_id" :board_id 
+			},
+			type : "get",
+			dataType : 'json',
+			success : function(res){
+				let tablebody = $('#rtb tbody')	
+				tablebody.html('') // 댓글 목록 창을 초기화 
+				$('rCount').text("댓글 ("+res.length+")") // 댓글 갯수 출력
+				if (res != null){
+					console.log(res)
+					for(var i in res){
+						var $tr = $("<tr>");
+						var $rWriter = $("<td width='100'>").text(
+								res[i].user_id);
+						var $rContent = $("<td>").text(
+								res[i].board_comment);
+						var $rCreatDate = $("<td width='100'>").text(
+								res[i].write_date);
+
+						$tr.append($rWriter);
+						$tr.append($rContent);
+						$tr.append($rCreatDate);
+						$tableBody.append($tr);
+					
+						}
+					
+				}
+			}
+		})
+	};
+	
+	
+	</script>
+  
  <script>
+ 
+ 
     $(document).ready(function(){
     	$(document).on('click','#Input',function(){
     		let board_comment = $("#comment").val();
@@ -496,7 +536,6 @@
     					"board_comment" : board_comment,
     					"user_id" : user_id,
     					"board_id" : board_id
-  		
     			},
     			type : "post",
     			success : function(res){
@@ -504,38 +543,21 @@
     						alert("등록성공")
     				}
     				$("#comment").val(''); // 댓글 등록 후 등록창 초기화하는 구문
-    				getComment(
-    						
-    				
-    				
-    				
-    				
+    					getComment(
+    					);
+    						// 필요한 정보는 board_id 만 있으면 그에 해당하는 댓글 내용과 user_id 를 가져올 수 있을 듯 
     				);
     			},
     			error : function (){
     				alert("등록실패")
     			}
-    			
-    		});
+    			});
     	})
     	
      });
     </script>
-  <%-- 
-    <script>
-	$(document).ready(function(){
-		// 등록 버튼에는 접근 했음 
-		$(document).on('click','#Input',function(){
-			console.log('나와라');	
-			})
 
-		});
-	 --%>
-    
 	
-    
-    </script>
-      
 </body>
 
 </html>
