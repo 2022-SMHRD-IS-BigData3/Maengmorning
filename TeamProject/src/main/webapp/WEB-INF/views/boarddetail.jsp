@@ -471,8 +471,9 @@
     </script>
    --%>
   <script>
-
-
+  function init() {
+      getComment();
+  };
   $(document).ready(function() {
       getComment();
   });
@@ -523,11 +524,9 @@
     $(document).ready(function(){
     	$(document).on('click','#Input',function(){
     		let board_comment = $("#comment").val();
-    		let user_id = "${member.user_id}"
-    		let board_id = "${detail.board_id}"
-    		console.log(board_comment)
-    		console.log(user_id)
-    		console.log(board_id)
+    		let user_id = "${member.user_id}";
+    		let board_id = "${detail.board_id}";
+    	
     		
     		$.ajax({
     			url : "Comment.do",
@@ -538,11 +537,14 @@
     			},
     			type : "post",
     			success : function(res){
-    					if (res == "success"){
-    						
-    					}
+    					console.log(res);
+    			
+    					if (res == 1){
     						alert("등록성공")
-    				}
+    						getComment();
+  
+    					}
+    				
     				$("#comment").val(''); // 댓글 등록 후 등록창 초기화하는 구문
     					
     						// 필요한 정보는 board_id 만 있으면 그에 해당하는 댓글 내용과 user_id 를 가져올 수 있을 듯 

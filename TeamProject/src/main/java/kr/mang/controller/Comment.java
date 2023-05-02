@@ -1,6 +1,7 @@
 package kr.mang.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,8 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
 
 import kr.mang.model.BoardVO;
 import kr.mang.model.CommentDAO;
@@ -17,7 +20,8 @@ import kr.mang.model.CommentVO;
 public class Comment implements Command {
     
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		 PrintWriter out = null;
+		 Gson gson = null;
 		System.out.println("댓글등록1");
 		
 		String board_comment = request.getParameter("board_comment");
@@ -32,11 +36,13 @@ public class Comment implements Command {
 		vo.setUser_id(user_id);
 		
 		 int row = dao.comment(vo);
-		 System.out.println("댓글 입력 되면 이거 숫자로 나옴 >> "+row);
 		 if (row > 0) {
-			 return "boarddetail.jsp"; 
+			 out = response.getWriter();
+				 gson = new Gson();
+				 out.print(gson.toJson(row));
+				 
 		 }
-		 	return "boarddetail.jsp";
+		 return null; 
 
 	}
 }
