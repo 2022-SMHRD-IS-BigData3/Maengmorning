@@ -402,11 +402,10 @@
                     
 
               
-                    <div class="comment">
+                   
                         댓글  <input id="comment" type="text">
-                        	<input type="hidden" name ="board_id" value="">
-                        <button >등록</button>
-                    </div>
+                        <button id="Input">등록</button>
+                  
                    
 
                     <br>
@@ -481,16 +480,20 @@
         });
     </script>
   
-    <%-- <script>
-    
-    	document.on('click',function(){
-    		var comment = $("#comment").val();
-    		var user_id = "${member.iser_id}"
-    		var board_id = ""
+ <script>
+    $(document).ready(function(){
+    	$(document).on('click','#Input',function(){
+    		let board_comment = $("#comment").val();
+    		let user_id = "${member.user_id}"
+    		let board_id = "${detail.board_id}"
+    		console.log(board_comment)
+    		console.log(user_id)
+    		console.log(board_id)
+    		
     		$.ajax({
-    			url = "Comment",
-    			date = {
-    					"b_comment_content" : comment,
+    			url : "Comment.do",
+    			data : {
+    					"board_comment" : board_comment,
     					"user_id" : user_id,
     					"board_id" : board_id
   		
@@ -501,20 +504,38 @@
     						alert("등록성공")
     				}
     				$("#comment").val(''); // 댓글 등록 후 등록창 초기화하는 구문
-    				getComment();
+    				getComment(
+    						
+    				
+    				
+    				
+    				
+    				);
     			},
     			error : function (){
     				alert("등록실패")
     			}
     			
-    			
-    		})
- 
+    		});
     	})
+    	
+     });
+    </script>
+  <%-- 
+    <script>
+	$(document).ready(function(){
+		// 등록 버튼에는 접근 했음 
+		$(document).on('click','#Input',function(){
+			console.log('나와라');	
+			})
+
+		});
+	 --%>
     
+	
     
     </script>
-        --%>
+      
 </body>
 
 </html>

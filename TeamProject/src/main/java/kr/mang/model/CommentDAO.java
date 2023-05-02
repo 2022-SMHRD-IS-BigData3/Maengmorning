@@ -21,4 +21,23 @@ public class CommentDAO {
 	}
 	
 	SqlSession session = null;
+
+	public int comment(CommentVO vo) {
+		int row = 0;
+		try {
+			session = sqlSessionFactory.openSession(true);
+
+			row = session.insert("commentInput",vo); // BoardVO 객체에서 코멘트 값, user_id , board_id 삽입
+			
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return row;
+	}
+
+
+
 }

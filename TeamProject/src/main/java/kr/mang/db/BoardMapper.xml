@@ -36,11 +36,6 @@
   	values('B'||BOARD_IMG_ID.nextval,#{file_name})
   </insert> -->
 
-<insert id="board_comment" parameterType="kr.mang.model.BoardVO">
-  	insert into board_comment(b_comment_id, board_comment, user_id, c_write_date) 
-  	values('ggggg',#{comment},'123445',null)
-  </insert>
-  
   <select id="get_boardlistif" resultType="kr.mang.model.BoardVO">
  	select * from items where tag_id='12'
   </select>

@@ -7,9 +7,9 @@
 
 <mapper namespace="kr.mang.model.CommentDAO">
 
-<insert id="board_comment" parameterType="kr.mang.model.CommentVO">
-  	insert into board_comment(b_comment_id, board_comment, user_id, c_write_date,BOARD_ID) 
-  	values('C'||COMMENT.SEQ.NEXTVAL,#{comment},#{USER_ID},SYSDATE,#{BOARD_ID})
+<insert id="commentInput" parameterType="kr.mang.model.CommentVO">
+  	insert into board_comment(b_comment_id, board_comment,user_id, c_write_date,board_id) 
+  	values('C'||COMMENT.SEQ.NEXTVAL,#{board_comment},#{user_id},SYSDATE,#{board_id})
 </insert>
 
 	

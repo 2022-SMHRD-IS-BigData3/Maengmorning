@@ -9,8 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.mang.model.BoardDAO;
 import kr.mang.model.BoardVO;
+import kr.mang.model.CommentDAO;
+import kr.mang.model.CommentVO;
 
 @WebServlet("/Comment")
 public class Comment implements Command {
@@ -19,20 +20,23 @@ public class Comment implements Command {
 
 		System.out.println("댓글등록1");
 		
-		String comment = request.getParameter("comment");
-		System.out.println(comment);
+		String board_comment = request.getParameter("board_comment");
+		int board_id = Integer.parseInt(request.getParameter("board_id")); 
+		String user_id = request.getParameter("user_id");
 		
-		BoardVO vo = new BoardVO();
-		BoardDAO dao = new BoardDAO();
+		CommentVO vo = new CommentVO();
+		CommentDAO dao = new CommentDAO();
 		
-		List<BoardVO> list = new ArrayList<>();
+		vo.setBoard_comment(board_comment);
+		vo.setBoard_id(board_id);
+		vo.setUser_id(user_id);
 		
-		vo.setBoard_comment(comment); 
-		
-		list = dao.comment(vo);
-		
-		request.setAttribute("comments", list);
+		 int row = dao.comment(vo);
+		 System.out.println("댓글 입력 되면 이거 숫자로 나옴 >> "+row);
+		 if (row > 0) {
+			 return "boarddetail.jsp"; 
+		 }
+		 	return "boarddetail.jsp";
 
-		return "boarddetail.jsp"; 
 	}
 }

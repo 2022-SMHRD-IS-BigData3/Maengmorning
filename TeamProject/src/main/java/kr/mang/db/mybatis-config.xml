@@ -30,6 +30,7 @@
 		<mapper resource="kr/mang/db/MemberMapper.xml" />
 		<mapper resource="kr/mang/db/BoardMapper.xml" />
 		<mapper resource="kr/mang/db/productlistMapper.xml" />
+		<mapper resource="kr/mang/db/CommentMapper.xml" />
 
 	</mappers>
 
