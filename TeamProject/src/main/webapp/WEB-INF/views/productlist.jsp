@@ -319,7 +319,7 @@
                             <div class="card shadow-sm">
                                 <div class="card-body">
                                     <img src="./uploads/${imglist[status.index].file_name}" alt="이미지" width="250px" height="250px" align="center">
-                                    
+                                    	<a href="ProductDetail.do?items_id=${list.items_id}">
                                         <h5 id="title">
                                             ${list.title}
                                         </h5>
