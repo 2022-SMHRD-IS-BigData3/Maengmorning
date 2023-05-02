@@ -316,7 +316,7 @@
                                            <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
 <
                                             <a href="./ListIf.do">
-                                           <a href="Productdetail.do?items_id=${list.items_id}">
+                                           <a href="ProductDetail.do?items_id=${list.items_id}">
                                            <h5 id="title">
                                             	제목:${list.title}
                                             	</h5>
