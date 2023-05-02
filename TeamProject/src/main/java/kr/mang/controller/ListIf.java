@@ -13,9 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import kr.mang.model.ProductlistDAO;
 import kr.mang.model.ProductlistVO;
 
-/**
- * Servlet implementation class ListIf
- */
 @WebServlet("/ListIf")
 public class ListIf implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
@@ -26,11 +23,10 @@ public class ListIf implements Command {
 	    List<ProductlistVO> list = new ArrayList<>();
 
 	    list = dao.listif();
-	    
 	    request.setAttribute("list", list);
-	    System.out.println("리스트 값 : " + list.get(0).getItems_id());
+	    
 
-	    return "productdetail.jsp";
+	    return "main3.jsp";
 	}
        
   

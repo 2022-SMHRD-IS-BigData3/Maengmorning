@@ -358,23 +358,22 @@
                
                         <table class="ProductText">
                         <tr class="border-bottom">
-                            <td> <h3>상품정보</h3> </td>
+                            <td>작성날짜:<fmt:formatDate value="${detail.up_date}" pattern="yyyy.MM.dd"/></td>
+                        </tr>
+                        <tr>
+                        <td> <h3>상품정보</h3> </td>
                             <td>
                             ${detail.items_state}
                             </td>
-                        </tr>
-                        <tr>
-                            <td>작성날짜:<fmt:formatDate value="${detail.up_date}" pattern="yyyy.MM.dd"/></td>
                         </tr>
 
                         </table>
 
                         
     </section>
-   
                         	<div style="text-align: center;">
                         <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
-                            onclick="window.open('./main2.do', '_blank', 'width=1200,height=600')">관련 커뮤니티 글 보러가기</button>
+                            onclick="window.open('./main3.do', '_blank', 'width=1200,height=600')">관련 커뮤니티 글 보러가기</button>
                  		   </div>
         
             <!-- Js Plugins -->
