@@ -48,7 +48,9 @@
   </insert>
   
   <select id="get_listif" resultType="kr.mang.model.ProductlistVO">
-    select * from board where tag_id='12'
+    SELECT *
+	FROM items
+	WHERE title LIKE '%아이%'
   </select>
    
    <!-- 마이페이지 판매 및 구매내역 -->

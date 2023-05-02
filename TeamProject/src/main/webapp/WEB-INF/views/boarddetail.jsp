@@ -434,7 +434,10 @@
             </div>
         </div>
     </section>
-
+							<div style="text-align: center;">
+                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
+                            onclick="window.open('./main2.do', '_blank', 'width=1200,height=600')">관련 커뮤니티 글 보러가기</button>
+                 		   </div>
 
 
     

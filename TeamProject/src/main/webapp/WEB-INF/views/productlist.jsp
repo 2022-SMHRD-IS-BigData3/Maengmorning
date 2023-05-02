@@ -37,6 +37,9 @@
 
 <style>
 /* 검색창 */
+.nav-right a{
+  		 color: black;
+  	}
     .search-container {
         display: flex;
         justify-content: center;
@@ -248,7 +251,6 @@
     <!-- 카테고리/ 태그 -->
     <section class="product-shop spad">
         <div class="container">
-            <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-8 order-2 order-lg-1 produts-sidebar-filter">
                     <div class="filter-widget">
                         <h4 class="fw-title">Categories</h4>
@@ -265,11 +267,8 @@
                    
                </div>
               
-                <div class="col-lg-9 order-1 order-lg-2">
-                 
-<c:if test="${!empty member}">
+					<c:if test="${!empty member}">
                     <form action="./GoProductinput.do">
-                    <div class="product-show-option">
                         <div class="row">
                             <div class="col-lg-7 col-md-7">
                                 <div class="select-option">
@@ -288,31 +287,24 @@
                     
                     </form>
                     </c:if>      
-                        
-                    </div>
+                     
+                    
        <!-- 물품목록 
        dao productlist기능 이용, productVO에 있는 변수 활용 -->
-                    <div class="product-list">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6">
                                 <div class="product-item">
                                     <div class="pi-pic">
                                         <div class="icon">
                                             <i class="icon_heart_alt"></i>
                                         </div>
                                     </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">외출용품 </div>
-                                           </h5>
-                                        </a>
-                                        <div class="catagory-name">외출용품</div>
-                                </div>
-                            </div>
-                            </div>
-                            </div>
-                  <c:forEach items="${productlist}" var="list" varStatus="status">
-                                        <img src="./uploads/${imglist[status.index].file_name}" alt="이미지"><br>
-                                            <span>글번호:${list.items_id}</span>
+                                    
+                  						<c:forEach items="${productlist}" var="list" varStatus="status">
+                  						
+                  						<div class="col-sm-4">
+						                 <div class="card shadow-sm">
+						                   <div class="card-body">
+						                      <img src="./uploads/${imglist[status.index].file_name}" alt="이미지"  width="250px" height="250px" align="center">
+						                     <p>글번호:${list.items_id}</p>
                                            <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
                                               <a href="ProductDetail.do?items_id=${list.items_id}">
                                            <h5 id="title">
@@ -328,15 +320,25 @@
                                         <a class="area">장소:${area[status.index].area }</a>
                                         <a class="date">작성날짜:<fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd"/></a>
                         <br>
+						                   </div>
+						                 </div>
+						               </div>
+						                  						
+                                       
+                                            
                         </c:forEach>
 
-                </div>
-            </div>
+                
+             </div> 
         </div>
     </section>
     <!-- Product Shop Section End -->
 
-    
+    <div class="footer">
+		<br><br><br><br>
+	
+		
+		</div>
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>

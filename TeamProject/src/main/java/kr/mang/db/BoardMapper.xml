@@ -37,7 +37,9 @@
   </insert> -->
 
   <select id="get_boardlistif" resultType="kr.mang.model.BoardVO">
- 	select * from items where tag_id='12'
+ 	SELECT *
+	FROM board
+	WHERE title LIKE '%아이%'
   </select>
   
  

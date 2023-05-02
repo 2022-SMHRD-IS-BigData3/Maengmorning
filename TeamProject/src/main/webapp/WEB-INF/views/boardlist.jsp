@@ -29,6 +29,13 @@
 
 <style>
 /* 검색창 */
+	.nav-right a{
+  		 color: black;
+  	}
+	.table-scroll a{
+  		 color: black;
+  	}
+
     .search-container {
         display: flex;
         justify-content: center;
@@ -151,7 +158,9 @@
       .product-shop {
 		padding-top: 0px;
 		padding-bottom: 80px;
-}
+		}
+		
+		
 
  
 </style>
@@ -277,9 +286,6 @@
                     
                 <div class="col-lg-9 order-1 order-lg-2">
                     
-                    
-                    
-
                     <form action="./Goboardinput.do">
                     <table>
                     <div class="product-show-option">
@@ -302,7 +308,11 @@
                     </table>
                     
                     </form>
-                   
+                    
+                    
+                    
+                   <div class="table-scroll">
+         
                         <table>
                         <thead>
                             <tr>
@@ -328,7 +338,7 @@
                         </c:forEach>
                         </tbody>
                         </table>
-
+						</div>
 
 
                 </div>
@@ -336,7 +346,11 @@
         </div>
     </section>
     <!-- Product Shop Section End -->
-
+		<div class="footer">
+		<br><br><br><br>
+	
+		
+		</div>
     
 
     <!-- Js Plugins -->
@@ -350,6 +364,8 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+
 </body>
 
 </html>

@@ -67,6 +67,7 @@ public class FrontController extends HttpServlet {
 		map.put("Comment.do", new Comment());
 		map.put("GetComment.do", new GetComment());
 		map.put("ListIf.do", new ListIf());
+		map.put("main3.do", new ListIf());
 		map.put("main2.do", new BoardListIf());
 
 	}
