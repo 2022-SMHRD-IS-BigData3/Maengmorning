@@ -153,6 +153,7 @@
 		padding-bottom: 80px;
 		}
 		
+		
 
  
 </style>
@@ -300,7 +301,11 @@
                     </table>
                     
                     </form>
-                   
+                    
+                    
+                    
+                   <div class="table-scroll">
+         
                         <table>
                         <thead>
                             <tr>
@@ -326,7 +331,7 @@
                         </c:forEach>
                         </tbody>
                         </table>
-
+						</div>
 
 
                 </div>
@@ -352,6 +357,8 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
