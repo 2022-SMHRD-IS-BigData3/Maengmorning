@@ -304,7 +304,7 @@
             </div>
           </td>
         </tr>
-	<td>작성자</td>
+   <td>작성자</td>
           <td>
             <div>
             <input id="user_id" name="user_id" class="ProductTitle" type="text" placeholder="작성자">
@@ -366,6 +366,13 @@
     <script src="js/main.js"></script>
     <!-- 이미지 프리뷰 함수 -->
     <script>
+    
+    const submitButton = document.querySelector('.site-btn');
+    submitButton.addEventListener('click', () => {
+        location.href = './BoardList.do';
+    });
+    
+    
     function previewImage(event) {
         var preview = document.getElementById('previewImage'); // 미리보기 이미지 요소 가져오기
         var file = event.target.files[0]; // 선택한 파일 가져오기
