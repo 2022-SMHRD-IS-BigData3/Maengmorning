@@ -378,22 +378,12 @@
                             </div>-->
                         </div>
 
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">이전</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">다음</span>
-                        </a>
+                       
 
                         <table>
                             <tr>
                                 <p>
 									${detail.board_content}
-
                                 </p>
                                 <p>#태그</p>
                             </tr>
@@ -409,7 +399,7 @@
                    
 
                     <br>
-						 <table align="center" width="500" border="1" id="rtb">
+						 <table align="center" width="500" id="rtb">
 							<thead>
 								<td colspan="4"><b id="rCount">댓글목록</b></td>
 							</thead>
@@ -428,8 +418,7 @@
                             </tr>
                            
                             <tbody>
-                            
-                            
+
 							 <c:forEach items="${list}" var="item" varStatus="status">
 							    <tr>
 							        <td>${item.board_id}</td>
@@ -472,28 +461,37 @@
     <script type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script>
+  <%--  <script>
         $(document).ready(function () {
             $('#carouselExampleControls').carousel();
         });
     </script>
-  
+   --%>
   <script>
+
+
+  $(document).ready(function() {
+      getComment();
+  });
+  
 	function getComment(){
 		let board_id = "${detail.board_id}";
+		console.log(board_id)
 		$.ajax({
-			url : 'GetComment.do',
+			url : "GetComment.do",
 			data : {
 				"board_id" :board_id 
 			},
 			type : "get",
 			dataType : 'json',
 			success : function(res){
-				let tablebody = $('#rtb tbody')	
-				tablebody.html('') // 댓글 목록 창을 초기화 
+				console.log(res)
+			
+				var $tablebody = $('#rtb tbody')
+				console.log("테이블 바디",$tablebody)
+				$tablebody.html('') // 댓글 목록 창을 초기화 
 				$('rCount').text("댓글 ("+res.length+")") // 댓글 갯수 출력
 				if (res != null){
-					console.log(res)
 					for(var i in res){
 						var $tr = $("<tr>");
 						var $rWriter = $("<td width='100'>").text(
@@ -506,21 +504,19 @@
 						$tr.append($rWriter);
 						$tr.append($rContent);
 						$tr.append($rCreatDate);
-						$tableBody.append($tr);
+						$tablebody.append($tr);
 					
 						}
-					
 				}
+			},error : function(){
+				console.log('에러')
 			}
+			
 		})
 	};
-	
-	
 	</script>
   
  <script>
- 
- 
     $(document).ready(function(){
     	$(document).on('click','#Input',function(){
     		let board_comment = $("#comment").val();
@@ -540,17 +536,19 @@
     			type : "post",
     			success : function(res){
     					if (res == "success"){
+    						
+    					}
     						alert("등록성공")
     				}
     				$("#comment").val(''); // 댓글 등록 후 등록창 초기화하는 구문
-    					getComment(
-    					);
+    					
     						// 필요한 정보는 board_id 만 있으면 그에 해당하는 댓글 내용과 user_id 를 가져올 수 있을 듯 
-    				);
+    				
     			},
     			error : function (){
     				alert("등록실패")
     			}
+    			
     			});
     	})
     	

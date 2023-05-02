@@ -23,6 +23,7 @@ import kr.mang.controller.BoardListIf;
 import kr.mang.controller.Boarddetail;
 import kr.mang.controller.Command;
 import kr.mang.controller.Comment;
+import kr.mang.controller.GetComment;
 import kr.mang.controller.JoinService;
 import kr.mang.controller.ListIf;
 import kr.mang.controller.LoginService;
