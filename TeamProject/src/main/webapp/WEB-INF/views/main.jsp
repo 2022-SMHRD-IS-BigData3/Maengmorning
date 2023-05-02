@@ -32,6 +32,10 @@
 
   <style>
   /* 스타일링 */
+  	.nav-right a{
+  		 color: black;
+  	}
+  
      .search-container {
         display: flex;
         justify-content: center;
@@ -127,11 +131,7 @@
    margin-bottom: 9px;
    border-radius: 2px;
    
-   .single-banner {
-         width: 570.98px;
-         height: 330.55px;
-         overflow: hidden;
-     }
+   
      .single-banner {
          width: 570.00px;
          height: 330.55px;
@@ -244,7 +244,9 @@
      margin-left: 1600px
      }
      
- 
+ 	a {
+ 		color : none;
+ 	}
      
      
       
@@ -362,10 +364,10 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./img/맹모닝배너1-001.png" style="width: 1200px; margin-left: 350px;" class="mainBanner" alt="...">
+                <img src="./img/맹모닝배너1-001.png" style="width: 1140px; margin-left: 485px;" class="mainBanner" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="./img/맹모닝배너2-001.png" style="width: 1200px; margin-left: 350px;" class="mainBanner" alt="...">
+                <img src="./img/맹모닝배너2-001.png" style="width: 1140px; margin-left: 485px;" class="mainBanner" alt="...">
             </div>
         </div>
 
@@ -449,7 +451,7 @@
                         <tr>
                            <c:forEach items="${Blist}" var="blist" varStatus="status">
                            <c:if test="${status.index<5}">
-                               <td><a href = "./ProductList.do">${blist.title}</a></td>
+                               <td><a href = "./ProductList.do" style="color:black">${blist.title}</a></td>
                                <td>${blist.user_id}</td>
                                   <td>${area[status.index].area}</td>
                                   </tr>
