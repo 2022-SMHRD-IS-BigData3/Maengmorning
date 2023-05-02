@@ -319,22 +319,16 @@
                             <div class="card shadow-sm">
                                 <div class="card-body">
                                     <img src="./uploads/${imglist[status.index].file_name}" alt="이미지" width="250px" height="250px" align="center">
-                                    <p>글번호:${list.items_id}</p>
-                                    <!-- NumberFormatException을 방지하기 위해 imglist.file_name 표현식을 따옴표로 묶습니다. -->
-                                    <a href="ProductDetail.do?items_id=${list.items_id}">
+                                    
                                         <h5 id="title">
-                                            제목:${list.title}
+                                            ${list.title}
                                         </h5>
                                     </a>
+                                    
                                     <div class="product-price">
-                                        판매자: ${list.user_id}<br>
+                                        ${list.price}원<br>
                                     </div>
-                                    <div class="product-price">
-                                        가격: ${list.price}원<br>
-                                    </div>
-                                    <a class="area">장소:${area[status.index].area }</a>
-                                    <a class="date">작성날짜:
-                                        <fmt:formatDate value="${list.up_date}" pattern="yyyy.MM.dd" /></a>
+                                    <a class="area">${area[status.index].area }</a>
 
                                 </div>
                             </div>
