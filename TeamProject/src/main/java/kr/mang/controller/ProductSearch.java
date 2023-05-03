@@ -28,10 +28,13 @@ public class ProductSearch implements Command {
 		
 		ProductlistDAO dao = new ProductlistDAO();
 		List<ProductlistVO> list = new ArrayList<>();
-
+		List<ProductlistVO> imglist = new ArrayList<>();
+		
 		list = dao.ProductSearch(search);
+		imglist = dao.ProductSearch(search);
 		request.setAttribute("list", list);
-		    
+		request.setAttribute("imglist", imglist);
+		
 
 		return "searchpage.jsp";
 	}
