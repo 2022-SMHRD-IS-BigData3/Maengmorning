@@ -60,8 +60,11 @@
   ORDER BY A.UP_DATE ,B.TRADE_DATE DESC
    </select>
    
+	<!--SELECT * FROM items  -->
    <select id="search" parameterType="kr.mang.model.ProductlistVO" resultType="kr.mang.model.ProductlistVO">
-	SELECT * FROM items WHERE title LIKE  '%' || #{search} || '%'
+	SELECT A.ITEMS_ID,A.TITLE,A.ITEMS_STATE, A.PRICE,A.UP_DATE,A.USER_ID,B.FILE_NAME
+  FROM ITEMS A LEFT OUTER JOIN ITEMS_IMG B ON (A.ITEMS_IMG_ID = B.ITEMS_IMG_ID)
+	WHERE title LIKE  '%' || #{search} || '%'
    </select>
      
   
