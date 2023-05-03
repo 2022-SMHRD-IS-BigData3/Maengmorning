@@ -308,9 +308,8 @@
                             <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
                                 role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice"
                                 focusable="false">
-							<a href="mypagesell.do?items_id=68">                                
                                 <rect width="100%" height="100%" fill="#FFD280" /><text x="12%" y="50%"
-                                    fill="#F6F6F6">매너온도 ★★★★★</text></a>
+                                    fill="#F6F6F6"><a href="./Goreview.do">매너온도 ★★★★★</a></text>
                             </svg>
                         </div>
                     </div>
