@@ -100,36 +100,7 @@
                                 <td>${my.price }</td>
                             </tr>
                            </c:forEach>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 판매자</td>
-                                <td>DB에서 판매금액</td>
-                            </tr>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 판매자</td>
-                                <td>DB에서 판매금액</td>
-                            </tr>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 판매자</td>
-                                <td>DB에서 판매금액</td>
-                            </tr>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 판매자</td>
-                                <td>DB에서 판매금액</td>
-                            </tr>
-                            <tr>
-                                <td>DB에서 날짜</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 판매자</td>
-                                <td>DB에서 판매금액</td>
-                            </tr>
+                            
                         </tbody>
                         <tfoot>
                             <tr>

@@ -47,6 +47,7 @@ public class ProductInput implements Command {
     vo.setPrice(price);
     vo.setFile_name(file_name);
     vo.setUser_id(user_id);
+    vo.setTag_id(tag_id);
     System.out.println("파라메터 수집 ");
     //데이터 넘겨받아서 db에 저장 (productlistDAO로 이동)
     ProductlistDAO dao = new ProductlistDAO();

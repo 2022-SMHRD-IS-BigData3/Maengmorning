@@ -97,36 +97,7 @@
                                 <td>${my.price }</td>
                             </tr>
                            </c:forEach>
-                             <tr>
-                                <td>23.05.03</td>
-                                <td>TITLE</td>
-                                <td>USER_ID</td>
-                                <td>PRICE:20000</td>
-                            </tr>
-                              <tr>
-                                <td>23.05.02</td>
-                                <td>TITLE</td>
-                                <td>USER_ID</td>
-                                <td>PRICE:30000</td>
-                            </tr>
-                              <tr>
-                                <td>23.05.02</td>
-                                <td>TITLE</td>
-                                <td>USER_ID</td>
-                                <td>PRICE:50000</td>
-                            </tr>
-                            <tr>
-                                <td>23.04.30</td>
-                                <td>TITLE</td>
-                                <td>USER_ID</td>
-                                <td>PRICE:15000</td>
-                            </tr>
-                                                     <tr>
-                                <td>23.04.25</td>
-                                <td>TITLE</td>
-                                <td>USER_ID</td>
-                                <td>PRICE:27000</td>
-                            </tr>
+                             
                         </tbody>
                         <tfoot>
                             <tr>
