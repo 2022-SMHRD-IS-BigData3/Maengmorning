@@ -39,7 +39,7 @@
   <select id="get_boardlistif" resultType="kr.mang.model.BoardVO">
  	SELECT *
 	FROM board
-	WHERE title LIKE '%카시트%'
+	WHERE title LIKE '%고양이%'
   </select>
   
   <select id="search1" parameterType="kr.mang.model.BoardVO" resultType="kr.mang.model.BoardVO">

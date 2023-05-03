@@ -50,7 +50,7 @@
   <select id="get_listif" resultType="kr.mang.model.ProductlistVO">
     SELECT *
 	FROM items
-	WHERE title LIKE '%고양이%'
+	WHERE title LIKE '%카시트%'
   </select>
    
    <!-- 마이페이지 판매 및 구매내역 -->

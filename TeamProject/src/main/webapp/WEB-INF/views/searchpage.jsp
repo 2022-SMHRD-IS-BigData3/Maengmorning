@@ -38,8 +38,8 @@
 <style>
 /* 검색창 */
 .nav-right a{
-  		 color: black;
-  	}
+         color: black;
+     }
     .search-container {
         display: flex;
         justify-content: center;
@@ -277,7 +277,7 @@
 
                     <!-- 물품목록 
        dao productlist기능 이용, productVO에 있는 변수 활용 -->
-					<div style="width: 800px;">
+               <div style="width: 800px;">
                     <div class="col-lg-9 order-1 order-lg-2">
                         <c:if test="${!empty member}">
                             <form action="./GoProductinput.do">
@@ -309,7 +309,7 @@
                     </div>
                     
                     
-					<div class="row">
+               <div class="row">
                     <c:forEach items="${list}" var="item" varStatus="status">
 
                         <div class="col-sm-5 mb-3">
@@ -334,8 +334,8 @@
         </c:if>
                         
                     </c:forEach>
-					</div>
-					</div>
+               </div>
+               </div>
                     <!-- Product Shop Section End -->
 
                     <div class="footer">

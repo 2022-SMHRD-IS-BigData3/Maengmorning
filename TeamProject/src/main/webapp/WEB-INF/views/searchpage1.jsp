@@ -336,14 +336,16 @@
                         </thead>
                         <tbody>
                         <c:forEach items="${list}" var="item" varStatus="status">
-								<a href="Boarddetail.do?board_id=${item.board_id}">
+							
 									<tr>
 										<td>${item.board_id}</td>
-										<td>${item.title}</td>
+									
+										<td><a href="Boarddetail.do?board_id=${item.board_id}">${item.title}</a></td>
+									
 										<td>${item.user_id}</td>
 										 <td>${area[status.index].area}</td>
 									</tr>
-									</a>
+									
 						</c:forEach>
                         </tbody>
                         </table>
