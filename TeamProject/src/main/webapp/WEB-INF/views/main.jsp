@@ -393,7 +393,7 @@
         
       <div class="container">
           <div class="productShop">
-              <h4>중고거래</h4>
+              <h4><strong>중고거래</strong></h4>
               <br>
           </div>
           
@@ -418,7 +418,7 @@
 
         <form action="./ProductList.do">
           <div class="productShopDetail">
-            <button type="submit" class="btn btn-warning">더보기</button>
+            <button type="submit" class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
             <br>
         </div>
         </form>
@@ -432,7 +432,7 @@
       <div class="album py-5 bg-body-tertiary">
         <div class="container">
             <div class="productShop">
-                <h4>커뮤니티</h4>
+                <h4><strong>커뮤니티</strong></h4>
                 <br>
             </div>
 
@@ -468,7 +468,7 @@
 
             <form action="./BoardList.do">
             <div class="productShopDetail">
-                <button type="submit" class="btn btn-warning">더보기</button>
+                <button type="submit" class="btn btn-warning" style="color: white; font-weight: bold;">더보기</button>
                 <br>
             </div>
             </form>
