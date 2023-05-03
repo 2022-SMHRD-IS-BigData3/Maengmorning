@@ -340,12 +340,14 @@
                                 <td>판매금액</td>
                             </tr>
                            <c:forEach items="${getmylist }" var="my" varStatus="status">
+                            <c:if test="${status.index<5}">
                             <tr>
                                 <td><fmt:formatDate value="${my.trade_date}" pattern="yyyy.MM.dd"/></td>
                                 <td>${my.title }</td>
                                 <td>${my.buy_user_id }</td>
                                 <td>${my.price }</td>
                             </tr>
+                            </c:if>
                            </c:forEach>
                         </tbody>
                     </table>
@@ -374,6 +376,7 @@
                                 <td>구매금액</td>
                             </tr>
                           <c:forEach items="${getmylist }" var="my" varStatus="status">
+                          	<c:if test="${status.index<5}">
                             <tr>
                                 <tr>
                                 <td><fmt:formatDate value="${my.up_date}" pattern="yyyy.MM.dd"/></td>
@@ -381,6 +384,7 @@
                                 <td>${my.user_id }</td>
                                 <td>${my.price }</td>
                             </tr>
+                            </c:if>
                            </c:forEach>
                         </tbody>
                     </table>
