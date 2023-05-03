@@ -316,10 +316,11 @@
                             <div class="card shadow-sm">
                                 <div class="card-body">
                                     <img src="./uploads/${imglist[status.index].file_name}" alt="이미지" width="250px" height="250px" align="center">
+                                        <a href="ProductDetail.do?items_id=${item.items_id}">
                                         <h5 id="title">
                                             ${item.title}
                                         </h5>
-                                    
+                                    </a>
                                     <div class="product-price">
                                         ${item.price}원<br>
                                     </div>

@@ -1,4 +1,12 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@page import="kr.mang.model.ProductlistVO"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -328,12 +336,14 @@
                         </thead>
                         <tbody>
                         <c:forEach items="${list}" var="item" varStatus="status">
+										 <a href="Boarddetail.do?board_id=${item.board_id}">
 									<tr>
 										<td>${item.board_id}</td>
 										<td>${item.title}</td>
 										<td>${item.user_id}</td>
 										 <td>${area[status.index].area}</td>
 									</tr>
+										</a>
 						</c:forEach>
                         </tbody>
                         </table>
