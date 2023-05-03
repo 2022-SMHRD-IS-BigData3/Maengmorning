@@ -301,18 +301,16 @@
                     <div
                         class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-primary">아이디</strong>
-                            <h3 class="mb-0">${member.nickName}</h3>
-                            <div class="mb-1 text-body-secondary">그외</div>
-                            <p class="card-text mb-auto">등등</p>
+                            <strong class="d-inline-block mb-2 text-primary">${member.nickName}</strong>
+                            <div class="mb-1 text-body-secondary">${area[status.index].area }</div>
                         </div>
                         <div class="col-auto d-none d-lg-block">
                             <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
                                 role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice"
                                 focusable="false">
-                                <title>Placeholder</title>
+							<a href="mypagesell.do?items_id=68">                                
                                 <rect width="100%" height="100%" fill="#FFD280" /><text x="12%" y="50%"
-                                    fill="#F6F6F6">매너온도 ★★★★★</text>
+                                    fill="#F6F6F6">매너온도 ★★★★★</text></a>
                             </svg>
                         </div>
                     </div>
