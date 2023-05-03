@@ -702,21 +702,21 @@ ol {
 	margin-left: 16px;
 }
 
-.nav-item .nav-depart .depart-btn .depart-hover {
-	position: absolute;
-	width: 100%;
-	/* ㄴㄴ */
-	background: #ffffff;
-	left: 0;
-	top: 62px;
-	opacity: 0;
-	visibility: hidden;
-	padding-bottom: 29px;
-	-webkit-box-shadow: 0 13px 32px#ffffff(51, 51, 51, 0.1);
-	box-shadow: 0 13px 32px #ffffff(51, 51, 51, 0.1);
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+.box-shadow {
+  box-shadow: 0 13px 32px rgba(51, 51, 51, 0.1);
+}
+
+.depart-hover {
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  left: 0;
+  top: 62px;
+  opacity: 0;
+  visibility: hidden;
+  padding-bottom: 29px;
+  box-shadow: 0 13px 32px rgba(51, 51, 51, 0.1);
+  transition: all 0.3s;
 }
 
 .nav-item .nav-depart .depart-btn .depart-hover li {
