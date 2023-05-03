@@ -352,7 +352,9 @@
                     <!-- 게시판 글 -->
                     <div class="post-info">
                         <div class="title">
-                            <h1>${detail.title}</h1>
+                            <h1>${detail.title} <button style="text-align: right;" class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
+                            onclick="window.open('./main2.do', '_blank', 'width=1200,height=600')">관련 중고거래 글 보러가기</button> </h1>
+                            
                         </div>
 
                         <p>작성자:${detail.user_id} | 작성일:<fmt:formatDate value="${detail.write_date}" pattern="yyyy/MM/dd" /> | 동네: ${mdetail.area} | 조회수 : 1</p>
@@ -388,7 +390,7 @@
                                 <p>#태그</p>
                             </tr>
                         </table>
-
+						<br><br><br><br><br>
                     
 
               
@@ -408,16 +410,9 @@
 						</table>
 					</br>
 					<table class="Community">
-                            <tr class="border-bottom">
-                                <td > <h4>관련거래글</h4> </td>
-                            </tr> 
-                            <tr class="CommunityTitle">
-                                <th>글번호</th>
-                                <th>제목</th>
-                                <th>작성자</th>
-                            </tr>
+                            
                            
-                            <tbody>
+                           
 
 							 <c:forEach items="${list}" var="item" varStatus="status">
 							    <tr>
@@ -426,7 +421,6 @@
 							        <td>${item.user_id}</td>
 							    </tr>
 							</c:forEach>
-							</tbody>
                             </table>
 					
                     </div>
@@ -434,9 +428,8 @@
             </div>
         </div>
     </section>
-							<div style="text-align: center;">
-                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
-                            onclick="window.open('./main2.do', '_blank', 'width=1200,height=600')">관련 커뮤니티 글 보러가기</button>
+							<div>
+                        
                  		   </div>
 
 

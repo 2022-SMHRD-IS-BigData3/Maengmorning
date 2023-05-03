@@ -169,6 +169,16 @@
     font-size: 30px;
     }
     
+    #productImg, #productDetail {
+    margin-top: 30px;
+    }
+    .ProductText td h3 {
+  	border-bottom: 1px solid #ccc;
+  	padding-bottom:10px;
+	}
+	.btn-warning {
+  	color: #fff;
+	}
 </style>
 
 <body>
@@ -215,7 +225,7 @@
                     </form>
                   </div>
             </div>
-                    <div class="col-lg-3 text-right col-md-3">
+                    <div class="col-lg-2 text-right col-md-2">
                         
                         <ul class="nav-right">
                   <c:if test="${empty member}">
@@ -317,7 +327,7 @@
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                           <img alt="Product Image" src="./uploads/${detail.file_name}">
+                                           <img id="productImg" alt="Product Image" src="./uploads/${detail.file_name}">
                                         </div>
                                         
                                     </div>
@@ -326,7 +336,7 @@
                                 </div>
                         </div>
                         
-                        <div>
+                        <div id="productDetail">
                         <br>
                             <table>
                                 <tr>
@@ -351,42 +361,43 @@
                                     <td class="tdTitle">- 거래지역 : ${prodetail.area}</td>
                                     <td class="tdText"></td>
                                 </tr>
+                                 <tr>
+                            		<td class="tdTitle" colspan="2">- 작성날짜 : <fmt:formatDate value="${detail.up_date}" pattern="yyyy.MM.dd"/></td>
+                       			 </tr>
+                                
                                 <tr>
-                                    <td class="tdTitle">- 카테고리</td>
+                                    <td class="tdTitle">- 카테고리 : </td>
                                     <td class="tdText">의류</td>
                                 </tr>
                                 <tr>
-                                    <td class="tdTitle">- 상품태그</td>
+                                    <td class="tdTitle">- 상품태그 : </td>
                                     <td class="tdText">${detail.tag_id}</td>
                                 </tr>
                             </table>
                             <div align ="left">
-                                <button type="button" class="btn btn-secondary btn-lg btn-danger">❤︎찜</button>
-                                <button class="btn btn-secondary btn-lg btn btn-danger" type="button" onclick="window.open('./Gomessage.do', '_blank', 'width=600,height=600')">✉쪽지</button>
-                                <button class="btn btn-secondary btn-lg btn btn-danger" type="button" onclick="window.open('./Gopayment.do', '_blank', 'width=600,height=600')">바로구매</button>
+                                <button type="button" class="btn btn-secondary btn-lg">❤︎찜</button>
+                                <button class="btn btn-warning btn-lg " type="button" onclick="window.open('./Gomessage.do', '_blank', 'width=600,height=600')">✉쪽지</button>
+                                <button class="btn btn-danger btn-lg " type="button" onclick="window.open('./Gopayment.do', '_blank', 'width=600,height=600')">바로구매</button>
                             
                         </div>
                         </div>
                
                         <table class="ProductText">
-                        <tr class="border-bottom">
-                            <td>작성날짜:<fmt:formatDate value="${detail.up_date}" pattern="yyyy.MM.dd"/></td>
+                       <tr>
+                        <td> <h3>상품정보 <button class="btn btn-warning" style="color: white; font-weight: bold; float: right ;margin-right: 120px ; width : 310px" type="button"
+                            onclick="window.open('./main3.do', '_blank')">관련 커뮤니티 글 보러가기</button></h3> </td>
                         </tr>
-                        <tr>
-                        <td> <h3>상품정보</h3> </td>
-                            <td>
+                         <tr>
+                          <td>
                             ${detail.items_state}
-                            </td>
+                          </td>
                         </tr>
 
                         </table>
 
                         
     </section>
-                        	<div style="text-align: center;">
-                        <button class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
-                            onclick="window.open('./main3.do', '_blank', 'width=1200,height=600')">관련 커뮤니티 글 보러가기</button>
-                 		   </div>
+                        	
         
             <!-- Js Plugins -->
             <script src="js/jquery-3.3.1.min.js"></script>
