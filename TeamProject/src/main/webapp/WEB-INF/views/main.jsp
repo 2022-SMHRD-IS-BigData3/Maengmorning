@@ -248,10 +248,14 @@
  		color : none;
  	}
      
-     
-      
-      
-      
+    h5 #title {
+  font-weight: bold !important;
+  padding-top: 20px !important;
+	} 
+	
+   img #product {
+   margin-bottom: 20px;
+   }
       
       
   </style>
@@ -292,7 +296,7 @@
                  <ul class="nav-right">
                   <c:if test="${empty member}">
                        <a href="./Gologin.do">로그인</a>
-                       <a href="./Gojoin.do">회원가입</a>
+                       <a href="./Gojoin.do">| 회원가입</a>
                   </c:if>
                      
                      <c:if test="${!empty member}">
@@ -406,10 +410,10 @@
                                 <div class="col-sm-4">
                                     <div class="card shadow-sm">
                                         <div class="card-body">
-                                            <img width="300px" height="300px"
+                                            <img id="product" width="300px" height="300px" 
                                                 src="./uploads/${imglist[status.index].file_name}" alt="이미지">
-                                            <p class="card-text" name="title">제목 : ${list.title}<br>작성자 :
-                                                ${list.user_id}<br>가격 : ${list.price}원</p>
+                                            <h5 id="title">${list.title}</h5>
+                                                <p>${list.user_id}<br>${list.price}원</p>
                                         </div>
                                     </div>
                                 </div>
