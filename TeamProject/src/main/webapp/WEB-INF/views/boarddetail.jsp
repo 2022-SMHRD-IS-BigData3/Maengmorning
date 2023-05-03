@@ -34,29 +34,39 @@
 </head>
 
 <style>
-/* 검색창 */
 
-   .boardComment {
-        font-size: 20px;
-        background-color: #f5f5f5;
-        padding: 10px;
-        margin-bottom: 10px;
-   }
+	/* 댓글쓰는 곳  */
+	#comment {
+  	width: 88%;
+	}
+	
+	/* 댓글등록버튼  */
+	#Input {
+        background-color: #ffc107;
+        color: white;
+        border-radius: 5px;
+        
+    }
    
    #rCount {
-       font-size: 20px;
-        background-color: #f5f5f5;
-        padding: 10px;
-        margin-bottom: 10px;
+        font-size: 20px;
    }
    
    .abc {
-      	font-size: 20px;
+      	font-size: 15px;
+      	color : gray;
         background-color: #f5f5f5;
-        padding: 10px;
+   }
+   
+  
+   
+   .boardComment {
+        font-size: 20px;
+        background-color: #f5f5f5;
         margin-bottom: 10px;
    }
    
+    /* 검색창 */
     .search-container {
         display: flex;
         justify-content: center;
@@ -374,9 +384,8 @@
                     <!-- 게시판 글 -->
                     <div class="post-info">
                         <div class="title">
-                            <h1>${detail.title} <button style="text-align: right;" class="btn btn-warning" style="color: white; font-weight: bold;" type="button"
+                            <h1><strong>${detail.title}</strong><button class="btn btn-warning" style = "color: white; font-weight:bold;" type="button"
                             onclick="window.open('./main2.do', '_blank', 'width=1200,height=600')">관련 중고거래 글 보러가기</button> </h1>
-                            
                         </div>
 
                         <p>작성자:${detail.user_id} | 작성일:<fmt:formatDate value="${detail.write_date}" pattern="yyyy/MM/dd" /> | 동네: ${mdetail.area} | 조회수 : 1</p>
@@ -417,27 +426,25 @@
 
               
                    
-                        댓글  <input id="comment" type="text">
-                        <button id="Input">등록</button>
+                        <strong>댓글</strong><input id="comment" type="text">
+                        <button id="Input" class="btn btn-warning"><strong>등록</strong></button>
                   
                    
 
-                    <br>
+                    
 						 <table align="center" width="500" id="rtb">
-							<thead>
+							<thead><br>    <br>    <br> 
 								<td colspan="4"><b id="rCount">댓글목록</b></td>
 							</thead>
 							<tbody>
 							</tbody>
 						</table>
-					</br>
 					<table class="Community">
                             
-                           
-                           
 
 							 <c:forEach items="${list}" var="item" varStatus="status">
 							    <tr>
+					
 							        <td>${item.board_id}</td>
 							        <td>${item.title}</td>
 							        <td>${item.user_id}</td>
@@ -452,8 +459,7 @@
     </section>
 							<div>
                         
-                 		   </div>
-
+                 		   </div><br><br><br> </div><br><br><br>
 
     
     <!-- Js Plugins -->
