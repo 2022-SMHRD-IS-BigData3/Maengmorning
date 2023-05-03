@@ -408,8 +408,10 @@
                                         <div class="card-body">
                                             <img width="300px" height="300px"
                                                 src="./uploads/${imglist[status.index].file_name}" alt="이미지">
+                                           <a href="ProductDetail.do?items_id=${list.items_id}">
                                             <p class="card-text" name="title">제목 : ${list.title}<br>작성자 :
                                                 ${list.user_id}<br>가격 : ${list.price}원</p>
+                                                </a>
                                         </div>
                                     </div>
                                 </div>
@@ -453,7 +455,10 @@
                         <tr>
                            <c:forEach items="${Blist}" var="blist" varStatus="status">
                            <c:if test="${status.index<5}">
-                               <td><a href = "./BoardList.do" style="color:black">${blist.title}</a></td>
+                              <td>
+                              <a href="Boarddetail.do?board_id=${blist.board_id}">
+                               ${blist.title}
+                               </a></td>
                                <td>${blist.user_id}</td>
                                   <td>${area[status.index].area}</td>
                                   </tr>

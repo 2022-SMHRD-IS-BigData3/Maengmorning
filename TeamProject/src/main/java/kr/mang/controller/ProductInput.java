@@ -32,7 +32,8 @@ public class ProductInput implements Command {
     String price = multi.getParameter("price");
     Date upload_date = new Date();
     String user_id = multi.getParameter("user_id");
-    //String user_id = (String)session.getAttribute("user_id");
+    String tag_id = multi.getParameter("tag_id");
+
     System.out.println(file_name);
     System.out.println(title);
     System.out.println(items_state);

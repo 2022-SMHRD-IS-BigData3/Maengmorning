@@ -1,4 +1,10 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page import="kr.mang.model.ProductlistVO"%>
+<%@ page import="java.io.File" %>
+<%@ page import="java.util.Enumeration" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@ page import="com.oreilly.servlet.MultipartRequest"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +71,7 @@
 		
 		    <div class="message-container">
 		        <form action ="./Gomessagebox.do" >
-                      <label for="recipient">받는 사람:</label>
+                      <label for="recipient">받는 사람: ${detail.user_id}</label>
                       <input type="text" id="recipient" name="recipient">
                       <label for="subject">제목:</label>
                       <input type="text" id="subject" name="subject">
