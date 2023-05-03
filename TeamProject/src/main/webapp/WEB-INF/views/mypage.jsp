@@ -215,8 +215,10 @@
             </div>
             <div class="col-lg-2 text-right col-md-2"> <!-- 중앙 정렬 및 크기 변경 -->
               <ul class="nav-right">
-
-                <li class="heart-icon">
+				 <c:if test="${empty member}">
+                       <a href="./Gologin.do">로그인</a>
+                       <a href="./Gojoin.do">회원가입</a>
+                  </c:if>
                      <c:if test="${!empty member}">
                      <a>${member.nickName}님 환영합니다 '◡'✿ </a>
                      <a href="Gologout.do">| 로그아웃</a>
@@ -345,7 +347,7 @@
                                 <td><fmt:formatDate value="${my.trade_date}" pattern="yyyy.MM.dd"/></td>
                                 <td>${my.title }</td>
                                 <td>${my.buy_user_id }</td>
-                                <td>${my.price }</td>
+                                <td>${my.price }원</td>
                             </tr>
                             </c:if>
                            </c:forEach>
@@ -382,7 +384,7 @@
                                 <td><fmt:formatDate value="${my.up_date}" pattern="yyyy.MM.dd"/></td>
                                 <td>${my.title }</td>
                                 <td>${my.user_id }</td>
-                                <td>${my.price }</td>
+                                <td>${my.price }원</td>
                             </tr>
                             </c:if>
                            </c:forEach>
@@ -404,13 +406,33 @@
                         <tbody>
                             <tr>
                                 <td>판매자</td>
-                                <td>상품명</td>
+                                <td>글 제목</td>
                                 <td>금액</td>
                             </tr>
                             <tr>
-                                <td>DB에서 판매자</td>
-                                <td>DB에서 상품명</td>
-                                <td>DB에서 금액</td>
+                                <td>a11</td>
+                                <td>유아의류</td>
+                                <td>3900원</td>
+                            </tr>
+                            <tr>
+                                <td>정민규</td>
+                                <td>카시트 팔아요</td>
+                                <td>450000원</td>
+                            </tr>
+                            <tr>
+                                <td>a11</td>
+                                <td>아기 목튜브</td>
+                                <td>20000원</td>
+                            </tr>
+                            <tr>
+                                <td>꽃보다중년</td>
+                                <td>4moms 락카루 베이비 스윙 다크 그래이</td>
+                                <td>162000원</td>
+                            </tr>
+                            <tr>
+                                <td>smhrd11</td>
+                                <td>벨라 아기침대 미개봉 새제품 싸게팝니다</td>
+                                <td>100000원</td>
                             </tr>
                         </tbody>
                     </table>
