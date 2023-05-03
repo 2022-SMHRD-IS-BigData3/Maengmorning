@@ -35,6 +35,28 @@
 
 <style>
 /* 검색창 */
+
+   .boardComment {
+        font-size: 20px;
+        background-color: #f5f5f5;
+        padding: 10px;
+        margin-bottom: 10px;
+   }
+   
+   #rCount {
+       font-size: 20px;
+        background-color: #f5f5f5;
+        padding: 10px;
+        margin-bottom: 10px;
+   }
+   
+   .abc {
+      	font-size: 20px;
+        background-color: #f5f5f5;
+        padding: 10px;
+        margin-bottom: 10px;
+   }
+   
     .search-container {
         display: flex;
         justify-content: center;
@@ -471,46 +493,41 @@
       getComment();
   });
   
-	function getComment(){
-		let board_id = "${detail.board_id}";
-		console.log(board_id)
-		$.ajax({
-			url : "GetComment.do",
-			data : {
-				"board_id" :board_id 
-			},
-			type : "get",
-			dataType : 'json',
-			success : function(res){
-				console.log(res)
-			
-				var $tablebody = $('#rtb tbody')
-				console.log("테이블 바디",$tablebody)
-				$tablebody.html('') // 댓글 목록 창을 초기화 
-				$('rCount').text("댓글 ("+res.length+")") // 댓글 갯수 출력
-				if (res != null){
-					for(var i in res){
-						var $tr = $("<tr>");
-						var $rWriter = $("<td width='100'>").text(
-								res[i].user_id);
-						var $rContent = $("<td>").text(
-								res[i].board_comment);
-						var $rCreatDate = $("<td width='100'>").text(
-								res[i].write_date);
-
-						$tr.append($rWriter);
-						$tr.append($rContent);
-						$tr.append($rCreatDate);
-						$tablebody.append($tr);
-					
-						}
-				}
-			},error : function(){
-				console.log('에러')
-			}
-			
-		})
-	};
+	  function getComment(){
+	      let board_id = "${detail.board_id}";
+	      console.log(board_id)
+	      $.ajax({
+	         url : "GetComment.do",
+	         data : {
+	            "board_id" :board_id 
+	         },
+	         type : "get",
+	         dataType : 'json',
+	         success : function(res){
+	            console.log(res)
+	            var usernickname = "${member.nickName}";
+	            var $tablebody = $('#rtb tbody')
+	            console.log("테이블 바디",$tablebody)
+	            $tablebody.html('') // 댓글 목록 창을 초기화 
+	            $('rCount').text("댓글 ("+res.length+")") // 댓글 갯수 출력
+	            if (res != null){
+	               for(var i in res){
+	                  var $div = $("<div>");
+	                  var $rWriter = $("<div class = 'abc' width='100'>").text(res[i].user_id);
+	                  var $rContent = $("<div class = 'boardComment'>").text(res[i].board_comment);
+	                  var $rCreatDate = $("<div width='100'>").text(res[i].write_date);
+	                  $div.append($rWriter);
+	                  $div.append($rContent);
+	                  $div.append($rCreatDate);
+	                  $tablebody.append($div);
+	                  }
+	            }
+	         },error : function(){
+	            console.log('에러')
+	         }
+	         
+	      })
+	   };
 	</script>
   
  <script>
