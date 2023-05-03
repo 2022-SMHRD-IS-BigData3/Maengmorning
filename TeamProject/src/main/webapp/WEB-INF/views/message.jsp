@@ -71,8 +71,8 @@
 		
 		    <div class="message-container">
 		        <form action ="./Gomessagebox.do" >
-                      <label for="recipient">받는 사람: ${detail.user_id}</label>
-                      <input type="text" id="recipient" name="recipient">
+                      <label for="recipient">받는 사람: </label>
+                      <input type="text" id="recipient" name="recipient"> 
                       <label for="subject">제목:</label>
                       <input type="text" id="subject" name="subject">
                       <label for="message">내용:</label>
