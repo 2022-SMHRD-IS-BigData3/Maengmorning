@@ -383,10 +383,13 @@
 
                     <!-- 게시판 글 -->
                     <div class="post-info">
-                        <div class="title">
-                            <h1><strong>${detail.title}</strong><button class="btn btn-warning" style = "color: white; font-weight:bold;" type="button"
-                            onclick="window.open('./main2.do', '_blank', 'width=1200,height=600')">관련 중고거래 글 보러가기</button> </h1>
-                        </div>
+					  <div class="post-info">
+						  <div class="title">
+						    <button class="btn btn-warning" style="color: white; font-weight:bold; float: right;" type="button"
+						      onclick="window.open('./main2.do', '_blank', 'width=1200,height=600')">관련 중고거래 글 보러가기</button>
+						    <h1><strong>${detail.title}</strong></h1>
+						  </div>
+						</div>
 
                         <p>작성자:${detail.user_id} | 작성일:<fmt:formatDate value="${detail.write_date}" pattern="yyyy/MM/dd" /> | 동네: ${mdetail.area} | 조회수 : 1</p>
                     </div>
