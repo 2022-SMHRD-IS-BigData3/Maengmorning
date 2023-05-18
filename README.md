@@ -36,7 +36,7 @@
 ![image](https://github.com/2022-SMHRD-IS-BigData3/Maengmorning/assets/128571044/afbe9524-a5aa-4b54-8d69-a5d2cfefbc2b)
 
 ## 화면구성
-![image](https://github.com/2022-SMHRD-IS-BigData3/Maengmorning/assets/125337840/95357c96-0e8b-4f6c-9937-e4907824242a)
+![image](https://github.com/2022-SMHRD-IS-BigData3/Maengmorning/assets/125337840/381637d6-6d44-46f6-9d6d-f2a802a1fe33)
 
 - 메인페이지
 
